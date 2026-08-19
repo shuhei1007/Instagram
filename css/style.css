@@ -933,7 +933,8 @@ footer > div {
     padding: 16px 0;
     border-top: 1px dashed #cbbfe4;
 }
-.side-list time {
+.side-list time,
+.side-list a > span {
     font-family: "Kiwi Maru";
     font-size: 11px;
     color: #7a6aa3;
