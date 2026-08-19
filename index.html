@@ -1,42 +1,106 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9期生強化チームまとめサイト</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <aside class="sidebar">
-      <div class="logo">Circle Hub</div>
-      <nav>
-        <a href="index.html" class="menu-item active"> 🏠 ホーム </a>
 
-        <p class="menu-title">チーム</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Instagram 9期生チームの小さなまとめサイト。気になったこと、やってみたこと、メンバーの話。">
+    <title>インスタ部｜9期生の小さなまとめ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <a href="pages/news.html" class="menu-item"> 📢 お知らせ </a>
+<body>
+    <header class="header"><a class="logo" href="index.html"><span>☺</span><b>インスタ部</b></a>
+        <nav id="nav"><a href="articles.html">まとめ</a><a href="about.html">わたしたち</a><a href="days.html">活動</a><a
+                href="members.html">メンバー</a></nav><a class="header-link" href="contact.html">のぞいてみる ↗</a><button id="menu"
+            aria-label="メニューを開く">☰</button>
+    </header>
 
-        <a href="pages/schedule.html" class="menu-item"> 📅 スケジュール </a>
+    <main>
+        <section class="home-hero">
+            <div class="doodle d1">✦</div>
+            <p class="hello">こんにちは、9期生です。</p>
+            <h1>気になったことを、<br><span>ゆるくまとめています。</span></h1>
+            <p class="intro">写真、アイデア、チームのできごと。<br>普通の紹介ページじゃなくて、読みものを集めた小さなまとめサイトです。</p>
+        </section>
 
-        <a href="pages/members.html" class="menu-item"> 👥 メンバー </a>
+        <nav class="cats" aria-label="カテゴリー">
+            <a href="articles.html">すべてのまとめ</a>
+            <a href="articles/start.html">きょうのできごと</a>
+            <a href="articles/save.html">ちいさなヒント</a>
+            <a href="articles/yuma.html">メンバーのこと</a>
+        </nav>
 
-        <p class="menu-title">コンテンツ</p>
+        <section class="magazine">
+            <a class="feature reveal" href="articles/start.html">
+                <div class="feature-photo sky"><span>☁</span><b>はじまりの日</b></div>
+                <div class="feature-copy">
+                    <small>きょうのできごと　·　2026.08.19</small>
+                    <h2>9期生チーム、のんびりスタートしました</h2>
+                    <p>Instagramが好きな仲間が集まって、小さな編集部みたいなことをはじめました。まずは自分たちのペースで。</p>
+                    <span>このまとめを読む →</span>
+                </div>
+            </a>
+            <div class="side-list reveal">
+                <p>いま読んでほしい</p>
+                <a href="articles/save.html">
+                    <time>08.12</time>
+                    <div>
+                        <small>ちいさなヒント</small>
+                        <h3>保存したくなる投稿って、なんだろう？</h3>
+                    </div>
+                </a>
+                <a href="articles/yuma.html">
+                    <time>08.05</time>
+                    <div>
+                        <small>メンバーのこと</small>
+                        <h3>写真好きのゆうまに、いろいろ聞いてみた</h3>
+                    </div>
+                </a>
+                <a href="days.html">
+                    <time>活動</time>
+                    <div>
+                        <small>インスタ部の風景</small>
+                        <h3>アイデアを持ち寄って、いっしょにつくる</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-        <a href="pages/resources.html" class="menu-item"> 📂 共有資料 </a>
-
-        <a href="pages/knowledge.html" class="menu-item"> 💡 投稿ノウハウ </a>
-
-        <a href="pages/links.html" class="menu-item"> 🔗 リンク集 </a>
-      </nav>
-    </aside>
-
-    <main class="main-content">
-      <h1>ホーム</h1>
-
-      <p>Instagramチームの情報をまとめています。</p>
+        <section class="latest section">
+            <div class="latest-head reveal">
+                <div class="section-tag">あたらしいまとめ <span>NEW</span></div>
+                <h2>最近の記事</h2>
+                <a href="articles.html">一覧を見る →</a>
+            </div>
+            <div class="latest-grid reveal">
+                <a href="articles/start.html">
+                    <div class="thumb t-sky">☁</div>
+                    <small>きょうのできごと</small>
+                    <h3>9期生チーム、のんびりスタートしました</h3>
+                    <p>集まって、話して、少しずつ形にしていく。はじまりの記録です。</p>
+                </a>
+                <a href="articles/save.html">
+                    <div class="thumb t-pink">✿</div>
+                    <small>ちいさなヒント</small>
+                    <h3>保存したくなる投稿って、なんだろう？</h3>
+                    <p>きれいさより、あとで見返したくなる理由を探してみました。</p>
+                </a>
+                <a href="articles/yuma.html">
+                    <div class="thumb t-mint">▣</div>
+                    <small>メンバーのこと</small>
+                    <h3>写真好きのゆうまに、いろいろ聞いてみた</h3>
+                    <p>散歩係が見ている景色と、撮るときの小さなこだわり。</p>
+                </a>
+            </div>
+        </section>
     </main>
-    <footer>
-      <p>&copy;9期生強化チームまとめサイト</p>
+
+    <footer><a class="logo" href="index.html"><span>☺</span><b>インスタ部</b></a>
+        <p>Instagram 9期生チーム<br><small>© 2026 わたしたちのインスタ部</small></p>
+        <div><a href="about.html">わたしたち</a><a href="articles.html">まとめ</a><a href="contact.html">連絡する</a></div>
     </footer>
-  </body>
+    <script src="js/script.js"></script>
+</body>
+
 </html>
