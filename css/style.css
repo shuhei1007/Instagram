@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+
+  background-color: #f8f7f3;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #333;
+}
+
+/* --------------------
+   サイドバー
+-------------------- */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+
+  background-color: #ffffff;
+
+  padding: 30px 20px;
+
+  border-right: 1px solid #eeeeee;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+
+  color: #36564a;
+
+  margin-bottom: 40px;
+}
+
+/* --------------------
+   メニュー
+-------------------- */
+
+.menu-title {
+  font-size: 12px;
+  font-weight: bold;
+
+  color: #999;
+
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: block;
+
+  padding: 12px 14px;
+
+  margin-bottom: 6px;
+
+  text-decoration: none;
+
+  color: #555;
+
+  border-radius: 12px;
+
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #edf3ef;
+  color: #36564a;
+}
+
+.menu-item.active {
+  background-color: #dfeae3;
+  color: #36564a;
+
+  font-weight: bold;
+}
+
+/* --------------------
+   メイン
+-------------------- */
+
+.main-content {
+  flex: 1;
+
+  padding: 50px;
+}
+
+.main-content h1 {
+  margin-bottom: 15px;
+
+  color: #36564a;
+}
