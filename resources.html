@@ -15,33 +15,90 @@
 </head>
 <body>
     
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
     <!-- サイドバー -->
-    <aside class="sidebar">
-        <div class="logo">InstaCircle</div>
-        
+    <aside class="sidebar" id="sidebar">
         <nav class="menu">
-            <div class="menu-title">メインメニュー</div>
-            <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
-            <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
-            <a href="members.html" class="menu-item" data-page="members">メンバー紹介</a>
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+            </div>
             
-            <div class="menu-title">その他</div>
-            <a href="resources.html" class="menu-item" class="menu-item active" data-page="resources">リソース</a>
-            <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
-            <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
         </nav>
     </aside>
 
     <!-- メインコンテンツ -->
     <main class="main-content" id="app">
+        <div class="page-container gs-reveal">
+            <h1>リソース</h1>
+            <p style="margin-bottom: 30px; color: #666;">サークル活動で使用する各種資料へのリンク集です。</p>
+            
+            <div class="resource-list">
+                <!-- 投稿添削 -->
+                <a href="https://docs.google.com/spreadsheets/d/1yHKC3WosudYIUCPnIxbI6DYXHrrwvjnAJrBV1KAVgzU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="resource-card gs-item">
+                    <div class="resource-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="resource-info">
+                        <div class="resource-title">9期生強化チーム(投稿添削)</div>
+                        <div class="resource-desc">Google Spreadsheets</div>
+                    </div>
+                    <div class="resource-action">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </div>
+                </a>
 
-</main>
+                <!-- 競合分析 -->
+                <a href="https://docs.google.com/spreadsheets/d/1HfEvZyMXBRifgvP2oX_2y46IlOb9gUqTLrqssTGIijY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="resource-card gs-item">
+                    <div class="resource-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="resource-info">
+                        <div class="resource-title">9期生強化チーム(競合分析)</div>
+                        <div class="resource-desc">Google Spreadsheets</div>
+                    </div>
+                    <div class="resource-action">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
 
     <!-- GSAP & ScrollTrigger Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <!-- Custom JS -->
+    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
+
+    
+
 </body>
 </html>

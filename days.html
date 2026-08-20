@@ -15,20 +15,39 @@
 </head>
 <body>
     
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
     <!-- サイドバー -->
-    <aside class="sidebar">
-        <div class="logo">InstaCircle</div>
-        
+    <aside class="sidebar" id="sidebar">
         <nav class="menu">
-            <div class="menu-title">メインメニュー</div>
-            <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
-            <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
-            <a href="members.html" class="menu-item" data-page="members">メンバー紹介</a>
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+            </div>
             
-            <div class="menu-title">その他</div>
-            <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
-            <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
-            <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
         </nav>
     </aside>
 
@@ -109,6 +128,9 @@
         <div><a href="about.html">わたしたち</a><a href="articles.html">まとめ</a><a href="contact.html">連絡する</a></div>
     </footer>
     <script src="../js/script.js"></script>
+
+    
+
 </body>
 
 </html>
@@ -120,6 +142,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <!-- Custom JS -->
+    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

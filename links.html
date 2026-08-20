@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Circle Dashboard</title>
+    <title>関連リンク | Instagram Circle Dashboard</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,33 +15,75 @@
 </head>
 <body>
     
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
     <!-- サイドバー -->
-    <aside class="sidebar">
-        <div class="logo">InstaCircle</div>
-        
+    <aside class="sidebar" id="sidebar">
         <nav class="menu">
-            <div class="menu-title">メインメニュー</div>
-            <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
-            <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
-            <a href="members.html" class="menu-item" data-page="members">メンバー紹介</a>
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+            </div>
             
-            <div class="menu-title">その他</div>
-            <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
-            <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
-            <a href="links.html" class="menu-item" class="menu-item active" data-page="links">関連リンク</a>
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
         </nav>
     </aside>
 
     <!-- メインコンテンツ -->
     <main class="main-content" id="app">
-
-</main>
+        <div class="page-container gs-reveal">
+            <h1>関連リンク</h1>
+            <p style="margin-bottom: 30px; color: #666;">関連する外部サイトやプラットフォームへのリンク集です。</p>
+            
+            <div class="resource-list">
+                <!-- iサークル ログイン -->
+                <a href="https://i-circle.mykajabi.com/login" target="_blank" rel="noopener noreferrer" class="resource-card gs-item">
+                    <div class="resource-icon" style="background: #e3f2fd; color: #1565c0;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    </div>
+                    <div class="resource-info">
+                        <div class="resource-title">iサークル ログイン画面</div>
+                        <div class="resource-desc">会員専用プラットフォーム</div>
+                    </div>
+                    <div class="resource-action">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
 
     <!-- GSAP & ScrollTrigger Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <!-- Custom JS -->
+    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
+
+    
+
 </body>
 </html>

@@ -1,3 +1,35 @@
+
+:root {
+  --bg-1: #e0f2fe;
+  --bg-2: #f0fdf4;
+  --bg-3: #bae6fd;
+  --bg-4: #f8f7f3;
+}
+.theme-spring {
+  --bg-1: #fce4ec;
+  --bg-2: #fff3e0;
+  --bg-3: #f8bbd0;
+  --bg-4: #fff;
+}
+.theme-summer {
+  --bg-1: #e0f2fe;
+  --bg-2: #f0fdf4;
+  --bg-3: #bae6fd;
+  --bg-4: #f8f7f3;
+}
+.theme-autumn {
+  --bg-1: #fff3e0;
+  --bg-2: #ffe0b2;
+  --bg-3: #ffcc80;
+  --bg-4: #fafafa;
+}
+.theme-winter {
+  --bg-1: #e1f5fe;
+  --bg-2: #f5f5f5;
+  --bg-3: #b3e5fc;
+  --bg-4: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +38,12 @@
 
 body {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #f8f7f3;
+  
+  background: linear-gradient(-45deg, var(--bg-1), var(--bg-2), var(--bg-3), var(--bg-4));
+  background-size: 400% 400%;
+  animation: ocean-bg 20s ease infinite;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
   color: #333;
   line-height: 1.6;
@@ -23,34 +59,126 @@ ul {
 }
 
 /* --------------------
-   サイドバー
+   トップバー
 -------------------- */
-
-.sidebar {
-  width: 240px;
-  min-height: 100vh;
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
   background-color: #ffffff;
-  padding: 30px 20px;
-  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
-.logo {
-  font-size: 22px;
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: #36564a;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.menu-toggle:hover {
+  background-color: #f0f4f2;
+}
+
+.topbar .logo {
+  font-size: 20px;
   font-weight: bold;
   color: #36564a;
-  margin-bottom: 40px;
 }
 
 /* --------------------
-   メニュー
+   サイドバー (Drawer)
 -------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-right: 1px solid #eeeeee;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
 
-.menu-title {
-  font-size: 12px;
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.sidebar-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --------------------
+   アコーディオンメニュー
+-------------------- */
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 13px;
   font-weight: bold;
   color: #999;
-  margin-top: 28px;
+  margin-top: 15px;
   margin-bottom: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.accordion-btn:hover {
+  background-color: #f8f8f8;
+}
+
+.accordion-btn .arrow {
+  transition: transform 0.3s;
+}
+
+.accordion-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 300px;
 }
 
 .menu-item {
@@ -78,13 +206,15 @@ ul {
 /* --------------------
    メイン
 -------------------- */
-
 .main-content {
   flex: 1;
-  padding: 50px;
-  background-color: #f8f7f3;
-  overflow-y: auto;
-  height: 100vh;
+  padding: 40px;
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
 }
 
 .main-content h1 {
@@ -263,4 +393,584 @@ ul {
 .gs-reveal {
   opacity: 0;
   transform: translateY(30px);
+}
+
+/* --------------------
+   リソース (resources.html)
+-------------------- */
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s, border-color 0.3s;
+  border: 1px solid transparent;
+  gap: 20px;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-color: #36564a;
+}
+
+.resource-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.resource-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.resource-info {
+  flex-grow: 1;
+}
+
+.resource-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.resource-desc {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.resource-action {
+  color: #36564a;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.resource-card:hover .resource-action {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --------------------
+   メンバー紹介 (members.html)
+-------------------- */
+.profile-section {
+  display: flex;
+  gap: 40px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+  }
+}
+
+.profile-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #f8f7f3;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.profile-title {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.instagram-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.instagram-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(220, 39, 67, 0.3);
+  color: white;
+}
+
+.profile-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.concept-block {
+  background: #fcfcfc;
+  padding: 30px;
+  border-radius: 16px;
+  border-left: 6px solid #36564a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.concept-block h3 {
+  font-size: 1.15rem;
+  color: #36564a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.concept-block .icon {
+  font-size: 1.4rem;
+}
+
+.concept-block p {
+  color: #444;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+/* --------------------
+   カルーセル & サムネイル (members.html)
+-------------------- */
+.members-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.members-header h1 {
+  margin-bottom: 0;
+}
+
+.member-thumbnails {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.thumb-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 2px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.thumb-btn:hover {
+  transform: translateY(-2px);
+}
+
+.thumb-btn.active {
+  border-color: #36564a;
+}
+
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-weight: bold;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-nav {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #36564a;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.carousel-nav:hover {
+  background: #f0f4f2;
+}
+
+.carousel-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-track-container {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.carousel-slide.active-slide {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 箇条書き用スタイル */
+.concept-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.concept-list li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 10px;
+  color: #444;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.concept-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #36564a;
+  font-weight: bold;
+}
+.concept-subtitle {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #36564a;
+}
+
+/* --------------------
+   スケジュール (schedule.html)
+-------------------- */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.schedule-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.schedule-section h2 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid #f0f4f2;
+  padding-bottom: 12px;
+}
+
+.schedule-image-placeholder {
+  width: 100%;
+  min-height: 300px;
+  background: #f8f8f8;
+  border: 2px dashed #d0d0d0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.schedule-image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f4f2;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: #fcfcfc;
+  color: #36564a;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.schedule-table td {
+  color: #444;
+  line-height: 1.8;
+}
+
+.schedule-table .date-cell {
+  font-weight: bold;
+  color: #222;
+  width: 30%;
+  vertical-align: top;
+}
+
+
+/* --------------------
+   Ocean Theme Animations
+-------------------- */
+@keyframes ocean-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Apply float to main container blocks */
+.news-list, .resource-card, .profile-section, .schedule-section {
+  animation: float 7s ease-in-out infinite;
+}
+
+/* Stagger animations so they don't all move identically */
+.news-list, .profile-section {
+  animation-delay: -1s;
+}
+.resource-card:nth-child(2n), .schedule-section:nth-child(2n) {
+  animation-delay: -3.5s;
+}
+.resource-card:nth-child(3n) {
+  animation-delay: -2s;
+}
+
+/* Enhance resource card hover to feel more liquid */
+.resource-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 25px rgba(0, 150, 200, 0.08);
+}
+
+/* --------------------
+   Ocean Waves Effect
+-------------------- */
+.ocean-waves {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  min-height: 80px;
+  max-height: 150px;
+  z-index: 0; /* Behind main content but above background */
+  pointer-events: none;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/* Ensure main content sits above the waves */
+.main-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------
+   Splash / Home Screen
+-------------------- */
+.splash-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  padding: 0;
+  overflow: hidden;
+}
+
+.splash-container {
+  text-align: center;
+  z-index: 20;
+  position: relative;
+  margin-top: -10vh; /* slightly elevated */
+}
+
+.splash-title {
+  font-size: 2.8rem;
+  color: #2c4c3b;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
+}
+
+.splash-title .line1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #4a7762;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.splash-title .line2 {
+  font-weight: 700;
+  display: inline-block;
+}
+
+.dashboard-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #36564a;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 20px rgba(54, 86, 74, 0.2);
+}
+
+.dashboard-btn:hover {
+  background-color: #2c4c3b;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(54, 86, 74, 0.3);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .splash-title {
+    font-size: 2rem;
+  }
+  .splash-title .line1 {
+    font-size: 1.2rem;
+  }
 }
