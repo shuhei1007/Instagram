@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // GSAP
     gsap.registerPlugin(ScrollTrigger);
 
+    initSplash();
+    initCarousel();
+    initScheduleMonthTabs();
     animatePageContent();
 
     // Splash Screen Animation
@@ -43,10 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     
-    initSplash();
-
-    initCarousel();
-
     function initCarousel() {
         const track = document.getElementById("members-track");
         if (!track) return;
@@ -81,16 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // Disable/Enable buttons
             if (prevBtn) prevBtn.disabled = currentIndex === 0;
             if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
-            
-            // Optional: Re-trigger GSAP animations in the newly active slide
-            const activeSlide = slides[currentIndex];
-            const slideItems = activeSlide.querySelectorAll(".gs-item");
-            if (slideItems.length > 0) {
-                gsap.fromTo(slideItems,
-                    { opacity: 0, y: 40 },
-                    { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }
-                );
-            }
         }
         
         // Thumbnail clicks
@@ -114,38 +103,59 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
         
-        // Initial setup
+        // Initial setup (no GSAP re-trigger — avoids flicker)
         updateCarousel(0);
+    }
+
+    function initScheduleMonthTabs() {
+        const tabs = Array.from(document.querySelectorAll(".month-tab"));
+        const img = document.getElementById("icircle-schedule-img");
+        if (!tabs.length || !img) return;
+
+        const monthLabels = { "08": "8月", "09": "9月" };
+
+        function showMonth(month) {
+            const src = img.getAttribute(`data-src-${month}`);
+            if (!src) return;
+            img.src = src;
+            img.alt = `iサークル ${monthLabels[month] || month}の予定`;
+            tabs.forEach((tab) => {
+                const active = tab.getAttribute("data-month") === month;
+                tab.classList.toggle("active", active);
+                tab.setAttribute("aria-selected", active ? "true" : "false");
+            });
+        }
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                showMonth(tab.getAttribute("data-month"));
+            });
+        });
+
+        // Default to current month when available
+        const currentMonth = String(new Date().getMonth() + 1).padStart(2, "0");
+        if (img.getAttribute(`data-src-${currentMonth}`)) {
+            showMonth(currentMonth);
+        }
     }
 
     function animatePageContent() {
         const appContainer = document.getElementById("app");
         if (!appContainer) return;
-        
-        // Page container reveal
-        const revealEl = appContainer.querySelector(".gs-reveal");
-        if(revealEl) {
-            gsap.fromTo(revealEl, 
-                { opacity: 0, y: 40 },
-                { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }
-            );
-        }
 
-        // Stagger list items or cards
-        const listItems = appContainer.querySelectorAll(".gs-item");
-        if(listItems.length > 0) {
-            gsap.fromTo(listItems, 
-                { opacity: 0, y: 40 },
-                { 
-                    opacity: 1, 
-                    y: 0, 
-                    duration: 1.2, 
-                    stagger: 0.1, 
-                    ease: "power2.out",
-                    delay: 0.2
-                }
-            );
-        }
+        // No entrance motion: nested .gs-reveal + .gs-item y-animation
+        // looked like the page "shaking/sinking" when opening monthly info pages.
+        const revealEl = appContainer.querySelector(".gs-reveal");
+        const listItems = Array.from(appContainer.querySelectorAll(".gs-item")).filter((el) => {
+            const slide = el.closest(".carousel-slide");
+            return !slide || slide.classList.contains("active-slide");
+        });
+
+        if (revealEl) gsap.set(revealEl, { clearProps: "opacity,transform" });
+        if (listItems.length > 0) gsap.set(listItems, { clearProps: "opacity,transform" });
+        appContainer.querySelectorAll(".carousel-slide:not(.active-slide) .gs-item").forEach((el) => {
+            gsap.set(el, { clearProps: "opacity,transform" });
+        });
     }
 });
 

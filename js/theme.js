@@ -1,23 +1,24 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Determine season
+(() => {
+    // Determine season (runs with defer → DOM is ready, apply theme before paint settles)
     const month = new Date().getMonth() + 1;
-    let season = 'summer'; // default
-    
+    let season = 'summer';
+
     if (month >= 3 && month <= 5) season = 'spring';
     else if (month >= 6 && month <= 8) season = 'summer';
     else if (month >= 9 && month <= 11) season = 'autumn';
     else season = 'winter';
 
-    // Enable easy testing via URL parameter: ?season=winter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('season')) {
         season = urlParams.get('season');
     }
 
-    document.body.classList.add('theme-' + season);
+    if (document.body) {
+        document.body.classList.add('theme-' + season);
+    }
 
-    // Container for effects
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const effectContainer = document.createElement('div');
     effectContainer.id = 'season-effect';
     effectContainer.style.position = 'fixed';
@@ -26,8 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     effectContainer.style.width = '100%';
     effectContainer.style.height = '100%';
     effectContainer.style.pointerEvents = 'none';
-    effectContainer.style.zIndex = '0'; // Behind main content
+    effectContainer.style.zIndex = '0';
     document.body.appendChild(effectContainer);
+
+    if (reduceMotion) return;
 
     if (season === 'summer') {
         // Inject SVG Waves
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.height = window.innerHeight;
         effectContainer.appendChild(canvas);
         const ctx = canvas.getContext('2d');
-        
+
         let particles = [];
         const maxParticles = 40;
 
@@ -63,27 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
         class Particle {
             constructor() {
                 this.reset();
-                this.y = Math.random() * canvas.height; // initial random spread
+                this.y = Math.random() * canvas.height;
             }
             reset() {
                 this.x = Math.random() * canvas.width;
                 this.y = -50;
                 this.size = Math.random() * 5 + 2;
-                
-                if(season === 'spring') {
+
+                if (season === 'spring') {
                     this.size = Math.random() * 6 + 4;
                     this.speedY = Math.random() * 1.5 + 0.5;
-                    this.color = 'rgba(255, 183, 197, 0.7)'; // Sakura pink
-                } else if(season === 'autumn') {
+                    this.color = 'rgba(255, 183, 197, 0.7)';
+                } else if (season === 'autumn') {
                     this.size = Math.random() * 8 + 4;
                     this.speedY = Math.random() * 1.5 + 0.8;
-                    this.color = Math.random() > 0.5 ? 'rgba(216, 67, 21, 0.7)' : 'rgba(239, 108, 0, 0.7)'; // Orange/Red
-                } else { // winter
+                    this.color = Math.random() > 0.5 ? 'rgba(216, 67, 21, 0.7)' : 'rgba(239, 108, 0, 0.7)';
+                } else {
                     this.size = Math.random() * 3 + 1.5;
                     this.speedY = Math.random() * 1 + 0.5;
-                    this.color = 'rgba(255, 255, 255, 0.8)'; // Snow white
+                    this.color = 'rgba(255, 255, 255, 0.8)';
                 }
-                
+
                 this.speedX = (Math.random() - 0.5) * 1;
                 this.angle = Math.random() * Math.PI * 2;
                 this.spin = (Math.random() - 0.5) * 0.1;
@@ -102,26 +105,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.angle);
                 ctx.fillStyle = this.color;
-                
+
                 if (season === 'winter') {
-                    // Snow
                     ctx.beginPath();
                     ctx.arc(0, 0, this.size, 0, Math.PI * 2);
                     ctx.fill();
                 } else if (season === 'spring') {
-                    // Sakura petal
                     ctx.beginPath();
                     ctx.moveTo(0, 0);
                     ctx.quadraticCurveTo(this.size, -this.size, this.size * 2, 0);
                     ctx.quadraticCurveTo(this.size, this.size, 0, 0);
                     ctx.fill();
                 } else if (season === 'autumn') {
-                    // Autumn leaf (simple diamond/kite shape)
                     ctx.beginPath();
                     ctx.moveTo(0, -this.size);
-                    ctx.lineTo(this.size/1.5, 0);
+                    ctx.lineTo(this.size / 1.5, 0);
                     ctx.lineTo(0, this.size);
-                    ctx.lineTo(-this.size/1.5, 0);
+                    ctx.lineTo(-this.size / 1.5, 0);
                     ctx.closePath();
                     ctx.fill();
                 }
@@ -143,4 +143,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         animate();
     }
-});
+})();
