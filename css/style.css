@@ -974,3 +974,177 @@ ul {
     font-size: 1.2rem;
   }
 }
+
+/* --------------------
+   プロンプト集
+-------------------- */
+.prompt-section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #fcfcfc;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.prompt-header h2 {
+  font-size: 1.1rem;
+  color: #36564a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-btn {
+  background: #36564a;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.copy-btn:hover {
+  background: #2c4c3b;
+}
+
+.copy-btn.copied {
+  background: #4caf50;
+}
+
+.prompt-body {
+  padding: 24px;
+}
+
+.prompt-box {
+  background: #282c34;
+  color: #abb2bf;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* --------------------
+   記事（詳細）ページ用
+-------------------- */
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #36564a;
+}
+
+.article-header {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.article-header h1 {
+  font-size: 1.8rem;
+  color: #2c4c3b;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.article-meta {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.article-content {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #333;
+}
+
+.article-content h2 {
+  font-size: 1.4rem;
+  color: #36564a;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-left: 14px;
+  border-left: 5px solid #36564a;
+}
+
+.article-content h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.article-content p {
+  margin-bottom: 1.5em;
+}
+
+.article-content ul {
+  margin-bottom: 1.5em;
+  padding-left: 20px;
+}
+
+.article-content li {
+  margin-bottom: 0.5em;
+}
+
+.highlight-box {
+  background: #f4f9f7;
+  border: 1px solid #d1e5db;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.highlight-box h4 {
+  margin-top: 0;
+  color: #2c4c3b;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .article-container {
+    padding: 24px;
+  }
+  .article-header h1 {
+    font-size: 1.5rem;
+  }
+}

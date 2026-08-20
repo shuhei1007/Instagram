@@ -192,3 +192,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Prompt Copy Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtns = document.querySelectorAll('.copy-btn');
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const targetId = btn.getAttribute('data-target');
+            const targetEl = document.getElementById(targetId);
+            if(targetEl) {
+                try {
+                    await navigator.clipboard.writeText(targetEl.textContent.trim());
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✅ コピーしました！';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('copied');
+                    }, 2000);
+                } catch(err) {
+                    console.error('Copy failed', err);
+                    alert('コピーに失敗しました。');
+                }
+            }
+        });
+    });
+});
