@@ -1148,3 +1148,119 @@ ul {
     font-size: 1.5rem;
   }
 }
+
+/* --------------------
+   📱 Mobile Responsive Settings
+-------------------- */
+@media (max-width: 768px) {
+  /* 1. Global & Main Layout */
+  .main-content {
+    padding: 20px 15px !important;
+  }
+  .main-content h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 2. Topbar & Menu */
+  .topbar {
+    padding: 0 15px !important;
+  }
+  .topbar .logo {
+    font-size: 1.1rem !important;
+  }
+
+  /* 3. News (news.html) */
+  .news-item a {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+  .news-meta {
+    width: 100% !important;
+  }
+
+  /* 4. Grid & Cards (knowledge.html, resources.html) */
+  .grid {
+    gap: 20px !important;
+  }
+  .card-img-wrap {
+    height: 180px !important;
+  }
+  .resource-list {
+    grid-template-columns: 1fr !important; /* Full width on mobile */
+  }
+  .resource-card {
+    padding: 16px !important;
+    gap: 15px !important;
+  }
+
+  /* 5. Member Profile (members.html) */
+  .profile-section {
+    padding: 20px !important;
+  }
+  .profile-sidebar {
+    width: 100% !important;
+  }
+  .profile-image-wrap {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .concept-block {
+    padding: 20px !important;
+  }
+
+  /* 6. Prompts (prompts.html) */
+  .prompt-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .prompt-box {
+    font-size: 0.85rem !important; /* Smaller code font for mobile */
+    padding: 16px !important;
+  }
+  .prompt-body {
+    padding: 16px !important;
+  }
+
+  /* 7. Article Detail (info_2026_07.html etc) */
+  .article-container {
+    padding: 20px !important;
+    border-radius: 8px !important;
+  }
+  .article-header h1 {
+    font-size: 1.3rem !important;
+  }
+  .article-content {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+  }
+  .article-content h2 {
+    font-size: 1.2rem !important;
+    margin-top: 30px !important;
+    padding-left: 10px !important;
+  }
+  .article-content h3 {
+    font-size: 1.1rem !important;
+    margin-top: 20px !important;
+  }
+  .highlight-box {
+    padding: 16px !important;
+  }
+
+  /* 8. Schedule (schedule.html) */
+  .schedule-section {
+    padding: 20px !important;
+  }
+  .schedule-table th,
+  .schedule-table td {
+    padding: 12px 10px !important;
+    font-size: 0.9rem !important;
+  }
+  .schedule-table .date-cell {
+    width: auto !important;
+    white-space: nowrap !important;
+  }
+}
