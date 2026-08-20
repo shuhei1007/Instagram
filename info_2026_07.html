@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- cSpell:ignore InstaCircle PDCA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026年7月の情報共有 | Instagram Circle Dashboard</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=1787214249096">
 </head>
+
 <body>
-    
+
     <!-- トップバー -->
     <header class="topbar">
-        <button class="menu-toggle" id="menu-toggle">
-            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
         <a href="index.html" class="logo">InstaCircle</a>
     </header>
@@ -31,7 +38,10 @@
         <nav class="menu">
             <button class="accordion-btn">
                 <span>メインメニュー</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
@@ -39,10 +49,13 @@
                 <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
                 <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
             </div>
-            
+
             <button class="accordion-btn">
                 <span>その他</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
@@ -56,72 +69,104 @@
     <main class="main-content" id="app">
         <div class="article-container gs-reveal">
             <a href="knowledge.html" class="back-link">← ノウハウ一覧に戻る</a>
-            
+
             <header class="article-header">
                 <h1>2026年7月の情報共有まとめ</h1>
                 <div class="article-meta">更新日: 2026年7月末日</div>
             </header>
-            
+
             <div class="article-content gs-item">
                 <p>2026年7月に行われたライブ、会議、ラジオ等での情報共有まとめです。</p>
 
-                <h2>1. 台本作り・撮影のポイント (7/14)</h2>
+                <h2>1. 世界観づくりと撮影・構成の基本 (7/6)</h2>
                 <div class="highlight-box">
-                    <h4>💡 台本づくりの基本と型</h4>
+                    <h3>✨ 結論：世界観が大事</h3>
+                    <p>世界観を出す＝<strong>理想的な未来</strong>を見せること。誰に何を届けるかを軸に、コンセプトと見せ方を設計する。</p>
+                </div>
+                <div class="highlight-box">
+                    <h3>🎬 撮影・構成のポイント</h3>
                     <ul>
-                        <li><strong>①PREP法</strong><br>結論 → お悩み → 解決策 → CTA</li>
-                        <li><strong>お悩み・共感パートのネタ例</strong><br>
-                            ・暮らし/商品紹介：「日常」をネタに（片付けてもすぐ散らかる・収納不足）<br>
-                            ・レシピ：「季節・旬」をネタに（旬の食材で美味しく、毎日献立が大変）<br>
-                            ・お出かけ：「季節感・限定性」をネタに（子連れの行き先、今しかない周年イベント）<br>
-                            ・美容/ダイエット：「季節・年齢・悩み」をネタに（季節の変わり目、年齢に伴う肌悩み）<br>
-                            ・子育て：「悩み」をネタに（遊びマンネリ、何を食べさせたら良いか）</li>
-                        <li><strong>②〇〇選方式</strong><br>アイテム・手順・ノウハウを「複数」纏めて紹介するリールの型。（構成：冒頭 → 1選目 → 2選目 → 3選目 → CTA）</li>
-                        <li><strong>意識するポイント</strong><br>冒頭の興味づけ後はテンポよく本題へ入る。語尾のかぶりを防ぐ（「〜です。〜です。」は単調になる）。事実だけでなく、体験や感情を入れる。「何を伝えるか」より「何を削っても伝わるか」が大事。</li>
+                        <li><strong>被写体は真ん中に</strong><br>映す際は中央に収める。</li>
+                        <li><strong>引きと寄りの撮影が大事</strong><br>引きのカットは掃除が必須になりやすい（特に料理系など）。</li>
+                        <li><strong>コンセプトを伝える</strong><br>なぜそのコンセプトにしたのかを説明する。作り方を見せたうえで、理想の未来を提示する。<br>構成の目安：冒頭2秒の後にコンセプトを入れる。</li>
+                        <li><strong>冒頭の型</strong><br>理想の未来を入れる／危機感を煽る、のどちらかが有効。</li>
+                        <li><strong>長さのバランス</strong><br>短くしすぎて伝わらなければ意味がない。</li>
+                        <li><strong>見せ方の手法</strong><br>ジャストカットなどの動画手法も選択肢になる。</li>
+                        <li><strong>AI・イラスト画像の多用はNG</strong><br>離脱につながるため控える。</li>
                     </ul>
                 </div>
-                
+                <ul>
+                    <li><strong>SNSで言われていることは否定する方がいい</strong></li>
+                    <li><strong>添削ライブ応募時：</strong>宿題を貼り付けること</li>
+                    <li><strong>お知らせ：</strong>7/8に年払いの説明会あり。月払いから年払いにしたい場合は参加できる。</li>
+                </ul>
+
+                <h2>2. 台本作り・撮影のポイント (7/14)</h2>
                 <div class="highlight-box">
-                    <h4>🎥 視聴者の集中を作る撮影ポイント</h4>
+                    <h3>💡 台本づくりの基本と型</h3>
+                    <ul>
+                        <li><strong>①PREP法</strong><br>結論 → お悩み → 解決策 → CTA</li>
+                        <li><strong>お悩み・共感パートのネタ例</strong>
+                            <ul>
+                                <li>暮らし/商品紹介：「日常」をネタに（片付けてもすぐ散らかる・収納不足）</li>
+                                <li>レシピ：「季節・旬」をネタに（旬の食材で美味しく、毎日献立が大変）</li>
+                                <li>お出かけ：「季節感・限定性」をネタに（子連れの行き先、今しかない周年イベント）</li>
+                                <li>美容/ダイエット：「季節・年齢・悩み」をネタに（季節の変わり目、年齢に伴う肌悩み）</li>
+                                <li>子育て：「悩み」をネタに（遊びマンネリ、何を食べさせたら良いか）</li>
+                            </ul>
+                        </li>
+                        <li><strong>②〇〇選方式</strong><br>アイテム・手順・ノウハウを「複数」纏めて紹介するリールの型。（構成：冒頭 → 1選目 → 2選目 → 3選目 → CTA）
+                        </li>
+                        <li><strong>意識するポイント</strong><br>冒頭の興味づけ後はテンポよく本題へ入る。語尾のかぶりを防ぐ（「〜です。〜です。」は単調になる）。事実だけでなく、体験や感情を入れる。「何を伝えるか」より「何を削っても伝わるか」が大事。
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>🎥 視聴者の集中を作る撮影ポイント</h3>
                     <ul>
                         <li><strong>視線の動きを小さくする</strong><br>SNSをなんとなくスクロールしている視聴者のため、被写体は中央に収める。</li>
                         <li><strong>視線ブレを防ぐ</strong><br>目の上下運動が続くと無意識に疲れて視線が分散する。被写体が上、下、横端に行き過ぎないように注意する。</li>
                     </ul>
                 </div>
 
-                <h2>2. 競合分析とアカウント運用のマインド (7/18〜7/19)</h2>
+                <h2>3. 競合分析とアカウント運用のマインド (7/18〜7/19)</h2>
                 <ul>
                     <li><strong>競合分析の本質：</strong>世の中の「多数」が求めている「コト（要素）」を探すこと。<br>
                         ※多数＝3〜6ヶ月以内で10倍＆30万再生以上、または短期間で1万人フォロワー増。<br>
                         ※主語（キーワード/映像/アフレコ等）× 述語（役立つ/癒される等）から価値ある要素を見つけ記録する。</li>
-                    <li><strong>マインドセット：</strong>行動できていない時は「昨日の自分よりできていればいい」と小さな目標で慣らしていく。添削ライブで恥ずかしい思いをすることが原動力になる。人と比べず「過去の自分」と比べる。最初は伸びなくても自己流にならずやるべきことをやる。</li>
-                    <li><strong>マネタイズのタイミング：</strong>かなり早い段階で取り組む。アカウントが育ってからだと胡散臭さが出て離脱率が上がる。「商品紹介もするアカウント」という意識付けをフォロワーにしておく。</li>
+                    <li><strong>マインドセット：</strong>行動できていない時は「昨日の自分よりできていればいい」と小さな目標で慣らしていく。添削ライブで恥ずかしい思いをすることが原動力になる。人と比べず「過去の自分」と比べる。最初は伸びなくても自己流にならずやるべきことをやる。
+                    </li>
+                    <li><strong>マネタイズのタイミング：</strong>かなり早い段階で取り組む。アカウントが育ってからだと胡散臭さが出て離脱率が上がる。「商品紹介もするアカウント」という意識付けをフォロワーにしておく。
+                    </li>
                     <li><strong>分析力アップ：</strong>全てに「なぜ？」と疑問を持ち、深く考える。唯一の正解は存在しないので、正解・不正解を気にせず仮説検証とPDCAを繰り返す。</li>
                 </ul>
 
-                <h2>3. リール企画・文章作成のコツ (7/19〜7/20)</h2>
+                <h2>4. リール企画・文章作成のコツ (7/19〜7/20)</h2>
                 <ul>
                     <li><strong>ネタ出し：</strong>自分の中から出さなくていい。「編集長」の気持ちになり、どんな企画が喜ばれるか様々なメディアを参考にする。</li>
                     <li><strong>伝わる文章：</strong>一瞬で理解できる文章に。一文を短く（句読点を入れて15文字以内）する。</li>
                     <li><strong>内容のバランス：</strong>共感8割 ＋ 役立ち2割。（例：〇〇5選なら、4つ共感＋1つ役立ち）偉そうにならずフォロワーと同じ目線に立つ。</li>
                     <li><strong>動画編集のテンポ：</strong>文字の表示時間は「1.5倍くらい速く」、アフレコは「人が少し早口に読み上げる速度」が丁度良い。テンプレ化して時短する。</li>
-                    <li><strong>商品紹介リール：</strong>機能だけではなく「機能＋理想の未来」を語ることで購買意欲が倍増。日常のちょっとかゆいところを解決できる説明が大事。（商品を全部揃えると購入が楽になるという意見も）</li>
+                    <li><strong>商品紹介リール：</strong>機能だけではなく「機能＋理想の未来」を語ることで購買意欲が倍増。日常のちょっとかゆいところを解決できる説明が大事。（商品を全部揃えると購入が楽になるという意見も）
+                    </li>
                     <li><strong>離脱を防ぐ型：</strong>冒頭2秒で「ベネフィット型」「共感型」「常識破壊型」を入れる。</li>
                     <li><strong>失敗談の発信：</strong>失敗談は回るがフォローに繋がりにくい。必ず「解決策」を提示してフォロー率を上げる。</li>
                     <li><strong>縛りの重要性：</strong>「都内1LDK×四人家族」などの縛り（コンセプト）が大事。</li>
                 </ul>
 
-                <h2>4. AI活用と属人性の出し方 (7/21〜7/26)</h2>
+                <h2>5. AI活用と属人性の出し方 (7/21〜7/26)</h2>
                 <ul>
                     <li><strong>過去の失敗談の活かし方：</strong>マイナスな過去の経験に、現在のプラス状況や有益情報（VLOG風など）を掛け合わせる。</li>
                     <li><strong>AIとの壁打ち：</strong>AIは嫌われない意見を出してくるので、あえて「否定的な意見も出して」と指示する。様々な意見が出たら、自分の目的に合うものを試す。</li>
                     <li><strong>料理系アカウント：</strong>「簡単」が伸びる。手順は動画では見られないので要点のみ伝え、詳細はキャプションに書く。</li>
-                    <li><strong>属人性の出し方：</strong>失敗している姿や思考の過程をあえて出すことで、親近感と安心感が生まれる。ただし愚痴にならないよう、その後の試行錯誤や有益情報をセットにする。</li>
+                    <li><strong>属人性の出し方：</strong>失敗している姿や思考の過程をあえて出すことで、親近感と安心感が生まれる。ただし愚痴にならないよう、その後の試行錯誤や有益情報をセットにする。
+                    </li>
                     <li><strong>モデリング：</strong>自分ジャンル（または少しズレたジャンル）で万再生されているリールを10〜20本探し、文字起こしして型を学ぶ。</li>
                     <li><strong>プロフィールの裏技：</strong>空白行を作りたい時は、自動で詰められてしまうため特殊文字（見えない空白文字「⠀」）を入れる。</li>
                 </ul>
 
-                <h2>5. 伸びている人の5つの共通点 (7/26)</h2>
+                <h2>6. 伸びている人の5つの共通点 (7/26)</h2>
                 <div class="highlight-box">
                     <ol>
                         <li>競合を「見る」だけでなく<strong>「分析して真似る（型を学ぶ）」</strong></li>
@@ -135,15 +180,16 @@
         </div>
     </main>
 
-    <!-- GSAP & ScrollTrigger Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    
+    <!-- Custom JS -->
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+
+
 
 </body>
+
 </html>

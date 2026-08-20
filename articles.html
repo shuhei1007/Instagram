@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- cSpell:ignore InstaCircle -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Circle Dashboard</title>
-    
+    <meta name="description" content="インスタ部のまとめ一覧。きょうのできごと、ちいさなヒント、メンバーのこと。">
+    <title>まとめ一覧 | Instagram Circle Dashboard</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=1787214249096">
 </head>
 <body>
-    
+
     <!-- トップバー -->
     <header class="topbar">
-        <button class="menu-toggle" id="menu-toggle">
-            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
         <a href="index.html" class="logo">InstaCircle</a>
     </header>
@@ -28,10 +35,13 @@
 
     <!-- サイドバー -->
     <aside class="sidebar" id="sidebar">
-        <nav class="menu">
+        <nav class="menu" aria-label="サイトメニュー">
             <button class="accordion-btn">
                 <span>メインメニュー</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
@@ -39,10 +49,13 @@
                 <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
                 <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
             </div>
-            
+
             <button class="accordion-btn">
                 <span>その他</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
@@ -53,79 +66,58 @@
     </aside>
 
     <!-- メインコンテンツ -->
-    <main class="main-content" id="app">
-<!doctype html>
-<html lang="ja">
+    <main class="main-content" id="app" aria-label="まとめ一覧">
+        <div class="article-container gs-reveal">
+            <header class="article-header">
+                <p>ARCHIVE</p>
+                <h1>まとめ一覧</h1>
+                <div class="article-meta">気になったことから、ゆるく書いています。</div>
+            </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="インスタ部のまとめ一覧。きょうのできごと、ちいさなヒント、メンバーのこと。">
-    <title>まとめ一覧｜インスタ部</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-    <header class="header"><a class="logo" href="../index.html"><span>☺</span><b>インスタ部</b></a>
-        <nav id="nav"><a href="articles.html">まとめ</a><a href="about.html">わたしたち</a><a href="days.html">活動</a><a
-                href="members.html">メンバー</a></nav><a class="header-link" href="contact.html">のぞいてみる ↗</a><button id="menu"
-            aria-label="メニューを開く">☰</button>
-    </header>
-
-    <main>
-        <section class="page-head">
-            <p>ARCHIVE</p>
-            <h1>まとめ一覧</h1>
-            <span>気になったことから、ゆるく書いています。</span>
-        </section>
-
-        <section class="archive section">
-            <div class="notes reveal">
-                <a href="../articles/start.html">
-                    <time>8月19日</time><i class="pink-dot"></i>
-                    <div>
-                        <small>きょうのできごと</small>
-                        <h3>9期生チーム、のんびりスタートしました</h3>
-                    </div><span>→</span>
-                </a>
-                <a href="../articles/save.html">
-                    <time>8月12日</time><i class="purple-dot"></i>
-                    <div>
-                        <small>ちいさなヒント</small>
-                        <h3>保存したくなる投稿って、なんだろう？</h3>
-                    </div><span>→</span>
-                </a>
-                <a href="../articles/yuma.html">
-                    <time>8月5日</time><i class="green-dot"></i>
-                    <div>
-                        <small>メンバーのこと</small>
-                        <h3>写真好きのゆうまに、いろいろ聞いてみた</h3>
-                    </div><span>→</span>
-                </a>
+            <div class="article-content gs-item">
+                <section class="archive section">
+                    <h2>最近のまとめ</h2>
+                    <div class="notes reveal">
+                        <a href="articles/start.html">
+                            <time datetime="2026-08-19">8月19日</time>
+                            <i class="pink-dot" aria-hidden="true"></i>
+                            <div>
+                                <small>きょうのできごと</small>
+                                <h3>9期生チーム、のんびりスタートしました</h3>
+                            </div>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="articles/save.html">
+                            <time datetime="2026-08-12">8月12日</time>
+                            <i class="purple-dot" aria-hidden="true"></i>
+                            <div>
+                                <small>ちいさなヒント</small>
+                                <h3>保存したくなる投稿って、なんだろう？</h3>
+                            </div>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="articles/yuma.html">
+                            <time datetime="2026-08-05">8月5日</time>
+                            <i class="green-dot" aria-hidden="true"></i>
+                            <div>
+                                <small>メンバーのこと</small>
+                                <h3>写真好きのゆうまに、いろいろ聞いてみた</h3>
+                            </div>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer><a class="logo" href="../index.html"><span>☺</span><b>インスタ部</b></a>
-        <p>Instagram 9期生チーム<br><small>© 2026 わたしたちのインスタ部</small></p>
-        <div><a href="about.html">わたしたち</a><a href="articles.html">まとめ</a><a href="contact.html">連絡する</a></div>
-    </footer>
-    <script src="../js/script.js"></script>
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    
-
-</body>
-
-</html>
-
-</main>
-
-    <!-- GSAP & ScrollTrigger Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
     <!-- Custom JS -->
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+
 </body>
 </html>

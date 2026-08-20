@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+    <!-- cSpell:ignore InstaCircle PDCA NISA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>メンバー一覧 | Instagram Circle Dashboard</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=1787214249096">
 </head>
+
 <body>
-    
+
     <!-- トップバー -->
     <header class="topbar">
-        <button class="menu-toggle" id="menu-toggle">
-            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
         <a href="index.html" class="logo">InstaCircle</a>
     </header>
@@ -31,7 +39,10 @@
         <nav class="menu">
             <button class="accordion-btn">
                 <span>メインメニュー</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
@@ -39,10 +50,13 @@
                 <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
                 <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
             </div>
-            
+
             <button class="accordion-btn">
                 <span>その他</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
             </button>
             <div class="accordion-content">
                 <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
@@ -53,545 +67,570 @@
     </aside>
 
     <!-- メインコンテンツ -->
-        <main class="main-content" id="app">
+    <main class="main-content" id="app">
         <div class="page-container gs-reveal">
             <div class="members-header">
                 <h1>メンバー一覧</h1>
                 <div class="member-thumbnails">
-<button class="thumb-btn active" data-index="0">
-            <img src="assets/images/profile.png" alt="しゅうへい">
-        </button>
-<button class="thumb-btn " data-index="1">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="2">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="3">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="4">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="5">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="6">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="7">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="8">
-            <div class="thumb-placeholder">?</div>
-        </button>
-<button class="thumb-btn " data-index="9">
-            <div class="thumb-placeholder">?</div>
-        </button>
+                    <button type="button" aria-label="しゅうへい" class="thumb-btn active" data-index="0">
+                        <img src="assets/images/profile.png" alt="しゅうへい" width="64" height="64">
+                    </button>
+                    <button type="button" aria-label="メンバー2" class="thumb-btn " data-index="1">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー3" class="thumb-btn " data-index="2">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー4" class="thumb-btn " data-index="3">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー5" class="thumb-btn " data-index="4">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー6" class="thumb-btn " data-index="5">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー7" class="thumb-btn " data-index="6">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー8" class="thumb-btn " data-index="7">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー9" class="thumb-btn " data-index="8">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
+                    <button type="button" aria-label="メンバー10" class="thumb-btn " data-index="9">
+                        <span class="thumb-placeholder">?</span>
+                    </button>
 
                 </div>
             </div>
-            
+
             <div class="carousel-container">
                 <button class="carousel-nav prev-btn" aria-label="前のメンバー">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
                 </button>
-                
+
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="members-track">
 
-                    <div class="carousel-slide active-slide">
-                        <div class="profile-section">
+                        <div class="carousel-slide active-slide">
+                            <div class="profile-section">
 
-                <!-- 左側：プロフィール画像・名前・SNS -->
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <img src="assets/images/profile.png" alt="しゅうへい" class="profile-img">
-                    </div>
-                    <h2 class="profile-name">しゅうへい</h2>
-                    
-                    <a href="https://www.instagram.com/shuhei_mikeiken_eng/reels/" target="_blank" rel="noopener noreferrer" class="instagram-btn">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <!-- 右側：コンセプト -->
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <p>27歳・携帯ショップ販売員5年目。<br>
-                        ノルマと接客のストレスで疲弊してて、給与の伸びもあんまり見込めない人。<br>
-                        同期がオフィスワークに転職していくのを見て焦りを感じている。<br>
-                        「PC苦手・文系だから無理」いう思い込みがブレーキになってて、スクールの高額費用にも半信半疑。<br>
-                        中途半端に終わることへの恐れと、「携帯販売員からエンジニアになれた前例が見えない」いう再現性への疑いも抱えてる。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <p>未経験からプログラミング学習を進める順番と方法を理解して、自分で学習を継続できるようになる。<br>
-                        「自分には無理」いう思い込みを、「今日はこれをやってみよう」いう具体的な行動に変える。<br>
-                        最終的には未経験エンジニア転職に挑戦して、自分で働き方やキャリアを選べる状態を目指す。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <p>未経験からのプログラミング学習を軸に、HTML・CSS・JavaScriptなどの学習順、挫折しない学習の続け方、エンジニア特有の開発ツール（VSCode・Git・ターミナルなど）の使い方を段階的に発信する。<br>
-                        あわせて、携帯販売5年から未経験転職に成功した実体験をもとに、学習中に詰まった箇所や感情、失敗談、転職後のリアルを伝える。</p>
-                    </div>
-                </div>
+                                <!-- 左側：プロフィール画像・名前・SNS -->
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <img src="assets/images/profile.png" alt="しゅうへい" class="profile-img" width="200"
+                                            height="200">
+                                    </div>
+                                    <h2 class="profile-name">しゅうへい</h2>
 
+                                    <a href="https://www.instagram.com/shuhei_mikeiken_eng/reels/" target="_blank"
+                                        rel="noopener noreferrer" class="instagram-btn">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
+
+                                <!-- 右側：コンセプト -->
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <p>27歳・携帯ショップ販売員5年目。<br>
+                                            ノルマと接客のストレスで疲弊してて、給与の伸びもあんまり見込めない人。<br>
+                                            同期がオフィスワークに転職していくのを見て焦りを感じている。<br>
+                                            「PC苦手・文系だから無理」いう思い込みがブレーキになってて、スクールの高額費用にも半信半疑。<br>
+                                            中途半端に終わることへの恐れと、「携帯販売員からエンジニアになれた前例が見えない」いう再現性への疑いも抱えてる。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <p>未経験からプログラミング学習を進める順番と方法を理解して、自分で学習を継続できるようになる。<br>
+                                            「自分には無理」いう思い込みを、「今日はこれをやってみよう」いう具体的な行動に変える。<br>
+                                            最終的には未経験エンジニア転職に挑戦して、自分で働き方やキャリアを選べる状態を目指す。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <p>未経験からのプログラミング学習を軸に、HTML・CSS・JavaScriptなどの学習順、挫折しない学習の続け方、エンジニア特有の開発ツール（VSCode・Git・ターミナルなど）の使い方を段階的に発信する。<br>
+                                            あわせて、携帯販売5年から未経験転職に成功した実体験をもとに、学習中に詰まった箇所や感情、失敗談、転職後のリアルを伝える。</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">きょん姐</h2>
-                    
-                    <a href="https://www.instagram.com/kii_kakei/" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <ul class="concept-list">
-    <li>4歳と2歳の子どもを育てる時短ワーママ。</li>
-    <li>時短勤務になって手取りが減り、「このまま教育費は大丈夫？」と毎月不安を感じている。</li>
-    <li>家計簿やNISAを始めようとしても何から手を付ければいいか分からず、Instagramの「みんな貯めてる投稿」を見て焦る毎日。</li>
-    <li>本当は子どもに好きなことを我慢させず、家族旅行にも気兼ねなく行ける暮らしがしたい。</li>
-</ul>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>「教育費、大丈夫かな…」と毎月不安になる生活から卒業し、「このまま続ければ大丈夫」と安心できる毎日に変わる</li>
-    <li>我慢する節約ではなく、お金を整えることで、家族旅行や子どもの習い事、美味しいご飯を心から楽しめる</li>
-    <li>お金の余裕だけでなく、心にも余裕が生まれ、「子どもの今しかない時間」を笑顔で過ごせるママになれる</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">きょん姐</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>時短ワーママでも続く「5分家計管理」を実体験ベースで紹介。</li>
-    <li>子どもに課金というテーマでマネ出来る家計管理方法を紹介する。</li>
-    <li>忙しくても継続できる仕組みを伝える。</li>
-    <li>100万円貯めるまでのリアルなロードマップを、初心者でも真似できる順番で発信する。</li>
-    <li>固定費・保険・通信費など「効果が大きい節約」を優先し、我慢する節約は極力減らす。</li>
-    <li>「6年で4,000万円貯めた」考え方を、小さな一歩に分解し、「まず100万円」を目標に伴走する。</li>
-</ul>
+                                    <a href="https://www.instagram.com/kii_kakei/" target="_blank"
+                                        rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <ul class="concept-list">
+                                            <li>4歳と2歳の子どもを育てる時短ワーママ。</li>
+                                            <li>時短勤務になって手取りが減り、「このまま教育費は大丈夫？」と毎月不安を感じている。</li>
+                                            <li>家計簿やNISAを始めようとしても何から手を付ければいいか分からず、Instagramの「みんな貯めてる投稿」を見て焦る毎日。</li>
+                                            <li>本当は子どもに好きなことを我慢させず、家族旅行にも気兼ねなく行ける暮らしがしたい。</li>
+                                        </ul>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>「教育費、大丈夫かな…」と毎月不安になる生活から卒業し、「このまま続ければ大丈夫」と安心できる毎日に変わる</li>
+                                            <li>我慢する節約ではなく、お金を整えることで、家族旅行や子どもの習い事、美味しいご飯を心から楽しめる</li>
+                                            <li>お金の余裕だけでなく、心にも余裕が生まれ、「子どもの今しかない時間」を笑顔で過ごせるママになれる</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>時短ワーママでも続く「5分家計管理」を実体験ベースで紹介。</li>
+                                            <li>子どもに課金というテーマでマネ出来る家計管理方法を紹介する。</li>
+                                            <li>忙しくても継続できる仕組みを伝える。</li>
+                                            <li>100万円貯めるまでのリアルなロードマップを、初心者でも真似できる順番で発信する。</li>
+                                            <li>固定費・保険・通信費など「効果が大きい節約」を優先し、我慢する節約は極力減らす。</li>
+                                            <li>「6年で4,000万円貯めた」考え方を、小さな一歩に分解し、「まず100万円」を目標に伴走する。</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">みこ姐</h2>
-                    
-                    <a href="https://www.instagram.com/miko_bodymake?igsh=a2Z4MWtyd2puaGZq&utm_source=qr" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <ul class="concept-list">
-    <li>35歳都市部に住む、子ども3人時短ワーママ</li>
-    <li>産後なかなか元の体型に戻らない。他のママ友は綺麗で、朝の幼稚園バスを待っている井戸端会議の時間が憂鬱</li>
-    <li>本当はエステにも行きたいし、ジムも行きたいし、美容院もこまめに行きたいけど、そんな時間も体力もお金もない</li>
-    <li>せめて妊娠前と同じ洋服が着たい</li>
-</ul>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>お金をかけずに痩せる</li>
-    <li>毎日体を動かすことで、マインドも整う。</li>
-    <li>痩せることで着たい服も着れて、ストレッチにより気分も安定。劣等感からの解放。</li>
-    <li>子育てにも余裕が出る。</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">みこ姐</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>女性ならではの悩みを解決する骨盤ケア</li>
-    <li>激しい運動なしのダイエット術</li>
-    <li>毎日できるトレーニング</li>
-    <li>食べ方や痩せレシピの紹介（ストーリーズ）</li>
-</ul>
+                                    <a href="https://www.instagram.com/miko_bodymake?igsh=a2Z4MWtyd2puaGZq&utm_source=qr"
+                                        target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <ul class="concept-list">
+                                            <li>35歳都市部に住む、子ども3人時短ワーママ</li>
+                                            <li>産後なかなか元の体型に戻らない。他のママ友は綺麗で、朝の幼稚園バスを待っている井戸端会議の時間が憂鬱</li>
+                                            <li>本当はエステにも行きたいし、ジムも行きたいし、美容院もこまめに行きたいけど、そんな時間も体力もお金もない</li>
+                                            <li>せめて妊娠前と同じ洋服が着たい</li>
+                                        </ul>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>お金をかけずに痩せる</li>
+                                            <li>毎日体を動かすことで、マインドも整う。</li>
+                                            <li>痩せることで着たい服も着れて、ストレッチにより気分も安定。劣等感からの解放。</li>
+                                            <li>子育てにも余裕が出る。</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>女性ならではの悩みを解決する骨盤ケア</li>
+                                            <li>激しい運動なしのダイエット術</li>
+                                            <li>毎日できるトレーニング</li>
+                                            <li>食べ方や痩せレシピの紹介（ストーリーズ）</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">しげちゃん</h2>
-                    
-                    <a href="https://www.instagram.com/shige_rihhys_weekend?utm_source=qr" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <p>定年や老後が見えてきて、「自分の人生、このままでいいのか」
-                           と焦りを感じている人、平日のストレスから解放され、週末に自分だけの時間を作ってのんびり癒されたい人
-                        </p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <p>自由な旅や秘密基地を作る楽しい時間を体験する</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <p>バイクや車で自由な旅をしたり、
-                            キャンプで秘密基地の時間を楽しんでいるところを魅せる。</p>
-                    </div>
-                </div>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">しげちゃん</h2>
+
+                                    <a href="https://www.instagram.com/shige_rihhys_weekend?utm_source=qr"
+                                        target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
+
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <p>定年や老後が見えてきて、「自分の人生、このままでいいのか」
+                                            と焦りを感じている人、平日のストレスから解放され、週末に自分だけの時間を作ってのんびり癒されたい人
+                                        </p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <p>自由な旅や秘密基地を作る楽しい時間を体験する</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <p>バイクや車で自由な旅をしたり、
+                                            キャンプで秘密基地の時間を楽しんでいるところを魅せる。</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">ありさ姐</h2>
-                    
-                    <a href="https://www.instagram.com/suisui_illust?igsh=YzV4ZHhjbTd4YTcz&igsi=YzV4ZHhjbTd4YTcz&utm_source=qr" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <ul class="concept-list">
-    <li>繊細で生きづらさを感じ、自分に自信が持てず、</li>
-</ul>
-<p>「変わりたい」と思いながらも心がついてこない30代女性</p>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>心が軽くなり、自分を責める時間が減る</li>
-    <li>「私だけじゃなかった」と安心できて、自分のペースで前を向ける</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">ありさ姐</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>繊細さんあるあるや心が軽くなる考え方</li>
-    <li>小さな習慣を通して「頭ではわかる」を「少しやってみよう」に変えるきっかけを届ける</li>
-</ul>
+                                    <a href="https://www.instagram.com/suisui_illust?igsh=YzV4ZHhjbTd4YTcz&igsi=YzV4ZHhjbTd4YTcz&utm_source=qr"
+                                        target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <ul class="concept-list">
+                                            <li>繊細で生きづらさを感じ、自分に自信が持てず、</li>
+                                        </ul>
+                                        <p>「変わりたい」と思いながらも心がついてこない30代女性</p>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>心が軽くなり、自分を責める時間が減る</li>
+                                            <li>「私だけじゃなかった」と安心できて、自分のペースで前を向ける</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>繊細さんあるあるや心が軽くなる考え方</li>
+                                            <li>小さな習慣を通して「頭ではわかる」を「少しやってみよう」に変えるきっかけを届ける</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">かれあ</h2>
-                     <a href="https://www.instagram.com/nonon_solodays/" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                </div>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">かれあ</h2>
+                                    <a href="https://www.instagram.com/nonon_solodays/" target="_blank"
+                                        rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
+
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">ともき</h2>
-                    
-                    <a href="https://www.instagram.com/tomo.s_family?igsh=cGUyNGl4bGFqYzZp&utm_source=qr" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <ul class="concept-list">
-    <li>毎日仕事や日常に追われ、子供と今の時間を無駄にしていると感じている共働き夫婦</li>
-    <li>何気ないことで子どもに怒ったり、子どもの誘いを断ったりして、後々後悔しほかの家族はどうしているのか知りたい家庭</li>
-</ul>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>実は生活の中でちょっとしたことが子供と過ごせる幸せな時間であったり、今しかない大切な時間であると気付ける</li>
-    <li>普通の生活を見せることで、特別なことをしなくても子どもと遊ぶだけでも十分なんだよと思わせる</li>
-    <li>夫婦時間やパパママそれぞれの時間の過ごし方も見せて、家族時間だけでなく大人だけの時間も大切にしていきたいと思わせる</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">ともき</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>子どもとの今しかない時間を大切にしていこうと思わせる</li>
-    <li>子どもとの時間を作るために夫婦で何をしたらいいかを１つの案として見せる</li>
-    <li>子育てに夢中になっている人に夫婦時間など少しのゆとりも大切なんだと気付かせる</li>
-</ul>
+                                    <a href="https://www.instagram.com/tomo.s_family?igsh=cGUyNGl4bGFqYzZp&utm_source=qr"
+                                        target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <ul class="concept-list">
+                                            <li>毎日仕事や日常に追われ、子供と今の時間を無駄にしていると感じている共働き夫婦</li>
+                                            <li>何気ないことで子どもに怒ったり、子どもの誘いを断ったりして、後々後悔しほかの家族はどうしているのか知りたい家庭</li>
+                                        </ul>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>実は生活の中でちょっとしたことが子供と過ごせる幸せな時間であったり、今しかない大切な時間であると気付ける</li>
+                                            <li>普通の生活を見せることで、特別なことをしなくても子どもと遊ぶだけでも十分なんだよと思わせる</li>
+                                            <li>夫婦時間やパパママそれぞれの時間の過ごし方も見せて、家族時間だけでなく大人だけの時間も大切にしていきたいと思わせる</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>子どもとの今しかない時間を大切にしていこうと思わせる</li>
+                                            <li>子どもとの時間を作るために夫婦で何をしたらいいかを１つの案として見せる</li>
+                                            <li>子育てに夢中になっている人に夫婦時間など少しのゆとりも大切なんだと気付かせる</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">ねこた</h2>
-                    
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <p>現在準備中です。後ほど追加されます。</p>
-                    </div>
-                </div>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">ねこた</h2>
+
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
+
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <p>現在準備中です。後ほど追加されます。</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">もあ</h2>
-                    
-                    <a href="https://www.instagram.com/moa_tripgram/" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <ul class="concept-list">
-    <li>同じような毎日にちょっと疑問を持ち始めている既婚アラフィフ女性</li>
-    <li>私の人生これでいいの？（良くない）と感じている</li>
-    <li>家族のために自分を犠牲にしている気がする</li>
-    <li>やりたいことができない→諦め続けた結果、やりたいことが分からなくなっている</li>
-    <li>もっと自由に生きたいと思っているが同時に自分を止めるブロックがある</li>
-    <li>友達と疎遠になっている、または予定が合わない</li>
-    <li>ひとり旅したいが人目が気になる（寂しい人と思われる）等の理由から躊躇している</li>
-    <li>行きたい場所はあるが、何かと理由をつけて行動に移せない</li>
-    <li>子どもが大きくなり、さぁこれから！と思っても、若い頃と違って体力がない（なんだかんだお金もかかる）</li>
-</ul>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>家族だけでなく自分のことも幸せにできる未来</li>
-    <li>妻が自立することで夫婦円満になる</li>
-    <li>「いつか」を「次の予定」に変えて叶えられる自分になる</li>
-    <li>これからの人生も楽しみになる</li>
-    <li>充実した毎日（週末）</li>
-    <li>旅行プランに迷わない未来</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">もあ</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>日帰りで行けるお出かけ旅の提案</li>
-    <li>ひとり旅の様子を見せる</li>
-    <li>躊躇や懸念点が多いことへの安心材料の提示</li>
-    <li>所要時間の提示</li>
-    <li>食事場所の提案</li>
-    <li>失敗談・夫婦のやり取り→ストーリーズで展開予定</li>
-</ul>
+                                    <a href="https://www.instagram.com/moa_tripgram/" target="_blank"
+                                        rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <ul class="concept-list">
+                                            <li>同じような毎日にちょっと疑問を持ち始めている既婚アラフィフ女性</li>
+                                            <li>私の人生これでいいの？（良くない）と感じている</li>
+                                            <li>家族のために自分を犠牲にしている気がする</li>
+                                            <li>やりたいことができない→諦め続けた結果、やりたいことが分からなくなっている</li>
+                                            <li>もっと自由に生きたいと思っているが同時に自分を止めるブロックがある</li>
+                                            <li>友達と疎遠になっている、または予定が合わない</li>
+                                            <li>ひとり旅したいが人目が気になる（寂しい人と思われる）等の理由から躊躇している</li>
+                                            <li>行きたい場所はあるが、何かと理由をつけて行動に移せない</li>
+                                            <li>子どもが大きくなり、さぁこれから！と思っても、若い頃と違って体力がない（なんだかんだお金もかかる）</li>
+                                        </ul>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>家族だけでなく自分のことも幸せにできる未来</li>
+                                            <li>妻が自立することで夫婦円満になる</li>
+                                            <li>「いつか」を「次の予定」に変えて叶えられる自分になる</li>
+                                            <li>これからの人生も楽しみになる</li>
+                                            <li>充実した毎日（週末）</li>
+                                            <li>旅行プランに迷わない未来</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>日帰りで行けるお出かけ旅の提案</li>
+                                            <li>ひとり旅の様子を見せる</li>
+                                            <li>躊躇や懸念点が多いことへの安心材料の提示</li>
+                                            <li>所要時間の提示</li>
+                                            <li>食事場所の提案</li>
+                                            <li>失敗談・夫婦のやり取り→ストーリーズで展開予定</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="carousel-slide ">
-                        <div class="profile-section">
 
-                <div class="profile-sidebar gs-item">
-                    <div class="profile-image-wrap">
-                        <div class="placeholder-img">画像未設定</div>
-                    </div>
-                    <h2 class="profile-name">ヒロ</h2>
-                    
-                    <a href="https://www.instagram.com/dopaniki1188/" target="_blank" rel="noopener noreferrer" class="instagram-btn mt-20">
-                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24" height="24">
-                        Instagramを見る
-                    </a>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
-                        <p class="concept-subtitle"><strong>-表面-</strong></p>
-<ul class="concept-list">
-    <li>子どもの「あそんで！」に「あとでね」と返し、動画に子守りを任せて、あとで胸が痛んだことのある親</li>
-    <li>忙しいわけじゃないのにスマホを見てしまい、「今のままでいいのか」とうっすら不安な人</li>
-</ul>
-<p class="concept-subtitle"><strong>-深層-</strong></p>
-<ul class="concept-list">
-    <li>子どもとの時間が有限だと頭ではわかっているのに動けず、そのギャップに一番自分で苛立っている人</li>
-    <li>「ダメな親かもしれない」と薄々気づきながら、認めるのが怖くて見ないふりをしている人</li>
-</ul>
+                        <div class="carousel-slide ">
+                            <div class="profile-section">
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
-                        <ul class="concept-list">
-    <li>「あとでね」を「今やろう」に変えられる自分になれる</li>
-    <li>お金や遠出がなくても、子どもとの特別な時間は今日から作れると気付ける</li>
-    <li>「わかっちゃいるけど動けない」自分でも変われると思える（変わっていく実例を見て、自分も一歩踏み出せる）</li>
-    <li>子どもとの残り時間を「後悔の種」ではなく「今日やる理由」に変えられる</li>
-</ul>
+                                <div class="profile-sidebar gs-item">
+                                    <div class="profile-image-wrap">
+                                        <div class="placeholder-img">画像未設定</div>
+                                    </div>
+                                    <h2 class="profile-name">ヒロ</h2>
 
-                    </div>
-                    
-                    <div class="concept-block gs-item">
-                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
-                        <ul class="concept-list">
-    <li>「第2子誕生までの期間で、娘とふたりでしたい100のこと」を片っ端から実行する過程をリアルタイムで公開（プロセスエコノミー）</li>
-    <li>実体験ベースの親子のグルメ・旅・遊び情報を、「今日マネできる」形で紹介</li>
-    <li>うまくいかなかった回や気まずさも隠さず見せて、「完璧な親じゃなくていい」と思わせる</li>
-    <li>スマホばかりだった父の変化の記録で、見る側の「自分もやらなきゃ」を引き出す（一番大事だけどムズイ！）</li>
-</ul>
+                                    <a href="https://www.instagram.com/dopaniki1188/" target="_blank"
+                                        rel="noopener noreferrer" class="instagram-btn mt-20">
+                                        <img src="assets/images/instagram-icon.svg" alt="Instagram" width="24"
+                                            height="24">
+                                        Instagramを見る
+                                    </a>
+                                </div>
 
-                    </div>
-                </div>
+                                <div class="profile-content">
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🎯</span> どんな悩みを持っている人に届けるのか</h3>
+                                        <p class="concept-subtitle"><strong>-表面-</strong></p>
+                                        <ul class="concept-list">
+                                            <li>子どもの「あそんで！」に「あとでね」と返し、動画に子守りを任せて、あとで胸が痛んだことのある親</li>
+                                            <li>忙しいわけじゃないのにスマホを見てしまい、「今のままでいいのか」とうっすら不安な人</li>
+                                        </ul>
+                                        <p class="concept-subtitle"><strong>-深層-</strong></p>
+                                        <ul class="concept-list">
+                                            <li>子どもとの時間が有限だと頭ではわかっているのに動けず、そのギャップに一番自分で苛立っている人</li>
+                                            <li>「ダメな親かもしれない」と薄々気づきながら、認めるのが怖くて見ないふりをしている人</li>
+                                        </ul>
 
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">🚀</span> どんな未来に連れていくのか</h3>
+                                        <ul class="concept-list">
+                                            <li>「あとでね」を「今やろう」に変えられる自分になれる</li>
+                                            <li>お金や遠出がなくても、子どもとの特別な時間は今日から作れると気付ける</li>
+                                            <li>「わかっちゃいるけど動けない」自分でも変われると思える（変わっていく実例を見て、自分も一歩踏み出せる）</li>
+                                            <li>子どもとの残り時間を「後悔の種」ではなく「今日やる理由」に変えられる</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="concept-block gs-item">
+                                        <h3><span class="icon">💡</span> どんな解決策を提示するのか</h3>
+                                        <ul class="concept-list">
+                                            <li>「第2子誕生までの期間で、娘とふたりでしたい100のこと」を片っ端から実行する過程をリアルタイムで公開（プロセスエコノミー）</li>
+                                            <li>実体験ベースの親子のグルメ・旅・遊び情報を、「今日マネできる」形で紹介</li>
+                                            <li>うまくいかなかった回や気まずさも隠さず見せて、「完璧な親じゃなくていい」と思わせる</li>
+                                            <li>スマホばかりだった父の変化の記録で、見る側の「自分もやらなきゃ」を引き出す（一番大事だけどムズイ！）</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-    
+
                     </div>
                 </div>
-                
+
                 <button class="carousel-nav next-btn" aria-label="次のメンバー">
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
                 </button>
             </div>
         </div>
     </main>
 
-    <!-- GSAP & ScrollTrigger Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    
+    <!-- Custom JS -->
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+
+
 
 </body>
+
 </html>
