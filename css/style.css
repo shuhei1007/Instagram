@@ -1264,3 +1264,37 @@ ul {
     white-space: nowrap !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* 9. Members Carousel Fix (members.html) */
+  .members-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+  }
+  .member-thumbnails {
+    flex-wrap: wrap !important;
+  }
+  .carousel-container {
+    position: relative !important;
+    padding-bottom: 70px !important; /* Make room for buttons at the bottom */
+    gap: 0 !important;
+  }
+  .carousel-track-container {
+    width: 100% !important;
+  }
+  .carousel-nav {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .carousel-nav.prev-btn {
+    left: calc(50% - 55px) !important;
+  }
+  .carousel-nav.next-btn {
+    right: calc(50% - 55px) !important;
+  }
+
+}
