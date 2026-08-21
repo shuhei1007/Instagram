@@ -1,0 +1,18 @@
+/* links.html 固有のスタイル */
+
+/* ページ説明文 */
+.links-description {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* アイコンの色バリエーション */
+.icon-blue {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.icon-purple {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
