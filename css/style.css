@@ -1205,11 +1205,121 @@ ul {
   margin: 30px 0;
 }
 
+.highlight-box h3,
 .highlight-box h4 {
   margin-top: 0;
   color: #2c4c3b;
   margin-bottom: 10px;
   font-size: 1.1rem;
+}
+
+.highlight-box--key {
+  background: #edf3ef;
+  border-color: #a8c4b4;
+  border-left: 4px solid #36564a;
+}
+
+.highlight-box--key h3,
+.highlight-box--key h4 {
+  color: #36564a;
+}
+
+.highlight-box--ng {
+  background: #fff5f5;
+  border-color: #f5c2c2;
+  border-left: 4px solid #c0392b;
+}
+
+.highlight-box--ng h3,
+.highlight-box--ng h4 {
+  color: #a93226;
+}
+
+.highlight-box--ok {
+  background: #f0f7ff;
+  border-color: #b8d4f0;
+  border-left: 4px solid #1d6fb8;
+}
+
+.highlight-box--ok h3,
+.highlight-box--ok h4 {
+  color: #1a5f9e;
+}
+
+.highlight-box--homework {
+  background: #fff8eb;
+  border-color: #f0d9a8;
+  border-left: 4px solid #c47b1a;
+}
+
+.highlight-box--homework h3,
+.highlight-box--homework h4 {
+  color: #9a5b0a;
+}
+
+.story-steps {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  counter-reset: story-step;
+}
+
+.story-steps li {
+  counter-increment: story-step;
+  position: relative;
+  padding: 14px 14px 14px 52px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #d6e4f5;
+  border-radius: 10px;
+  color: #1e3a5f;
+}
+
+.story-steps li::before {
+  content: counter(story-step);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1d6fb8;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.story-steps strong {
+  color: #0f3d6e;
+}
+
+.callout-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.callout-label--ng {
+  background: #fde2e2;
+  color: #a93226;
+}
+
+.callout-label--ok {
+  background: #d6eafc;
+  color: #1a5f9e;
+}
+
+.callout-label--task {
+  background: #fce8c7;
+  color: #9a5b0a;
 }
 
 @media (max-width: 768px) {
