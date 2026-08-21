@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEP10: 2投稿目に挑戦しよう（字幕・アフレコ・完成） | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev { margin-right: auto; }
+        .nav-next { margin-left: auto; }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>STEP10: 2投稿目に挑戦しよう（字幕・アフレコ・完成）</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回は、台本を入れるところから動画を最終調整し、2本目のリール完成までを目標にしましょう！</p>
+                    <p>より効率的にリールを作成していくためのコツをお伝えしていきますので、ここを抑えて、より短時間でリールを作成できるようになっていただけたら嬉しいです！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 8️⃣ 動画に台本を入れよう</h2>
+                    <p>前回と同様に、編集ができた動画に台本を字幕として入れていきます。</p>
+
+                    <h4 style="margin-top: 20px;">【注意すべきポイント】</h4>
+                    <ul>
+                        <li><strong>① 字幕は1つの場所に表示する</strong><br>
+                        見ている人の目線がキョロキョロ動いてしまうと、それがストレスになってしまいます。基本的には常に1つの場所に、紙芝居のように表示させるのが好ましいです。</li>
+                        <li style="margin-top: 10px;"><strong>② 字幕を表示している時間に気をつける</strong><br>
+                        リールなどのショート動画を見ている人は「あなたの動画が見たい！」と思いながら見ているわけではありません。長すぎれば「つまらない」と感じ、短すぎれば「何が言いたいのか理解できず」次の動画にとばしてしまいます。</li>
+                    </ul>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【適切な字幕の長さ】</p>
+                        <p style="margin-bottom: 0;">文章を表示するちょうど良い長さは、「人が話すスピードの1.5倍くらい」が読みやすくテンポも良い表示時間になります。「アフレコ」を入れる場合は、人がちょっと早口に読み上げる速度くらいで表示できるとちょうど良い長さになります。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">より効率的に台本を入力する方法</h3>
+                    <p>より効率的に台本を入力する方法も2つご紹介します。</p>
+
+                    <h4 style="margin-top: 15px;">① スマホのメモ帳を活用する</h4>
+                    <p>スマホで編集している場合は、作成した台本をスマホのメモ帳に入力して、それをコピー＆ペーストで入力しましょう。これにより、編集アプリVLLO内でわざわざ台本をフリック入力する手間が省けます。</p>
+
+                    <h4 style="margin-top: 15px;">② 文字のサイズ・フォントを決めておく</h4>
+                    <p>文字の見やすさを意識するあまり、サイズや文字の背景色、文字色やフォントを毎動画変更することはあまりおすすめできません。1回決めたら、全ての動画で同じ「文字色・フォント」で作成することが、より効率よく動画を作成するために重要です。</p>
+                    
+                    <p style="margin-top: 15px;">ある程度、自分の動画の型が決まったら、その通りに作成していきましょう。数秒の効率化にはなるのですが、このような細かい積み重ねが「苦労」「大変さ」につながっていきます。</p>
+
+                    <div style="font-size: 1.1rem; font-weight: bold; text-align: center; margin: 20px 0; padding: 15px; background-color: #fef3c7; border-radius: 4px;">
+                        💡 継続し続けられるように、効率よく作成する！ということも忘れずに行っていきましょう。
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 9️⃣ 動画にアフレコを入れよう</h2>
+                    <p>アフレコを入れなくてもリールで数百万再生いっている人もたくさんいます。ただ、その後のマネタイズや自分にファンをつけるためにも、自分の音声を動画に入れる「アフレコ」はおすすめです。</p>
+                    <p>このアフレコは、VLLOなどの音声アプリの機能で簡単に入れられます！アプリ画面左下の「音声の録音」をタップしましょう。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【アフレコの効率化のコツ】</p>
+                        <p style="margin-bottom: 0;">アフレコを効率的に入れるために注意すべきなのが、<strong>完璧な音声を入れようとしないこと</strong>です。慣れていないと、かんでしまったり想像よりもゆっくり話してしまったりするかもしれません。しかし、後からカットや速度調節などで簡単に編集は可能です。<br>
+                        編集できることを前提に、アフレコを入れていきましょう。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 🔟 フィルターで微調節しよう</h2>
+                    <p>最後に全体にフィルターをかけます。VLLOの場合「フィルター」からつけたいフィルターを選択します。</p>
+                    <p>このとき、場面ごとにフィルターを分けたりしなくても良いです。1つのフィルターを最初から最後までかけるくらいで問題ないので、ここはサクッと終わらせましょう！！</p>
+                </section>
+                
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 サムネイルを作成しよう</h2>
+                    <p>アカウント設計編の後半で作成した世界観に従って、タイトルだけ差し替えてサムネイルを完成させましょう！</p>
+                    <p>もし、ここまで作成を進めていく中で作りたい世界観が変わってきた場合は、10種類のサムネイルテンプレートを見返して、組み合わせて自分風のサムネイルを作成してみましょう。</p>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="reels-step9.html" class="nav-prev">← 前へ：STEP9 撮影・編集の効率化</a>
+                    <a href="reels-step11.html" class="nav-next">次へ：STEP11 模写リールの作り方 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウント開設と初期設定 | Instagram Circle Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1787214249096">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev {
+            margin-right: auto;
+        }
+        .nav-next {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="knowledge.html" class="back-link" style="margin-bottom: 0;">← ノウハウ一覧に戻る</a>
+                <a href="account-design.html" class="back-link">← アカウント設計の基礎に戻る</a>
+            </div>
+
+            <header class="article-header" style="margin-top: 20px;">
+                <h1>アカウント開設と初期設定</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11 アカウント開設と初期設定</h2>
+                    <p>アカウント設計とプロフィール作成が完了したら、実際にアカウントを開設して投稿の準備を進めていきます。適当に設定してしまうと、アカウントの乗っ取りや凍結、データ分析ができないといった事態に繋がるため、正しく設定を行いましょう。</p>
+                    <p style="font-size: 0.9em; color: #64748b;">※ すでにアカウントを作成済みで、プロアカウントへの切り替えや二段階認証ができている方は、この項目は飛ばしてもOKです。</p>
+
+                    <div class="highlight-box">
+                        <h3 style="margin-top: 0;">1. アカウント開設の5ステップ</h3>
+
+                        <h4 style="margin-top: 20px;">① Instagramアプリのインストール</h4>
+                        <p>iPhoneならApp Store、AndroidならGoogle Playで「インスタ」と検索し、Instagramのアプリをダウンロードします。</p>
+
+                        <h4 style="margin-top: 20px;">② 電話番号/メールアドレスを使って登録</h4>
+                        <ol>
+                            <li>「新しいアカウントを作成」をタップ</li>
+                            <li>電話番号またはメールアドレスを入力</li>
+                            <li>パスワードを作成（セキュリティ強化のため6文字以上で英字・数字を混ぜる。記号はNG）</li>
+                            <li>生年月日を入力（未成年保護・年齢確認のため。公開はされません）</li>
+                            <li>名前・ユーザーネームを作成（アカウント設計で決めたものを入力）</li>
+                        </ol>
+                        <p>オススメは『電話番号』での登録です（アカウント凍結リスクを下げられると言われています）。また、『Facebookアカウント』での登録は、投稿がFacebookに自動で流れたり繋がっている人に通知される可能性があるため、基本は「新しいアカウントを作成」から手動で進めるのがオススメです。</p>
+
+                        <h4 style="margin-top: 20px;">③ プロフィール写真を追加・設定</h4>
+                        <p>連絡先や位置情報などのデバイスによるアクセス許可画面は、一旦スキップでOKです。プロフィールのカメラマークをタップし、スマホの写真フォルダから画像を選択します。「この写真を投稿としてシェア」が出た場合はOFFにして『次へ』を進めます。フォロー候補も今はスキップで構いません。</p>
+
+                        <h4 style="margin-top: 20px;">④ 各プロフィール情報を入力</h4>
+                        <p>名前、ユーザーネーム、自己紹介（プロフィール文章）、リンクなどを編集画面で入力します。</p>
+
+                        <h4 style="margin-top: 20px;">⑤ プロアカウントに切り替える</h4>
+                        <p>プロアカウントを設定すると、インサイト（リーチ数やフォロワー数の推移などのデータ分析）を見ることができます。</p>
+                        <ul>
+                            <li>設定画面から『プロアカウントに切り替える』を選択し、当てはまるカテゴリを選びます（『プロフィールに表示』はOFF推奨）。</li>
+                            <li>個人用の「クリエイター」か、店舗・法人用の「ビジネス」を選択します。</li>
+                            <li>「プロフェッショナルダッシュボード」が表示されれば切り替え成功です。</li>
+                        </ul>
+                        <p style="font-size: 0.9em; color: #64748b;">※ フォロワーの属性データ（年齢・性別・地域など）は、フォロワーが100人以上になると見ることができます。</p>
+
+                        <h3 style="margin-top: 30px;">2. セキュリティとジャンル認知</h3>
+
+                        <h4 style="margin-top: 20px;">二段階認証（セキュリティ）</h4>
+                        <p>アカウント乗っ取りを防ぐため、『二段階認証』は必ず設定しておきましょう。ログイン時にIDとパスワードに加え、スマホに送られるログインコードを入力する仕組みです。</p>
+                        <p>【設定手順】右上メニュー三 ＞ アカウントセンター ＞ パスワードとセキュリティ ＞ 二段階認証</p>
+                        <p>※ スマホ紛失時に備え、バックアップコードはPCやクラウドに保存しておきましょう。</p>
+
+                        <h4 style="margin-top: 20px;">ジャンル認知について</h4>
+                        <p>アカウント作りたての時は、Instagram側はあなたの発信ジャンルを理解していません。自分のジャンルを認知してもらうことで、『発見欄』に投稿が載りやすくなります。</p>
+                        <p>【認知の確認方法】別のアカウントから自分のアカウントを見る ＞ メッセージ横の「人型＋マーク」をタップ ＞ おすすめ（関連アカウント）を確認。ここに同ジャンルの発信者が表示されていれば、正しくジャンル認知されています。</p>
+
+                        <h3 style="margin-top: 30px;">3. キャプションの作り方</h3>
+                        <p>キャプションとは投稿の下にある文章のことです。投稿を見てプロフィールに飛んでくれるような濃いファンは、キャプションまでしっかり読んでくれます。情報を整理して伝えましょう。</p>
+                        
+                        <div style="background-color: #f8fafc; padding: 15px; margin-top: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0; font-weight: bold;">▼ 基本の書き方（PREP法）</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>① 結論（Point）</li>
+                                <li>② 理由（Reason）</li>
+                                <li>③ 具体例（Example）</li>
+                                <li>④ 結論・想い（Point）</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">キャプションに入れるべき6つの項目</h4>
+                        <ol>
+                            <li><strong>プロフィールの訴求「ユーザー名＋一言」：</strong>「__syake_minim ← 少ないお金で満足できる暮らしを覗く」のように、ターゲットの興味を惹く一言を添えます。</li>
+                            <li style="margin-top: 10px;"><strong>投稿の補足情報：</strong>投稿を作った背景や想い、投稿の要約、有益情報などを記載し、満足度を上げます。</li>
+                            <li style="margin-top: 10px;"><strong>コメント・DMの訴求：</strong>「DMでお悩み受付中」など、ユーザーにアクションを促します。</li>
+                            <li style="margin-top: 10px;"><strong>アカウントコンセプト：</strong>「このアカウントはあなたのためのアカウントですよ」と改めて伝えます。</li>
+                            <li style="margin-top: 10px;"><strong>ジャンル認知させるワード：</strong>導入・本文・締めなどに、発信ジャンルに関連するキーワードを自然に散りばめます。</li>
+                            <li style="margin-top: 10px;"><strong>発信ジャンルに合うハッシュタグ：</strong>ジャンル認知とリーチ増加のため、投稿内容に直接関係するタグを最大5個まで厳選して付けます。</li>
+                        </ol>
+
+                        <h3 style="margin-top: 30px;">4. アカウント開設後に覚えておきたいこと</h3>
+
+                        <h4 style="margin-top: 20px;">① 万垢（1万フォロワー以上のアカウント）をフォローする</h4>
+                        <p>自分の発信ジャンルの先を行く万垢を5〜10人ほどフォローします。これにより、Instagram側に「このジャンルのアカウントだ」と認識させやすくなります。</p>
+
+                        <h4 style="margin-top: 20px;">② 投稿の仕方と時間の固定</h4>
+                        <p>作成した動画（リール）をアプリから投稿します。音源（BGM）を選び、アフレコの声が聞こえるようにBGMの音量を調整し、サムネイルのカバーを設定して、キャプションを入力します。</p>
+                        <p>投稿する時間はできるだけ固定しましょう。ターゲット層が見やすい時間帯（一般的には20時〜21時）を狙い、予約投稿機能を活用するのがオススメです。</p>
+
+                        <h4 style="margin-top: 20px;">③ いいね周りについて</h4>
+                        <p>「いいね周り」は本質的な作業ではないため、しなくても問題ありません。フォロワーが100人未満でジャンル認知ができていない時期に、同ジャンルの万垢のフォロワー（アクティブなユーザー）に対して1日10〜20件程度行うくらいで十分です。基本はコンテンツ（リール）作成に一番時間を割きましょう。</p>
+                    </div>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="account-profile.html" class="nav-prev">← 前へ：世界観・プロフィール設計</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>

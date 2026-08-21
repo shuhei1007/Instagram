@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLLO完全解説 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .qa-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .qa-q {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        .qa-a {
+            margin-bottom: 0;
+            color: #334155;
+        }
+        .time-badge {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #475569;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>特別編：VLLO完全解説</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回は動画編集アプリ『VLLO』の使い方を完全解説していきます。「インフルエンサーのこの編集ってどうやってやるんだろう？」も全て解決できます。</p>
+                    <p>VLLOはパソコンの編集ソフトと同じくらい、動画編集に必要な機能が揃っています。このアプリがあれば、</p>
+                    <ul>
+                        <li>・商業利用可能なので、発信を考慮した動画の作成も可能</li>
+                        <li>・100万再生のバズリールを作れる</li>
+                        <li>・売上7桁も十分に目指せる</li>
+                    </ul>
+                    <p>今日の内容を見れば、難しいと感じていたVLLOがサクサク使えて、バズリールを作るのが楽しくなります。</p>
+                    <div style="background-color: #fef3c7; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin: 0; font-weight: bold;">💡 進め方</p>
+                        <p style="margin: 0;">この講座はVLLOの編集項目別に動画を止めて実際に見ていきます。スマホとVLLOを用意して視聴しましょう。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 プロジェクトの作成</h2>
+                    <p>まずはプロジェクトの作成から。VLLOのアプリを立ち上げ、『新しい動画』をタップします。『メディア選択』をタップすると、左から『最近の項目』『ブロ・ストック』『プロジェクト』の順で並んだ画面になります。</p>
+
+                    <h3 style="margin-top: 20px;">最近の項目 <span class="time-badge">2:06〜</span></h3>
+                    <p>自分のスマホに最近追加した動画や画像が表示されます。Instagramでリール投稿する場合は、撮影した素材を台本通りに選択していきます。</p>
+
+                    <h3 style="margin-top: 20px;">ブロ・ストック <span class="time-badge">2:29〜</span></h3>
+                    <p>VLLOにすでにある素材を活用できます。通常の素材と併用することで、編集の幅を広げられます。『ブロ・ストック』の項目は次の通りです。</p>
+                    <ul>
+                        <li>・イントロ</li>
+                        <li>・アウトロ</li>
+                        <li>・バックグラウンド など</li>
+                    </ul>
+                    <p>『イントロ』では動画の始まり、『カウントダウン』であれば結婚式の素材などに活用できます。</p>
+
+                    <h3 style="margin-top: 20px;">プロジェクト <span class="time-badge">3:22〜</span></h3>
+                    <p>今まで作ったプロジェクト（VLLOで編集した動画）を選択できます。基本的に触るところは『最近の項目』です。『最近の項目』から初級編で作った台本通りに素材を選択しましょう。</p>
+
+                    <h3 style="margin-top: 30px;">次に3つの設定をします。</h3>
+                    
+                    <h4 style="margin-top: 15px;">① プロジェクトタイトルを決める <span class="time-badge">4:02〜</span></h4>
+                    <p>編集する動画のタイトルを決めます。投稿タイトル・投稿する日付など、自分が探しやすいようにタイトルを付けておきましょう。</p>
+
+                    <h4 style="margin-top: 15px;">② 画面比率を決定 <span class="time-badge">4:39〜</span></h4>
+                    <p>画面比率は画面の縦と横の比率を表します。リール投稿（1080×1920px）で動画を作る場合は「9:16」を選択します。</p>
+
+                    <h4 style="margin-top: 15px;">③ 動画配置を決める <span class="time-badge">4:54〜</span></h4>
+                    <p>動画配置は3種類あります。</p>
+                    <ul>
+                        <li><strong>差し込む</strong>：縦を見切れずに配置でき、画像全体を見られます。動画全体を見せたいときに使います。</li>
+                        <li><strong>埋める</strong>：横がぴったり配置でき、余白をなくせます。動画に余白を入れたくないときに使います。</li>
+                        <li><strong>中央</strong>：画面の中央に配置し、上下左右に余白を作ります。画面の周りにエフェクトを入れる場合に活用します。</li>
+                    </ul>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #94a3b8; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【整理】Instagramのリール投稿を作る場合の設定</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>・プロジェクトの名前を付ける（投稿タイトル・投稿する日付など）</li>
+                            <li>・画面比率…9:16</li>
+                            <li>・動画配置…差し込むか埋める</li>
+                        </ul>
+                        <p style="margin-bottom: 0; margin-top: 10px; font-size: 0.9rem;">※間違えて選択した場合でも上部をタップすれば変更可能</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">プロジェクトの各名称の紹介 <span class="time-badge">6:13〜</span></h3>
+                    <p>画面上部にはインポートした動画素材が表示され、その下は「タイムライン」です。タイムライン上で2本指で広げたり（ピンチアウト）狭めたり（ピンチイン）することで、直感的に拡大縮小できます。</p>
+                    <p>真ん中にある赤い線が編集点です。タイムラインでスワイプすると動画素材が動き、動いた先では「今の時間（フレーム）｜全体の時間」がわかります。</p>
+                    
+                    <h4 style="margin-top: 15px;">フレームレートについて</h4>
+                    <p>基本的には1秒間30枚の静止画で構成されています。「抽出する」をタップすると、フレームレートの変更ができます。</p>
+                    <ul>
+                        <li>・数字が大きいほどきれいでなめらかだが、動画の容量は大きい</li>
+                        <li>・数字が小さいほどカクカクするが、動画の容量は小さい</li>
+                    </ul>
+                    <p>人間の目は30fps程度の映像を見ていると言われているので、基本はそのままの設定でOKです。中級講座のカメラ設定で60fpsにしている場合は、こちらも合わせて60fpsにしてみてください。</p>
+
+                    <h4 style="margin-top: 15px;">基本操作アイコン</h4>
+                    <p>「メディア」をタップすると素材を追加できます。また、素材を選択した状態だと3つの機能があります。</p>
+                    <ul>
+                        <li><strong>再生ボタン <span class="time-badge">8:50〜</span></strong>：動画を再生して、流れを見ることができます。</li>
+                        <li><strong>コマ送り <span class="time-badge">9:01〜</span></strong>：│▶で1コマ送り、◀│で1コマ戻しができます。細かい調整をしたい場合にご利用ください。▶│で編集点を次の素材の先頭まで、│◀で前の素材の先頭まで飛ばせます。</li>
+                        <li><strong>作業の取り消し・再実行 <span class="time-badge">9:47〜</span></strong>：右上の戻る矢印をタップすることで取り消し・再実行ができます。</li>
+                    </ul>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">💡 補足</p>
+                        <p style="margin-bottom: 10px; font-size: 0.95rem;">※今回はiPhoneのVLLOアプリで解説します。Androidの方とは少し違う項目が出ることがありますが、重要な項目はどちらにもあるので気にせず進めてください。</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;">※有料版では作業効率がグッと上がります（表示されている素材編集の項目が使える／広告が表示されなくなる）。Instagramを頑張っている方にはオススメです。料金は「買い切り」「サブスク（月額・年額）」の2種類があり、価格は改定されることが多いため最新はApp Store／Google Playでご確認ください。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 素材に対しての編集</h2>
+                    <p>次は素材を選択しているときに出てくる編集項目を見ていきます。項目が多いので、「絶対に使う機能」「よく使う機能」「時々使う機能」の3つに分類して紹介します。</p>
+
+                    <h3 style="margin-top: 30px; color: #dc2626;">✅ 絶対に使う機能4選</h3>
+                    
+                    <h4 style="margin-top: 15px;">① 分割・素材の移動 <span class="time-badge">12:35〜</span></h4>
+                    <p>分割は、動画内の不要な部分をカットして飽きさせないために重要な項目です。ピンチイン・ピンチアウトで見やすさを調整してから作業に移りましょう。分割した動画・素材は並び替えできます。</p>
+                    <p><strong>⑴ 長押しして移動させる</strong><br>移動させたい素材を長押しでつかみ、そのまま指を動かすことで並び替えができます。</p>
+                    <p><strong>⑵ 移動項目を活用する</strong><br>素材を選択すると以下の効果があります。</p>
+                    <ul>
+                        <li>・「最初に」をタップ → 選択した素材が先頭に移動</li>
+                        <li>・「最後に」をタップ → 選択した素材が最後尾に移動</li>
+                        <li>・「移動（左へ）」をタップ → 選択した素材が1つ左に移動</li>
+                        <li>・「移動（右へ）」をタップ → 選択した素材が1つ右に移動</li>
+                    </ul>
+
+                    <h4 style="margin-top: 15px;">② ミュート <span class="time-badge">16:32〜</span></h4>
+                    <p>選択した動画素材の音を消します。すべての素材を同時にミュートしたい場合は「音量」の項目を使いましょう。<br>
+                    <strong>音量</strong>：選択した動画素材の音量を調整できます。メーターを動かして音量を調整し、リセットをタップすると元に戻ります。</p>
+
+                    <h4 style="margin-top: 15px;">③ 倍速 <span class="time-badge">18:30〜</span></h4>
+                    <p>選択した素材の速度調整ができ、動画や音声のテンポを速めたいときに使います。倍速にすると音程が変わるので、音程を変えたくない場合はメーターの右にある『音程維持』を選択しましょう。</p>
+
+                    <h4 style="margin-top: 15px;">④ 複製 <span class="time-badge">19:35〜</span></h4>
+                    <p>選択した素材を複製することができます。</p>
+
+
+                    <h3 style="margin-top: 30px; color: #0ea5e9;">✅ よく使う機能6選</h3>
+                    
+                    <h4 style="margin-top: 15px;">① 変形 <span class="time-badge">21:56〜</span></h4>
+                    <p>素材のサイズ変更や移動ができます。</p>
+                    <ul>
+                        <li>・位置：素材の位置を変更</li>
+                        <li>・サイズ：素材の大きさを変更</li>
+                        <li>・回転：素材を回転</li>
+                        <li>・反転：素材を上下左右に反転</li>
+                        <li>・切り抜き：素材自体を切り抜く</li>
+                    </ul>
+
+                    <h4 style="margin-top: 15px;">② キーフレーム <span class="time-badge">25:35〜</span></h4>
+                    <p>映像再生中に変化を入れたいときに利用します。変化をゆっくりさせたい場合はキーフレームの間隔を広げて範囲を小さく、急にしたい場合は間隔を狭めて調整します。</p>
+
+                    <h4 style="margin-top: 15px;">③ フリーズ <span class="time-badge">27:30〜</span></h4>
+                    <p>現在選択している部分の素材を切り抜いた静止画を抽出できます。抽出後は『複製』『PIPに複製』『交替』が選択できます。</p>
+
+                    <h4 style="margin-top: 15px;">④【一部有料】アニメーション <span class="time-badge">29:45〜</span></h4>
+                    <p>選択した動画素材に動きを付けられます。素材の切り替わりタイミングで動きを付け、視聴者を飽きさせないために利用します。</p>
+
+                    <h4 style="margin-top: 15px;">⑤ ブラー <span class="time-badge">31:35〜</span></h4>
+                    <p>ブラーは、モザイクのようなものです。センシティブな映像や見せたくない部分を隠すときに使います。</p>
+                    <ul>
+                        <li>・ブラー：ピントが合っていない状態</li>
+                        <li>・モザイク：四角形に区切って同じ色で塗りつぶした状態</li>
+                    </ul>
+
+                    <h4 style="margin-top: 15px;">⑥ 逆方向 <span class="time-badge">33:46〜</span></h4>
+                    <p>選択した動画素材を逆再生するときに使います。視聴者に刺激を与えて動画に集中させたいときに活用。</p>
+
+
+                    <h3 style="margin-top: 30px; color: #8b5cf6;">✅ 時々使う機能14選</h3>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px;">
+                        <ul style="margin-bottom: 0;">
+                            <li>① レイアウト：素材のレイアウトを変更。フレームのような装飾に。</li>
+                            <li>② バックグラウンド：素材の背景色を入れられる。</li>
+                            <li>③ フェード：音声に少しずつ音量変化をつけられる。</li>
+                            <li>④ オーディオ効果：素材の音声を加工。</li>
+                            <li>⑤ エコー＆リバーブ：オーディオ効果と同様に音声を加工。</li>
+                            <li>⑥【有料】オーディオ分離：選択した素材の音声だけを別で抽出。</li>
+                            <li>⑦ 無音区間を削除：無音部分を一括でカット。</li>
+                            <li>⑧ 自動キャプション：音声が入っている素材に自動で文字起こし。</li>
+                            <li>⑨【一部有料】特殊効果：動画素材全体の映像を加工。</li>
+                            <li>⑩ 不透明度：動画素材の透明度を調整。</li>
+                            <li>⑪ 背景消し：AIが人物を検知して背景を消せる。</li>
+                            <li>⑫ クロマキー合成：特定の色を削除して合成できる。</li>
+                            <li>⑬【有料】PIPに複製：素材をPIP素材として複製。</li>
+                            <li>⑭ 交替：素材を別の素材に差し替える。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 オーディオ</h2>
+                    <p>オーディオでは、BGMや効果音を追加することができます。</p>
+
+                    <h4 style="margin-top: 15px; color: #dc2626;">✅ 絶対に使える機能</h4>
+                    <p><strong>① 音声の録音 <span class="time-badge">52:08〜</span></strong><br>アフレコを入れることができます。コツは、スマホを電話のときのように持って話すこと。</p>
+                    <p><strong>② BGM <span class="time-badge">52:38〜</span></strong><br>VLLOが提供しているBGMを使用できます。（※リール投稿ではInstagram上の音源を使うことが多いです）</p>
+                    
+                    <div class="qa-box">
+                        <p class="qa-q">FAQ：AndroidではInstagramで録音したBGMが挿入できません</p>
+                        <p class="qa-a">Androidでは画面録画データが音声データとして認識されない事例があります。この場合は「PIP」の動画として画面録画ごとインポートすれば解消できます。</p>
+                    </div>
+
+                    <h4 style="margin-top: 15px; color: #0ea5e9;">✅ よく使う機能</h4>
+                    <p><strong>③ 効果音 <span class="time-badge">54:30〜</span></strong><br>動画に効果音を追加できます。VLLO上に欲しい効果音がない場合は、外部サイトからインポートして使用できます。</p>
+                    <ul>
+                        <li>・<a href="https://soundeffect-lab.info/" target="_blank" rel="noopener">効果音ラボ</a>：種類が豊富で国内最大級</li>
+                        <li>・<a href="https://maou.audio/" target="_blank" rel="noopener">魔王魂</a>：ゲーム用の効果音が多い</li>
+                    </ul>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 グラフィック / ▍06 テキスト</h2>
+                    
+                    <h3 style="margin-top: 20px;">グラフィック</h3>
+                    <p><strong>✅ よく使う機能</strong></p>
+                    <ul>
+                        <li>①【一部有料】テンプレート：動画全体にエフェクトをかけられる。</li>
+                        <li>② 描画＆図形：動画内に線を書いたり図形を挿入。</li>
+                    </ul>
+                    <p><strong>✅ 時々使う機能</strong></p>
+                    <ul>
+                        <li>③【一部有料】フレーム：外側にフレームを足せる。</li>
+                        <li>④【一部有料】ステッカー：アニメーションのようなスタンプ（GIPHY、VLLO内蔵）。</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">テキスト</h3>
+                    <p><strong>✅ 絶対に使える機能</strong></p>
+                    <p><strong>① テキスト <span class="time-badge">1:04:22〜</span></strong><br>動画内に文字を入れられます。テキストは縁取りなどのエフェクトを付けて、背景と境界線を付けることが重要です。<br>
+                    配置したテキストは素材として選択して、文字色や背景色を設定できます。（編集、デザイン、フォント、フォントサイズ、書式）</p>
+
+                    <p><strong>✅ 時々使う機能</strong></p>
+                    <ul>
+                        <li>② ラベル：吹き出しやロゴの中にテキストを入れる。</li>
+                        <li>③ 字幕：テレビのような字幕を表現できる。</li>
+                        <li>④ 自動キャプション：自動で文字を入れる機能。</li>
+                    </ul>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07 PIP / ▍08 効果 / ▍09 抽出する</h2>
+                    
+                    <h3 style="margin-top: 20px;">PIP（ピクチャーインピクチャー）</h3>
+                    <p>動画の中に画像・GIF・動画を重ねて表示できます。説明、アイコン、自分を動画で表示させるようなシーンで使います。（※動画のPIPは有料機能です）</p>
+
+                    <h3 style="margin-top: 20px;">効果</h3>
+                    <p><strong>①【一部有料】フィルター <span class="time-badge">1:17:34〜</span></strong><br>画像や動画全体の色味や明るさを変化させられます。（旅行、Film、Pure、朝、ブランチ など）</p>
+                    <p><strong>② 顔ゆがみ（モザイク） <span class="time-badge">1:21:00〜</span></strong><br>素材の一部を変化させられます。個人情報や顔を映したくない部分に活用します。</p>
+
+                    <h3 style="margin-top: 30px;">抽出する（最終チェック）</h3>
+                    <p>抽出前に最終チェックをしましょう。このチェックで動画の質が断然変わります。</p>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-bottom: 15px;">
+                        <ul style="margin-bottom: 0;">
+                            <li>・文字サイズと配置は良いか</li>
+                            <li>・表示時間が適切か</li>
+                            <li>・変な箇所がないか</li>
+                            <li>・音量が正しいか</li>
+                            <li>・アフレコに違和感はないか</li>
+                            <li>・全体を見て飽きないか</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="margin-top: 20px;">抽出の設定</h4>
+                    <ul>
+                        <li><strong>解像度</strong>：Instagramのリール投稿なら「フルHD」を選択。</li>
+                        <li><strong>フレームレート</strong>：基本は「30fps」でOK。</li>
+                        <li><strong>ビデオコーデック（iPhone）</strong>：基本は「H265」でOK。</li>
+                    </ul>
+                    <p>抽出した動画はInstagramのリール画面で最終確認しましょう。違和感がなければ、Instagramの音源を入れて投稿していきます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10 おわりに</h2>
+                    <p>今日は動画を見ながら一緒に編集を一通り体験していただいたので、宿題はありません。</p>
+                    <p>「ここの項目だけまた確認したい！」そんなときは、各項目のタイムスタンプを参考に見返してくださいね。</p>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="reels-guide.html" class="nav-prev">← 前へ：リール投稿の基本に戻る</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>

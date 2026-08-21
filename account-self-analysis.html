@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己分析 | Instagram Circle Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=1787214249096">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev {
+            margin-right: auto;
+        }
+        .nav-next {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="knowledge.html" class="back-link" style="margin-bottom: 0;">← ノウハウ一覧に戻る</a>
+                <a href="account-design.html" class="back-link">← アカウント設計の基礎に戻る</a>
+            </div>
+
+            <header class="article-header" style="margin-top: 20px;">
+                <h1>自己分析</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 自己分析の深堀り</h2>
+                    <p>アカウント設計の始まりは、「自己分析」です。自己分析では、「自分の強み」を以下の2点に分解して見つけていきます。</p>
+                    <ul>
+                        <li>⭐ 好き</li>
+                        <li>⭐ 経験</li>
+                    </ul>
+                    <p>「好き」という気持ちに向き合うことで、Instagram運用を無理なく続けられ、「好き」を仕事にできるワクワクの毎日が待っています。</p>
+
+                    <div class="highlight-box">
+                        <h3 style="margin-top: 0;">1. 自己分析の必要性</h3>
+                        <p>自己分析はアカウント設計の中で一番大事な工程です。なぜなら、発信の軸は全て自分の中にあるからです。</p>
+                        <p>今の時代、Instagramの中には発信者が山のようにいます。その中で情報だけで差別化するのはほぼ不可能です。そこで「あなたの強み」をかけ合わせて他のアカウントと差別化できれば、あなたにしか作れない唯一無二のアカウントが完成します。</p>
+                        
+                        <h4 style="margin-top: 20px;">▼ アカウントの比較例</h4>
+                        <ul>
+                            <li><strong>普通のアカウント：</strong>ただググれば出てくるようなお金の情報をまとめて発信しているだけのアカウント</li>
+                            <li><strong>強みを活かしたアカウント：</strong>借金が500万円あったけど、2年で完済。その後1,000万円まで貯金を増やして、夢のマイホームをゲット！その具体的な経験や節約知識を発信しているアカウント</li>
+                        </ul>
+                        <p>この2つだと、後者のアカウントのほうが魅力的に感じますよね。</p>
+
+                        <h4 style="margin-top: 20px;">▼ 実際のアカウント例</h4>
+                        <ul>
+                            <li>「炊飯器レシピ」＋「ギャル」</li>
+                            <li>「片付け・掃除」＋「農家の嫁」</li>
+                        </ul>
+
+                        <p style="margin-top: 20px;">このように、発信ジャンルに自分の「強み」をかけることで、以下の効果を期待できます。</p>
+                        <ul>
+                            <li>⭐ 発信内容に説得力が出る</li>
+                            <li>⭐ 情熱を持ってアカウントを運用できる</li>
+                            <li>⭐ 同じ悩みを抱えている人に、具体的な解決方法を提案できる</li>
+                            <li>⭐ 自分にしか作れない、個性的で面白い投稿ができる</li>
+                        </ul>
+                        <p>したがって、代わりのきかない唯一無二のアカウントを作ることが可能です。</p>
+
+                        <h3 style="margin-top: 30px;">2. 「強み」は必ずある</h3>
+                        <p>多くの人が「自分には強みなんてない」と思っていますが、それは間違いです。人はみんな必ず「強み」を持っています。</p>
+
+                        <h4 style="margin-top: 20px;">例① ダイエット × ◯◯（好き）</h4>
+                        <ul>
+                            <li>憧れの韓国アイドルのようになるためにダイエットの過程を発信</li>
+                            <li>大好きな奥様の美容と健康のために作るヘルシーな料理のレシピを発信</li>
+                        </ul>
+                        <p>このように、自分の「好き」を掛け合わせることで新しい切り口のアカウントが生まれます。</p>
+
+                        <h4 style="margin-top: 20px;">例② マイナス × 〇〇（経験）</h4>
+                        <ul>
+                            <li>生涯彼女がいなかった男性が、初彼女をゲットするまでの自分磨きの過程を発信</li>
+                            <li>離婚を決めた3児のママが、引っ越し先の賃貸アパートをおしゃれにする過程を発信</li>
+                        </ul>
+                        <p>このように、自分の辛かった経験や失敗体験を掛け合わせることでも新しいアカウントを作れます。</p>
+
+                        <p style="margin-top: 20px;">「強み」とは、誰かより優れていることや、ビジネスに直接関係があることだけではありません。心からの「好き！楽しい！」という思いを発信しているアカウントのほうが、フォロワーにその想いが伝わります。そして、自分自身の辛かった経験を取り入れたアカウントのほうが、それについて悩んでいる人に刺さりやすいです。</p>
+                        <p>「強み」を深堀る際は、「ビジネスには関係なさそうな好きという気持ち」や「マイナスな経験」も忘れずに探しましょう。</p>
+
+                        <h3 style="margin-top: 30px;">3. 「好き」を大切にする理由</h3>
+                        <p>実際にあなたの強みを見つけていく際、まず考えてほしいのが、あなたの中に眠っている「好き」という気持ちです。一番にあなたの中にある「好き」「やりたい」という気持ちを大切にしてください。</p>
+
+                        <h4 style="margin-top: 20px;">理由① 好きじゃないと幸せな人生を送れないから</h4>
+                        <p>Instagram副業に興味を持ったきっかけは、今の仕事に多少の不満を抱えているからではないでしょうか。副業でも自分が心から好きで満足できる仕事じゃない限り、同じ状況を繰り返してしまいます。</p>
+                        <p>豊かな人生とは、お金があるだけではありません。</p>
+                        <ul>
+                            <li>⭐️ 毎日がワクワクに満ち溢れている</li>
+                            <li>⭐️ 楽しい人たちに囲まれている</li>
+                            <li>⭐️ 心から充実した日々を送れる</li>
+                        </ul>
+                        <p>このような人生のためには、自分が心から「好き！」「楽しい！」と思えることを仕事にするのが一番良いです。そのような仕事を見つけられたら、遊びと仕事の区別がなくなり、楽しいことをやっているだけで自然とお金が入ってくる未来が待っています。</p>
+
+                        <h4 style="margin-top: 20px;">理由② 好きじゃないと継続できないから</h4>
+                        <p>Instagramで成果を上げるために一番大切なことは「継続」です。しかし、Instagram運用をこの先事業としてやっていくなら、「1回稼いで終わり」ではありません。</p>
+                        <p>伸びそうだからという理由だけでアカウントを作っても、自らの発信が好きではなかったら、情熱を持って続けることはできません。楽しく継続するためには、「好きなこと・興味のあること」や「これから見ていきたいこと」を発信するジャンルに選ぶことが大切です。</p>
+
+                        <h4 style="margin-top: 20px;">理由③ 情熱はフォロワーにも伝わるから</h4>
+                        <p>たくさんの人に愛されそうなアカウント、情報を知りたいときに話を聞きたいのはどちらでしょうか？</p>
+                        <ul>
+                            <li>❓️ お金のためだけに興味のないことを発信しているアカウント vs ⭐ <strong>好きで好きで仕方ないことを、情熱を持って発信しているアカウント</strong></li>
+                            <li>❓️ 浅い知識しか持っていない人 vs ⭐ <strong>すごく好きで詳しい人</strong></li>
+                        </ul>
+                        <p>Instagramでは、「稼げそうだから」という理由だけで、情熱がないにも関わらずお金や転職のアカウントを作る人がいます。そういうアカウントは、ただネットに落ちている情報をまとめることしかできません。</p>
+                        <ul>
+                            <li>❌ こだわりも伝わらない</li>
+                            <li>❌ 具体的な解決策や経験談はない</li>
+                            <li>❌ そもそも好きじゃないので続けられない</li>
+                        </ul>
+                        <p>このような状況に陥ってしまう人が多いです。たくさんの人にあなたの情熱が伝わるように、「好き」という気持ちを整理してみましょう。</p>
+
+                        <div style="background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 15px; margin-top: 20px; border-radius: 0 4px 4px 0;">
+                            <p style="margin-top: 0; margin-bottom: 10px;">❌ 伸びそうなものはどれかな？と考えるのではなく<br>
+                            ⭕ <strong>自分が好きなものをどうしたら伸ばせるかな？</strong>と考える</p>
+                            <p style="margin-bottom: 0;">これが、自分の強みを活かせて継続できる唯一無二のアカウントを作るコツです。</p>
+                        </div>
+
+                        <h3 style="margin-top: 30px;">4. 「経験」が大事な理由</h3>
+                        <p>あなただけの経験を織り交ぜた発信をしていくことで、過去と同じ悩みを持つ人を助けられます。また、他のアカウントのマネをしているだけではない、唯一無二のアカウントを作ることが可能です。</p>
+
+                        <h4 style="margin-top: 20px;">理由① 「一次情報」に価値があるから！</h4>
+                        <ul>
+                            <li><strong>一次情報：</strong>あなたが実際に経験したエピソード</li>
+                            <li><strong>二次情報：</strong>他人の情報を寄せ集めたもの</li>
+                        </ul>
+                        <p>今の時代、ネット上には膨大な量の情報が溢れています。ユーザーはその中から、本当に信頼できる情報を探しています。ネットに溢れた情報をまとめるだけでは、残念ながら「信頼してくれるファンがつくアカウント」にはなりません。どこにでもある情報より、あなたにしか発信できない唯一無二の一次情報のほうが価値があります。</p>
+                        
+                        <p style="margin-top: 10px; font-weight: bold;">▼ 実体験ベースの発信</p>
+                        <ul>
+                            <li>⭐️ 10キロのダイエットに成功した人のダイエット情報</li>
+                            <li>⭐️ ゴミ屋敷からミニマリスト部屋へ変化させた人のおしゃれ部屋情報</li>
+                            <li>⭐️ ブラック企業からホワイト企業に転職した人の転職情報</li>
+                        </ul>
+                        <p>「そのジャンルのちょっと先を行く先輩」として発信すると、「この人の言ってることは信頼できそう」と思ってもらえる可能性が高くなります。結果、フォローや商品の購入に繋がりやすくなります。なので、自分の経験を活かせる発信ジャンルを選ぶことが大切です。</p>
+
+                        <h4 style="margin-top: 20px;">理由② Instagramは共感のSNSだから！</h4>
+                        <p>Instagramで価値のある情報は成功体験だけではありません。「離婚」「借金」「低収入」「恋愛経験なし」などのネガティブな経験にも価値があります。なぜなら、同じ悩みや不安・辛い気持ちを抱えている人から強い共感を得られるからです。</p>
+                        <p>有益な情報を発信するだけでもフォロワーは増えるかもしれません。しかし、「共感」がプラスされることで、より見ている人の心を動かせるアカウントを作れます。</p>
+                        
+                        <p style="margin-top: 10px; font-weight: bold;">▼ 例</p>
+                        <ul>
+                            <li>🌀 旦那の不倫が原因で離婚した</li>
+                            <li>🌀 突如親の借金を肩代わりすることになった</li>
+                            <li>🌀 学生のころ、太っていることが原因でいじめられていた</li>
+                        </ul>
+                        <p>ただしネガティブな気持ちを投稿にするだけでは、見ている人も暗い気持ちになってしまいます。Instagramでは「価値ある発信＝誰かの悩みが解決できる発信」です。ネガティブな経験をどうやって乗り越えたのか、解決策やポジティブな未来も一緒に発信することがポイントです。</p>
+
+                        <div style="background-color: #f8fafc; padding: 15px; margin-top: 15px; border-radius: 4px;">
+                            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                                <li style="margin-bottom: 10px;">🌀 旦那の不倫が原因で離婚した<br>→ 大好きな子供と新しい人生を歩んでいて幸せ✨️</li>
+                                <li style="margin-bottom: 10px;">🌀 突如親の借金を肩代わりすることになった<br>→ がんばってお金のことを勉強して、もう一度両親の笑顔を見る！✨️</li>
+                                <li>🌀 学生のころ、太っていることが原因でいじめられていた<br>→ いじめがダイエットのきっかけになって、自分のことが大好きになれた✨️</li>
+                            </ul>
+                        </div>
+                        <p style="margin-top: 15px;">このように、ネガティブを乗り越えるための解決策やポジティブな未来も一緒に提示してあげると、悩んでいるユーザーさんに希望を与えることができます。ネガティブな経験やコンプレックスを開示できて、さらにポジティブな未来へ連れていってくれる人が、長く愛されるインフルエンサーになれる確率が高いです。</p>
+                        <p>また、同じような辛い経験をした人は結束力が高まります。辛い経験を共有することで、フォロワーと強い絆で結ばれることができます。そんな辛い経験をしているにも関わらず明るい未来を手に入れる姿を見せることで、ユーザーにも「この人のやり方をマネすれば、私にもこんな未来があるかも…！」と思ってもらえます。</p>
+                        <p>嫌な経験やコンプレックスを開示することで、簡単に他のアカウントとの差別化が可能です。勇気がいりますが、共感してくれたユーザーから温かい言葉が必ず届きます。自己分析をしてアウトプットすることは、運用に活かせるだけでなく、今後の人生の考え方が変わるきっかけにもなります。人に言いたくない心の奥底にしまっているようなネガティブな経験、失敗談、コンプレックスも勇気を出してアウトプットしてみてください。</p>
+
+                        <h4 style="margin-top: 20px;">理由③ 人は物語に惹かれるから！</h4>
+                        <p>心を動かされる裏には、必ず「物語」があります。例えばオリンピックでは、「金メダルを取った」という事実に感動しているのではありません。その裏側にある、選手の努力や手に汗握る試合展開に感動しています。</p>
+                        <p>Instagramでも同じです。事実の裏側に隠れた物語を一緒に見せると、ユーザーの心を動かせます。その構成を「ヒーローズ・ジャーニー」といいます。</p>
+                        <ul>
+                            <li>主人公が絶望的な体験をし、「使命・ミッション」を自覚する</li>
+                            <li>旅に出る</li>
+                            <li>運命の出会いがある</li>
+                            <li>修行を積んで強くなる</li>
+                            <li>試練が訪れるがそれも乗り越えていき</li>
+                            <li>最終的には宿敵を倒し主人公はヒーローとなる</li>
+                        </ul>
+                        <p>SNS上では、物語の主人公が「あなた」になり、あなたの物語がおもしろいほど人は惹かれて、応援したくなります。あなたの物語をおもしろくするためには、成功している姿だけでなく、失敗や弱みも見せることが大切です。その挫折や失敗を乗り越えて強くなるから、人々は心を熱くして夢中になります。</p>
+                        <p>例えば数年前から、Instagramでは「100日後に◯◯になる△△」というコンセプトが流行っています。</p>
+                        <ul>
+                            <li>⭐️ 100日後、2300万で買った家をDIYで別荘っぽくする人</li>
+                            <li>⭐️ 100日後に韓国アイドルを目指すOL</li>
+                            <li>⭐️ 100日で妻と関係修復したい物置部屋おじさん</li>
+                        </ul>
+                        <p>この型が流行っている理由は、そのコンセプトが伸びやすいからです。ヒーローズジャーニーを体現しながらアカウントを運用することで、人の「応援したい欲」を掻き立てることができます。</p>
+                        <p>フォロワーさんは「あなたの物語」を、エンタメ感覚で楽しめます。応援しながら、楽しみながら、学びながらあなたのアカウントを追いかけられるので、ただのフォロワーからあなたのファンになりやすいです。このように、「理想的ではない状態」から試行錯誤して「理想の未来」へ歩む姿そのものを、アカウントのコンセプトやコンテンツにできます。あなたの人生の山と谷を両方見せるイメージで運用していきましょう。</p>
+                    </div>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="account-design.html" class="nav-prev">← 前へ：アカウント設計の基礎</a>
+                    <a href="account-research.html" class="nav-next">次へ：ニーズ調査・競合分析・ジャンル選定 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>

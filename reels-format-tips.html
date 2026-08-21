@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>構成別動画編集テクニック5選 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .tip-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #14b8a6;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .tip-title {
+            color: #0f766e;
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 1px solid #ccfbf1;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .structure-box {
+            background-color: #f8fafc;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .structure-box p {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+            color: #334155;
+        }
+        .structure-box ul {
+            margin: 0;
+        }
+        .vllo-step {
+            background-color: #f0fdfa;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        .vllo-step p {
+            margin: 0;
+            font-weight: bold;
+            color: #0f766e;
+        }
+        .vllo-step ol {
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>特別編：構成別動画編集テクニック5選</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回は前回使った編集テクニックを基に、構成別動画編集テクニックを紹介していきます。冒頭2秒で心を掴むためには、以下のすべてを駆使して飽きさせない構成が必要です。</p>
+                    
+                    <ul style="margin-bottom: 15px;">
+                        <li>・テキスト</li>
+                        <li>・動画編集</li>
+                        <li>・音源</li>
+                        <li>・アフレコ</li>
+                    </ul>
+
+                    <p>今回のゴールは、冒頭2秒で心を掴むショート動画を作るための構成別編集テクニックをマスターすること。<br>
+                    マスターすることで、冒頭2秒でユーザーの心をつかむショート動画を作れるようになります。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 構成別テクニック5選</h2>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">① ビフォーアフター動画の冒頭の作り方</h3>
+                        <div class="structure-box">
+                            <p>構成</p>
+                            <ul>
+                                <li><strong>冒頭</strong>：ビフォーアフター</li>
+                                <li><strong>中盤</strong>：ビフォーからアフターへの過程を紹介</li>
+                                <li><strong>終盤</strong>：アフターの様子</li>
+                            </ul>
+                        </div>
+                        <p>ビフォーアフターは最初のインパクトが非常に重要です。アフターの動画をよりよく見せるために、ビフォーの動画の画質を落とすのも効果的です。</p>
+                        <p>冒頭ではテロップも非常に重要です。なぜなら、テロップでもギャップを伝えられるから。動画だけでなくテロップも重要になるので覚えておきましょう。</p>
+                        <div class="vllo-step">
+                            <p>作り方</p>
+                            <ol>
+                                <li>ビフォーの動画を挿入</li>
+                                <li>アフターの動画を挿入</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">② ランキング形式の冒頭の作り方</h3>
+                        <div class="structure-box">
+                            <p>構成</p>
+                            <ul>
+                                <li><strong>冒頭</strong>：ランキングのタイトルコール</li>
+                                <li><strong>中盤</strong>：商品を紹介</li>
+                                <li><strong>終盤</strong>：次回予告、もしくはプロフィールに誘導</li>
+                            </ul>
+                        </div>
+                        <p>冒頭2〜3秒の間に、紹介するものの魅力が最大限に伝わるシーンを2〜4個ぐらい入れてください。<br>
+                        また、季節や時期を意識したワードをテロップに必ず入れるようにしましょう。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">③ 想いを伝える冒頭の作り方</h3>
+                        <div class="structure-box">
+                            <p>構成</p>
+                            <ul>
+                                <li><strong>冒頭</strong>：マイナスなアンチなコメントを紹介</li>
+                                <li><strong>中盤</strong>：それに対するアンサー、なぜこの発信をしてきたのかという過程・過去の経験を紹介</li>
+                                <li><strong>終盤</strong>：現状どう変わったのかと、フォロワーさんに対する熱いメッセージを伝える</li>
+                            </ul>
+                        </div>
+                        <div class="vllo-step">
+                            <p>作り方</p>
+                            <ol>
+                                <li>VLLOの画像挿入から、コメントを動画の上に挿入<br>
+                                <span style="font-size: 0.9rem; color: #475569;">※コメントを選ぶ際は、長くなくシンプルなコメントを1つだけ選ぶ</span></li>
+                                <li>必ずエモい音源を入れて、テンポ感は遅め</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">④ 音ハメ動画の作り方</h3>
+                        <div class="vllo-step">
+                            <p>作り方</p>
+                            <ol>
+                                <li>音ハメ動画の音源を画面収録で録音</li>
+                                <li>録音した音源をBGMに追加</li>
+                                <li>その音源を聴きながら動画を挿入</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">⑤ 質問殺到、コメント殺到してた冒頭の作り方</h3>
+                        <div class="structure-box">
+                            <p>構成</p>
+                            <ul>
+                                <li><strong>冒頭</strong>：「質問が殺到していた」、ないしは「コメントをたくさんいただいた」と紹介</li>
+                                <li><strong>中盤</strong>：商品を紹介</li>
+                                <li><strong>終盤</strong>：プロフに誘導</li>
+                            </ul>
+                        </div>
+                        <div class="vllo-step">
+                            <p>作り方</p>
+                            <ol>
+                                <li>挿入したい画像を選択</li>
+                                <li>サイズを調整</li>
+                                <li>コメントは5〜10個ぐらい貼り付ける</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 まとめ</h2>
+                    <p>今回は5つの構成の冒頭の作り方を紹介しました。</p>
+                    <ul>
+                        <li>① ビフォーアフター動画の冒頭の作り方</li>
+                        <li>② ランキング形式の冒頭の作り方</li>
+                        <li>③ 想いを伝える冒頭の作り方</li>
+                        <li>④ 音ハメ動画の作り方</li>
+                        <li>⑤ 質問殺到、コメント殺到してた冒頭の作り方</li>
+                    </ul>
+                    <p>今回紹介した構成を使うことで、冒頭2秒でユーザーの心をつかむショート動画を作れます。どのジャンルでも必ず使える構成や動画編集テクニックです。</p>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-left: 4px solid #f59e0b; border-radius: 0 4px 4px 0; margin-top: 20px;">
+                        <p style="margin-top: 0; font-weight: bold; color: #d97706;">💡 最後に</p>
+                        <p style="margin-bottom: 0;">クオリティを上げる最後の方法は、ひたすら動画編集をして慣れること。最初は6割・7割の完成度で大丈夫です。</p>
+                    </div>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="reels-intro-tips.html" class="nav-prev">← 前へ：冒頭テクニック7選</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>
