@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アフィリエイト完全攻略ガイド | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .master-toc {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .master-toc h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #1e293b;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 10px;
+        }
+        .master-toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .master-toc a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+        .master-toc a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        .chapter-title {
+            font-size: 2rem;
+            color: #0f172a;
+            border-bottom: 4px solid #10b981;
+            padding-bottom: 10px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>アフィリエイト・PR編</span>
+            </div>
+            <h1>アフィリエイト完全攻略ガイド</h1>
+            <p class="subtitle">商品の選び方から、売上を最大化するセールス心理学、具体的な手順まで徹底解説。</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <!-- 目次 -->
+                <div class="master-toc">
+                    <h2>📑 目次</h2>
+                    <ul>
+                        <li><a href="#chapter1">第1章：Instagramでモノやサービスを売るための基本</a></li>
+                        <li><a href="#chapter2">第2章：月100万以上を売り上げるためのノウハウ（応用編）</a></li>
+                        <li><a href="#chapter3">第3章：売り方ノウハウを活用した具体的な手順（実践編）</a></li>
+                    </ul>
+                </div>
+
+                <!-- ==========================================
+                     第1章：基本編
+                =========================================== -->
+                <div id="chapter1">
+                    <h2 class="chapter-title">第1章：Instagramでモノやサービスを売るための基本</h2>
+
+                    <!-- ▍01 ストーリーズ編の復習 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　ストーリーズ編の復習</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">ストーリーズ編では、<span style="font-weight: bold; color: #b91c1c;">「ただのフォロワー」では意味がない「ファン」になってもらうストーリーズを運用しよう</span>という話をしてきました。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">そのために、ストーリーズで重要な3つを復習していきます。</p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-top: 4px solid #3b82f6;">
+                                <p style="font-weight: bold; color: #1e40af; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">① 価値を提供する</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 5px; font-weight: bold;">価値提供とは：</p>
+                                <ul style="font-size: 0.85rem; color: #334155; margin-bottom: 0; padding-left: 20px;">
+                                    <li>有益情報 / ノウハウ</li>
+                                    <li>あなたとのコミュニケーション</li>
+                                    <li>フォロワーさん同士の情報交換</li>
+                                    <li>自己開示や価値観の共有 など</li>
+                                </ul>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-top: 4px solid #10b981;">
+                                <p style="font-weight: bold; color: #065f46; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">② 交流する</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 5px;">交流機能を使って自己開示をしたり、動画など様々なメディアを使ったりして、<span style="font-weight: bold; color: #065f46;">あなたの個性、魅力を伝えてファンを育みましょう。</span></p>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-top: 4px solid #f59e0b;">
+                                <p style="font-weight: bold; color: #92400e; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">③ 信頼を高める</p>
+                                <ul style="font-size: 0.85rem; color: #334155; margin-bottom: 0; padding-left: 20px;">
+                                    <li>誠実な取り組みであることをユーザーに説明する</li>
+                                    <li>自分自身が常に誠実である</li>
+                                    <li>ユーザーに成功体験を提供する</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fffbeb; padding: 25px; border-radius: 8px; border: 2px solid #fde68a; margin-bottom: 30px;">
+                            <p style="font-size: 1.1rem; font-weight: bold; color: #92400e; margin-top: 0; margin-bottom: 15px; text-align: center;">Instagramのストーリーマネタイズで重要なこと</p>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 6px; text-align: center; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-size: 1.3rem; font-weight: bold; color: #b45309; margin: 0;">信頼 × 言語化 × 商品力 ＝ 売り上げ</p>
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                <div style="background-color: #fef3c7; padding: 15px; border-radius: 6px;">
+                                    <p style="font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0;">✅ 信頼を最大化</p>
+                                    <p style="font-size: 0.9rem; color: #78350f; margin-bottom: 0;">「価値を提供する」「交流する」「信頼を高める」を継続して続けることで、信頼を最大化しましょう。</p>
+                                </div>
+                                <div style="background-color: #fef3c7; padding: 15px; border-radius: 6px;">
+                                    <p style="font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0;">✅ 言語力を最大化（言語力＝観察×思考×言葉へ変換×相手が理解しやすい表現）</p>
+                                    <p style="font-size: 0.9rem; color: #78350f; margin-bottom: 0;">さらに、ストーリーズからのマネタイズに特化したセールスライティング「新PASONAの法則」を使いましょう。</p>
+                                </div>
+                                <div style="background-color: #fef3c7; padding: 15px; border-radius: 6px;">
+                                    <p style="font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0;">✅ 商品力を最大化</p>
+                                    <ul style="font-size: 0.9rem; color: #78350f; margin-bottom: 0; padding-left: 20px;">
+                                        <li>Instagramでよく売れている商品 / 他メディアでバズっている商品を紹介する</li>
+                                        <li>自分の発信ジャンルの商品を誰よりもリサーチして試す</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">でも、 これら全てを常に意識してストーリーズでセールスする！ってやっぱり難しいですよね。</p>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 0;">なので今回からは、セールスの基本から「具体的にどういう行動を取れば良いのか」まで進んでいきます。これにより、今日、<span style="font-weight: bold; color: #1e40af;">どんな状態で、どんな行動を取れば、どれくらい売り上げが上がるのか</span>を明確に学んでもらいます。</p>
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍02 Instagramで稼ぐということ -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　Instagramで稼ぐということ</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">まずは復習も含んでいますが、インスタグラム上でお金を稼ぐ方法はこの3つしかありません。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;">
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #1e40af; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">① 自分のアカウントから、他人の商品を売ってあげること</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">その広告料をもらうということ。これが<span style="font-weight: bold; color: #1d4ed8;">アフィリエイト</span>ですね。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #065f46; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">② 自分のアカウントから、自分の商品を売ること</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">OEMで自分オリジナルブランドを作ったり、オンラインサロンなどのサービスを作ったり、自分オリジナルの商品を「作る」ということです。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #92400e; margin-bottom: 10px; margin-top: 0; font-size: 1.1rem;">③ 他人のアカウントから、他人の商品を売ってあげること</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">これが運用代行です。「他人の時間を節約させる」「採用をしやすくする」など、自分への運用代行報酬以上に金銭的メリットを与え、他人を喜ばせることが重要です。</p>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">そもそも商売というのは「作る」と「売る」の2つで説明がつきます。アフィリエイトはその「売る」だけに特化してやっているということです。</p>
+                            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">商品の所有者には「大きな責任」が伴います。だからこそ、<span style="font-weight: bold; color: #b91c1c;">責任最少で、売り上げ最大化のために、他人の商品を自分が売るというアフィリエイトはまず稼ぐ第一歩、スモールスタートの最もスジの良い進め方</span>です。</p>
+                            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">今回のセールス講座はこの「①自分のアカウントから、他人の商品を売る」に特化してお話ししていきます。もちろん他人の商品が全く売れないのに、自分の商品を作っても売れないので、まずは「売る」という力をつけていく必要があります。</p>
+                            
+                            <div style="background-color: #eff6ff; padding: 15px; border-radius: 6px; border: 1px dashed #bfdbfe; text-align: center;">
+                                <p style="font-size: 1.1rem; font-weight: bold; color: #1e40af; margin-bottom: 10px; margin-top: 0;">アフィリエイトの売り上げ ＝ 「商品選び」 × 「商品の売り方」</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">この「売り方」はレベルアップに時間がかかるにしても、<span style="font-weight: bold; color: #1d4ed8;">商品選びは初心者だろうが、ベテランだろうがすぐに最適化することができます。</span></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍03 良い商品の探し方 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　良い商品の探し方</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">「稼ぎたい」人が最初にやるべきことは「売りもの」を決めることです。初心者はまずこの「商品選び」を最適化することが売り上げを上げる第一歩です。</p>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 10px;">良い商品の2つの条件</h3>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">「自分が心から好きと言える」「単価が高い」など条件を挙げればキリがありませんが、この2つだけを絶対に意識してください。</p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                            
+                            <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #3b82f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 15px; text-align: center;">✅ フォロワーの属性に合っている</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">ここで注意しないといけないのが<span style="font-weight: bold; color: #b91c1c;">自分の「発信ジャンル＝フォロワーの属性」ではない</span>ということです。</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">お金アカウントで発信していても、自分が登場していて属人性高めの投稿が多いなら美容品の方が売れる可能性は高かったりします。</p>
+                                <p style="font-size: 0.9rem; font-weight: bold; color: #1d4ed8; margin-bottom: 0;">「フォロワー達の内、大多数に当てはまる共通点」を把握して、ジャンルではなく「フォロワーの属性に合った商品」を選ぶことが重要です。</p>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #ef4444; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 15px; text-align: center;">✅ Instagramでニーズがある</h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">ブログやYouTubeで人気があってもInstagramでは人気がないなんてモノはザラにあります。</p>
+                                <p style="font-size: 0.9rem; font-weight: bold; color: #b91c1c; margin-bottom: 10px;">Instagramの雰囲気に合ったものとは「他のインフルエンサーが紹介しているモノ」です。</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">多くのフォロワーがいるインフルエンサーが紹介しているということは、それだけニーズが明確で選りすぐられた精鋭商品である可能性が高いです。</p>
+                            </div>
+
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">この2つを満たすためにやるべきこと</h3>
+                        
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 25px;">
+                            <h4 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 10px;">① 自分のフォロワーの共通点を知る</h4>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">投稿を届けるペルソナ（ターゲット）の生活、仕事、平日の過ごし方、休日の過ごし方、子供の有無など、共通点を見直しましょう。</p>
+                            
+                            <h4 style="font-size: 1.1rem; color: #0f172a; margin-top: 20px; margin-bottom: 10px;">② 他のインフルエンサーが売っている商品をリサーチする</h4>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">調査する箇所は<span style="font-weight: bold;">「ハイライト欄」</span>と<span style="font-weight: bold;">「日頃のストーリーズ」</span>の2点です。ハイライトには過去アフィリエイトした商品が並んでいます。また、期間限定掲載の案件などもあるため、日頃からストーリーズをウォッチしていくのが一番です。</p>
+                            
+                            <div style="background-color: #fff; padding: 15px; border-radius: 6px; border: 1px dashed #94a3b8; margin-top: 10px;">
+                                <p style="font-size: 0.85rem; font-weight: bold; color: #334155; margin-bottom: 5px;">💡 キャンペーンが起こりやすい時期</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 5px;">「月末月初」は、なんとなくストーリーズを見るのではなく、宿題シートなどを並べた状態でリサーチしましょう。</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">※楽天アフィリエイトのみ異なり「5日」と「20日」前後がキャンペーン期間（料率アップ）になります。これをコツコツメモしておくと、次回自分がアフィリエイトする時の準備になります。</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍04 商品の取り扱い方 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　商品の取り扱い方</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">大前提として、アフィリエイトをするためには、色んな商品のアフィリエイトを扱っているASP（広告代理店）と契約することが一般的です。このASPには<span style="font-weight: bold; color: #1e40af;">「オープンASP」</span>と<span style="font-weight: bold; color: #b91c1c;">「クローズドASP」</span>という2つが存在します。</p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                            
+                            <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <h3 style="font-size: 1.2rem; color: #1e40af; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #bfdbfe; padding-bottom: 5px; text-align: center;">オープンASP</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">代表的なところだと「A8ネット」など「誰でも」登録できるASPです。</p>
+                                <ul style="font-size: 0.9rem; color: #334155; margin-bottom: 15px; padding-left: 20px;">
+                                    <li>誰でも登録できるだけあって、単価は低い</li>
+                                    <li>基本的にはオープンASPはおすすめしない（アフィリエイトに疲弊するだけ）</li>
+                                    <li>一度登録した後にクローズドASPに変更するのは手続きが面倒</li>
+                                </ul>
+                                <div style="background-color: #fff; padding: 10px; border-radius: 6px; font-size: 0.85rem; color: #64748b; border: 1px solid #cbd5e1;">
+                                    ※フォロワーが5万人〜10万人となれば、オープンASPでも担当者がついて10倍20倍の特別単価になることはあります。
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fef2f2; padding: 25px; border-radius: 8px; border: 1px solid #fecaca;">
+                                <h3 style="font-size: 1.2rem; color: #991b1b; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #fca5a5; padding-bottom: 5px; text-align: center;">クローズドASP</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">ASPからDMが来たり、友人からの招待でのみ入れたり、限られた人だけが契約できるASPです。</p>
+                                <ul style="font-size: 0.9rem; color: #334155; margin-bottom: 15px; padding-left: 20px;">
+                                    <li style="font-weight: bold; color: #b91c1c;">オープンASPと比べて単価が高い</li>
+                                    <li>実績や他のASPの単価を用いて交渉することで、さらに単価を上げられる</li>
+                                    <li>契約するまでのハードルが高い</li>
+                                </ul>
+                                <div style="background-color: #fff; padding: 10px; border-radius: 6px; font-size: 0.85rem; color: #b91c1c; font-weight: bold; border: 1px solid #fca5a5;">
+                                    目先の5,000円ではなく、20万30万と稼ぐためには、クローズドASPと契約するまで焦らないことが重要です。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fffbeb; padding: 25px; border-radius: 8px; border: 2px solid #f59e0b;">
+                            <h3 style="font-size: 1.1rem; color: #92400e; margin-top: 0; margin-bottom: 15px;">⚠️ クローズドASPと契約する際の注意点</h3>
+                            <p style="font-size: 0.9rem; color: #78350f; margin-bottom: 15px;">クローズドASPの中でも「単価が安い」ぼったくりASPも存在します。DMが来たら、そのASPにホームページがあるか、他のインスタグラマーが多く契約しているかを判断しましょう。</p>
+                            
+                            <div style="background-color: #fff; padding: 15px; border-radius: 6px; border: 1px dashed #f59e0b;">
+                                <p style="font-size: 0.9rem; font-weight: bold; color: #b45309; margin-bottom: 5px; margin-top: 0;">🔍 インスタグラマーが使用しているASPを調べる方法</p>
+                                <ol style="font-size: 0.85rem; color: #78350f; margin-bottom: 0; padding-left: 20px;">
+                                    <li>インフルエンサーのハイライト欄を開く</li>
+                                    <li>アフィリエイトリンクを見つける</li>
+                                    <li>リンクをタップする</li>
+                                    <li>「リンクにアクセス」の下に表示されたURLをチェックする（このURL内にASP名が書かれていることが多いです）</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第2章：応用編
+                =========================================== -->
+                <div id="chapter2">
+                    <h2 class="chapter-title">第2章：月100万以上を売り上げるためのノウハウ（応用編）</h2>
+
+                    <!-- ▍01 モノを売るとは何か -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　モノを売るとは何か</h2>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">※「売るモノ・サービス」がフォロワーのニーズに合っているという前提で話を進めていきます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">「売り上げを上げる」ということを念頭においた場合、<span style="font-weight: bold; color: #1e40af;">モノを売るとは「行動してもらう」こと</span>です。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">本当に良いことで、本当に人助けになるモノでも行動してもらわなければ、その人を助けることも何もできません。みなさんのような売り主は、買い手を幸せにするために「行動をさせる」義務があります。</p>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">行動を阻む「4つの不」を越えさせる</h3>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 20px;">人を動かす自信がない、どうやったら行動するのかわからない。この解決策は、人間が行動をするための障害<span style="font-weight: bold; color: #b91c1c;">「4つの不」</span>を越えさせることです。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;">
+                            
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 5px; margin-top: 0; font-size: 1.1rem;">不信 ＝ 信用しない、信じない</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">「あなたの言うことが正しいのかわからない、いまいち信用できない」</p>
+                                <div style="background-color: #fef2f2; padding: 10px; border-radius: 6px; border: 1px solid #fecaca; display: inline-block;">
+                                    <span style="font-size: 0.85rem; font-weight: bold; color: #b91c1c;">【越え方】 自分が使った証拠で信用させる</span>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0; font-size: 1.1rem;">不要 ＝ 必要ではない</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">「あなたの言うことは信じるけど、これは私にとって必要ではない」</p>
+                                <div style="background-color: #fffbeb; padding: 10px; border-radius: 6px; border: 1px solid #fde68a; display: inline-block;">
+                                    <span style="font-size: 0.85rem; font-weight: bold; color: #b45309;">【越え方】 悩みを言語化して必要性を感じてもらう</span>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #1e40af; margin-bottom: 5px; margin-top: 0; font-size: 1.1rem;">不適 ＝ 最適ではない</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">「必要なことはわかったけど、これは最適ではない」</p>
+                                <div style="background-color: #eff6ff; padding: 10px; border-radius: 6px; border: 1px solid #bfdbfe; display: inline-block;">
+                                    <span style="font-size: 0.85rem; font-weight: bold; color: #1d4ed8;">【越え方】 なぜモノが悩みを解決するのか特徴を説明する</span>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #065f46; margin-bottom: 5px; margin-top: 0; font-size: 1.1rem;">不急 ＝ 今じゃない</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">「必要で最適だとわかったけど、今は必要ない」</p>
+                                <div style="background-color: #f0fdf4; padding: 10px; border-radius: 6px; border: 1px solid #bbf7d0; display: inline-block;">
+                                    <span style="font-size: 0.85rem; font-weight: bold; color: #15803d;">【越え方】 今すぐ買わないといけない理由を話す</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 10px;">みなさんが作ったストーリーズでこの4つ全て達成できていたら、何を売っても買ってくれます。結局のところ、マーケティングはこれをやっているだけです。</p>
+                            <ul style="font-size: 0.9rem; font-weight: bold; color: #1e40af; margin-bottom: 15px; padding-left: 20px;">
+                                <li>信じさせる人を増やす</li>
+                                <li>必要と思ってくれる人を増やす</li>
+                                <li>最適だと感じてくれる人を増やす</li>
+                                <li>今すぐ買おうと思ってくれる人を増やす</li>
+                            </ul>
+                            <p style="font-size: 0.9rem; color: #b91c1c; font-weight: bold; margin-bottom: 15px;">⚠️ この4つの不は順番に越えないといけません。</p>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">先に不急を越えようとしても「今すぐって言われても、そもそも私にとって必要じゃないし」と誰も買ってくれません。全員を行動させるのではなく、<span style="font-weight: bold;">「行動してほしい人に絞って、その人に可能な限り行動してもらう」</span>ことが重要です。</p>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍02 基本のモノを売る型 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　基本のモノを売る型</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">4つの不を越えてもらい、行動してもらうための基本の型は<span style="font-weight: bold; color: #1e40af;">「新PASONAの法則」</span>です。</p>
+
+                        <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #3b82f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 30px;">
+                            
+                            <div style="margin-bottom: 15px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 15px;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">P：Problem（問題提起）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「あなたにとってこれが問題で、解決すべき課題だよ！」</p>
+                            </div>
+
+                            <div style="margin-bottom: 15px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 15px;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">A：Affinity（親近感・共感）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「辛いよね、僕もそうだったからすごい気持ちわかる」</p>
+                            </div>
+
+                            <div style="margin-bottom: 15px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 15px;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">S：Solution（解決策）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「でも〇〇って成分があれば大丈夫」</p>
+                            </div>
+
+                            <div style="margin-bottom: 15px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 15px;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">O：Offer（提案）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「だから〇〇が含まれている△△を使おう」</p>
+                            </div>
+
+                            <div style="margin-bottom: 15px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 15px;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">N：Narrowing Down（絞り込み）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「口コミもめちゃ良い！この成分が特に良い！ただ、期間限定でしか買えない」</p>
+                            </div>
+
+                            <div>
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-top: 0; margin-bottom: 5px;">A：Action（行動促進）</p>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">「お試しサンプルでここからまず試してみよう！」</p>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border: 1px solid #fecaca;">
+                            <p style="font-size: 0.95rem; color: #7f1d1d; margin-bottom: 15px;">このPASONAの順番で伝えていくと「モノを買う」という行動を起こしやすいです。</p>
+                            <p style="font-size: 0.95rem; font-weight: bold; color: #b91c1c; margin-bottom: 10px;">しかし、PASONAの法則の「P」は問題提起です。つまり4つの不の「不要」に関係するところです。</p>
+                            <p style="font-size: 0.95rem; color: #7f1d1d; margin-bottom: 15px;">そもそもの「信用（不信）」が得られていないと、何を伝えても無駄になってしまいます。まずは自分が信用に足ることを証明していかないといけません。</p>
+                            
+                            <div style="background-color: #fff; padding: 15px; border-radius: 6px; border-left: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 5px; margin-top: 0;">「モノを売る時、モノを売る日」はPASONAの法則でモノを売ります。</p>
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 0;">「モノを売る日までの過程」こそが、不信を越えるために最も重要になります。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍03 売り上げが大きく変わる売り方ノウハウ -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　【特に重要】売り上げが大きく変わる売り方ノウハウ</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">アフィリエイトとしてストーリーズでものを売るときに、「基本の型：PASONA」ではカバーしきれないけれど「売り上げ」にダイレクトに影響する「売り方ノウハウ」をお伝えします。</p>
+
+                        <div style="background-color: #fffbeb; padding: 25px; border-radius: 8px; border: 2px solid #f59e0b; text-align: center; margin-bottom: 30px;">
+                            <p style="font-size: 1.1rem; color: #92400e; margin-bottom: 10px; margin-top: 0;">重要なことはこのたった「1つ」だけ。</p>
+                            <p style="font-size: 1.8rem; font-weight: bold; color: #b45309; margin: 0;">「顧客の育成」です。</p>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">顧客の育成とは（基本）</h3>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">この「育成」とは<span style="font-weight: bold; color: #1e40af;">「自分への信用」や「お客さんの買いたい気持ち」を、その名の通り育成すること</span>です。1日2日でできることもなく、長い時間をかけて行っていく必要があります。</p>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 20px;">モノを売るためには、知識や情報を小さく与え続けて、信用してもらう・欲しい気持ちになってもらうためにお客さんを育てていくことが必要です。</p>
+                        
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 6px; border: 1px solid #cbd5e1; margin-bottom: 25px;">
+                            <p style="font-weight: bold; color: #b91c1c; margin-bottom: 5px; margin-top: 0;">この「育成」を省いてテクニック論に走ると、モノは売れません。</p>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">手っ取り早く稼ぐ方法はなく、最も近道なのは、お客さん（フォロワー）を成長させることです。普段からの価値提供や接し方こそが売り上げを最大化するために最も重要です。</p>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">顧客の育成（Instagram・ストーリーズ）</h3>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">前提として、フォロワーはあなたの言っていることを一部は信用してるけど、全部は信用してません。そのフォロワーに、<span style="font-weight: bold;">「自分のこと」「商品のこと」「価値提供」</span>をしていくことで、信用が育まれます。</p>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 20px;">そして、より強く「育成」できるのが<span style="font-weight: bold; color: #1e40af;">ストーリーズ</span>です。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 10px; margin-top: 0;">ストーリーズは24時間で消えてしまうので、毎日あったことをリアルタイムに共有しやすいです。だから、</p>
+                                <ul style="font-size: 0.9rem; font-weight: bold; color: #0f172a; margin-bottom: 10px; padding-left: 20px;">
+                                    <li>自分のこと / 自分の過去</li>
+                                    <li>発信の裏側 / ぶっちゃけ話</li>
+                                    <li>商品についての裏側</li>
+                                </ul>
+                                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 0;">より信用するに値する情報を”毎日”出していけます。</p>
+                            </div>
+                        </div>
+
+                        <h3 style="font-size: 1.4rem; color: #1e40af; margin-top: 0; margin-bottom: 20px; text-align: center;">💡 顧客の育成方法 3つのポイント</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            
+                            <div style="background-color: #eff6ff; padding: 25px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                                <h4 style="font-size: 1.15rem; color: #1d4ed8; margin-top: 0; margin-bottom: 10px;">① 物語</h4>
+                                <p style="font-size: 0.9rem; color: #1e40af; margin-bottom: 10px;">人間は物語・ストーリーに強く惹かれます。過去の紆余曲折した話、現在頑張っている話など、細かい感情や心の変化があるからこそ人は誰かを信用します。</p>
+                                <div style="background-color: #fff; padding: 15px; border-radius: 6px; border: 1px solid #bfdbfe;">
+                                    <p style="font-weight: bold; color: #b91c1c; margin-bottom: 5px; margin-top: 0;">⚠️ 注意点</p>
+                                    <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">「事実」だけを語らないこと。事実には感情を添えること。<span style="font-weight: bold; color: #1d4ed8;">「物語」とは「事実＋感情」によって作られます。</span></p>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #eff6ff; padding: 25px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                                <h4 style="font-size: 1.15rem; color: #1d4ed8; margin-top: 0; margin-bottom: 10px;">② 視覚的ベネフィット</h4>
+                                <p style="font-size: 0.9rem; color: #1e40af; margin-bottom: 10px;">人が情報により影響を受ける割合は、視覚情報：55%、聴覚情報：38％、言語情報：7%です。「Before・After」を見せるとモノは売れるといわれる所以です。</p>
+                                <p style="font-size: 0.9rem; color: #1e40af; margin-bottom: 0;">文章で書くより視覚で伝えたほうが伝わります。物語にあった画像や動画をこだわって準備しましょう。</p>
+                            </div>
+
+                            <div style="background-color: #eff6ff; padding: 25px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                                <h4 style="font-size: 1.15rem; color: #1d4ed8; margin-top: 0; margin-bottom: 10px;">③ 口コミ、他の人の意見・声</h4>
+                                <p style="font-size: 0.9rem; color: #1e40af; margin-bottom: 10px;">信用を確固たるものにするために重要なのが、「口コミ：客観的意見」です。本当にみんなが高く評価をしていることを”定量的に見せる”ことにより、より信用を強固なものになります。</p>
+                                <p style="font-size: 0.9rem; color: #1e40af; margin-bottom: 0;">結局<span style="font-weight: bold;">「いろんな人が良いと言ってる」を何度も見せ続けること</span>が大事です。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第3章：実践編
+                =========================================== -->
+                <div id="chapter3">
+                    <h2 class="chapter-title">第3章：売り方ノウハウを活用した具体的な手順（実践編）</h2>
+
+                    <!-- ▍01 アフィリエイトの手順 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　アフィリエイトの手順</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">ストーリーズアフィリエイトする際の手順はこの4つです。売るモノが決まった後は、この4つの手順通りに実施すれば、誰でも再現性高く数十万数百万と売り上げを上げることは可能です。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            
+                            <!-- 手順① -->
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 6px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">手順①：売るモノの特徴を知ろう</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">売るモノについては、売る責任として自分が誰よりも知っておく必要があります。</p>
+                                
+                                <ul style="font-size: 0.9rem; color: #334155; margin-bottom: 15px; padding-left: 20px;">
+                                    <li>モノを売ってる会社はどんな会社か</li>
+                                    <li>モノの特徴や成分が似ている商品とどう違うのか</li>
+                                    <li>自分はなぜこのモノを使っているのか</li>
+                                </ul>
+                                
+                                <div style="background-color: #eff6ff; padding: 10px; border-radius: 6px; border: 1px solid #bfdbfe;">
+                                    <p style="font-size: 0.85rem; color: #1d4ed8; margin-bottom: 0; font-weight: bold;">この売るモノへの理解の深さによって、ストーリーズで売るときの情熱や物語の深さが変わってきます。誰よりも使い込むことが大事です。</p>
+                                </div>
+                            </div>
+
+                            <!-- 手順② -->
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 6px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #065f46; margin-top: 0; margin-bottom: 10px;">手順②：フォロワーの悩みを知ろう</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">売るモノの特徴を知ったら、その特徴がフォロワーの悩みを解決することでなければ意味はありません。フォロワーさんに共通する特徴から、<span style="font-weight: bold;">「共通する悩み」</span>を明確にしましょう。</p>
+                                
+                                <ul style="font-size: 0.9rem; color: #334155; margin-bottom: 0; padding-left: 20px;">
+                                    <li>「より深い悩み」はないか</li>
+                                    <li>「商品の特徴で解決できる悩み」はないか</li>
+                                </ul>
+                            </div>
+
+                            <!-- 手順③ -->
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 6px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #92400e; margin-top: 0; margin-bottom: 10px;">手順③：販売計画を立てよう</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">一見インスタグラマーは思いつきのようにストーリーズを載せているようですが、売り上げを上げている人はしっかりと計画を立てています。思いつきでやっていては、成果は安定しません。</p>
+                                
+                                <div style="background-color: #fffbeb; padding: 10px; border-radius: 6px; border: 1px solid #fde68a;">
+                                    <p style="font-size: 0.85rem; color: #92400e; margin-bottom: 0; font-weight: bold;">スケジュールは必ず「書き出しましょう」。スケジュールを立てるとは書き出すことです！</p>
+                                </div>
+                            </div>
+
+                            <!-- 手順④ -->
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 6px solid #8b5cf6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #5b21b6; margin-top: 0; margin-bottom: 10px;">手順④：物語に載せよう</h3>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">「顧客の育成」のために重要な<span style="font-weight: bold;">物語</span>を作ることです。自分とモノの関係性などを物語化しましょう。この物語がより個人的であればあるほど、信用がうまれ、売り上げに繋がります。</p>
+                                
+                                <div style="background-color: #fff; padding: 15px; border-radius: 6px; border: 1px dashed #c4b5fd; margin-bottom: 15px;">
+                                    <p style="font-weight: bold; color: #5b21b6; margin-bottom: 5px; margin-top: 0;">【物語作りのステップ（約2週間）】</p>
+                                    <ol style="font-size: 0.9rem; color: #334155; margin-bottom: 0; padding-left: 20px;">
+                                        <li>悩みの状態の開示</li>
+                                        <li>悩みの深掘り</li>
+                                        <li>フォロワーとの交流</li>
+                                    </ol>
+                                </div>
+                                
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">この流れを2週間に分けて、毎日ストーリーズでシェアしていくと物語になります。<span style="font-weight: bold; color: #5b21b6;">アフィリエイト当日はこの物語をまとめて、ビフォーアフターを見せたりしてモノを売る</span>というイメージです。</p>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; text-align: center;">
+                            <p style="font-size: 0.95rem; font-weight: bold; color: #15803d; margin-bottom: 0;">もし売り上げが上がらない場合は、この手順のどこかができていないだけです。<br>手抜きせず、しっかり実施しましょう！</p>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                    <!-- ▍02 当日ストーリーズの注意点 -->
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　当日ストーリーズの注意点</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 25px;">アフィリエイト当日のストーリーズではPASONAの法則を意識しますが、結果が出ない人が軽視してしまいがちな、重要な2つについてお伝えします。</p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                            
+                            <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #ef4444; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #991b1b; margin-top: 0; margin-bottom: 15px; text-align: center;">① 当日の導入（1枚目の入り）</h3>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 15px;">ストーリーズアフィリエイトも「1枚目の入り」切り口が大事です。特に、<span style="font-weight: bold; color: #b91c1c;">アフィリエイト当日の最初の2枚</span>が重要です。</p>
+                                
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">ストーリーズを見ている人はソファーで寝転がって「最近みんな何してるかなー」って感情で見ています。だからこの入り方次第で、その先が読まれるか読まれないかが決まります。</p>
+                                
+                                <div style="background-color: #fef2f2; padding: 15px; border-radius: 6px; border: 1px solid #fecaca;">
+                                    <p style="font-size: 0.9rem; font-weight: bold; color: #991b1b; margin-bottom: 5px; margin-top: 0;">💡 対策</p>
+                                    <p style="font-size: 0.85rem; color: #7f1d1d; margin-bottom: 0;">「これって唐突すぎないか」を特に注意して、導入を考えましょう。<span style="font-weight: bold;">フォロワーの悩みから惹きつける「キャッチコピー」を考えて話し始める</span>ということです。</p>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #f59e0b; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                <h3 style="font-size: 1.2rem; color: #92400e; margin-top: 0; margin-bottom: 15px; text-align: center;">② 今である理由</h3>
+                                <p style="font-size: 0.95rem; color: #475569; margin-bottom: 15px;">基本、<span style="font-weight: bold; color: #b45309;">人は今じゃなくてよければ全て後回しにします。</span>（4つの不の「不急」）</p>
+                                
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">だから、今すぐに買わないといけない理由を添えないと、「またゆっくり考えて明日にしよう」と思って忘れてしまいます。もしくは、他の人のストーリーズを見た時に思い出して購入することもあります。</p>
+                                
+                                <div style="background-color: #fffbeb; padding: 15px; border-radius: 6px; border: 1px solid #fde68a;">
+                                    <p style="font-size: 0.9rem; font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0;">💡 対策</p>
+                                    <p style="font-size: 0.85rem; color: #78350f; margin-bottom: 0;">期間限定や先着30名など、<span style="font-weight: bold;">今である必要性をしっかり伝えましょう。</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

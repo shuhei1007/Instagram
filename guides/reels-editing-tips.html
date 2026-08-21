@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ショート動画編集のコツ5選 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .tip-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .tip-title {
+            color: #4c1d95;
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 1px solid #ede9fe;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>特別編：ショート動画編集のコツ5選</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回から3回にわたり、VLLOを使ったショート動画の編集テクニックを学んでいきます。</p>
+                    <p>VLLOの編集機能を自分の動画に落とし込めていないと、ショート動画は絶対に伸びません。なぜなら、ショート動画戦国時代といわれ、動画編集のクオリティが非常に高くなってきているからです。</p>
+                    <p>特にショート動画が伸びない原因の第1位は<strong>「ユーザー目線の欠如」</strong>です。</p>
+                    <p>今回の講座をマスターすれば、動画編集のクオリティが一定レベル上がり、ユーザーに刺さる動画編集が作れるようになります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">✅ 全体の流れ</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>① ショート動画の編集で絶対に押さえておきたいテクニック5選</li>
+                            <li>② 冒頭に使える動画編集テクニック7選</li>
+                            <li>③ 冒頭の構成別動画編集テクニック5選</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">✅ 講師：いつきのプロフィール</p>
+                        <p style="margin-bottom: 10px;">毎日バズっている動画を研究して、この1年半でショート動画を250本以上作成。総フォロワー10.8万人（2024年6月現在）。</p>
+                        <ul style="margin-bottom: 0; margin-top: 0;">
+                            <li>・インスタ：5.4万人</li>
+                            <li>・LINE：1.6万人</li>
+                            <li>・TikTok：1万人</li>
+                            <li>・YouTube：2.8万人</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 編集で絶対に押さえておきたいテクニック5選</h2>
+                    <p>今回の講座のメインテーマです。順番に見ていきましょう。</p>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">① テロップの正しい入れ方</h3>
+                        <p>テロップで1番重要なことは、<strong>なるべく同じ位置で横向きに挿入すること</strong>です。</p>
+                        <p><strong>【理由】</strong></p>
+                        <ul>
+                            <li>・横向きに比べて縦向きはかなり編集技術やセンスが必要だから</li>
+                            <li>・同じ位置に表示することで、眼を動かして読むストレスを軽減できるから</li>
+                        </ul>
+                        <p>視聴者に違和感を与えないことで視聴維持につながり、ショート動画を最後まで見てもらえます。</p>
+                        <div style="background-color: #f8fafc; padding: 10px 15px; border-radius: 4px; margin-top: 10px;">
+                            <p style="margin: 0; font-weight: bold;">VLLOの操作</p>
+                            <ol style="margin-bottom: 0; margin-top: 5px;">
+                                <li>テロップのデザインと位置を決める</li>
+                                <li>「最後まで」をタップ</li>
+                                <li>テロップを変える場所で「分割」をタップ</li>
+                                <li>テロップの位置を固定</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">② カット割りの正しい使い方</h3>
+                        <p>非常によくある間違いとして「カットする＝画角を変えること」があります。3秒以上の長いカットは避けると学びました。しかし、無理やり画角をたくさん変えている動画は、ユーザーにとって非常に見づらい動画になってしまいます。</p>
+                        <p>正しいカット割りは、<strong>動作や行動が分かるようにカットを入れていくこと</strong>です。むやみやたらに画角を変えている動画に比べ、自然で非常に見やすくなります。</p>
+                        <p>コツは、<strong>シーンに意味を持たせること</strong>です。</p>
+                        <div style="background-color: #f8fafc; padding: 10px 15px; border-radius: 4px; margin-top: 10px;">
+                            <p style="margin: 0; font-weight: bold;">例：カーテンを取り付けるシーン</p>
+                            <ol style="margin-bottom: 0; margin-top: 5px;">
+                                <li>素材を見せる</li>
+                                <li>カーテンを取り付ける</li>
+                                <li>どう取り付けるか分かるように手元のシーンを入れる</li>
+                                <li>全体が分かるように引きで撮る</li>
+                            </ol>
+                        </div>
+                        <p style="margin-top: 10px;">このように、シーンの意味を考えて、動作や行動が分かるようにカットを入れていくよう心がけてください。そうすると、無駄な画角やカットがなくなり、自然なカット割りを使えるようになります。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">③ 倍速の正しい使い方</h3>
+                        <p>倍速の正しい使い方は3つあります。</p>
+                        <ul>
+                            <li>・工程をすべて見せたい</li>
+                            <li>・編集で都合の良いところだけを見せていないことを伝えたい</li>
+                            <li>・リアル感を出したい</li>
+                        </ul>
+                        <p>倍速で見せることで、暮らしのリアル感が非常に伝わります。<br>全部の構成を見せたい、編集していないことを伝えたい、リアル感を出したいと思ったときに使ってみてください。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">④ ユーザー目線でテンポ感を作る方法</h3>
+                        <p>基本的に2〜3秒で画角やカットを変えましょうと言われているため、それぐらいのスピードでテンポ感を作っている人が非常に多いです。しかし、見ている人の年齢や届けたい相手によって画角やカットを変えないと、非常に見づらい動画になってしまいます。</p>
+                        <p>テンポ感を間違えていると、どんなにいい動画やいいコンテンツを作っても、ターゲットに届くことはありません。<br>
+                        <strong>届けたいユーザーの年齢によってテンポを変えてあげることが大切です。</strong></p>
+                        <div style="background-color: #f8fafc; padding: 10px 15px; border-radius: 4px; margin-top: 10px;">
+                            <p style="margin: 0; font-weight: bold;">テンポ感の変え方</p>
+                            <ul style="margin-bottom: 0; margin-top: 5px;">
+                                <li>・年齢層が10歳上がるたびに0.5秒テンポを足す<br>
+                                <span style="font-size: 0.9rem; color: #64748b;">（30代で1.5秒なら、40代では2秒、50代なら2.5秒というイメージ）</span></li>
+                                <li>・年齢層が上がるたびにテロップの文字を多く長めに表示する</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <h3 class="tip-title">⑤ アフレコのやり方</h3>
+                        <p>冒頭の部分のアフレコを入れる際は、生感やリアリティを意識してアフレコしてください。</p>
+                        <p>投稿のテーマを友達や大親友に話すときにどう話すか。そして、その考えた言葉を冒頭のアフレコに使ってください。こうすることで生感やリアリティが生まれます。</p>
+                        <p>アフレコに生感やリアリティを入れることで、アフレコ自体に感情が乗ります。その結果、棒読みを避けられ、感情が入ることで見ている人も楽しくなります。</p>
+                        <p>リアル感が伝わることで、見ている人がファンになってくれる可能性も高くなります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 まとめ・抽出前のチェック</h2>
+                    <p>動画編集が終わったら、必ず動画を3〜4回以上は見直してみてください。</p>
+                    
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0;">
+                        <p style="margin-top: 0; font-weight: bold;">✅ 見直すポイント</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>・ユーザー目線が欠けていないか</li>
+                            <li>・カット割りは見にくくなっていないか</li>
+                            <li>・本当にユーザーに伝わる動画になっているのか</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: 15px;">それだけで再生数や動画の見やすさは大きく変わってきます。今回の5つのテクニックを意識して、クオリティの高いショート動画を作成していきましょう！</p>
+                </section>
+
+                <div class="page-navigation">
+                    <a href="reels-guide.html" class="nav-prev">← 前へ：リール投稿の基本に戻る</a>
+                    <a href="reels-intro-tips.html" class="nav-next">次へ：冒頭テクニック7選 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

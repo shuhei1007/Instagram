@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザイン編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>【 デザイン編 】</h1>
+            <p>センス不要で攻略できるデザインの基本をご紹介します。</p>
+        </div>
+
+        <div class="content-card">
+            <div class="guide-content">
+                
+                <section>
+                    <p>デザインの知識を学ぶことで以下のコンテンツを自然と作れるようになります。</p>
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-around; font-weight: bold; color: #1e3a8a;">
+                            <li>👀 思わず目が止まる</li>
+                            <li>💡 直感的に理解しやすい</li>
+                            <li>😊 ストレスなく見られる</li>
+                        </ul>
+                    </div>
+                    <p style="text-align: center; color: #64748b; font-weight: bold;">そうすると…</p>
+                    <div style="background-color: #fff1f2; padding: 20px; border-radius: 8px; margin: 15px 0; border: 1px solid #fecdd3;">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-around; font-weight: bold; color: #be123c;">
+                            <li>📈 タップ率アップ</li>
+                            <li>💕 満足度アップ</li>
+                            <li>⏱️ 視聴時間アップ</li>
+                        </ul>
+                    </div>
+                    <p style="font-weight: bold; text-align: center; font-size: 1.1rem; color: #1e293b;">目に見えてSNS上での反応が良くなります。</p>
+                    <p style="margin-top: 20px;">SNSで必要なデザインは、アーティストのようなデザインセンスではなくて、<strong>ぱっと見てすぐわかる、直感的に伝わるデザインスキル</strong>です。<br>今回の講座では、センス不要で攻略できるデザインの基本をご紹介していますので、デザインスキルを上げていきましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　フォントについて</h2>
+                    <p>フォントと書体には以下の違いがあります。</p>
+                    
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>書体</strong>：ある方針に基づいてデザインされた文字の分類</li>
+                            <li><strong>フォント</strong>：その書体を実際にパソコンなどで使うために作られたデータファイル</li>
+                        </ul>
+                    </div>
+
+                    <p>Canvaにはあらかじめたくさんの種類のフォントが用意されています。フォントを選ぶときの手掛かりとして、書体の特徴について知っておきましょう。</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1e293b;">ゴシック体</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: #64748b;">文字を構成する線の太さが均等なもの</p>
+                        </div>
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1e293b; font-family: serif;">明朝体</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: #64748b;">線に強弱があり、細いところと太いところがある</p>
+                        </div>
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1e293b;">サンセリフ体</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: #64748b;">装飾がなくシンプル（英字）</p>
+                        </div>
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1e293b; font-family: serif;">セリフ体</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: #64748b;">文字の先に髭のような装飾がついている（英字）</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">用途・目的を軸にして選ぶ</h3>
+                    <p>たくさんあるフォントを選ぶときの手掛かりとして、用途、目的を軸にして考えましょう。</p>
+                    <ul style="font-weight: bold;">
+                        <li>読みやすさを重視：シンプルなゴシック体や明朝体、サンセリフ体、セリフ体</li>
+                        <li>目立たせたい・個性を出したい：特徴的なデザインフォントや手書き風フォント</li>
+                    </ul>
+
+                    <h4 style="margin-top: 30px;">どうやって使い分ける？</h4>
+                    <p>見出し（アイキャッチ）として目立たせたい部分と、情報をしっかり伝えたい本文（説明文）で使い分けるとデザインに合いやすいです。見出しと本文にシンプルなゴシック体や明朝体を使うと、癖がなく読みやすいデザインになります。</p>
+                    <p>本文などサイズが小さく文章量が多い箇所に特徴的なフォントを使うと読みづらくなってしまいます。また、見出しと同様に本文も太めのフォントにすると、素人っぽく見えてしまいます。<br>筆記体はインパクトがありますが、本文で使うと読みづらくなるので、見出しやアイキャッチだけにとどめましょう。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT：特徴のあるフォントの使用は限定的に！</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>見出しやアイキャッチ部分に使うことで、デザインにインパクトを出す</li>
+                            <li>本文や説明など、小さな文字は読みやすいゴシック体や明朝体を使う</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">フォントの太さで使い分ける</h3>
+                    <p>同じフォントでも太さにバリエーションがあり、印象に違いがあります。</p>
+                    <ul>
+                        <li>太めのフォントは読みやすく力強い</li>
+                        <li>細めのフォントは女性的で繊細、上品でおしゃれ、若々しい</li>
+                    </ul>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT：フォントの太さでイメージが変わる</p>
+                        <div style="display: flex; gap: 20px;">
+                            <div style="flex: 1; background: #fff; padding: 15px; border-radius: 6px;">
+                                <p style="font-weight: bold; text-align: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-top: 0;">太めのフォント</p>
+                                <ul style="margin-bottom: 0; font-size: 0.95rem; padding-left: 20px;">
+                                    <li>読みやすい</li>
+                                    <li>親しみやすい</li>
+                                    <li>価格帯：安い</li>
+                                    <li>not おしゃれ</li>
+                                </ul>
+                            </div>
+                            <div style="flex: 1; background: #fff; padding: 15px; border-radius: 6px;">
+                                <p style="font-weight: bold; text-align: center; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-top: 0; font-weight: 300;">細めのフォント</p>
+                                <ul style="margin-bottom: 0; font-size: 0.95rem; padding-left: 20px;">
+                                    <li>女性的</li>
+                                    <li>上品・繊細</li>
+                                    <li>価格帯：高め</li>
+                                    <li>おしゃれ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;">※必ずしもそうだという一つの正解ではありませんが、大体このような傾向があると覚えておきましょう。</p>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">手書き＆手書き風フォントの効果</h3>
+                    <p>手書きフォントは使う人の人柄が想像でき、人間味を伝えられるという良さがあります。SNSでは人間味が伝わるものほど人の心を動かすことができるので、より共感を持って身近に感じてもらうために効果的です。</p>
+                    <p>タイトルやアイキャッチの部分に手書き風のフォントを使用し、英語のフォントなどでも線の細いラフなフォントを使うことで、世界観を統一することができます。正確に伝えたい部分はゴシック体を使うなど、使い分けをしていきましょう。</p>
+                    <p>Canvaには手書き風の素材がたくさんあるので、手書き風のフォントと合わせて使うとよりイメージが膨らむのでおすすめです。<br>
+                    <strong>検索ワード</strong>：<code>線</code>　<code>イラスト</code></p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT：手書き＆手書き風フォント</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>アクセントとして使うと効果的！</li>
+                            <li>多用すると読みづらいので注意</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　配置について</h2>
+                    <p>文字や画像の配置によって、読みやすさや関連性など、分かりやすさが大きく左右されます。それぞれの位置を決めるレイアウトはデザインの中でも迷うことが多い部分ですが、いくつか守るべきポイントを抑えておきましょう。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">デザインの4原則</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3b82f6;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1d4ed8; font-size: 1.1rem;">近接 (Proximity)</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">関係の深い要素を近づけて一塊に見せるグループ化</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3b82f6;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1d4ed8; font-size: 1.1rem;">整列 (Alignment)</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">左寄せ、中央寄せなど、デザインの中で統一したルールを決めて配置</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3b82f6;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1d4ed8; font-size: 1.1rem;">反復 (Repetition)</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">同じ意味を持つ要素は大きさや形を統一して、関連性のある情報が連続して表示されている状態</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 5px solid #3b82f6;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1d4ed8; font-size: 1.1rem;">対比 (Contrast)</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">大きさや形、色など、それぞれに対比の差を大きくし、デザインにメリハリを出す</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　配色について</h2>
+                    <p>配色はデザインの決め手となる重要な要素です。色選びはその人のセンスによるところも多いのですが、単に見た目が綺麗な色というだけではなく、情報が伝わりやすい選び方のポイントを抑えておくようにしましょう。</p>
+
+                    <p>原則として<strong>色の数を少なめにすること</strong>をおすすめします。色使いが苦手という人は特に使う色を増やしすぎないよう注意してください。何の法則性もなく色を増やしていくと、非常にまとまりがない印象に。色の数を少なくするほど、全体をコントロールしやすくなります。</p>
+
+                    <p>写真の上にロゴやコピーを配置している状態で文字を強調したい時は、背景の写真にエフェクトをかけて暗くしたり、彩度を落とすなどして加工してみてください。</p>
+                    <ul style="background-color: #f8fafc; padding: 15px 15px 15px 35px; border-radius: 8px;">
+                        <li>背景を黒にして、写真の透明度を調整</li>
+                        <li>写真を編集からエフェクトを使用</li>
+                        <li>彩度を落として白黒にする</li>
+                    </ul>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT：色数は少なめに（色は引き算）</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>むやみに色数を増やさず、むしろ減らす</li>
+                            <li>写真の色を調整してデザインに馴染ませる</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">色のトーンとは</h3>
+                    <p>色を表すときに、色相、明度、彩度という3つの尺度を用いる方法があります。これは色の三属性と呼ばれていて、この3つによって色を客観的に表すことができます。</p>
+                    
+                    <div style="display: flex; gap: 15px; margin: 20px 0;">
+                        <div style="flex: 1; background-color: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
+                            <p style="font-weight: bold; margin: 0; color: #334155;">色相</p>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0 0; color: #64748b;">色味、色合い</p>
+                        </div>
+                        <div style="flex: 1; background-color: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
+                            <p style="font-weight: bold; margin: 0; color: #334155;">明度</p>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0 0; color: #64748b;">色の明るさの度合い</p>
+                        </div>
+                        <div style="flex: 1; background-color: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; text-align: center;">
+                            <p style="font-weight: bold; margin: 0; color: #334155;">彩度</p>
+                            <p style="font-size: 0.9rem; margin: 5px 0 0 0; color: #64748b;">色の鮮やかさを示す尺度</p>
+                        </div>
+                    </div>
+
+                    <p>色のトーンとは、<strong>明度＋彩度＝色調</strong>のこと。色につける形容詞のようなものです。例えば、”明るい”赤や、”暗い”赤、”鮮やかな”赤などの形容詞にあたる部分がトーンになります。</p>
+
+                    <p>Canvaではカラーパレットを表示してポインターを動かすことでトーンを変更できます。</p>
+                    <ul style="background-color: #f8fafc; padding: 15px 15px 15px 35px; border-radius: 8px; font-weight: bold;">
+                        <li>上下：明るさ</li>
+                        <li>左右：彩度</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;">また、アプリ「Shade」を使うことで、1度に6種類のパターンを自動生成してくれるので便利です。</p>
+                    <p>トーンを揃えることでイメージが伝わりやすくなるので、配色を決めるときのヒントにしてみてください。</p>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">色の連想・色が持つイメージ</h3>
+                    <p>色に対するイメージは、多くの人に共有されているものがたくさんあります。色に対して持っている共通のイメージを利用すると、自分が伝えたいテーマに合ったデザインを作ることができます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　あなたが届けたい相手はどんな世界観を好むのか</h2>
+                    <p>Instagramアカウントで世界観を作るために、「あなたが届けたい相手はどんな世界観を好むのか」を考えましょう。<br>
+                    Instagramを副業、ビジネスでやるなら、再現性高く成功するために競合調査や、ユーザーのニーズを汲み取ることは欠かせません。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 15px 0; border: 1px solid #e2e8f0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ ｉサークルのInstagram講座が推奨する世界観作りのステップ</p>
+                        <ol style="margin-bottom: 0; font-weight: bold; color: #1e40af;">
+                            <li>競合調査をする</li>
+                            <li>ユーザーのニーズを汲み取る</li>
+                        </ol>
+                    </div>
+                    <p>ただ、このステップで進んでも最終的なデザイン・世界観の判断をしているのはあなた自身なので、完成した世界観はあなたが作った唯一無二の世界観になります。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">再現性高く、ユーザーに好まれる世界観を作る2ステップ</h3>
+
+                    <h4 style="margin-top: 25px; border-bottom: 2px solid #cbd5e1; padding-bottom: 5px;">① 競合アカウントの世界観を調査する</h4>
+                    <p>初級17日目の宿題を見ながら、ベンチマーク（競合）アカウントに抱いたイメージや世界観を振り返っていきます。まず、ベンチマークアカウントがどのようなデザインを採用しているのかを改めて書き出しましょう。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155;">🧐 競合のアカウントでは、誰に届けるのか？</p>
+                            <ul style="font-size: 0.95rem;">
+                                <li><strong>どんな悩みを持っている人向け？</strong><br>どんな悩みを持っている人に発信しているのか</li>
+                                <li style="margin-top: 10px;"><strong>年代は？</strong><br>10代／20代／30代／40代／50代以上</li>
+                                <li style="margin-top: 10px;"><strong>性別は？</strong><br>男性向け／女性向け／どちらも</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155;">🎨 競合アカウントはどんなデザインか？</p>
+                            <ul style="font-size: 0.95rem;">
+                                <li><strong>配色は？</strong><br>テーマカラーは？／背景色は？</li>
+                                <li style="margin-top: 10px;"><strong>フォントは？</strong><br>どんなフォント？／どんな文字装飾？</li>
+                                <li style="margin-top: 10px;"><strong>雰囲気は？</strong><br>綺麗・上品／ポップ・かわいい／シンプル・ミニマル／かっこいい・力強い</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0;">📌 フォント探しのヒント</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">Canvaの中にフォントがなかった場合、フォントのダウンロードサイトを見る</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://free-fonts.jp/" target="_blank" style="background-color: #e2e8f0; padding: 5px 15px; border-radius: 20px; color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: bold;">＞＞ フリーフォントの栞</a>
+                            <a href="https://fontfree.me/" target="_blank" style="background-color: #e2e8f0; padding: 5px 15px; border-radius: 20px; color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: bold;">＞＞ フォントフリー</a>
+                            <a href="https://designpocket.jp/" target="_blank" style="background-color: #e2e8f0; padding: 5px 15px; border-radius: 20px; color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: bold;">＞＞ デザインポケット</a>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-weight: bold;">競合を分析することで、あなたが届けたい人はどんな世界観を好むのかを知ることができます。</p>
+
+                    <h4 style="margin-top: 40px; border-bottom: 2px solid #cbd5e1; padding-bottom: 5px;">② 届けたい相手が好む世界観を考える</h4>
+                    <p>競合分析をした上で、改めて自分のアカウントの世界観を考えていきます。初級16日目の宿題を見ながら、アカウントのコンセプトを振り返りましょう。</p>
+                    <p>あなたのアカウントについて、先ほどの競合調査と同じ項目（悩み、年代、性別、配色、フォント、雰囲気）を埋めてみてください。</p>
+
+                    <h5 style="margin-top: 30px; font-size: 1.1rem;">▼ ｉサークルオリジナルテンプレート</h5>
+                    <p>イメージに合わせてCanvaのテンプレートを活用しましょう。</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px;">
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;">綺麗・上品なイメージ</p>
+                            <a href="https://www.canva.com/design/DAFyUR92KAg/111O9CHQEpbMG7lDJcQydQ/view?utm_content=DAFyUR92KAg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #2563eb; text-decoration: none; font-size: 0.95rem;">＞＞ シンプルデザイン</a>
+                            <a href="https://www.canva.com/design/DAFyO9A0BvE/6J2yTlsVCJSSBuFY3QKazA/view?utm_content=DAFyO9A0BvE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #2563eb; text-decoration: none; font-size: 0.95rem;">＞＞ シャープデザイン</a>
+                        </div>
+                        <div style="background-color: #fdf4ff; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #e879f9; padding-bottom: 5px;">ポップ・かわいいイメージ</p>
+                            <a href="https://www.canva.com/design/DAFyfr3uHic/ki_4UrnHnmp9vlt3i8Q7Lg/view?utm_content=DAFyfr3uHic&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ 美容系デザイン</a>
+                            <a href="https://www.canva.com/design/DAFyVsnOEs4/No6Egqu4RsLtVoyDZjiIcQ/view?utm_content=DAFyVsnOEs4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ レシピ系デザイン</a>
+                            <a href="https://www.canva.com/design/DAFy0BkBV3M/k5hQi8lW2HMPKa_in3n0IA/view?utm_content=DAFy0BkBV3M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ 文字投稿系デザイン</a>
+                        </div>
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #4ade80; padding-bottom: 5px;">シンプル・ミニマルなイメージ</p>
+                            <a href="https://www.canva.com/design/DAFyyNYqqSs/KYUEFweb_NQxosDRb3xI5Q/view?utm_content=DAFyyNYqqSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ 家系デザイン</a>
+                            <a href="https://www.canva.com/design/DAFyfzZQ5cA/kfWNzQagkxwzP6lntdk47w/view?utm_content=DAFyfzZQ5cA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ ミニマルデザイン</a>
+                            <a href="https://www.canva.com/design/DAFyQ1QzqQg/lmRTPOq7-Bz8vR__dIC9mQ/view?utm_content=DAFyQ1QzqQg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ ほっこり系デザイン</a>
+                        </div>
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #f87171; padding-bottom: 5px;">かっこいい・力強いイメージ</p>
+                            <a href="https://www.canva.com/design/DAFyyj868as/kBO09lBt-AAcCI7vgMZayg/view?utm_content=DAFyyj868as&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; margin-bottom: 8px; color: #dc2626; text-decoration: none; font-size: 0.95rem;">＞＞ ノウハウ系デザイン</a>
+                            <a href="https://www.canva.com/design/DAFy4bdYej8/65W3cyVf0by9Uoy6Z315eA/view?utm_content=DAFy4bdYej8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #dc2626; text-decoration: none; font-size: 0.95rem;">＞＞ 旅系デザイン</a>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 25px;">競合調査を踏まえて、あなたが届けたい相手の好みを想像していくことで、より解像度が高いイメージをもつことができます。<br>
+                    <strong>競合調査は重要ですが、あくまでも参考。丸パクリはNGです。</strong></p>
+
+                    <div style="display: flex; gap: 20px; margin-top: 20px;">
+                        <div style="flex: 1; background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 2px solid #bfdbfe;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1d4ed8;">⭕️ 参考にする</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">近い色を使う／同じフォントを使う／違う発信ジャンルのアカウントの色・フォントを参考にする</p>
+                        </div>
+                        <div style="flex: 1; background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 2px solid #fecaca;">
+                            <p style="font-weight: bold; margin-top: 0; color: #b91c1c;">❌ 丸パクリはNG</p>
+                            <p style="margin-bottom: 0; font-size: 0.95rem;">色とフォントの組み合わせが同じかつ、発信内容も同じ</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-weight: bold; text-align: center;">良いアカウントの良い点を上手に参考にしていきましょうね。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05　テーマカラーとフォントで世界観を作ろう</h2>
+                    <p>Instagramで世界観を作る上で重要な要素となるのは次の2つの要素です。</p>
+                    <ul style="font-weight: bold; font-size: 1.1rem; color: #1e3a8a;">
+                        <li>テーマカラー</li>
+                        <li>フォント</li>
+                    </ul>
+                    <p>テーマカラーとフォントで世界観の8割が決まると言っても過言ではありません。</p>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ テーマカラー</h3>
+                    <p>テーマカラーとは、「このアカウントといえばこの色！」のように連想される色のことです。テーマカラーのアカウントへの影響力は想像以上に大きいです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ テーマカラーで世界観を作るポイント</p>
+                        <ol style="margin-bottom: 0; font-weight: bold;">
+                            <li>ストレスにならない配色</li>
+                            <li>アカウント設計にあっている色</li>
+                            <li>届けたいユーザーに好まれる色</li>
+                            <li>すべてのタッチポイントでテーマカラーを統一</li>
+                        </ol>
+                    </div>
+
+                    <h4 style="margin-top: 30px;">① ストレスにならない配色</h4>
+                    <p>まず、ストレスになる配色を3つ紹介します。</p>
+                    <ul style="margin-bottom: 20px;">
+                        <li><strong>ストループ効果</strong>：色から読み取れる情報と、意味から読み取れる情報が一致しない場合に、人は直感的に情報を理解することができません。理解するまでに時間がかかってしまう現象のことです。</li>
+                        <li><strong>ハレーション</strong>：配色を行う色同士の明度が互いに近く、彩度が高いと起こる現象。目がチカチカし、視認性が低いデザインになってしまいます。</li>
+                        <li><strong>色の数が多すぎる</strong>：色数が多ければ多いほど情報量が多くなってしまい、一番伝えたいことや強調したいことがわかりづらくなってしまいます。</li>
+                    </ul>
+
+                    <p>配色の基本的なルールとして、ベースカラー・メインカラー・アクセントカラーの3色で配色して次の割合で使用すると失敗しません。</p>
+                    
+                    <div style="margin: 20px 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; height: 60px; text-align: center; line-height: 60px; font-weight: bold; color: #334155;">
+                        <div style="width: 70%; background-color: #f1f5f9;">ベースカラー 70%</div>
+                        <div style="width: 25%; background-color: #93c5fd; color: #fff;">メインカラー 25%</div>
+                        <div style="width: 5%; background-color: #f87171; color: #fff; line-height: 1.2; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">アクセント<br>5%</div>
+                    </div>
+                    <p>これらのストレスになる配色を避けるだけで、視認性が高く、わかりやすいデザインをつくることができます。</p>
+
+                    <h4 style="margin-top: 30px;">② アカウント設計にあっている色</h4>
+                    <p>色にはそれぞれ連想されるイメージがあり、色を変えるだけでイメージも大きく変わります。アカウントのコンセプトや発信内容と、色の持つイメージはずれないようにしましょう。<br>
+                    ずれてしまうと、ストループ効果で、色のイメージと発信内容が違っていて混乱し、すぐに理解できず、ユーザーにストレスが発生してしまいます。<br>
+                    <strong>色の影響力は絶大です。アカウント設計にあったテーマカラーを選びましょう。</strong></p>
+
+                    <h4 style="margin-top: 30px;">③ 届けたいユーザーに好まれる色</h4>
+                    <p>先ほど解説した「競合アカウントの調査」と「届けたい相手が好む世界観」で見えてきた「ユーザーに好まれる色」を踏まえてテーマカラーを決めましょう。</p>
+
+                    <h4 style="margin-top: 30px;">④ Instagram内のすべての発信でテーマカラーを統一</h4>
+                    <p>決めたテーマカラーは、Instagram内のすべての発信で統一して使いましょう。そうすることで、アカウントに一貫性が生まれます。<br>
+                    Canvaの有料版を使っている方は<strong>ブランド機能</strong>を活用すると便利です。</p>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ フォント</h3>
+                    <p>instagram運用においてはフォントも非常に重要です。フォントの種類によって、投稿やアカウントの雰囲気・世界観に影響することはもちろんですが、投稿の<strong>タップ率</strong>にも大きく影響します。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; color: #b91c1c;">💡 タップ率とは</p>
+                        <ul style="margin-bottom: 0; color: #7f1d1d;">
+                            <li>検索欄や発見欄の中であなたの投稿が選ばれる（タップされる）割合</li>
+                            <li>あなたの投稿の表紙を見た人がタップして中身を見る割合</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ フォントで世界観を作るときのポイント</p>
+                        <ol style="margin-bottom: 0; font-weight: bold;">
+                            <li>ストレスにならないフォント</li>
+                            <li>アカウント設計にあっているフォント</li>
+                            <li>届けたいユーザーに好まれるフォント</li>
+                            <li>文字装飾もフォントの一部と捉えよう</li>
+                            <li>Instagram内のすべての発信でフォントを統一</li>
+                        </ol>
+                    </div>
+
+                    <h4 style="margin-top: 30px;">① ストレスにならないフォント</h4>
+                    <p>ストレスにならないフォントとは「読みやすいフォント」「わかりやすいフォント」です。逆にいうと、読みにくく、わかりにくいフォントを避ければOKということです。</p>
+
+                    <h4 style="margin-top: 30px;">② アカウント設計にあっているフォント</h4>
+                    <p>フォントにはそれぞれ連想されるイメージがあります。ずれてしまうと、フォントのイメージと発信内容が違っていて混乱し、すぐに理解できないため、ユーザーにストレスが発生してしまいます。</p>
+                    <p><strong>イメージ別のおすすめフォント</strong></p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div style="background-color: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #475569;">綺麗・上品</p>
+                            <p style="margin-bottom: 0; font-family: serif; font-size: 1.1rem;">筑紫Aオールド明朝<br>テロップ明朝</p>
+                        </div>
+                        <div style="background-color: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #475569;">シンプル・ミニマル</p>
+                            <p style="margin-bottom: 0; font-size: 1.1rem;">筑紫A丸ゴシック<br>はなとちょうちょ</p>
+                        </div>
+                        <div style="background-color: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #475569;">ポップ・かわいい</p>
+                            <p style="margin-bottom: 0; font-size: 1.1rem;">コーポレート・ロゴ丸<br>じゃんぴょんまる</p>
+                        </div>
+                        <div style="background-color: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #475569;">かっこいい・力強い</p>
+                            <p style="margin-bottom: 0; font-weight: bold; font-size: 1.1rem;">UD角ゴ＿ラージ<br>コーポレートロゴ</p>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px;">③ 届けたいユーザーに好まれるフォント</h4>
+                    <p>「競合アカウントの世界観の調査」「届けたい相手が好む世界観」で見えてきた情報を踏まえて、フォントを決めましょう。</p>
+
+                    <h4 style="margin-top: 30px;">④ 文字装飾もフォントの一部と捉えよう</h4>
+                    <p>同じフォントでも、文字装飾で印象が変わります。文字装飾についても届けたいユーザーに好まれるものを選びましょう。</p>
+
+                    <h4 style="margin-top: 30px;">⑤ Instagram内のすべての発信でフォントを統一</h4>
+                    <p>決めたフォントは、Instagram内のすべての発信で統一して使いましょう。そうすることで、アカウントに一貫性が生まれます。ここでも、Canvaのブランド機能を使うと便利です。</p>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; margin-top: 30px; text-align: center; border: 1px solid #bfdbfe;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #1e40af; margin-top: 0;">テーマカラー、フォントを決める際のポイントを意識して、実際に使用するものを決めましょう。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">ダウンロードしたフォントはCanvaやVLLOに取り込んで使用可能です。</p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <a href="https://free-fonts.jp/" target="_blank" style="background-color: #fff; padding: 5px 15px; border-radius: 20px; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: bold; border: 1px solid #3b82f6;">＞＞ フリーフォントの栞</a>
+                            <a href="https://fontfree.me/" target="_blank" style="background-color: #fff; padding: 5px 15px; border-radius: 20px; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: bold; border: 1px solid #3b82f6;">＞＞ フォントフリー</a>
+                            <a href="https://designpocket.jp/" target="_blank" style="background-color: #fff; padding: 5px 15px; border-radius: 20px; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: bold; border: 1px solid #3b82f6;">＞＞ デザインポケット</a>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06　アカウント設計にマッチした世界観を作ろう！</h2>
+                    <p>届けたい相手が好む世界観が見えてきたところで、その世界観をInstagramのタッチポイントに反映していきましょう。<br>
+                    <strong>タッチポイントとは、ユーザーが感想を持つすべてのものです。</strong></p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e3a8a;">▼ Instagramのタッチポイント</p>
+                        <ul style="margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 20px; list-style-type: none; padding-left: 0; font-weight: bold;">
+                            <li>📱 アイコン</li>
+                            <li>📱 ハイライト</li>
+                            <li>📱 投稿 など</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ アイコン</h3>
+                    <p>アイコンはアカウントの世界観に大きな影響を与えます。</p>
+
+                    <h4 style="margin-top: 25px;">意識すべきポイント</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+                        <div style="flex: 1; min-width: 250px; background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155;">① 実写か、イラストか</p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0;">
+                                <li><strong>実写</strong>：綺麗目のイメージ、かっこいいイメージ</li>
+                                <li><strong>イラスト</strong>：ポップ、かわいい、シンプルなイメージ</li>
+                            </ul>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px; margin-bottom: 0;">例：綺麗で上品な世界観のアカウントであれば、実写アイコンを使用。ポップで可愛い印象であれば、かわいいイラストアイコンが相性が良いです。</p>
+                        </div>
+                        <div style="flex: 1; min-width: 250px; background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155;">② どのような雰囲気か</p>
+                            <p style="font-size: 0.95rem; margin-bottom: 5px;">アイコンはいわば、アカウントの顔です。アカウント設計にあった雰囲気、世界観のものを使いましょう。</p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0;">
+                                <li>背景色や文字色にテーマカラーを使う</li>
+                                <li>文字入れする場合のフォントを統一する</li>
+                                <li>写真の色味をテーマカラーに寄せる</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                        <p style="margin-top: 0; margin-bottom: 10px; font-weight: bold;">事例で紹介したアイコンはテンプレートとしても使えます。<br>これからアイコンを作る、見直す際にはぜひ使ってみてください。</p>
+                        <a href="https://www.canva.com/design/DAF4ymcYrL0/VqJYTDNcmq5tw2FGrzxEcw/view?utm_content=DAF4ymcYrL0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: inline-block; background-color: #3b82f6; color: #fff; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">＞＞ ｉサークルアイコンテンプレートはこちら</a>
+                    </div>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ ハイライト</h3>
+                    <p>ハイライトはプロフィールの世界観に大きな影響を与えます。</p>
+                    
+                    <h4 style="margin-top: 25px;">意識すべきポイント</h4>
+                    <p>アイコン同様、「① 実写か、イラストか」「② どのような雰囲気か」を意識します。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ Canvaハイライトテンプレート</p>
+                        <p style="font-size: 0.95rem;">Canvaはハイライトのテンプレートが豊富なので、デザインに迷っている方はぜひ覗いてみてください。</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;">綺麗・上品なイメージ</p>
+                                <a href="https://www.canva.com/templates/EAFc_NNb0Jw-neutral-minimalist-highlight-covers-instagram-story/" target="_blank" style="display: block; margin-bottom: 8px; color: #2563eb; text-decoration: none; font-size: 0.95rem;">＞＞ 綺麗・上品なイメージ①</a>
+                                <a href="https://www.canva.com/templates/EAE2wsRfIOA-free-instagram-story-highlight-covers/" target="_blank" style="display: block; margin-bottom: 8px; color: #2563eb; text-decoration: none; font-size: 0.95rem;">＞＞ 綺麗・上品なイメージ②</a>
+                                <a href="https://www.canva.com/templates/EAFYQtFkAOc-beige-minimalist-highlight-cover-instagram-story/" target="_blank" style="display: block; color: #2563eb; text-decoration: none; font-size: 0.95rem;">＞＞ 綺麗・上品なイメージ③</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #e879f9; padding-bottom: 5px;">ポップ・かわいいイメージ</p>
+                                <a href="https://www.canva.com/templates/EAFOXWC4u_8-grey-and-orange-modern-feminine-highlight-covers-for-blog-instagram-story/" target="_blank" style="display: block; margin-bottom: 8px; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ ポップ・かわいい①</a>
+                                <a href="https://www.canva.com/ja_jp/templates/EAFPK6pFUtQ/" target="_blank" style="display: block; margin-bottom: 8px; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ ポップ・かわいい②</a>
+                                <a href="https://www.canva.com/ja_jp/templates/EAFOacd2ZbY/" target="_blank" style="display: block; margin-bottom: 8px; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ ポップ・かわいい③</a>
+                                <a href="https://www.canva.com/templates/EAFLeuKUABk-pink-modern-instagram-your-story-stories-highlights-icons/" target="_blank" style="display: block; color: #c026d3; text-decoration: none; font-size: 0.95rem;">＞＞ ポップ・かわいい④</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #4ade80; padding-bottom: 5px;">シンプル・ミニマルなイメージ</p>
+                                <a href="https://www.canva.com/templates/EAFE4WabV9A-beige-minimalist-text-highlight-covers-for-blog-instagram-story/" target="_blank" style="display: block; margin-bottom: 8px; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ シンプル・ミニマル①</a>
+                                <a href="https://www.canva.com/templates/EAFxW2v-ia4-neutral-simple-artline-highlight-covers-your-story/" target="_blank" style="display: block; margin-bottom: 8px; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ シンプル・ミニマル②</a>
+                                <a href="https://www.canva.com/templates/EAFL8AJ5Syg-beige-white-modern-minimalist-aesthetic-instagram-highlights-icon-your-story/" target="_blank" style="display: block; color: #16a34a; text-decoration: none; font-size: 0.95rem;">＞＞ シンプル・ミニマル③</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 1px solid #f87171; padding-bottom: 5px;">かっこいい・力強いイメージ</p>
+                                <a href="https://www.canva.com/templates/EAFfUhwZJjQ-black-aesthetic-minimalist-instagram-story-highlight-cover/" target="_blank" style="display: block; margin-bottom: 8px; color: #dc2626; text-decoration: none; font-size: 0.95rem;">＞＞ かっこいい・力強い①</a>
+                                <a href="https://www.canva.com/templates/EAFo5z-NeoU-black-and-gold-modern-minimalist-icons-social-media-story-highlight-cover/" target="_blank" style="display: block; margin-bottom: 8px; color: #dc2626; text-decoration: none; font-size: 0.95rem;">＞＞ かっこいい・力強い②</a>
+                                <a href="https://www.canva.com/templates/EAFdKsYdHhI-dark-aesthetics-feminine-highlight-covers-your-story/" target="_blank" style="display: block; color: #dc2626; text-decoration: none; font-size: 0.95rem;">＞＞ かっこいい・力強い③</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #b45309;">💡 ハイライトのデザインを作成するときのポイント</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>テーマカラーを統一</li>
+                            <li>フォントを統一</li>
+                        </ul>
+                    </div>
+
+                    <hr style="margin: 40px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ 投稿</h3>
+                    <p>投稿はもっとも多くのユーザーが目にするコンテンツです。ここで「この世界観は〇〇さんだ！」と一瞬で認知されるようになると、フォロー率が格段に上がります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ 投稿で世界観を作るポイント</p>
+                        <ol style="margin-bottom: 0; font-weight: bold;">
+                            <li>装飾を統一する</li>
+                            <li>写真の加工・フィルターを統一する</li>
+                        </ol>
+                    </div>
+
+                    <h4 style="margin-top: 30px;">① 装飾を統一する</h4>
+                    <p>投稿の形式が変わっても、世界観が維持されるよう装飾を統一しましょう。</p>
+
+                    <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e293b;">🎬 リール投稿の場合</p>
+                        <ul style="font-size: 0.95rem;">
+                            <li>サムネイルをCanvaで作成する場合は、一度Canvaで作ったリール表紙をテンプレートとして、内容を入れ替えて使うと便利です。</li>
+                            <li>また、リール表紙ガイドラインを使えば、ホーム画面、リール欄、フィード投稿、それぞれのサイズで、最適化された表紙を作ることができます。<br>
+                            <a href="https://drive.google.com/file/d/1woC_evo42pNcRuuJ2tqdPGjcZGBmsByf/view?usp=sharing" target="_blank" style="color: #2563eb; font-weight: bold;">＞＞ リール表紙ガイドラインはこちら</a><br>
+                            Canvaに読み込み、リールの表紙に重ねて、どの位置で表紙が切り取られるか確認しましょう。</li>
+                            <li>ショート動画をVLLOで作成する場合は、動画作成画面で、配色表を読み込んでテーマカラーをカラーピッカーで抽出しましょう。一度保存すればパレットに残ります。</li>
+                            <li>フォント、文字装飾に関しては、Canvaと同じ物がない場合もあるので、できるだけ似ているものを使いましょう。</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e293b;">📷 フィード投稿の場合</p>
+                        <p style="font-size: 0.95rem;">テーマカラー、装飾、フォント、文字装飾を統一するには、一度Canvaで作った投稿をテンプレートとして、内容を入れ替えて使うと便利です。こうすることで世界観が統一され、制作時間も短くなります。</p>
+                        
+                        <p style="font-weight: bold; font-size: 0.95rem; margin-bottom: 5px;">▼ ｉサークルテンプレート</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                            <div style="background-color: #fff; padding: 10px; border-radius: 8px;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; font-size: 0.9rem;">綺麗・上品</p>
+                                <a href="https://www.canva.com/design/DAFyUR92KAg/111O9CHQEpbMG7lDJcQydQ/view?utm_content=DAFyUR92KAg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #2563eb; text-decoration: none; font-size: 0.85rem;">＞＞ シンプルデザイン</a>
+                                <a href="https://www.canva.com/design/DAFyO9A0BvE/6J2yTlsVCJSSBuFY3QKazA/view?utm_content=DAFyO9A0BvE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #2563eb; text-decoration: none; font-size: 0.85rem;">＞＞ シャープデザイン</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 10px; border-radius: 8px;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; font-size: 0.9rem;">ポップ・かわいい</p>
+                                <a href="https://www.canva.com/design/DAFyfr3uHic/ki_4UrnHnmp9vlt3i8Q7Lg/view?utm_content=DAFyfr3uHic&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #c026d3; text-decoration: none; font-size: 0.85rem;">＞＞ 美容系デザイン</a>
+                                <a href="https://www.canva.com/design/DAFyVsnOEs4/No6Egqu4RsLtVoyDZjiIcQ/view?utm_content=DAFyVsnOEs4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #c026d3; text-decoration: none; font-size: 0.85rem;">＞＞ レシピ系デザイン</a>
+                                <a href="https://www.canva.com/design/DAFy0BkBV3M/k5hQi8lW2HMPKa_in3n0IA/view?utm_content=DAFy0BkBV3M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #c026d3; text-decoration: none; font-size: 0.85rem;">＞＞ 文字投稿系</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 10px; border-radius: 8px;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; font-size: 0.9rem;">シンプル・ミニマル</p>
+                                <a href="https://www.canva.com/design/DAFyyNYqqSs/KYUEFweb_NQxosDRb3xI5Q/view?utm_content=DAFyyNYqqSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #16a34a; text-decoration: none; font-size: 0.85rem;">＞＞ 家系デザイン</a>
+                                <a href="https://www.canva.com/design/DAFyfzZQ5cA/kfWNzQagkxwzP6lntdk47w/view?utm_content=DAFyfzZQ5cA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #16a34a; text-decoration: none; font-size: 0.85rem;">＞＞ ミニマルデザイン</a>
+                                <a href="https://www.canva.com/design/DAFyQ1QzqQg/lmRTPOq7-Bz8vR__dIC9mQ/view?utm_content=DAFyQ1QzqQg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #16a34a; text-decoration: none; font-size: 0.85rem;">＞＞ ほっこり系</a>
+                            </div>
+                            <div style="background-color: #fff; padding: 10px; border-radius: 8px;">
+                                <p style="font-weight: bold; margin-top: 0; color: #334155; font-size: 0.9rem;">かっこいい・力強い</p>
+                                <a href="https://www.canva.com/design/DAFyyj868as/kBO09lBt-AAcCI7vgMZayg/view?utm_content=DAFyyj868as&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #dc2626; text-decoration: none; font-size: 0.85rem;">＞＞ ノウハウ系</a>
+                                <a href="https://www.canva.com/design/DAFy4bdYej8/65W3cyVf0by9Uoy6Z315eA/view?utm_content=DAFy4bdYej8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="display: block; color: #dc2626; text-decoration: none; font-size: 0.85rem;">＞＞ 旅系デザイン</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e293b;">⭕️ ストーリーズの場合</p>
+                        <p style="font-size: 0.95rem;">Instagram上から作成する場合は、使用するフォントを統一すること、配色表を使ってテーマカラーを統一することで世界観を作りましょう。<br>
+                        <a href="https://www.canva.com/design/DAF1f3T3f6U/CoeGqqtO7XjBUaVbSy865Q/view?utm_content=DAF1f3T3f6U&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" style="color: #2563eb; font-weight: bold;">＞＞ 配色表</a><br>
+                        Canvaで作成する場合は、フィード投稿同様に過去の投稿をテンプレートとして、フォントやテーマカラーを統一しましょう。</p>
+                    </div>
+
+                    <h4 style="margin-top: 40px;">② 写真の加工・フィルターを統一する</h4>
+                    <p>写真や動画の加工方法、フィルターなどを統一することでも、世界観を作ることができます。</p>
+
+                    <div style="background-color: #fdf2f8; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #9d174d;">📱 おすすめ写真アプリ</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">アプリで加工する場合も、使用するフィルターの雰囲気を統一しましょう。</p>
+                        <ul style="font-size: 0.95rem; line-height: 1.8;">
+                            <li><a href="https://apps.apple.com/jp/app/soda-%E3%82%BD%E3%83%BC%E3%83%80/id1437880869" target="_blank" style="color: #db2777; font-weight: bold; text-decoration: none;">📷 SODA</a>：人物を撮影するのに適したアプリ</li>
+                            <li><a href="https://apps.apple.com/jp/app/filmhwa-hwa-min-filter/id6443723657" target="_blank" style="color: #db2777; font-weight: bold; text-decoration: none;">📷 filmhwa</a>：人物やオシャレな世界観を撮影するのに適したアプリ（※2026年7月時点で買切り500円）</li>
+                            <li><a href="https://apps.apple.com/jp/app/foodie-%E3%83%95%E3%83%BC%E3%83%87%E3%82%A3%E3%83%BC/id1076859004" target="_blank" style="color: #db2777; font-weight: bold; text-decoration: none;">📷 Foodie</a>：食べ物、暮らしを撮影するのに適したアプリ</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 15px;">リール制作のおすすめツールとして紹介しているVLLOのフィルター機能はかなり優秀です。リールの場合はVLLOのフィルターで世界観を作っていきましょう。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #b91c1c;">✅ VLLOのフィルターをかけるときのポイント</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>毎回同じ系統のものを使う</li>
+                            <li><strong>想像の2倍、がっつり加工する</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: 15px; font-weight: bold;">SNSはフィクションの世界ですので、フィルター機能を駆使して最も美しい世界をつくりましょう。</p>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; margin-top: 30px; text-align: center; border: 2px dashed #bfdbfe;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #1e40af; margin-top: 0;">世界観を意識したデザインができたら、自分が届けたいターゲットと近い属性の人に見てもらってFBをもらうのもおすすめです！</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0; color: #334155;">ユーザー視点での生の感想がもらえるので、より洗練された世界観になります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07　Canvaのテンプレート活用術</h2>
+                    <p>Canvaにはたくさんのテンプレートがあり大きく2つに分けられます。</p>
+                    <ul style="font-size: 0.95rem;">
+                        <li>要素が確定していてほとんどそのまま使えるタイプ</li>
+                        <li>要素を差し替えることを前提としているタイプ</li>
+                    </ul>
+                    <p>目的に合わせて、この2つを使い分けましょう。</p>
+                    <p>お好きなサイズで新規デザインを開き、左パネルのテンプレートからキーワードで検索します。ホーム画面の左側のメニューからテンプレートを選び、使用するメディアやテーマなどから検索することができます。</p>
+                    <p>また、サイズにこだわらず、テーマやスタイルを手掛かりにして探すやり方もあります。自分の目的や好みに合わせて、探し方をいろいろ試してみましょう。</p>
+                    
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>テンプレートはそのまま使えるタイプ、アレンジしやすいタイプを見極めよう</li>
+                            <li>テーマやスタイル、サイズなど、自分の目的に適した探し方を取り入れよう</li>
+                            <li>テンプレートの好きな部分を壊さないように注意しよう</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08　文字に厚みを出す（エフェクトを重ねる方法）</h2>
+                    <p>現在Canvaの文字にはエフェクト1種類しかつけられません。しかし、インパクトを出したい、もっと強調したい時には、一旦画像として書き出すことでエフェクトを重ね付けできるようになります。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ 書き出し時の設定</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">後で拡大した時に画像がにじまないように、書き出すときは以下の設定にしましょう</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>ファイルの種類：<strong>png</strong></li>
+                            <li>背景透過：<strong>オン</strong></li>
+                            <li>画像サイズ：<strong>少し大きめ</strong></li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>文字をPNG画像として書き出し、アップロードした画像にエフェクトをかける</li>
+                            <li>太めのフォントを使う（線が潰れて読みづらくならないように）</li>
+                            <li>エフェクトの量は多すぎないように注意する</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09　グラデーションで背景になじませる</h2>
+                    <p>グラデーション機能を使うと、徐々に背景に溶け込むような繊細なイメージを作ることができます。<br>
+                    ポイントは<strong>透明度の調整</strong>です。透明度を変えられることに気づかない方も多いので、活用してデザインに差をつけましょう。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>片方の色の透明度を0に設定</li>
+                            <li>好きな色で「徐々に消えていくグラデーション」を作ってデザインに活かそう！</li>
+                            <li>グラデーションは繊細なイメージに合う</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10　オススメの写真加工『マジック切り抜き』</h2>
+                    <p>写真の背景と被写体を別々に加工したい時などに使います。例えば、手前に写っている人物はクッキリと、背景だけをぼかしたい時などに便利です。<br>
+                    マジックスタジオの中の『マジック切り抜き』を選びます。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>背景イメージも活かしたいときに有効。対象はクッキリ、背景はぼかすなど別々のエフェクトがかけられる</li>
+                            <li>商品イメージなどにも効果的</li>
+                            <li>1枚の写真から深みのある画像を作れる</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11　被写体の位置調整</h2>
+                    <p>同じ写真でもトリミングする位置やサイズを変えることで印象が大きく変わります。<br>
+                    使い方次第で、1枚の写真を別のテーマや複数の投稿に使うこともできるので、工夫してみましょう。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>トリミング次第で全く別のテーマにも使える</li>
+                            <li>1枚の写真でも、グリッドで分割することでボリューム感を出すことができる</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍12　Canvaおすすめ素材集・検索ワードとイラスト一覧</h2>
+                    <p>今回はCanva公式がオススメしていた素材を中心に紹介します。「よく見かけるけど、どんなワードで検索すればわからない」と悩みがちなアイテムがたくさんあるので、ぜひお気に入りに登録してみてください。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>気に入った素材の3点リーダーから『似ているアイテム』や『コレクション』を選択</li>
+                            <li>気に入った素材のiマークからも、『似ているアイテム』や『コレクション』を選択</li>
+                            <li>気に入った素材はスター☆を付けていつでも使えるようにしましょう！</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍13　手書き（風）をプラスして属人性UP</h2>
+                    <p>手書き文字や手書き風のフォントを使うことで、デザインに親しみやすさや温かみが増します。整った文字でなくても、より身近に感じてもらうことで、発信する情報にも共感が得られやすくなる可能性が高くなります。</p>
+                    <p>全部手書きにする必要はなく、<strong>アクセントとして限定的に手書きを使用すること</strong>がポイントです。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">✅ POINT</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>手書き文字（手書き風フォント含む）や、手書き風の『あしらい』を加えることで人間味のある暖かさをプラス！</li>
+                            <li>1つのデザインの中に使いすぎると見づらくなるので、アクセントとして使うようにしましょう</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗・ECショップアカウント運用 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="../knowledge.html" class="back-link">← ノウハウ一覧に戻る</a>
+
+            <header class="article-header">
+                <span class="category badge-info" style="background:#dcfce7; color:#166534; padding: 4px 8px; border-radius:4px; font-size:0.8rem; font-weight:bold; margin-bottom: 10px; display: inline-block;">応用・特別編</span>
+                <h1>店舗・ECショップアカウント運営</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 個人アカウントと店舗・ECアカウントの違い</h2>
+                    <p>個人アカウントと店舗・ECアカウント*では以下の点で違います。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li><strong>① 運営目的</strong></li>
+                        <li><strong>② フォロワーの伸び</strong></li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: #64748b;">*ECとは「Electronic Commerce（エレクトロニック・コマース）」の略で、インターネット上で商品やサービスの売買を行う取引のことです。</p>
+
+                    <h3 style="margin-top: 30px;">① 運営目的</h3>
+                    <p>個人の場合と店舗・ECの場合は、主に収益化の方法に違いがあります。</p>
+
+                    <h4 style="margin-top: 20px; color: #1e3a8a;">⑴ 個人の場合は『他社商品』での収益化</h4>
+                    <p>個人の場合は始め、自分の商品やサービスではなく、他社の商品やサービスを紹介して販売していく『他社商品販売』という形での収益化が多いです。（例：アフィリエイトやPR案件）</p>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">個人が他社商品販売での収益化が多い理由</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li>✅ 個人が自社商品・サービスを持っていることが少ない</li>
+                            <li>✅ 自社商品・サービスを作る手間やコストが大きい</li>
+                        </ul>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                            <h4 style="margin-top: 0; color: #166534;">⭕️ メリット</h4>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>自分で商品・サービスを準備・提供しないので手間がかからない</li>
+                                <li>他社商品の数だけ収益化方法がある</li>
+                                <li>アカウント開始からすぐ収益化を実施できるものもあるので、0→1を達成しやすい</li>
+                                <li>初期費用がほとんどかからない</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fecaca;">
+                            <h4 style="margin-top: 0; color: #b91c1c;">❌ デメリット</h4>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>自社商品販売と比べて利益率が低い傾向にある</li>
+                                <li>他社に依存する</li>
+                                <li>商品・サービスを選ぶ手間やコストがかかる</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px;">他社商品販売は、他社に主導権を握られているが、自分で商品やサービスを持っていなくても、スモールスタートで手軽に始められるのが収益化ができるということです。ちなみに、他社商品販売だけでも月7桁達成している人はたくさんいます。</p>
+
+                    <h4 style="margin-top: 30px; color: #1e3a8a;">⑵ 店舗・ECの場合は『自社商品』での収益化</h4>
+                    <p>店舗・ECの場合はすでに『自社商品』がある状態でできるアカウント運営方法です。店舗・ECアカウントの主な運営目的は、自社の商品を<strong>”Instagram経由で販売して売上を最大化させること”</strong>です。</p>
+
+                    <ul>
+                        <li><strong>店舗</strong>：ユーザに認知してもらって、実店舗に足を運んでもらう</li>
+                        <li><strong>EC</strong>：ユーザに認知してもらって、オンライン上で自社の商品やサービスを購入してもらう</li>
+                    </ul>
+                    <p>また、働き手を募集する目的でも利用できます。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                            <h4 style="margin-top: 0; color: #166534;">⭕️ メリット</h4>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>他社商品と比べて利益率が高い傾向にある</li>
+                                <li>他社に依存しない</li>
+                                <li>SNSを活用すればローコストで集客できる</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fecaca;">
+                            <h4 style="margin-top: 0; color: #b91c1c;">❌ デメリット</h4>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>自社で商品やサービスの準備をする負荷がある</li>
+                                <li>初期費用が大きく掛かるものもある</li>
+                                <li>在庫リスクがある</li>
+                                <li>維持費用がかかる</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px;">自社商品販売は、自由度があり、利益率が高い傾向にあります。しかし、実店舗などであれば初期費用・維持費用が高く、在庫を抱えるといった金銭的リスクが非常に大きいです。また、<strong>ローコストで集客や売上をあげることができる</strong>のが、店舗・ECアカウントが、Instagram運用をする最大のメリットです。</p>
+                    <p>既に自社商品があり販売している方であれば、Instagramを活用してコストをかけず、売上を拡大させていきましょう。</p>
+                    <p style="background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 10px; margin-top: 15px;">💡 こういった事情を把握して企業や店舗の方に提案できる個人の方は、<strong>運用代行の案件も取りやすい</strong>ので、覚えておいてくださいね。</p>
+
+                    <h3 style="margin-top: 30px;">② フォロワーの伸び</h3>
+                    <p>個人アカウントは伸びやすく、店舗・ECアカウントは伸びにくい傾向があります。一番の大きな理由は<strong>「親しみやすさ」</strong>です。</p>
+                    <p>個人アカウントの場合は、共感や発信に有益性を感じてフォローし、ファンになります。一方で、店舗・ECアカウントは新規ユーザがたまたま見つけて、「うん！なんか良さそう！」で来店したり、商品購入をする。特にフォローもしないし、親しみを感じることなんてほとんどなかったりするんですね。</p>
+                    <p>その中でも「店舗・ECアカウントで伸ばしたい！」という方向けの具体的な改善アクションとしては2つあります。</p>
+
+                    <h4 style="margin-top: 20px; color: #1e3a8a;">⑴ 『個人』を出して、親しみを感じる投稿や交流を心がけて運営をしていく</h4>
+                    <p>店舗・ECでは担当者を決めて個人のアカウントのように運営していくことで、ユーザは親しみを覚えてフォローしてもらいやすいです。</p>
+
+                    <h4 style="margin-top: 20px; color: #1e3a8a;">⑵ 新規ユーザが購入しやすい環境を作っておく</h4>
+                    <p>店舗・ECアカウントは商品の満足度が高ければフォローされやすいです。「もう一度商品やサービスを購入したい！」「商品やサービスのお得なクーポンやセール情報が欲しい」と考えるから、「その情報を見逃がしたくない」とフォローします。</p>
+                    <p>逆にいうと、<strong>フォローされる前に、商品やサービスを購入してくれるユーザがいる</strong>ということです。ユーザが購入するまでに必要な情報を入れてあげることで、フォローされなくても商品やサービスは購入してくれることもあります！</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px;">▼ 必要な情報</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>口コミ</li>
+                            <li>店舗までの行き方・ECサイトでの商品の買い方</li>
+                            <li>実績・効果</li>
+                            <li>店舗・ECの雰囲気</li>
+                            <li>営業日・営業時間　など</li>
+                        </ul>
+                    </div>
+
+                    <p style="font-weight: bold; margin-top: 20px;">店舗・ECアカウントを伸ばしていくためには、以下の内容を実施しましょう。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ 個人を出して親しみやすさを出して新規のユーザからフォローをしてもらう</li>
+                        <li>✅ プロフィールに訪れたユーザが迷いなく、その店舗やECの商品やサービスを買うための情報を揃える(ベネフィット、口コミ等)</li>
+                    </ul>
+                    <p>店舗・ECアカウントでもInstagramを通じてフォロワーを増やしたり、売上を上げることができます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 店舗・ECアカウント運営の流れ</h2>
+                    <p>まずは個人アカウントと店舗・ECアカウントのユーザの流れを確認しましょう。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <h4 style="margin-top: 0; color: #334155; text-align: center; border-bottom: 2px solid #cbd5e1; padding-bottom: 10px;">個人アカウントのユーザの流れ</h4>
+                            <ol style="padding-left: 20px; margin-bottom: 0;">
+                                <li><strong>投稿を見る</strong><br><span style="font-size: 0.9rem; color: #475569;">発見欄や検索から投稿を見つける</span></li>
+                                <li style="margin-top: 10px;"><strong>プロフィールを見る</strong><br><span style="font-size: 0.9rem; color: #475569;">「この投稿いいな」と他の投稿も気になって飛ぶ</span></li>
+                                <li style="margin-top: 10px;"><strong>フォローする</strong><br><span style="font-size: 0.9rem; color: #475569;">「見逃したくないな」と思ったらフォローする</span></li>
+                                <li style="margin-top: 10px;"><strong>その人のファンになる</strong><br><span style="font-size: 0.9rem; color: #475569;">「悩みを解消する情報を発信してくれている」と思ったら</span></li>
+                                <li style="margin-top: 10px;"><strong>紹介した商品の購入する</strong><br><span style="font-size: 0.9rem; color: #475569;">「悩みを解消してくれる人が紹介する商品なら買ってみようかな！」</span></li>
+                                <li style="margin-top: 10px;"><strong>口コミをする</strong><br><span style="font-size: 0.9rem; color: #475569;">使ってみてどうだったか？の口コミをする</span></li>
+                            </ol>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                            <h4 style="margin-top: 0; color: #1e40af; text-align: center; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">店舗・ECアカウントのユーザの流れ</h4>
+                            <ol style="padding-left: 20px; margin-bottom: 0;">
+                                <li><strong>投稿を見る</strong><br><span style="font-size: 0.9rem; color: #475569;">発見欄や検索から投稿を見つける</span></li>
+                                <li style="margin-top: 10px;"><strong>プロフィールを見る</strong><br><span style="font-size: 0.9rem; color: #475569;">「この投稿いいな」と他の投稿も気になって飛ぶ</span></li>
+                                <li style="margin-top: 10px;"><strong>HP/サイトを見る</strong><br><span style="font-size: 0.9rem; color: #475569;">プロフィールで「魅力的な商品だな」と感じたら詳細を見る</span></li>
+                                <li style="margin-top: 10px;"><strong>購入・予約・申し込み</strong><br><span style="font-size: 0.9rem; color: #475569;">「この商品は自分の悩みを解消してくれそう」と思ったら購入する</span></li>
+                                <li style="margin-top: 10px;"><strong>フォローする</strong><br><span style="font-size: 0.9rem; color: #475569;">「今後の商品情報」や「お得なクーポン情報」を見逃したくないと思ったら</span></li>
+                                <li style="margin-top: 10px;"><strong>口コミをする</strong><br><span style="font-size: 0.9rem; color: #475569;">使ってみてどうだったか？の口コミをする</span></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 20px;">個人と店舗・ECの流れの違いは<strong>『プロフィールに飛んだ後の動き』</strong>です。</p>
+                    
+                    <ul style="margin-bottom: 20px;">
+                        <li><strong>個人アカウントの場合</strong>：プロフィールの中でいかに<strong>『本人』</strong>が発信している経験や情報にベネフィットや魅力を伝えられるか？が、フォローやファン化に繋がり、「この人が紹介した商品なら買ってみたい！」と売上にも影響してきます。</li>
+                        <li><strong>店舗・ECアカウントの場合</strong>：プロフィールの中でいかに<strong>『商品』</strong>のベネフィットや魅力を伝えられるか？が新規の売上の向上だったり、フォローにも影響してきます。</li>
+                    </ul>
+                    
+                    <div style="text-align: center; font-size: 1.2rem; font-weight: bold; background-color: #fdf2f8; padding: 15px; border-radius: 8px; color: #be185d;">
+                        個人は『人』にファンが付き、<br>店舗・ECは『商品』にファンが付きます。
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">店舗・ECアカウントで成果を出すためには<strong>『商品』の魅力をいかに打ち出していくか？</strong>が重要だということです。</p>
+
+                    <h3 style="margin-top: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">店舗・ECアカウント運営 5つのステップ</h3>
+                    <p>ユーザの流れを理解したところで、アカウント運営のステップを見ていきます。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">① アカウント設計(店舗・EC)</h4>
+                    <p>「どんな悩みを持っている人に届けるのか」「どんな未来に連れていくのか」「どんな解決策を提示するのか」<br>
+                    この3つを考えることで『発信の方向性』が定まっていきます。発信の方向性が定まっていれば「これは私のための情報だ！」と刺さるアカウントを作ることができ、影響力や信頼を手に入れ、その結果お金がついてきます。</p>
+
+                    <p style="font-weight: bold; margin-top: 15px;">店舗・ECアカウントの設計では以下の2点が大切です。</p>
+                    <ul>
+                        <li><strong>❶ 自社の強みを伝えていく</strong><br>その商品やサービスを得ることでどんな体験を得られるか？ベネフィットを想像させることができる店舗・ECアカウントは伸びていきます。</li>
+                        <li><strong>❷ 競合分析の視点を増やす</strong><br>店舗のサイトや会社HPなどを、より詳しく店舗・ECの分析をすることができるので分析の精度として高くするために、7W2Hという概念も取り入れて分析していきます。</li>
+                    </ul>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">▼ 7W2H</p>
+                        <ul style="column-count: 2; margin-bottom: 0;">
+                            <li>いつ（When）</li>
+                            <li>どこで（Where）</li>
+                            <li>誰が（Who）</li>
+                            <li>何を（What）</li>
+                            <li>なぜ（Why）</li>
+                            <li>どちら（Which）</li>
+                            <li>誰に（Whom）</li>
+                            <li>どのように（How）</li>
+                            <li>いくら（How much）</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">② プロフィール作成(店舗・EC)</h4>
+                    <p>アカウント設計を元に、訪れたユーザが購入しやすい流れが作れているのか？を見ていきます。</p>
+                    <ol>
+                        <li>投稿を見る</li>
+                        <li>プロフィールを見る</li>
+                        <li>HP/サイトを見る</li>
+                        <li>購入・予約・申し込み</li>
+                    </ol>
+                    <p>この流れがスムーズにできていると、新規ユーザから「④購入・予約・申し込み」をしてもらえます！</p>
+                    <p>また、店舗・ECアカウントは、万垢目指さず、フォロワー1000人とかでも充分な効果を発揮します。先ほどの例でも話した通り、フォロワーではなくても店舗に来てくれたり、オンラインの商品を買ってくれる人も多いからです。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">③ 投稿作成(店舗・EC)</h4>
+                    <p>アカウント設計で決めたことを元に投稿を作成します。店舗・ECアカウントでは役割によって、「フィード投稿」と「リール投稿」を使い分けていきます！</p>
+                    <ul>
+                        <li><strong>リール投稿は主に新規ユーザ向けの情報</strong><br>→ユーザがあなたの店舗・サイトに行くべき理由を発信で伝えていきます。</li>
+                        <li><strong>フィード投稿は主に既存フォロワー向けの情報</strong><br>→お得な情報や、有益な詳しい情報を解説し、フォローしてくれたファンの人を満足させる投稿を作っていくことで、売上の安定にも繋げていきます。</li>
+                    </ul>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">④ HP・ECサイト作成</h4>
+                    <p>HP/サイトを作成する目的は「信用力の向上」と「新規の申し込み数向上」です。Instagramだけではなく、HP/サイトがあることで、新規ユーザに信用してもらいやすく、申し込みが増加する傾向があります。</p>
+                    <p>HP/サイトは、ユーザ目線で作ることが重要です。あくまで、HP/サイトはユーザの悩みを解消するための手段なので、</p>
+                    <ul>
+                        <li>アカウント設計で届けたいユーザを明確にする</li>
+                        <li>自社の商品がどのようにユーザの悩みを解決するのか？を伝える</li>
+                        <li>ユーザが見やすくわかりやすいデザイン・世界観になっている等</li>
+                    </ul>
+                    <p>届けたいユーザのニーズに合わせてHP/サイトを作ることが大事です。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">⑤ 口コミの逆算設計</h4>
+                    <p>口コミは売上向上・申し込み数に大幅に関係してきます。</p>
+                    <p style="font-weight: bold; margin-bottom: 5px;">口コミが売上や申し込み数向上に関係する理由</p>
+                    <ol style="margin-top: 0;">
+                        <li>信頼性が増す</li>
+                        <li>社会的な証明になる</li>
+                        <li>購入の判断材料になる</li>
+                    </ol>
+                    <p>つまり、口コミが連鎖する仕組みができあがれば、広告を出す費用や手間をかけずに新規ユーザを獲得することができます。<br>
+                    ユーザの行動を逆算して口コミが連鎖する仕組みを作ってあげれば、自然と売上が上がる店舗・ECアカウントになります。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 店舗・ECのアカウント設計</h2>
+                    <p>アカウント設計とは、あなたがInstagramで「発信の方向性」を定めることです。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>・「どんな悩みを持っている人に届けるのか」</li>
+                        <li>・「どんな未来に連れていくのか」</li>
+                        <li>・「どんな解決策を提示するのか」</li>
+                    </ul>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px;">このアカウント設計をしっかりやることで次のことが可能になります。</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>ユーザに価値を提供できる</li>
+                            <li>影響力や信頼を手に入れられる</li>
+                            <li>売上を5倍10倍伸ばせる</li>
+                        </ul>
+                    </div>
+
+                    <p>店舗・ECアカウントで必要なアカウント設計に注目して解説します。店舗・ECのアカウント設計でやることは次の3つです。</p>
+                    <ol>
+                        <li>① 自社分析</li>
+                        <li>② 競合分析</li>
+                        <li>③ コンセプト設計</li>
+                    </ol>
+
+                    <h3 style="margin-top: 30px;">① 自社分析</h3>
+                    <p>店舗・ECの場合は「商品の強み」を見つけていきます。強みとは、<strong>「お客さんがその商品を使うことで手にする良い未来」</strong>です。ここを明確にして、他社では味わえない唯一無二の体験をしてもらうことが大切です。</p>
+                    <p>自社の強みの部分は何かを理解して、ユーザの需要を満たしてあげる形で、良い未来を提示してあげると、「ここにしよう！」と来店・購入に繋がります。</p>
+                    
+                    <div style="background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">💡 あなたの店舗・ECの強みを見つけるきっかけ</p>
+                        <p>実際に利用してくれた人に聞いてみることです。「なぜ来店・購入をしてくれたのか？」<br>
+                        利用してくれた人の声を見返したり、お客様アンケートボックスを実施して声を集めてみましょう。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">② 競合分析</h3>
+                    <p>競合分析とは、既に成果が出ているアカウントを分析して参考にすることです。早く成果を出す人ほど、競合分析をしています。なぜなら既に成果が出ているアカウントを分析するので、成果が出る要因を探ることができるからです。</p>
+                    <p>既に成功している競合アカウントというのは「売れている」ので、似ている切り口でコンセプトを作ってみたり、見せ方を工夫したりすることで、一気に売上が上がる可能性があります。<br>
+                    この競合分析なくして最適解を見つけることは困難です。競合分析を実施して最短で成果を出していきましょう。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">競合分析の仕方</h4>
+                    <ol>
+                        <li><strong>❶ SNS競合を見る</strong></li>
+                        <li><strong>❷ 法人競合を見る</strong></li>
+                    </ol>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px;">各競合が、成功しているかどうかの見極め方</p>
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>数字実績</strong>（売上、販売数等）</li>
+                            <li><strong>広告費を多く使っている</strong> ＝ 既に売れている商品だから、広告を使って広めようとしている</li>
+                            <li><strong>SNS・LINE公式の登録人数(フォロワー数)</strong> ＝ それだけ求めている人がいる</li>
+                        </ul>
+                    </div>
+                    <p>SNS競合・法人競合は分析情報が被らないようにそれぞれ最低でも3つずつ以上は見つけましょう。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">成功している競合の見るべきポイント（7W2H）</h4>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><strong>✅ When：いつ</strong><br>営業時間/曜日／どんな時に利用してもらえるか</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ Where：どこで</strong><br>どのSNSを使っているか／どのプラットフォームを使っているか</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ Who：誰が</strong><br>他社との差別化ポイント(独自性)</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ Whom：誰に</strong><br>例：30代女性で肥満に悩んでいるけど、運動が苦手で痩せられるか不安な人</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ What：何を</strong><br>この商品を活用することでお客さんをどのような状態にするものなのか？(良い未来：ベネフィット)</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ Why：なぜ</strong><br>なぜその商品を扱おうと思ったのか(理念)／なぜお客さんは来店するのか？</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ Which：どれを</strong><br>複数ある商品の中でなぜをそれを推すのか</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ How：どのように</strong><br>どのように集客しているか？／どのように販売しているか？</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ How much：いくらで</strong><br>商品本体の価格(プラン、コース等)／手数料・送料(〇円以上で無料等)／支払方法(クレカ、電子決済、現金等)</li>
+                        <li><strong>✅ コンセプト</strong><br>「どんな悩みを持っている人に届けるのか」／「どんな未来に連れていくのか」／「どんな解決策を提示するのか」</li>
+                    </ul>
+                    <p style="margin-top: 15px;">成功している競合のこれらを分析していけば、答えがわかった状態でアカウント運用をすることができます。</p>
+
+                    <h3 style="margin-top: 30px;">③ コンセプト設計</h3>
+                    <p>コンセプト設計とは、発信軸として以下の3つを決めることです。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>・「どんな悩みを持っている人に届けるのか」</li>
+                        <li>・「どんな解決策を提示するのか」</li>
+                        <li>・「どんな未来に連れていくのか」</li>
+                    </ul>
+                    <p>コンセプト設計をすることで、届けるターゲットと提供する価値が明確になるので、競合との差別化ができるようになります。</p>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; color: #b45309;">▼ コンセプト設計の具体例（店舗アカウント：油そば屋）</h4>
+                        
+                        <p style="font-weight: bold; margin-bottom: 5px;">自社商品の強み</p>
+                        <ol style="margin-top: 0;">
+                            <li>ラーメンよりも低カロリー</li>
+                            <li>スープがなくても美味しい！</li>
+                            <li>スープがない代わりに様々なトッピングを交えて色々な味を楽しめる</li>
+                        </ol>
+
+                        <p style="font-weight: bold; margin-bottom: 5px;">お客さんからよく貰う良い口コミ・意見BEST３</p>
+                        <ol style="margin-top: 0;">
+                            <li>注文して5分で来てくれるから早くてありがたい</li>
+                            <li>油そばって書いてあるけど、油っぽさがなくて女性でもサクッと食べられる</li>
+                            <li>店員さんが元気で丁寧なところに好感が持てる</li>
+                        </ol>
+
+                        <p style="font-weight: bold; margin-bottom: 5px;">実績</p>
+                        <ol style="margin-top: 0;">
+                            <li>Instagram登録者数3000人</li>
+                            <li>LINE登録者数10000人</li>
+                        </ol>
+
+                        <hr style="margin: 15px 0; border: none; border-top: 1px dashed #d1d5db;">
+                        <p style="font-weight: bold; margin-bottom: 10px;">7W2Hによる分析</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li><strong>When：いつ</strong><br>営業時間/曜日：11:00~21:00<br>どんな時に利用してもらえるか：仕事のランチ休憩、仕事後にサクッと食べる際に利用されることが多い</li>
+                            <li style="margin-top: 10px;"><strong>Where：どこで</strong><br>どのSNSを使っているか：X／Instagram／Facebook／LINE（登録者にクーポン配布あり）<br>どのプラットフォームを使っているか：自社HP／EC販売あり</li>
+                            <li style="margin-top: 10px;"><strong>Who：誰が</strong><br>他社との差別化ポイント(独自性)：地域特有の小麦で作るモチモチした麺／EC販売にて自宅でも楽しめる</li>
+                            <li style="margin-top: 10px;"><strong>Whom：誰に</strong><br>「30代男性でお金・時間をかけずに、手軽に濃い味を美味しく食べられる満足感が欲しい」人</li>
+                            <li style="margin-top: 10px;"><strong>What：何を</strong><br>お客さんをどのような状態にするものなのか？(良い未来：ベネフィット)：熱々できたての麺で、空いたお腹をすぐに満たすことができる／お腹に満足感があってもカロリーはラーメンより少ないから罪悪感が少ない</li>
+                            <li style="margin-top: 10px;"><strong>Why：なぜ</strong><br>なぜその商品を扱おうと思ったのか(理念)：地域に「食」で笑顔を作りたい／麺の種類やトッピングで自分だけのお気に入りの一杯を作ってほしい<br>なぜ来店するのか？：職場に近く、時間を要さずサクッと食べられる</li>
+                            <li style="margin-top: 10px;"><strong>Which：どれを</strong><br>複数ある商品の中でなぜをそれを推すのか：売上が一番上がる油そばをHPの顔として採用</li>
+                            <li style="margin-top: 10px;"><strong>How：どのように</strong><br>どのように集客しているか？：各SNS発信(クーポン配布・トッピング別の食べ方紹介等)／HP／食べログ・Googleマップ掲載<br>どのように販売しているか？：実店舗販売(券売機)／EC販売(BASE)</li>
+                            <li style="margin-top: 10px;"><strong>How much：いくらで</strong><br>商品本体の価格：800円<br>手数料・送料：EC販売は地域ごとによって送料(5000円以上で送料無料)<br>支払方法：実店舗＝現金のみ／EC販売＝各種電子決済、クレカ</li>
+                        </ul>
+
+                        <hr style="margin: 15px 0; border: none; border-top: 1px dashed #d1d5db;">
+                        <p style="font-weight: bold; margin-bottom: 5px;">コンセプト</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li><strong>「どんな悩みを持っている人に届けるのか」</strong><br>時間がなく、すぐにご飯を終わらせたいと思っている人／でも美味しいものは食べたいし、お腹は満たしたい</li>
+                            <li style="margin-top: 10px;"><strong>「どんな未来に連れていくのか」</strong><br>低価格で注文できて、サクッと提供されるので時間も待たない／ラーメンよりもカロリーが少ないからこそ罪悪感を感じにくく、「美味しかった！」と満腹感と満足感を味わって、笑顔になれる状態</li>
+                            <li style="margin-top: 10px;"><strong>「どんな解決策を提示するのか」</strong><br>職場の近くにあり、短い時間でサクッと食べられる熱々麺／「ラーメンよりカロリーが少ない！」というワードを打ち出して罪悪感を感じさせない／でも色々なトッピングをして自分なりに好きな味で楽しめるよう、トッピングの豊富さを提供する</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #fdf2f8; border: 1px solid #fbcfe8; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="margin-top: 0; color: #be185d;">▼ 自社のコンセプト・強み（例）</h4>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li><strong>「どんな悩みを持っている人に届けるのか」</strong><br>女性だからラーメンに行くのに抵抗があるけど、食べたい人<br>でも麺ってカロリー高そうだし、太りそうで不安</li>
+                            <li style="margin-top: 10px;"><strong>「どんな未来に連れていくのか」</strong><br>ラーメンよりもカロリーが少ないからこそ罪悪感を感じにくく、「美味しかった！」と満腹感と満足感を味わって、笑顔になれる状態<br>油っこくなく女性でも1人油そばを楽しめた！という感情</li>
+                            <li style="margin-top: 10px;"><strong>「どんな解決策を提示するのか」</strong><br>女性1人でも入りやすい雰囲気の店内<br>女性スタッフの採用&明るい接客<br>「ラーメンよりカロリーが少ない！」というワードを打ち出して罪悪感を感じさせない</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px;">同じ商品でも立地や地域によって全然お客さんの層が違います。競合分析で上手くいっている点を活用しながら、自社の強みもしっかり反映して、コンセプトができてくると、軸がぶれない、成功する店舗・EC運営ができていきます！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 店舗・ECのプロフィール作成</h2>
+                    
+                    <h3 style="margin-top: 20px;">✅ プロフィールの重要性</h3>
+                    <p>プロフィールの重要性はユーザが購入するまでの流れを見てみると分かります。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #334155; border-bottom: 2px solid #cbd5e1; padding-bottom: 5px;">個人アカウントの流れ</p>
+                            <ol style="margin-bottom: 0; padding-left: 20px;">
+                                <li>投稿を見る</li>
+                                <li>プロフィールを見る</li>
+                                <li>フォローする</li>
+                                <li>ファンになる</li>
+                                <li>購入する</li>
+                                <li>口コミをする</li>
+                            </ol>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                            <p style="font-weight: bold; margin-top: 0; color: #1e40af; border-bottom: 2px solid #bfdbfe; padding-bottom: 5px;">店舗・ECアカウントの流れ</p>
+                            <ol style="margin-bottom: 0; padding-left: 20px;">
+                                <li>投稿を見る</li>
+                                <li>プロフィールを見る</li>
+                                <li><strong>HP/サイトを見る</strong></li>
+                                <li><strong>購入・予約・申し込み</strong></li>
+                                <li>フォローする</li>
+                                <li>口コミをする</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 20px;">「発見欄」や「検索」から投稿を見つけてプロフィールを見るまでは個人アカウントと同じですが、店舗・ECアカウントではそこから<strong>「HP/サイトを見る」</strong>という流れになっていきます。<br>
+                    つまり、店舗・ECアカウントでは、いかにHP/サイトを見てもらえるかが重要です。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">① ユーザはわざわざ店舗アカウントをフォローしない</h4>
+                    <p>店舗・ECアカウントをフォローするタイミングは「またリピートして利用したい！」と思ったときです。<br>
+                    リピートしてもらうために有効な施策の1つとしては、「フォローするとお得なクーポン」の配布があります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">② ユーザは詳細な情報を見てから購入・予約・申し込みを行う</h4>
+                    <p>店舗・ECアカウントはHP/サイトを見てもらうことで、ユーザが購入・予約・申し込みをしてくれる可能性がグッと高まります！なぜなら、ユーザが商品を購入したりお店を予約するときは、自分が本当に必要なのか？という情報の詳細を見てから決めるからです。</p>
+                    
+                    <div style="text-align: center; font-size: 1.1rem; font-weight: bold; background-color: #fffbeb; padding: 15px; border-radius: 8px; color: #b45309; border: 1px solid #fde68a;">
+                        ユーザが投稿からプロフィールに来たときに、「わ！この店舗いいな！ちょっと細かい情報を見てみたい！」と思ってもらうことが、売上を上げるために重要なポイントになります。
+                    </div>
+
+                    <h3 style="margin-top: 40px;">✅ プロフィールの構成要素</h3>
+                    <p>店舗・ECアカウントの構成要素は以下の5つです。</p>
+                    
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">1. アイコン</h4>
+                    <p>店舗・ECアカウントのアイコンでは基本的には2パターンあります。</p>
+                    <ul>
+                        <li><strong>① 実写</strong><br>
+                        個人経営されている店舗・ECの場合は、個人の実写アイコンの場合があります。<br>
+                        ✅ 個人アカウントと同じような親近感が得られる<br>
+                        ✅ 誰が商品・サービスをしてくれるかわかるので、安心感・信用感<br>
+                        個人アカウントと同様にその人にファンが付くことが多いので、フォロワーも増えやすい傾向があります。</li>
+                        <li style="margin-top: 10px;"><strong>② ロゴ</strong><br>
+                        店舗や企業を表すロゴアイコンです。ロゴは企業や公式としての権威性を出す上で効果的です。<br>
+                        権威性があるだけで、人は無意識に相手の言うことや主張を受け入れてしまう性質を持ちます。<br>
+                        親しみさは出しにくいですが、発信が本物だ！という安心感を与えることが可能です。</li>
+                    </ul>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">2. アカウントID(ユーザネーム)</h4>
+                    <p>「店舗・EC名＋ジャンル」で設定するのがオススメです。店舗・EC名とジャンルには「_」や「.」の記号などで区切りましょう。<br>
+                    読みやすく、どんな店舗か？どんなジャンルか？をわかりやすく入れていきましょう。</p>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px;">▼ 店舗・ECの参考例</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>店舗名_seitai</li>
+                            <li>店舗名_salon</li>
+                            <li>tokyo(地域名)_店舗名</li>
+                            <li>店舗名_official</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">3. 名前</h4>
+                    <p>名前は、アイコンで「個人の実写で出す場合」と「ロゴで出す場合」でわけます。</p>
+                    <ul>
+                        <li><strong>個人の実写で出す場合</strong><br>
+                        「2文字～4文字＋発信テーマ(地域名)」で設定するのがオススメです。<br>
+                        （例：しゃけ先生/東京の整体師、えれな＠東京の大人可愛いネイル屋）<br>
+                        <span style="font-size: 0.9rem; color: #475569;">※検索しやすい・読みやすい・覚えやすい・ひらがな/カタカナ・2〜4文字・他の人と被らない 等を意識。</span></li>
+                        <li style="margin-top: 10px;"><strong>ロゴで出す場合</strong><br>
+                        「【地域】店舗名＋発信テーマ」で設定するのがオススメです。<br>
+                        （例：オンライン英会話教室 (店舗名)、【東京】(店舗名) ショートケーキ専門店）<br>
+                        <span style="font-size: 0.9rem; color: #475569;">※似たような店舗が２つあるなら「【渋谷】」など地域を絞りましょう。店舗名や発信テーマで検索したときに出てくるような名前にしておきます。</span></li>
+                    </ul>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">4. プロフィール文章</h4>
+                    <p>最初の4行にこだわっていきます。Instagramアプリでプロフィールを開いたときに4行しか表示されないからです。</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0;">文章を作る時のポイント</p>
+                            <ul style="margin-bottom: 0; padding-left: 20px;">
+                                <li>1文1メッセージ</li>
+                                <li>箇条書きで簡潔に伝える</li>
+                                <li>数字を出して具体性を高める</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                            <p style="font-weight: bold; margin-top: 0; color: #166534;">プロフィール文章に書くこと</p>
+                            <ol style="margin-bottom: 0; padding-left: 20px; font-size: 0.9rem;">
+                                <li><strong>アカウントコンセプト</strong><br>どんな悩みを持つ人に、どんな解決策・未来を届けるか</li>
+                                <li><strong>商品・サービスを得るベネフィット</strong><br>理想の未来・ゴールを見せる</li>
+                                <li><strong>自社を選ぶ理由・権威性2行分</strong><br>ベネフィットを得られる根拠</li>
+                                <li><strong>自社HP/サイト</strong><br>リンクを貼り「⇩ご予約はこちら」と促す</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">5. ハイライト</h4>
+                    <p>ハイライトは店舗・ECでは「命」と思えるほど重要です。店舗・ECアカウントでいいな！と思ってもらうためには、ユーザがどんな情報が欲しいかを網羅的に載せてあげることが必要になります。</p>
+                    <ul style="column-count: 2;">
+                        <li>ビフォーアフター（どんな効果が得られるか）</li>
+                        <li>費用</li>
+                        <li>お店までの行き方</li>
+                        <li>商品のコンセプト</li>
+                        <li>お客様の声(口コミ)</li>
+                        <li>店舗の雰囲気</li>
+                        <li>購入前後の流れ</li>
+                        <li>よくある質問</li>
+                    </ul>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 ビジネスアカウントの切り替え</h2>
+                    <p>店舗・ECアカウントはプロアカウントの中でも、「ビジネス」の方が使い勝手が良いことも多いので切り替えることをオススメしています。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>・Instagram上で店舗の位置情報を共有したい</li>
+                        <li>・投稿を見てくれたユーザにタップしただけで商品ページに飛んでもらいたい</li>
+                    </ul>
+                    <p>そういったときに便利だからです。</p>
+
+                    <h3 style="margin-top: 30px;">プロアカウントにできること</h3>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>カテゴリラベルの表示</strong>：アイコンのすぐ下に何のお店かを表すカテゴリを表示</li>
+                            <li><strong>インサイトへのアクセス</strong>：リーチ数やフォロワー数推移などのデータ分析</li>
+                            <li><strong>Instagram広告の出稿</strong>：自分の投稿を広告として出稿</li>
+                            <li><strong>Instagram管理権限の共有</strong>：第三者に権限を共有し、投稿の更新などをしてもらう</li>
+                            <li><strong>補助受信箱（DMのフォルダ分け）</strong>：DMで「メイン」と「一般」の2つの受信箱を利用可能</li>
+                            <li><strong>DMテンプレートの保存</strong>：簡単に返信できるようテンプレートを保存</li>
+                            <li><strong>予約投稿</strong>：Instagramの投稿を予約</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">クリエイターとビジネスの違い</h3>
+                    <p>ビジネスにはあってクリエイターにはない機能が2つあります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">① お問い合わせ先の表示</h4>
+                    <p>設定しておくとユーザが店舗・ECに手軽にお問い合わせすることができます。お問い合わせを少しでも増やしていきたい場合は設定していきましょう。<br>
+                    アクションボタンも設置することで、手軽に予約や注文をしてもらうことも可能です！<br>
+                    <span style="color: #b91c1c; font-size: 0.9rem;">※アクションボタン内には提携先があります。自社の提携先がアクションボタン内のものと連携していないと使用できません。</span></p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">② Instagramショッピングとの連携</h4>
+                    <p>ショッピング機能を設定しておくと、投稿からそのまま商品サイトに飛んでもらうことができます。投稿から直接サイトに飛べる機能なので、投稿ごとに商品を紹介でき、販売促進に繋がります。<br>
+                    投稿がバズったり、広告×ショッピング機能を掛け合わせることでより多くのユーザに届けることも可能です。</p>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ ショッピング機能を利用するステップ</p>
+                        <ol style="margin-bottom: 0;">
+                            <li><strong>利用要件の確認</strong><br>
+                            ポリシー準拠、ネットショップとの紐づき、所在地の確認、信頼性、正確な商品情報など。</li>
+                            <li style="margin-top: 10px;"><strong>商品をコマースマネージャに登録する</strong><br>
+                            Facebookのログイン → コマースマネージャトップの「開始する」 → 「ショップを作成」 → 次へ → 概要 → 設定を終了（国、メール、契約内容確認）</li>
+                            <li style="margin-top: 10px;"><strong>Instagram上で設定する</strong><br>
+                            コマースマネージャの審査に合格する。<br>
+                            Instagramのアカウントから「設定とプライバシー」→「ビジネスツールと管理」→「Instagramショッピングを設定する」</li>
+                        </ol>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">ビジネスアカウントへの切り替え方</h3>
+                    <ol>
+                        <li>プロフィール右上の三（メニュー）</li>
+                        <li>設定とプライバシー</li>
+                        <li>ビジネスツールと管理</li>
+                        <li>アカウントタイプの切り替え</li>
+                        <li>ビジネスアカウントに切り替える</li>
+                    </ol>
+
+                    <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="margin-top: 0; color: #b91c1c;">【注意点】音源の制限について</h4>
+                        <p>ビジネスアカウントは著作権の関係で使用できる音源に制限があり、一部の音源が使用不可能です。リールで音源をよく使うアカウントにとっては悩ましい問題なので2つの方法から対策を選んでいきましょう。</p>
+                        
+                        <p style="font-weight: bold; margin-top: 15px;">① 目的によって使い分ける</p>
+                        <p style="margin-bottom: 10px;">ビジネスアカウントでしか使えないのは「問い合わせ先の表示」「ショッピング機能」です。これらを使わなくても大丈夫で、リール音源をよく使うのであれば、クリエイターアカウントで頑張るというのも一つの手段です。</p>
+
+                        <p style="font-weight: bold;">② アカウントを別で運用する</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>クリエイターアカウント：集客用</li>
+                            <li>ビジネスアカウント：販売用</li>
+                        </ul>
+                        <p style="font-size: 0.9rem;">2つのアカウントを運用し倍のアカウント設計が必要になりますが、売上も出て、SNS運用担当者ができた場合は検討してみてもいいかもしれません。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06 店舗・ECだからこそ気を付けるべきポイント</h2>
+                    <p>投稿について、店舗・ECだからこそ気を付けるべきポイントが2つあります。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ リールとフィードの使い分け</li>
+                        <li>✅ ベネフィットの見せ方</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">リールとフィードの使い分け</h3>
+                    <p>リール投稿とフィード投稿は、以下のように使い分けていきます。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li><span style="font-size: 1.2rem;">🎬</span> <strong>リール投稿：新規ユーザーの獲得</strong></li>
+                            <li style="margin-top: 10px;"><span style="font-size: 1.2rem;">📷</span> <strong>フィード投稿：既存ユーザー（＝フォロワー）のファン化</strong></li>
+                        </ul>
+                    </div>
+
+                    <p style="font-weight: bold; margin-bottom: 5px;">理由は以下の通りです。</p>
+                    <ul>
+                        <li><strong>リール投稿</strong>は新規にリーチしやすく、新規ユーザーが「このお店行ってみたいかも！」と思える投稿に向いています。<br>
+                        <span style="color: #475569;">（『店舗の雰囲気・ビフォーアフター・商品の魅力』など）</span></li>
+                        <li style="margin-top: 10px;"><strong>フィード投稿</strong>は文章を読んでもらいやすく、既存ユーザーが「またこのお店に行こうかな！」と思える投稿に向いています。<br>
+                        <span style="color: #475569;">（『クーポン・セール情報、イベント・企画、採用情報』など）</span></li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">ベネフィットの見せ方</h3>
+                    <p>個人アカウントと店舗・ECアカウントでは、ベネフィットの伝え方が違ってきます。なぜなら、個人は『人』、店舗・ECは『商品』がメインになるからです。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <p style="margin-top: 0; margin-bottom: 5px;"><span style="font-size: 1.2rem;">👤</span> <strong>個人アカウント</strong></p>
+                            <p style="margin-bottom: 0; color: #334155;">その人の一次情報を受け取った後の未来</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                            <p style="margin-top: 0; margin-bottom: 5px;"><span style="font-size: 1.2rem;">🛍️</span> <strong>店舗・ECアカウント</strong></p>
+                            <p style="margin-bottom: 0; color: #1e40af;">商品・サービスを買った後の未来</p>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #b45309;">店舗・ECアカウントの投稿だからこそ気を付けるべきポイントは2つ。</p>
+                        <ol style="margin-bottom: 0;">
+                            <li>リールとフィードを使い分けること</li>
+                            <li>商品ベネフィットを見せていくこと</li>
+                        </ol>
+                        <p style="margin-bottom: 0; margin-top: 10px; font-size: 0.9rem;">このポイントを気を付けることで、店舗・ECでも伸ばせる投稿を作ることができます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07 店舗・ECの投稿作成</h2>
+                    <p>店舗・ECアカウントでの『リールとフィードの使い分け』と『ベネフィットの伝え方』を踏まえて、投稿の作り方を見ていきましょう。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ リール投稿は『新規ユーザーの獲得』×『商品ベネフィット』</h3>
+                    <p>店舗・ECアカウントのリール投稿は主に、新規ユーザー向けに「この店舗の商品を購入すると、どんな良い未来が体験できるのか？」というベネフィットを伝えます。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ レストランの場合</p>
+                        <ul style="margin-bottom: 15px;">
+                            <li>料理がどのような過程で作られていくのか？を発信</li>
+                            <li>スタッフの接客の様子を発信</li>
+                            <li>店舗内の雰囲気を発信</li>
+                        </ul>
+                        
+                        <p style="font-weight: bold; margin-top: 0;">▼ 美容系の施術の場合</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>ビフォーアフターの様子</li>
+                            <li>ビフォーアフターのインタビュー</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 15px;">アカウント設計で決めた「ユーザーが悩んでいること」を、「この商品・サービスを手に入れることで解消できるんだ！」と、いかに想像させてあげられるリール投稿か？が重要です。<br>
+                    最後に「予約はこちらから」などのCTAを設置してプロフィールに案内してあげれば、新規ユーザーの多くはプロフィールに飛んでくれます。</p>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ フィード投稿は『既存ユーザーのファン化』×『商品ベネフィット』</h3>
+                    <p>店舗・ECアカウントのフィード投稿は主に、既に自社を知ってくれている既存ユーザー向けに、リピートしてもらうための情報を発信していきます。<br>
+                    具体的には、『お得情報』や『新商品・サービス』『イベント』などのご案内です。</p>
+
+                    <ul style="column-count: 2;">
+                        <li>セール・クーポン情報</li>
+                        <li>新商品・サービスに関する詳しい情報</li>
+                        <li>採用情報</li>
+                    </ul>
+
+                    <p style="margin-top: 15px;">フィード投稿は主に、既存ユーザーに文章を読んでもらい、理解を深めてもらうための投稿です。<br>
+                    既存ユーザーがこの投稿を見たときに「また行きたい」と思えるお得な情報を発信して、定期的にこの店舗に訪れる理由・メリットを提示し、リピート率を上げていきます。フィード投稿では、既存ユーザーがリピートするベネフィットを伝えていきましょう。</p>
+
+                    <h3 style="margin-top: 40px; color: #1e3a8a;">✅ 大まかなユーザーの流れ</h3>
+                    
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                        <ol style="margin-top: 0; margin-bottom: 0;">
+                            <li>リール投稿で新規ユーザーにアカウントを知ってもらう</li>
+                            <li>プロフィールに飛んでもらう</li>
+                            <li>HP/サイトを読んでもらい、購入・予約・申し込みをしてもらう</li>
+                            <li>気に入ったユーザーにフォローしてもらう</li>
+                            <li>フィード投稿で定期的にGIVE情報を発信してリピーターになってもらう</li>
+                        </ol>
+                    </div>
+
+                    <p style="margin-top: 15px;">基本的にはこの流れですが、リール投稿の方が既存ユーザーへお得情報などを発信できるなら、リール投稿だけで提供するのもOKです。</p>
+                </section>
+
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08 HP/サイトの種類と特徴</h2>
+                    <p>HP/サイトの種類は主に４つあります。</p>
+                    
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">① ECサイト</h3>
+                    <p>ECサイトとは、インターネット上で商品を販売するウェブサイトのこと。ECサイトには「モール型」と「自社ECサイト」の2種類があります！</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>モール型</strong>：Amazonや楽天市場のように多数の企業や個人が参加しているショッピングサイトのこと<br>
+                            <span style="font-size: 0.9rem; color: #475569;">参照：楽天市場</span></li>
+                            <li style="margin-top: 10px;"><strong>自社ECサイト</strong>：企業や個人が単独で運営するショッピングサイトのこと<br>
+                            <span style="font-size: 0.9rem; color: #475569;">参照：APAホテル</span></li>
+                        </ul>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px;">
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a;">
+                            <p style="font-weight: bold; margin-top: 0; color: #b45309;">▼ 制作費用相場（自社ECサイト）</p>
+                            <ul style="margin-bottom: 0; padding-left: 20px; font-size: 0.9rem;">
+                                <li>小規模：0～10万円</li>
+                                <li>中規模：10～500万円</li>
+                                <li>大規模：200万円以上～</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                            <p style="font-weight: bold; margin-top: 0; color: #166534;">▼ 小規模サイト作成ツールの例</p>
+                            <ul style="margin-bottom: 0; padding-left: 20px; font-size: 0.9rem;">
+                                <li><strong>WordPress</strong>：無料だが初心者にはややハードルが高い</li>
+                                <li><strong>Wix</strong>：簡単に美しいサイトが作れるが、画像が多いと不向き</li>
+                                <li><strong>ジンドゥー</strong>：低コストでネットショップを開設したい人向け</li>
+                                <li><strong>GoogleSites</strong>：完全無料かつ直感的な操作</li>
+                                <li><strong>BASE</strong>：初心者でも30分で作成可能、決済機能付き</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">② コーポレートサイト</h3>
+                    <p>コーポレートサイトとは、自社の紹介を目的としたWebサイトのこと。会社概要や採用情報、サービス紹介などを載せて、営業や広報の代わりに会社紹介の役割を担っています。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">③ 採用サイト</h3>
+                    <p>採用サイトとは、採用活動に必要な情報を載せるWebサイトのこと。募集要項や選考フローなど、採用に必要な情報を掲載していきます。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">④ ランディングページ(LP)</h3>
+                    <p>ランディングページとは、主に「集客」を目的としたWebサイトのこと。Webサイトなどに表示された広告をクリックした際に表示される縦長のWebページのことで、「LP」とも呼ばれています。</p>
+
+                    <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 15px; border-radius: 8px; margin-top: 30px;">
+                        <h4 style="margin-top: 0; color: #b91c1c;">なぜ「自社ECサイト」がオススメなのか？</h4>
+                        <p style="margin-bottom: 10px;">今日はECサイトの中の「自社ECサイト」を作成していきます。理由は２つあります。</p>
+                        <ol style="margin-bottom: 0;">
+                            <li>自社ECサイト以外は難易度が高く、費用がかかるものが多いから</li>
+                            <li>自社ECサイトはネット上で販売する目的に適していて、低予算で作ることができるから</li>
+                        </ol>
+                        <p style="margin-bottom: 0; margin-top: 10px; font-size: 0.95rem;">「まだ事業を始めたてです！」という方は、費用をかけずに作成できて売上にも直結するので、自社ECサイトがオススメなんですね。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09 HP/サイトを作る前の準備</h2>
+                    <p>HP/サイトは簡単なものであれば、初心者でもサクッと1時間ほどで作れちゃいます！ただ、事前に知っておかないといけない内容もあります。<br>
+                    たとえば、オンラインで決済する際はルールを守らないと法律違反になることもあるので、事前準備で正しくHP/サイトを作る方法を抑えて回避しましょう！</p>
+
+                    <h3 style="margin-top: 30px;">プライバシーポリシーと特定商取引法の表記について</h3>
+                    <p>個人情報を取り扱う場合やネット上で商売をする場合は、プライバシーポリシーと特定商取引法(＝特商法)の表記が必要になります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">✅ プライバシーポリシー</h4>
+                    <p>プライバシーポリシーとは、ユーザーの個人情報(名前や電話番号、決済情報など)を取得する際に、その情報をどうやって使うのか？をユーザーが見える状態で公表するものです。</p>
+                    
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ こんな時に必要になります</p>
+                        <ul style="column-count: 2; margin-bottom: 0; font-size: 0.9rem;">
+                            <li>商品やサービスのお申し込み</li>
+                            <li>カタログ・資料請求</li>
+                            <li>会員制サイトへの登録や入会</li>
+                            <li>イベント参加、施設の利用申し込み</li>
+                            <li>メールによるお問い合わせ、照会や意見募集</li>
+                            <li>その他、個人情報を収集するもの</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px;">プライバシーポリシーを作成する上では、以下の7点を含めましょう。</p>
+                    <ol>
+                        <li>社内情報の確認と利用目的の記載</li>
+                        <li>個人情報の定義</li>
+                        <li>個人情報を第三者に提供する可能性があれば明記</li>
+                        <li>共同利用する可能性があれば明記</li>
+                        <li>本人からの開示請求の対応法を明記</li>
+                        <li>Webページからすぐに見える場所に置く</li>
+                        <li>個人情報を匿名加工する</li>
+                    </ol>
+                    <p>これらの項目を全て最初から１人で作るのは大変です。テンプレートを活用して、自分に必要な項目だけ考えて作成してみてください。<br>
+                    <a href="https://kiyaku.jp/hinagata/privacy.html" target="_blank" style="color: #2563eb; text-decoration: none;">＞＞ kiyaku.jp プライバシーポリシーのひな型</a></p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">✅ 特定商取引法（特商法）</h4>
+                    <p>特定商取引法(＝特商法)とは、ユーザー(＝消費者)のために事業者の情報をわかりやすくまとめたものです。ユーザーとトラブルが発生しやすい取引に対して事業者側が守るべきルールのことで、ECサイトを運営する場合は法律で必要になります。</p>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ 特商法の対象となる取引</p>
+                        <ul style="column-count: 2; margin-bottom: 0; font-size: 0.9rem;">
+                            <li>訪問販売</li>
+                            <li>通信販売(インターネット販売)</li>
+                            <li>電話勧誘販売</li>
+                            <li>連鎖販売取引</li>
+                            <li>特定継続的役務提供</li>
+                            <li>業務提供誘引販売取引</li>
+                            <li>訪問購入</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px;">特定商取引法に基づく表記に必要な項目は『特定商取引法ガイド』にて確認できます。自分が対象となる業種の項目は必ず入れるようにしましょう。<br>
+                    <a href="https://www.no-trouble.caa.go.jp/what/mailorder/advertising.html" target="_blank" style="color: #2563eb; text-decoration: none;">＞＞ 特定商取引法ガイド</a></p>
+                    <p>各業種にあった雛形もありますので、活用すれば漏れなく記入可能です。今回の内容とガイドに則って作成できれば基本的に問題はありませんが、抜け漏れがあると法律違反になってしまう可能性があるので、心配な方は『弁護士』に確認・依頼することも検討してみましょう！</p>
+
+                    <h3 style="margin-top: 40px;">HP/サイトで抑えておくべき役割とポイント</h3>
+                    <p>せっかくHP/サイトまで見てくれたユーザーさんに離脱されないために、抑えておくべき役割とポイントがあります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">✅ HP/サイトの役割２つ</h4>
+                    <ol>
+                        <li><strong>ユーザーにとって必要なHP/サイトかどうか、一目で理解してもらう。</strong><br>「このページには求めている情報がある！」と思ってもらうことが重要です。</li>
+                        <li style="margin-top: 10px;"><strong>ゴールがわかりやすい。</strong><br>スムーズに行動を起こしてもらうことで、購入・予約・申し込みの数はグッと上がります。</li>
+                    </ol>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">✅ 作成時に必ず押さえておきたいポイント3つ</h4>
+                    <ol>
+                        <li><strong>ファーストビューに載せる情報は１つ。</strong><br>ファーストビューに情報量が多いと、読む気を失って離脱してしまうからです。</li>
+                        <li style="margin-top: 10px;"><strong>掲載する写真・画像は画質にこだわる。</strong><br>画像の解像度は72dpiにして、きれいで表示速度の速いものにしましょう。</li>
+                        <li style="margin-top: 10px;"><strong>レイアウト重視。</strong><br>レイアウトがしっかりしていないとユーザーの知りたい情報が隠れて、離脱率が上がってしまいます。</li>
+                    </ol>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0;">▼ 店舗レイアウト参考</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>1枚の大きな写真でビジュアルを表現</li>
+                                <li>電話番号や予約検索機能を目立つように配置</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0;">▼ EC参考レイアウト</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>左コラムにメニューバーがある</li>
+                                <li>上部に検索バーがある</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 style="color: #1e3a8a; margin-top: 30px;">✅ 他、やっておくとより良くなるポイント3つ</h4>
+                    <ol>
+                        <li><strong>不要なものは入れない。</strong> HP/サイトはできるだけシンプルにしましょう。</li>
+                        <li style="margin-top: 10px;"><strong>スマホ表示を重視する。</strong> 多くのユーザーはスマホでネットを利用する割合が高いからです。</li>
+                        <li style="margin-top: 10px;"><strong>デザインは各ページ統一。</strong> 各ページに遷移したときにデザインが変わってしまうと、落ち着かない印象を与えてしまいます。</li>
+                    </ol>
+
+                    <div style="text-align: center; font-size: 1.1rem; font-weight: bold; background-color: #fffbeb; padding: 15px; border-radius: 8px; color: #b45309; border: 1px solid #fde68a; margin-top: 20px;">
+                        今回の「法律周り」と「HP作成のポイント」を抑えれば、法律を守りつつ売上を上げるHP/サイトが作れます！
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10 BASEがオススメな理由</h2>
+                    <p>スモールスタートで、かつ売上を上げられるHP/サイトを作るためには『BASE』がオススメです。</p>
+
+                    <h3 style="margin-top: 30px;">BASEをオススメする理由</h3>
+                    <ol>
+                        <li>HP/サイト作成の専門知識が不要</li>
+                        <li>簡単に立ち上げができる</li>
+                        <li>登録料・月額料金無料で始められる</li>
+                        <li>決済システムの連携が簡単</li>
+                        <li>Instagramショッピング機能と連携できる</li>
+                    </ol>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="margin-top: 0; color: #1e3a8a;">① HP/サイト作成の専門知識が不要</h4>
+                        <p>HP/サイトを作る際には「WEBデザイン」や「コーディング」が必要なのですが、BASEにはすでにデザインテンプレートがあります。無料・有料がありますが、最初は無料でOKです。</p>
+
+                        <h4 style="color: #1e3a8a; margin-top: 20px;">② 簡単に立ち上げができる</h4>
+                        <p>早い人であれば30分でサイトを立ち上げることができます。初心者でもマニュアルを読まず、感覚的に立ち上げることが可能です。</p>
+
+                        <h4 style="color: #1e3a8a; margin-top: 20px;">③ 登録料・月額料金無料で始められる</h4>
+                        <p>初期費用や維持費用が一切かかりません。商品が売れない場合は費用がかからないので、赤字になる心配がないわけです。</p>
+
+                        <h4 style="color: #1e3a8a; margin-top: 20px;">④ 決済システムの連携が簡単</h4>
+                        <p>事業者が決済関係を考える場合、本来は各カード会社に申請したり決済代行サービスと契約する必要がありますが、BASEには「BASEかんたん決済」があり、必要な項目を入力するだけで決済が導入可能です。</p>
+                        
+                        <h4 style="color: #1e3a8a; margin-top: 20px;">⑤ Instagramショッピング機能と連携できる</h4>
+                        <p>作ったBASEのサイトをInstagramと連携することができます。</p>
+                    </div>
+
+                    <h3 style="margin-top: 40px;">Instagramとの連携手順</h3>
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                        <ol style="margin-bottom: 0;">
+                            <li>Facebookログイン</li>
+                            <li>ショップを開く</li>
+                            <li>ビジネスマネージャを選択</li>
+                            <li>Facebookページにリンク</li>
+                            <li>Instagramアカウントをリンク</li>
+                            <li>カタログを選択</li>
+                            <li>広告アカウントを選択</li>
+                            <li>Metaピクセルを選択</li>
+                            <li>コマースアカウントを確認</li>
+                            <li>連携内容の確認</li>
+                            <li>BASEに許可するアクセスの設定</li>
+                            <li>完了</li>
+                        </ol>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">詳細な手順やよくある質問は、公式の連携手順をご確認ください。<br>
+                    <a href="https://baseu.jp/9222" target="_blank" style="color: #2563eb; text-decoration: none;">＞＞ 【Instagramで販売を始めよう！「Instagram販売アプリ」の使い方を徹底解説】</a></p>
+
+                    <h4 style="margin-top: 30px; color: #1e3a8a;">BASEに商品情報を追加する</h4>
+                    <ol>
+                        <li>カタログ商品情報</li>
+                        <li>商品のジャンルとカテゴリ選択</li>
+                        <li>更新する</li>
+                    </ol>
+
+                    <h4 style="margin-top: 30px; color: #1e3a8a;">最後にInstagramの投稿に商品を表示させる</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0;">▼ リールでの商品タグ付け</p>
+                            <ol style="margin-bottom: 0; padding-left: 20px;">
+                                <li>投稿</li>
+                                <li>投稿の設定をして、商品をタグ付け</li>
+                                <li>ショップ・商品を選択</li>
+                                <li>タグ付けされたことを確認してシェア</li>
+                            </ol>
+                        </div>
+                        <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px;">
+                            <p style="font-weight: bold; margin-top: 0;">▼ フィードでの商品タグ付け</p>
+                            <ol style="margin-bottom: 0; padding-left: 20px;">
+                                <li>投稿</li>
+                                <li>画像をタップ</li>
+                                <li>商品を選択</li>
+                                <li>チェック</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 20px; font-weight: bold;">これで、投稿からBASEの販売サイトに飛んでもらうことができるので、集客から購入までが繋げやすくなります！</p>
+                </section>
+
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11 口コミがもたらす効果</h2>
+                    <p>あなたの事業で長期的に売上を上げていくためには「口コミ」が必須になります。なぜなら口コミは「無料の自動集客ツール」になるからです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ 口コミの例</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>食べログのレビュー</li>
+                            <li>Amazon・楽天のレビュー</li>
+                            <li>お客様の声</li>
+                        </ul>
+                    </div>
+                    <p>こういった内容を見て購入を決めた人も多いはずです。口コミには、店舗側が直接、営業やチラシ配りなどをしなくても、自動でユーザーを呼んでくれて、来店・購入してもらえる効果があります。</p>
+
+                    <h3 style="margin-top: 30px;">心理学の視点</h3>
+                    <p>口コミには人の心理に働く3つの効果があります。</p>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 15px;">
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="margin: 0;"><strong>① ウィンザー効果</strong><br>当事者よりも第三者が発信した情報のほうが信頼されやすいという心理効果</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="margin: 0;"><strong>② ハロー効果</strong><br>ある対象を評価するとき、その一部の特徴的な印象に引きずられて、全体を評価してしまう効果</p>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="margin: 0;"><strong>③ バンドワゴン効果</strong><br>他の人が持っているものを自分も欲しいと思う心理効果</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">統計の視点</h3>
+                    <p>口コミは統計的にも効果があることが実証されています。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">① 商品購入の決め手、最も影響を受けるのは「SNSで偶然見つけた口コミ」(AMN調べ)</h4>
+                    <p>『Q.モノやサービスの購入を検討する際に、どんな人の口コミに影響を受けることが多いですか？』</p>
+                    <ul style="margin-bottom: 15px;">
+                        <li><strong>たまたま検索で見つけたSNS投稿が50%</strong></li>
+                        <li>友人、知人が43%</li>
+                        <li>家族が37%</li>
+                        <li>インフルエンサー、有名人が31%</li>
+                        <li>職場仲間が17%</li>
+                    </ul>
+                    <p>AMNはこの結果に対して、「一般の商品/サービス利用者による商品体験に関するクチコミの有無や、評判形成の重要性が明らかになった」と考察しています。<br>
+                    つまり、新規のユーザーでも、Instagramで商品・サービスに関する口コミを見てもらうと、商品やサービスを買ってもらいやすくなる傾向があります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">② ネットの口コミを参考にする人は6割弱(MyVoice株式会社調べ)</h4>
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0;">▼ 参考にする人の割合</p>
+                        <ul style="margin-bottom: 10px;">
+                            <li>「かなり参考にする」「まあ参考にする」の合計は、全体の55.1%(6割弱)</li>
+                            <li>男性：5割弱、女性：6割強</li>
+                            <li><strong>女性10～30代で7割強～8割強</strong></li>
+                        </ul>
+                        
+                        <p style="font-weight: bold; margin-top: 0;">▼ 商品購入時の決定理由</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>口コミで評判が良い方を買った（約3割）</li>
+                            <li>口コミ情報を見て買うことを決めた（約3割）</li>
+                            <li>口コミ情報を見て買うことをやめた（約3割）</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px;">これらの結果から、以下の傾向が見えてきます。</p>
+                    <ol>
+                        <li>2人に1人の割合が口コミ情報を参考に商品・サービスを購入する</li>
+                        <li>良い口コミがあると、商品・サービスを購入してもらいやすくなる</li>
+                    </ol>
+                    <p style="font-weight: bold; color: #b45309; text-align: center; margin-top: 15px; padding: 15px; background-color: #fffbeb; border-radius: 8px; border: 1px solid #fde68a;">
+                        統計的なデータを見ても、口コミは集客効果・購入決定に大きな影響を与えることがわかります。
+                    </p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍12 口コミの逆算設計</h2>
+                    <p>実際に口コミをInstagram運用に落とし込んで活用できれば、口コミを自動集客ツールとして活用し、売上が自然と2倍3倍になるInstagram運用ができるようになります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e3a8a;">▼ 自動集客ツールとして活用するために必要なこと</p>
+                        <ol style="margin-bottom: 0;">
+                            <li>Instagramで口コミを集める手法を理解する</li>
+                            <li>ユーザーがユーザーを呼ぶ口コミ内容を抑える</li>
+                            <li>集めた口コミが自然と拡散していく流れを作る(口コミの逆算設計)</li>
+                        </ol>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">1. Instagramで口コミを集める手法を理解する</h3>
+                    <p>口コミを集める上で重要なのは、口コミ集めを最優先事項にしないことです。長期的に売上をあげていくための最優先事項は、<strong>『顧客満足度を上げる』</strong>という点です。顧客満足度を一番に優先し、そこに口コミをしてもらうきっかけを作ることが重要です。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">✅ 口コミを集める上で押さえておきたいポイントは3つ</h4>
+                    <ol>
+                        <li><strong>投稿でキャンペーン企画をする</strong><br>
+                        多くの人がキャンペーン企画をきっかけに口コミをしているからです。</li>
+                        <li style="margin-top: 10px;"><strong>インパクト×エピソードを体験してもらう</strong><br>
+                        ユーザーの心を動かして自ら口コミをしてくれる一番効果的な方法です。商品・サービスの中に工夫を入れることで、自然とSNSに上げたくなる流れを作ります。<br>
+                        <span style="font-size: 0.9rem; color: #475569;">※インパクト：つい人が反応してしまうこと / エピソード：感情を伴う行動のこと</span></li>
+                        <li style="margin-top: 10px;"><strong>口コミ投稿してくれたお礼をする</strong><br>
+                        ユーザーにわかりやすいメリットを提示し、DM等でお礼をします。ユーザーとの交流のきっかけを作り、親しみを感じてもらうことでリピーターになってもらえる可能性が上がります。</li>
+                    </ol>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #166534;">▼ その他の小技工夫</p>
+                        <ul style="margin-bottom: 0; column-count: 2;">
+                            <li>フォトスポットを作る</li>
+                            <li>QRコードを設置する</li>
+                            <li>一緒に撮影をする</li>
+                            <li>ユーザーの投稿をタグ付けしてリポストする</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 40px;">2. ユーザーがユーザーを呼ぶ口コミ内容を抑える</h3>
+                    <p>ユーザーを呼ぶ口コミにするには、まず口コミからベネフィットを感じてもらわなければいけません。届けたいユーザーのベネフィットを口コミで集めることで、来店・購入に繋がります。</p>
+
+                    <h4 style="color: #1e3a8a; margin-top: 20px;">✅ ユーザーを呼ぶ口コミ内容にするための2つのこと</h4>
+                    <ol>
+                        <li><strong>一貫したコンセプトを表現する</strong><br>
+                        『投稿』『店舗』『商品』など、自社の発信で一貫させます。一貫したコンセプトにすることで、対象としたユーザーの悩みに繋がるので、自社が伝えたいコンセプトをそのまま口コミとして書いてくれる確率が上がります。</li>
+                        <li style="margin-top: 10px;"><strong>マイナス評価への対応</strong><br>
+                        悪い口コミを書かれることも想定しておきましょう。真摯に対応しつつ、問題改善に取り組む姿勢を見せることで、ユーザーからの信頼を取り戻すことができます。問題点の解消が今後のユーザー満足度向上に繋がり、良い口コミの割合を増やすことになります。</li>
+                    </ol>
+
+                    <h3 style="margin-top: 40px;">3. 集めた口コミが自然と拡散していく流れを作る(口コミの逆算設計)</h3>
+                    <p>ユーザーがユーザーを呼んでくれる口コミを逆算して設計していきます。</p>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <h4 style="margin-top: 0; color: #1e40af;">① 認知する</h4>
+                        <p style="font-size: 0.9rem; color: #475569;">投稿・プロフィール・HP/サイト閲覧、口コミの確認</p>
+                        <p>全ては投稿閲覧から始まります。まずは投稿を見てもらった時に「ん？気になる！」と思ってもらわなければいけません。<br>
+                        <strong>商品購入のきっかけを作る3つのアクション：</strong></p>
+                        <ul>
+                            <li>新規ユーザーに対してベネフィットの深い投稿をする</li>
+                            <li>キャンペーン企画・プレゼント企画をする</li>
+                            <li>ユーザーの口コミを提示する（口コミを投稿やプロフィールに提示することで購入のきっかけに繋がります）</li>
+                        </ul>
+
+                        <hr style="border: none; border-top: 1px dashed #bfdbfe; margin: 15px 0;">
+
+                        <h4 style="margin-top: 0; color: #1e40af;">② 商品・サービスの利用</h4>
+                        <p style="font-size: 0.9rem; color: #475569;">入店時、商品・サービス購入時、退店時</p>
+                        <p>入店～退店の中で口コミをもらうのに欠かせない要素が<strong>『インパクト×エピソード』</strong>です。人は感動したときに口コミをしたくなるからです。<br>
+                        「あなたの商品のインパクトは何か？」「どんなエピソードを作れるか？」を考えましょう。<br>
+                        <span style="color: #b91c1c; font-size: 0.9rem;">※口コミのきっかけが多すぎると負担になるので、1～最大3つまでにしましょう。</span></p>
+
+                        <hr style="border: none; border-top: 1px dashed #bfdbfe; margin: 15px 0;">
+
+                        <h4 style="margin-top: 0; color: #1e40af;">③ 商品・サービスの利用後</h4>
+                        <p style="font-size: 0.9rem; color: #475569;">アフターフォロー（退店後）、口コミの投稿</p>
+                        <p>ユーザーが購入した後にアフターフォローを入れます（良い口コミに繋がるため）。</p>
+                        <ul>
+                            <li>ご来店ありがとうのフォローDM</li>
+                            <li>投稿をメンションしたり、ストーリーズでアップされたものにメンション付きで返信・コメントする</li>
+                            <li>継続中であれば問題点がなかったかを次のサービスで確認する 等</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 20px;">各フェーズで共通して持っておきたいのが<strong>「コンセプトを一貫して表現していること」「マイナス評価への対応を持っておくこと」</strong>です。<br>
+                    この流れができれば口コミの逆算設計は完了です！</p>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #b45309;">💡 いただいた口コミの活用</p>
+                        <p style="margin-bottom: 0;">いただいた口コミはプロフィールのハイライトにて『お客様の声』などのように設置しておきましょう。プロフィールに飛んできたユーザーが見たときに、『自分の悩みを解消してくれそうな声ばかりだし、信頼できそう』と来店・予約・購入に繋がっていきます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍13 まとめ</h2>
+                    
+                    <div style="background-color: #fdf2f8; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #fbcfe8;">
+                        <p style="font-weight: bold; margin-top: 0; font-size: 1.1rem; color: #be185d;">店舗・EC運用において、口コミは最強の無料自動集客ツールです。</p>
+                        
+                        <h4 style="margin-top: 15px; color: #9d174d;">✅ 口コミがもたらす効果</h4>
+                        <ul>
+                            <li><strong>心理学の視点</strong>：ウィンザー効果、ハロー効果、バンドワゴン効果により、第三者の声は信頼されやすい。</li>
+                            <li><strong>統計の視点</strong>：商品購入の決め手の多くが「SNSでの口コミ」であり、約6割の人が購入時に口コミを参考にしている。</li>
+                        </ul>
+
+                        <h4 style="margin-top: 15px; color: #9d174d;">✅ 口コミの逆算設計（3ステップ）</h4>
+                        <ol style="padding-left: 20px; font-size: 0.95rem;">
+                            <li><strong>口コミを集める手法</strong><br>最優先は「顧客満足度」の向上。キャンペーン企画や、心を動かす『インパクト×エピソード』の提供、お礼のDMなどを活用する。</li>
+                            <li><strong>ユーザーがユーザーを呼ぶ内容</strong><br>投稿から店舗・商品まで一貫したコンセプトを持たせ、マイナス評価にも真摯に対応する。</li>
+                            <li><strong>拡散していく流れを作る</strong><br>「認知 → 利用 → 利用後（アフターフォロー）」の各フェーズで、口コミを生み・拡散させる仕掛け（逆算設計）を仕組み化する。</li>
+                        </ol>
+                        
+                        <p style="margin-top: 15px; font-weight: bold;">いただいた口コミはプロフィール（ハイライト等）やHPに掲載し、さらなる来店・購入のサイクルを回していきましょう！</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

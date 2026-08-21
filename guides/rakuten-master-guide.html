@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽天マネタイズマスターガイド | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .master-toc {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .master-toc h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #1e293b;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 10px;
+        }
+        .master-toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .master-toc a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+        .master-toc a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        .chapter-title {
+            font-size: 2rem;
+            color: #0f172a;
+            border-bottom: 4px solid #3b82f6;
+            padding-bottom: 10px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>楽天マネタイズ編</span>
+            </div>
+            <h1>楽天マネタイズマスターガイド</h1>
+            <p class="subtitle">楽天アフィリエイトと楽天ROOMの基礎から、売上を最大化する戦略、実践テクニックまで完全網羅。</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <!-- 目次 -->
+                <div class="master-toc">
+                    <h2>📑 目次</h2>
+                    <ul>
+                        <li><a href="#chapter1">第1章：楽天特化アフィリエイトの基本と登録</a></li>
+                        <li><a href="#chapter2">第2章：楽天マネタイズの全体像と事前準備</a></li>
+                        <li><a href="#chapter3">第3章：楽天アフィリエイトとROOMの使い分け・バランス</a></li>
+                        <li><a href="#chapter4">第4章：売上を最大化するためのポイント</a></li>
+                        <li><a href="#chapter5">第5章：楽天で実際にマネタイズしてみよう（実践編）</a></li>
+                        <li><a href="#chapter6">第6章：アフィリエイトの売上を加速させよう（イベント戦略）</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- ==========================================
+                     第1章
+                =========================================== -->
+                <div id="chapter1">
+                    <h2 class="chapter-title">第1章：楽天特化アフィリエイトの基本と登録</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　楽天マネタイズの基本</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">楽天マネタイズには2種類の方法があります。</p>
+
+                        <div style="display: flex; gap: 20px; margin-bottom: 25px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px; background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 2px solid #3b82f6; text-align: center;">
+                                <p style="font-size: 1.2rem; font-weight: bold; color: #1e40af; margin: 0;">① 楽天アフィリエイト</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px; background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 2px solid #ef4444; text-align: center;">
+                                <p style="font-size: 1.2rem; font-weight: bold; color: #991b1b; margin: 0;">② 楽天ROOM</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e40af;">▍02　楽天アフィリエイトとは？</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">楽天アフィリエイトとは、<span style="font-weight: bold; color: #1d4ed8;">「楽天の商品を紹介して収益を得られるプログラム」</span>のことです。ブログやSNSなどに商品リンクを貼り、購入につながると報酬が発生します。</p>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">報酬が入る仕組み</h3>
+
+                        <div style="background-color: #eff6ff; padding: 25px; border-radius: 8px; border: 1px solid #bfdbfe; margin-bottom: 20px;">
+                            <ol style="font-size: 0.95rem; color: #1e3a8a; margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
+                                <li>SNSなどに楽天のアフィリエイトリンクを貼る</li>
+                                <li>そのアフィリエイトリンクを、ユーザーがクリックをする</li>
+                                <li>楽天の商品ページに遷移する</li>
+                                <li><span style="font-weight: bold; color: #b91c1c;">ユーザーが24時間以内に商品をカートに入れ、かつ、89日以内に購入する</span></li>
+                                <li>報酬が入る</li>
+                            </ol>
+                        </div>
+
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <p style="font-size: 0.9rem; font-weight: bold; color: #92400e; margin: 0;">※ ただし、購入前に他の人のリンクを踏んだ場合は無効になります。</p>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e40af;">▍03　楽天アフィリエイトの登録方法</h2>
+                        
+                        <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #3b82f6; display: inline-block; padding-bottom: 5px;">登録方法（スマホ）</h3>
+                            <ol style="font-size: 0.95rem; color: #334155; margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">楽天アフィリエイトのサイトにアクセスする（ネットで検索）</li>
+                                <li style="margin-bottom: 10px;">左上のメニューバーから「はじめての方へ」⇒「はじめての方へ」をクリック</li>
+                                <li style="margin-bottom: 10px;">自身の楽天IDを入力しログインする</li>
+                                <li style="margin-bottom: 10px;">マイページを開く</li>
+                                <li style="margin-bottom: 10px;">「サイトの情報」をクリックする</li>
+                                <li><span style="font-weight: bold; color: #1d4ed8;">自分のインスタグラムアカウントを登録する</span></li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #991b1b;">▍04　楽天ROOMとは？</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">楽天ROOMとは、<span style="font-weight: bold; color: #b91c1c;">「楽天の商品を紹介できるプラットフォーム」</span>のことです。このプラットフォーム上で、楽天アフィリエイトを利用できます。</p>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">報酬が入る仕組み</h3>
+
+                        <div style="background-color: #fef2f2; padding: 25px; border-radius: 8px; border: 1px solid #fecaca; margin-bottom: 30px;">
+                            <ol style="font-size: 0.95rem; color: #7f1d1d; margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
+                                <li>SNSなどに、楽天ROOMのリンクを貼る</li>
+                                <li>ユーザーがROOMリンクをクリックする</li>
+                                <li><span style="font-weight: bold; color: #b91c1c;">楽天ROOMの商品ページの「楽天市場で詳細を見る」というボタンをクリックする</span></li>
+                                <li>楽天の商品ページに遷移する</li>
+                                <li>ユーザーが24時間以内にカートに入れ、89日以内に購入をする</li>
+                                <li>報酬が入る</li>
+                            </ol>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">楽天ROOMの特徴</h3>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">アクションが2段階必要</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">楽天アフィリエイトと違って、ユーザーのアクションが2段階（ROOMへの遷移 → 楽天市場への遷移）必要です。</p>
+                            </div>
+                            
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">自分だけのセレクトショップを作るイメージ</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">オリジナル写真・口コミを載せられ、コレクション機能でカテゴリ別に整頓できるため、世界観を統一して見せることができます。単独のプラットフォームとしてROOM内からの流入も見込めます。</p>
+                            </div>
+
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">上乗せボーナスポイント</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">条件に応じて6つのランクに振り分けられ、<span style="font-weight: bold; color: #b91c1c;">Bランク以上であれば通常の楽天アフィリエイトよりも1〜3％の上乗せボーナス</span>がもらえます。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #991b1b;">▍05　楽天ROOMの登録方法</h2>
+
+                        <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #ef4444; display: inline-block; padding-bottom: 5px;">登録方法（スマホ）</h3>
+                            <ol style="font-size: 0.95rem; color: #334155; margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
+                                <li style="margin-bottom: 10px;">楽天ROOMのアプリをダウンロードして開く</li>
+                                <li style="margin-bottom: 10px;">自分の楽天IDで登録・ログインする</li>
+                                <li style="margin-bottom: 10px;">プロフィールを作成する（ユーザー名はインスタのアカウント名がおすすめ）</li>
+                                <li style="margin-bottom: 10px;">楽天市場のアプリで、紹介したい商品のページを開く</li>
+                                <li style="margin-bottom: 10px;">「ROOMで投稿」ボタンをタップする</li>
+                                <li style="margin-bottom: 10px;">口コミ・感想を書いて登録する</li>
+                                <li><span style="font-weight: bold; color: #b91c1c;">InstagramのプロフィールにROOM URLを掲載する</span></li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第2章
+                =========================================== -->
+                <div id="chapter2">
+                    <h2 class="chapter-title">第2章：楽天マネタイズの全体像と事前準備</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　楽天マネタイズのメリットと全体像</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">楽天マネタイズは、アフィリエイトリンクを貼るだけで収益が発生する可能性があり、初心者にとっても非常にハードルが低く魅力的な方法です。</p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; border-top: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 10px; margin-top: 0;">✅ ハードルが低く、別の商品でもOK</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">友達に「これいいよ！」とおすすめするような感覚ででき、リンクから別の商品が購入されても報酬が発生します。ファーストキャッシュを得やすいのが特徴です。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; border-top: 4px solid #ef4444;">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 10px; margin-top: 0;">✅ 知名度と豊富なジャンル</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">楽天は広く使われており警戒感が少なく、あらゆるジャンルの商品があるので、どんな発信ジャンルとも相性が良いです。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　楽天ROOMの事前準備（ランクアップ）</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">楽天ROOMでは、ROOMの【ランク】に応じて<span style="font-weight: bold; color: #b91c1c;">「ランクボーナス」</span>がプラスされます。最低でも<span style="font-weight: bold; color: #b91c1c;">「Bランク以上」</span>を獲得しておくことが大切です。</p>
+
+                        <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #f59e0b; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                            <h4 style="font-size: 1.1rem; color: #b45309; margin-top: 0; margin-bottom: 15px; text-align: center;">【Bランク達成のための5つの条件（売上不要）】</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto;">
+                                <div style="background-color: #fef3c7; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #92400e;">✅ プロフィールを設定する</div>
+                                <div style="background-color: #fef3c7; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #92400e;">✅ 検索機能を使う</div>
+                                <div style="background-color: #fef3c7; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #92400e;">✅ フォローをする</div>
+                                <div style="background-color: #fef3c7; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #92400e;">✅ いいねをする</div>
+                                <div style="background-color: #fef3c7; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #92400e;">✅ オリジナル写真を投稿する</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　楽天アフィリエイトの事前準備（リサーチ）</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">収益アップのためには、<span style="font-weight: bold; color: #b91c1c;">できるだけ報酬率（料率）が高い商品かつ、期間限定でお得度が高い商品</span>を、<span style="font-weight: bold; color: #1e40af;">売れやすいタイミング</span>で紹介することが重要です。</p>
+                        
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <p style="font-weight: bold; color: #1e40af; margin-bottom: 5px; margin-top: 0;">【リサーチの流れ】</p>
+                            <ol style="font-size: 0.9rem; color: #475569; margin-bottom: 0; padding-left: 20px;">
+                                <li>セール前に競合アカウントをチェックし、過去の目玉商品をリサーチ</li>
+                                <li>セール情報解禁後、商品ページやイベントページで最新情報を確認</li>
+                                <li><span style="font-weight: bold;">【商品名・料率・通常価格・セール価格】</span>をスプレッドシート等で記録・データベース化</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　注意事項と収益の受け取り</h2>
+                        
+                        <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border: 2px solid #fca5a5; margin-bottom: 25px;">
+                            <h3 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 15px;">⚠️ 必ず守るべきルール</h3>
+                            <ul style="font-size: 0.95rem; font-weight: bold; color: #7f1d1d; margin-bottom: 0; padding-left: 20px;">
+                                <li>タイアップ投稿ラベルを必ず付ける（ステマ規制対策）</li>
+                                <li>商品画像のスクリーンショット使用は禁止（アフィリエイトサイトからのDLは可）</li>
+                                <li>DMでのアフィリエイトリンク共有は禁止</li>
+                                <li>楽天ROOMでの相互購入は禁止</li>
+                            </ul>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 0; margin-bottom: 15px;">収益の受け取り（楽天キャッシュ）</h3>
+                        <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">報酬は基本的に「楽天キャッシュ」で付与されます。<span style="font-weight: bold; color: #b91c1c;">月に3,001円以上の成果が発生している場合、楽天カードまたは楽天銀行口座とのID連携が必須</span>です。連携していないと3,000円を超える収益は消滅します。</p>
+                        
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 2px solid #10b981;">
+                            <p style="font-weight: bold; color: #065f46; margin-bottom: 5px; margin-top: 0;">💡 現金化のおすすめ設定</p>
+                            <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">楽天キャッシュを【プレミアム型】に設定すると、成果報酬もランクボーナスもまとめて現金出金可能になります。マネタイズ開始前に設定しておくのがおすすめです。</p>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第3章
+                =========================================== -->
+                <div id="chapter3">
+                    <h2 class="chapter-title">第3章：楽天アフィリエイトとROOMの使い分け・バランス</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　投稿とストーリーズの役割</h2>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 25px;">
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe; text-align: center;">
+                                <p style="font-weight: bold; color: #1e40af; font-size: 1.2rem; margin-bottom: 15px; margin-top: 0; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">投稿（フィード・リール）</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 5px;"><span style="font-weight: bold;">主な役割：</span>リーチ拡大、資産形成（母数を増やす）</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">フォロワー外にも届き、長期的に効果が続く</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #fecaca; text-align: center;">
+                                <p style="font-weight: bold; color: #991b1b; font-size: 1.2rem; margin-bottom: 15px; margin-top: 0; border-bottom: 2px solid #fecaca; padding-bottom: 10px;">ストーリーズ</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 5px;"><span style="font-weight: bold;">主な役割：</span>成約率向上、速報性</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">直接リンクが貼れ、即時購買行動を促す</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　訴求の4パターンとバランス</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">楽天マネタイズには、投稿・ストーリーズと、アフィリエイト・ROOMを掛け合わせた4つのパターンがあります。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 5px;">① 投稿 × 楽天アフィリエイト <span style="font-size: 0.85rem; background-color: #eff6ff; padding: 2px 8px; border-radius: 10px;">セール時</span></h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">拡散力のある投稿でハイライト等へ誘導。セール中の集中訴求で短期間に大きな収益を狙う。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 5px;">② 投稿 × 楽天ROOM <span style="font-size: 0.85rem; background-color: #fef2f2; padding: 2px 8px; border-radius: 10px;">セール外</span></h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">投稿からROOMへ誘導。資産となる流入を作り、長期的な安定収益を育てる。ROOMランクアップにも重要。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 5px;">③ ストーリーズ × 楽天アフィリエイト <span style="font-size: 0.85rem; background-color: #eff6ff; padding: 2px 8px; border-radius: 10px;">セール時・初心者おすすめ</span></h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">直接リンクで即購入へ誘導。限定クーポンやタイムセール情報など、短期間で収益を確実に取りに行く。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 5px;">④ ストーリーズ × 楽天ROOM <span style="font-size: 0.85rem; background-color: #fef2f2; padding: 2px 8px; border-radius: 10px;">コレクション訴求</span></h4>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">複数商品をまとめたコレクションを見せたい時や、ROOMランクを上げたい時に利用する。</p>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fffbeb; padding: 20px; border-radius: 8px; border: 2px solid #f59e0b; text-align: center;">
+                            <p style="font-size: 1.1rem; font-weight: bold; color: #b45309; margin-bottom: 10px; margin-top: 0;">🔥 売上最大化の最重要ポイント</p>
+                            <p style="font-size: 1rem; font-weight: bold; color: #92400e; margin-bottom: 0;">まず<span style="border-bottom: 2px solid #ef4444;">投稿で「母数（閲覧数）」を増やし</span>、そこから<span style="border-bottom: 2px solid #3b82f6;">ストーリーズで「成約率」を高める</span>連携プレーが必須です。</p>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第4章
+                =========================================== -->
+                <div id="chapter4">
+                    <h2 class="chapter-title">第4章：売上を最大化するためのポイント</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　投稿作成の4つのポイント（閲覧数UP）</h2>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">① 売れるタイミングで訴求</h4>
+                                <p style="font-size: 0.9rem; color: #334155; margin-bottom: 0;">セール初日の前日や、0・5のつく日の前日に投稿し、購買意欲が高まるタイミングでリーチ数を最大化する。</p>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">② 投稿をバズらせる</h4>
+                                <p style="font-size: 0.9rem; color: #334155; margin-bottom: 0;">特にリール投稿でバズを狙う。TikTokやROOM上位者からバズ要素をリサーチする。</p>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">③ 投稿数を増やす</h4>
+                                <p style="font-size: 0.9rem; color: #334155; margin-bottom: 0;">バズがなくても母数を増やす。同じ商品でも切り口を変えて再投稿する（例：セールまとめ、カテゴリ特集）。</p>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                                <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">④ リンクへ確実に誘導する</h4>
+                                <p style="font-size: 0.9rem; color: #334155; margin-bottom: 0;">投稿の最後で「ROOMで検索：〇〇」「ハイライトを見てね」など、矢印や画像で分かりやすくCTA（行動喚起）を配置する。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　ストーリーズ作成の4つのポイント（成約率UP）</h2>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-bottom: 30px;">
+                            <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 10px;">① 限定感の強い情報を届ける</h4>
+                                <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0;">「今だけ！」「今日だけ！」というワードを入れ、タイムセールや限定クーポンなど緊急性で即行動を促す。</p>
+                            </div>
+                            <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 10px;">② 思わずクリックしたくなる訴求</h4>
+                                <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0;">数字（割引率や高評価点数）を具体的に示し、含みを持たせることでリンククリック率を高める。</p>
+                            </div>
+                            <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 10px;">③ ハイライトを活用する</h4>
+                                <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0;">セール情報や人気商品をテーマごとにハイライトにまとめ、24時間以降も商品ページへの導線を維持する。</p>
+                            </div>
+                            <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                                <h4 style="font-size: 1.1rem; color: #991b1b; margin-top: 0; margin-bottom: 10px;">④ テンプレートを作っておく</h4>
+                                <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0;">セール告知や紹介用のテンプレを事前に準備し、リンクの貼り替えだけで量産できるよう作業効率を上げる。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第5章
+                =========================================== -->
+                <div id="chapter5">
+                    <h2 class="chapter-title">第5章：楽天で実際にマネタイズしてみよう（実践編）</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　リンクの発行と活用事例</h2>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 10px;">🔗 リンクの発行方法（ストーリーズ用）</p>
+                        <ul style="font-size: 0.9rem; color: #475569; margin-bottom: 20px; padding-left: 20px;">
+                            <li><span style="font-weight: bold;">イベント・クーポン：</span>URLをコピー → 楽天アフィリエイトで「短縮URL」を作成</li>
+                            <li><span style="font-weight: bold;">商品ページ：</span>楽天アプリから直接「アフィリエイトリンクを取得」</li>
+                            <li><span style="font-weight: bold;">ROOMリンク：</span>ROOMアプリの共有ボタンからURLをコピー</li>
+                        </ul>
+
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 10px;">🎯 ストーリーズの活用事例</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 30px;">
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">① イベントエントリー</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">マラソンやセールへのエントリー忘れを防ぐ＆イベントを盛り上げる。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">② クーポンページ</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">探しにくい開始2時間クーポンなどを直接シェアして手間を省く。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px; margin-top: 0;">③ 愛用品・超お得商品</p>
+                                <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">映えを意識し、10万円OFFなどのインパクトのある数字でアピール。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　アイテム選び（高料率商品）が超重要</h2>
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 15px;">楽天アフィリエイトの報酬は通常2〜4％ですが、<span style="font-weight: bold; color: #b91c1c;">最大20％の料率</span>のものが存在します。1000円の商品を100個売った場合、料率2％なら2000円、料率20％なら20,000円と大きな差になります。</p>
+
+                        <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; border: 1px solid #bbf7d0; margin-bottom: 20px;">
+                            <p style="font-weight: bold; color: #166534; margin-bottom: 10px; margin-top: 0;">💰 料率の高い商品の探し方・ポイント</p>
+                            <ul style="font-size: 0.9rem; color: #166534; margin-bottom: 0; padding-left: 20px;">
+                                <li>楽天アフィリエイトの「料率アップショップ」から検索</li>
+                                <li>楽天ROOMのランキング上位者が紹介しているアイテムをチェック</li>
+                                <li>同じ商品でも、料率の高い方のショップを選んで紹介する</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- ==========================================
+                     第6章
+                =========================================== -->
+                <div id="chapter6">
+                    <h2 class="chapter-title">第6章：アフィリエイトの売上を加速させよう（イベント戦略）</h2>
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　売上を加速させるイベントの波に乗る</h2>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">売上を何倍にも加速させる鍵になるのは、<span style="font-weight: bold; color: #b91c1c;">訴求のタイミング</span>です。</p>
+
+                        <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px;">
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 5px; margin-top: 0;">🔥 楽天スーパーセール（3・6・9・12月）</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">1年で最も購買意欲が高まる。特に12月は売上が出やすい。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #991b1b; margin-bottom: 5px; margin-top: 0;">🔥 お買い物マラソン（ほぼ毎月）</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">初日限定の半額セールやクーポンがあり、この期間にまとめ買いする人が多い。</p>
+                            </div>
+                            <div style="background-color: #fff; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                <p style="font-weight: bold; color: #b45309; margin-bottom: 5px; margin-top: 0;">📅 5と0のつく日</p>
+                                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 0;">楽天カード購入でポイントアップ。セール中もこの日に売上が集中する。</p>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fffbeb; padding: 20px; border-radius: 8px; border: 2px solid #f59e0b; text-align: center;">
+                            <p style="font-size: 1.1rem; font-weight: bold; color: #92400e; margin-bottom: 5px; margin-top: 0;">最大の極意：イベントの前日に投稿で訴求する！</p>
+                            <p style="font-size: 0.9rem; color: #78350f; margin-bottom: 0;">「セール初日の前日」「5と0のつく日の前日」に目玉商品を投稿することで、バズれば売上が10倍以上になることも。</p>
+                        </div>
+                    </section>
+
+                    <hr style="margin: 30px 0; border: none; border-top: 1px dashed #e2e8f0;">
+
+                    <section>
+                        <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　心理学を応用した訴求テクニック</h2>
+                        
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                            <p style="font-weight: bold; color: #0f172a; margin-bottom: 10px; margin-top: 0;">💡 ザイオンス効果（単純接触効果）</p>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 10px;">何度も目に触れさせることで、商品が気になり「欲しい」と思わせる効果。</p>
+                            <ul style="font-size: 0.9rem; color: #475569; margin-bottom: 0; padding-left: 20px;">
+                                <li>セールの時だけでなく、普段の投稿やストーリーズでも愛用感を見せる。</li>
+                                <li>フォロワーからの「気になります〜」という声をシェアし、バンドワゴン効果（みんなが気になってるから欲しい）も狙う。</li>
+                            </ul>
+                        </div>
+
+                        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 10px;">潜在的なニーズには「問題提起 → 解決策の提示」、顕在的なニーズには「今すぐ買うべき理由（今だけ半額など）」を明確に提示し、ユーザーが思わず買いたくなる流れを作りましょう！</p>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

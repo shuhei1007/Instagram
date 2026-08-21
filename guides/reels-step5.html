@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEP5: 動画を編集アプリに取り込んで音楽と合わせよう | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev { margin-right: auto; }
+        .nav-next { margin-left: auto; }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>STEP5: 動画を編集アプリに取り込んで音楽と合わせよう</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>前回までで台本が完成し、使用する動画の撮影も完了しましたね。</p>
+                    <p>今回は、作成した台本と動画を編集して、いよいよ短尺の「ショート動画」を作成していきます。音楽がついたテンポの良いショート動画ができあがるまで、一緒に進めていきましょう！</p>
+                    <p>今までは企画や構成を考えるなど、頭で考えるだけのことが多かったかもしれませんが、ここからは実際にあなた自身が手を動かして動画を作っていく形になります。</p>
+                    <p>今日の講座では、動画の途中で一旦動画を止めて、動画編集アプリを操作してもらいます。クリエイターとして動画を作り上げるまで、あと一歩になりますので、がんばっていきましょー！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 撮影した動画を編集アプリに取り込む</h2>
+                    <p>まず、前回撮影した動画を台本の順番に編集アプリに取り込んでいきます。後から順番を変えることもできますが、この状態で順番通りに並べておくと編集が圧倒的に楽になります。</p>
+                    <p>台本を見ながら、台本の順番になるように取り込んでいきましょう。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【おすすめ編集アプリ】</p>
+                        <ul style="margin-bottom: 10px;">
+                            <li>・CapCut</li>
+                            <li>・VLLO</li>
+                        </ul>
+                        <div style="background-color: #fffbeb; padding: 10px; border-left: 4px solid #f59e0b; border-radius: 0 4px 4px 0;">
+                            <p style="margin: 0;">💡 ｉサークルは「VLLO」を推奨</p>
+                        </div>
+                        <p style="margin-top: 15px; margin-bottom: 0;">私自身もVLLOでショート動画（リール）を編集していますし、フォロワー20万人以上のインフルエンサーに聞いてもVLLOを使っている人がほとんど。スマホでもタブレットでも使えるので、フル活用していきましょう。</p>
+                    </div>
+
+                    <p style="margin-top: 15px;">「プレミアプロ（Adobe Premiere Pro）」などのPC編集ソフトに慣れている場合は、それで編集してもOKです。周りのインフルエンサーに聞いても、スマホやタブレットのアプリで編集している人は多く、スマホのアプリのみでも十分クリエイターとして活躍し、月7桁稼ぐことは可能なので安心してください。</p>
+                    
+                    <p>今回はスマホで動画編集アプリVLLOを使う場合で進めていきます。インストールが完了したら、撮影した動画を“順番に”選択してアプリに取り込みましょう。</p>
+                    <p>取り込んだだけの状態では4分・5分ほどの長い動画になっていると思いますが、ここから編集して30秒ほどのギュッとまとまった動画にしていくので安心してください。</p>
+                    
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin: 0; font-weight: bold;">✋ ここで一旦ストップ</p>
+                        <p style="margin-bottom: 0;">講義動画を止めて、手持ちのスマホでVLLOを立ち上げ、撮影した動画をアプリに取り込みましょう。台本通り全て取り込み完了次第、講義動画を再生して次に進みましょう。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 音楽を編集アプリに取り込む</h2>
+                    <p>動画の取り込みが完了したら、編集にうつる前に音楽も取り込みましょう。</p>
+                    <p>先に音楽を取り込む理由は、音楽を基準に編集した方が視覚と聴覚のリズムが一致し、テンポ感のあるメリハリの効いた動画に仕上がるからです。音楽に合わせて編集すると、ミュートで見ても「ちょうど良い」と感じるテンポになるので一石二鳥です。このように映像と音楽をピッタリ合わせることを「音ハメ」といいます。</p>
+
+                    <h4 style="margin-top: 20px;">【使用する音源の選び方】</h4>
+                    <ul>
+                        <li>・TikTokのおすすめ</li>
+                        <li>・Instagramでバズっているリール投稿に使われているもの</li>
+                    </ul>
+                    <p>動画の雰囲気に合っていれば何でもOK。気負いすぎず「自分が好きだな」と感じる音源を選びましょう。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">⚠️ 音楽には著作権があります</p>
+                        <p style="margin-bottom: 0;">勝手に商用利用することは禁止されています。著作権法上、個人利用の範囲であれば複製・録音は問題ありません。編集アプリに取り込むのは「テンポや間隔を調整するため」であり、実際のリール投稿時はInstagram上の音源を使用することを忘れないでください。今回の場合、Instagram内で使用できる音源であれば、Instagram上で発信する動画に利用可能です。</p>
+                    </div>
+
+                    <h4 style="margin-top: 20px;">【Instagram上の音源をダウンロードする方法】</h4>
+                    <p>それでは、Instagram上の音源をダウンロードして編集アプリに取り込んでいきます。</p>
+                    <ol>
+                        <li>① 雰囲気が合っている、Instagram上で使用したい音楽を選ぶ</li>
+                        <li>② その音源画面にいき、スマホの画面録画機能で音源を録画する<br>
+                        <em>※機種やアップデート状況で画面録画の方法が違うので、わからない場合は「自分の機種 画面録画 方法」とGoogleで検索してみましょう。</em></li>
+                    </ol>
+
+                    <h4 style="margin-top: 20px;">【画面録画の音源のみVLLOに取り込む方法】</h4>
+                    <p>以下の手順で使用したい音源を編集アプリVLLOに取り込めます。</p>
+                    <ol>
+                        <li>① 赤枠部「BGM」をタップ</li>
+                        <li>② 水色枠部「ファイル」をタップ</li>
+                        <li>③ 黄色枠部「ビデオから抽出」をタップ</li>
+                    </ol>
+                    <p>前半の不必要なノイズ部を切り取って、リール動画の音源として使用しましょう。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin: 0; font-weight: bold;">✋ ここで一旦ストップ</p>
+                        <p style="margin-bottom: 0;">講義動画を止めて、自分の動画に合う雰囲気の音源をVLLOに取り込むまで実施しましょう。取り込めたら講義を再生して次に進みましょう。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 音楽のテンポを参考に動画を編集する</h2>
+                    <p>取り込んだ音楽に合わせて、動画をカットしたり倍速にしたりしていきましょう。編集時のポイントは2つです。</p>
+                    <ul>
+                        <li>① 前半2秒にこだわること</li>
+                        <li>② 1カットは3秒以内が目安</li>
+                    </ul>
+
+                    <h4 style="margin-top: 20px;">① 前半2秒にこだわること</h4>
+                    <p>台本のところでも出てきた「前半2秒」を意識するということです。ほとんどの人がこの2秒で、この先を見るか見ないかを判断しています。2秒がダラダラした動画だと「時間を無駄にしたくない」と次の動画にとばされてしまうので、理解できるけれど遅くなりすぎないテンポに編集しましょう。</p>
+
+                    <h4 style="margin-top: 20px;">② 1カットは3秒以内が目安</h4>
+                    <p>ずっと同じ画面で字幕だけ変わっていくと「つまらない動画」と感じられてしまいます。時には0.7秒のカットを入れたり、最長でも3秒以内を目安にカットしましょう。</p>
+
+                    <h4 style="margin-top: 20px;">音楽のテンポと動画の切り替え</h4>
+                    <p>音楽は基本的に4拍子でできており、4回に1回強い拍が入るものが多いです。この強い拍のタイミングで動画が切り替わったり、強調したいものが現れたりするように編集します。VLLOなどで音源が入っていると音量が表示され、強い拍となる4拍目で尖った山のように跳ねていることが多いです。</p>
+                    <p>この曲調が強くなる部分が動画の境目になるように編集していきます。動画をカットしたり速度調整したりして、テンポの良い動画を作り上げていきましょう。</p>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="reels-step4.html" class="nav-prev">← 前へ：STEP4 撮影しよう</a>
+                    <a href="reels-step6.html" class="nav-next">次へ：STEP6 台本とアフレコ →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

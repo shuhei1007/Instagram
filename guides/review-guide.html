@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウント見直し編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>アカウント見直し編</span>
+            </div>
+            <h1>アカウント見直し編</h1>
+            <p class="subtitle">自分の個性を深掘りし、唯一無二のアカウントを再設計するためのガイド</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　個性を深掘る</h2>
+                    <p>まずは、個性の深掘りから行っていきましょう。<br>Instagram運用において個性が大切な理由は2つあります。</p>
+                    <ul>
+                        <li>差別化に必要だから</li>
+                        <li>自分でコントロールできる範囲だから</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ 差別化に必要だから</h3>
+                    <p>今の時代のInstagramでは差別化は、「情報」ではなく「個性」でする必要があります。山のように発信者がいる中で、情報だけで差別化することはほぼ不可能だからです。<br>
+                    そこで<strong>あなたの個性を掛け合わせる</strong>ことで、唯一無二のアカウントが作れます。</p>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px;">
+                        <p style="margin: 0; font-weight: bold; color: #64748b; text-decoration: line-through;">❌「何を言うか」</p>
+                        <p style="margin: 5px 0 0; font-weight: bold; color: #1e40af; font-size: 1.1rem;">⭕️「誰がどのように言うか」</p>
+                        <p style="margin: 5px 0 0; font-size: 0.95rem;">が大切な時代になってきているんです。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ 自分でコントロールできる範囲だから</h3>
+                    <p>マーケティング編でお話した3C分析の図を覚えているでしょうか。</p>
+                    <div style="background-color: #fff; border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>Company「自社」</strong>：自己分析</li>
+                            <li><strong>Customer「市場・顧客」</strong>：競合分析でのニーズ調査</li>
+                            <li><strong>Competitor「競合」</strong>：競合分析</li>
+                        </ul>
+                    </div>
+                    <p style="margin-top: 15px;">この中で<strong>唯一自分でコントロールできる範囲のものがCompany「自社」</strong>です。自分のどの個性を武器として使っていくのかを見極めることに注力しましょう。</p>
+
+                    <p>初級編での宿題でも自己分析を行っていただきましたが、みなさんの中にはまだまだ自分で気付いていない個性が眠っています。<br>
+                    自己分析に慣れ、毎日のようにInstagramに向き合い、いろんな人のいろんな質問やアカウント設計を見て、視野も広くなっているタイミングで、もう一度自分自身を見つめ直すと、初級編のときには思いつかなかった強みや悩みが出てきます。</p>
+
+                    <p>自分の個性を深掘ることで、よりユニークな一面を見つけられるかもしれません。そしてその一面を活かせば、今よりももっとアカウントを尖らせられる可能性も高まります。</p>
+                    <p style="font-weight: bold; text-align: center; font-size: 1.1rem; color: #0f172a; margin-top: 20px;">山ほどいるインフルエンサーの中で、代替の効かない存在になりましょう。</p>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe; margin-top: 30px;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #1e40af; margin-top: 0;">📝 個性を深掘るステップ</p>
+                        
+                        <p style="font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: #1e3a8a;">1️⃣ 初級編の宿題11日目と12日目を見直す</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">決して0からやり直すわけではありません！あくまで「ヌケモレがないか見直すだけ」です！全ての自分の回答を見返してみて、足りないところや思いついたことがあればこのタイミングで書き足しましょう！</p>
+                        
+                        <p style="font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">2️⃣ 11日目と12日目の回答の中から、下記どちらかに当てはまるものを全て書き出す</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; background-color: #fff; padding: 10px 10px 10px 30px; border-radius: 6px;">
+                            <li>① 人に「すごいね」「変わってるね」と言われること</li>
+                            <li>② 周り5人の中で自分にしか当てはまらないこと</li>
+                        </ul>
+                        <p style="font-size: 0.95rem;">自分の強みは案外自分では気付かないもの。自分では「普通」だと思い込んでいても、人から見たら「普通」ではないことはよくあります。そこに気付くことであなたの個性を再発見できます。</p>
+
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 15px;">
+                            <p style="margin: 0; font-weight: bold; color: #92400e;">💡 ここで宿題シートを開き、「個性を深掘るステップ1️⃣＆2️⃣」に取り組んでみましょう。</p>
+                            <p style="font-size: 0.95rem; margin-top: 5px; margin-bottom: 0; color: #b45309;">中級編の宿題シートと初級編の宿題シート、2種類が必要です。<br>自分を見つめ直すにあたって、自分の今の発信ジャンルにひっぱられすぎないように注意しましょう。今の発信ジャンルに関係なく、「まっさらな状態」で考えることが大切です。思わぬところからコンセプトの軸が見つかることもありますよ。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　自分の悩みやコンプレックスに向き合う</h2>
+                    <p>ｉサークルでは、Instagram運用において自分の悩みや辛い過去、コンプレックスを開示していくのが大切だと何度もお伝えしてきました。<br>その理由は以下のとおりです。</p>
+                    <ul>
+                        <li>共感を得られるから</li>
+                        <li>悩みの解決方法が具体的に提示できるから</li>
+                        <li>応援シロがあるから</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ 共感を得られるから</h3>
+                    <p>自分が悩んでいるということは、他の人も悩んでいるということです。同じ悩みを抱えているからこそ、その人に刺さる言葉が出てきます。<br>
+                    そして、深い悩みやコンプレックスを話してくれた人には、「そんなことまで私に話してくれるんだ…！」と思わず心を開いてしまいますよね。<br>
+                    フォロワーさんに心を開いてもらうためには、まずは自分からオープンになる必要があります。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ 悩みの解決方法が具体的に提示できるから</h3>
+                    <p>悩みに対するアドバイスがほしいときに、</p>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0; font-weight: bold; color: #64748b; text-decoration: line-through;">❌「経験したことがない人からのなんとなくのアドバイス」</p>
+                        <p style="margin: 5px 0 0; font-weight: bold; color: #1e40af; font-size: 1.05rem;">⭕️「経験者からの具体的なアドバイス」</p>
+                    </div>
+                    <p>のほうが聞きたいと思いますよね。<br>つまり、</p>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0; font-weight: bold; color: #64748b; text-decoration: line-through;">❌「ただググれば出てくるような情報」を発信する</p>
+                        <p style="margin: 5px 0 0; font-weight: bold; color: #1e40af; font-size: 1.05rem;">⭕️「あなたの経験談が混じった一次情報」を発信する</p>
+                    </div>
+                    <p>ほうが、何倍もの価値のある情報をユーザーに届けることができます。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">✅ 応援シロがあるから</h3>
+                    <p>「応援シロ」というのは、キングコングの西野亮廣さんが作った言葉です。「シロ」は伸び代の「シロ」のことで、「応援される余地がどれくらいあるか」を測る言葉です。応援シロがあればあるほど、人から応援される存在になれる可能性が高まります。</p>
+                    <p>応援シロというのは、<strong>「目的地ー現在地」</strong>という式で表すことができます。</p>
+                    
+                    <div style="background-color: #fff7ed; padding: 15px; border-radius: 8px; border: 1px solid #fdba74; margin: 15px 0; text-align: center;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #c2410c; margin: 0;">「あなたが目指している未来」ー「今抱えている悩みやコンプレックス」</p>
+                    </div>
+                    
+                    <p>この差が応援シロというわけです。<br>
+                    人から応援されるインフルエンサーになるには、「現在」と「目的地」、両方をフォロワーさんに開示することが大切なんですね。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0; font-weight: bold; color: #64748b; text-decoration: line-through;">❌ ただ情報だけをまとめたアカウント</p>
+                        <p style="margin: 5px 0 0; font-weight: bold; color: #1e40af; font-size: 1.05rem;">⭕️ 今いる現在地から試行錯誤しながら未来に向かっていく姿を見せているアカウント</p>
+                    </div>
+                    <p>のほうが応援したくなりますよね。</p>
+
+                    <p>「ただ情報が見たくてフォローしている」フォロワーよりも、「あなたを応援したくてフォローしている」フォロワーのほうが、あなたのファンになってくれる確率が高いです。そしてファンが多いほどマネタイズにも繋がりやすいのは想像できるかと思います。</p>
+                    <p>人の心というのは、<br>
+                    「0→1：自分のできること得意なこと」をがんばるときよりも、<br>
+                    <strong>「-1→0：自分のできないこと、悪いこと」を解決するとき</strong>のほうが大きく動きます。</p>
+                    <p>そのため、自分の悩みや辛い過去・コンプレックスを開示していくのが大切なんです。ただ、悩みやコンプレックスを人に開示するのが怖いと感じる人がいるのもわかります。<br>しかし、みんな怖い・嫌だと思っているから、<strong>開示している人はまだまだ少ない</strong>んですね。<br>だからこそ、<strong>自己開示が差別化になる</strong>んです。勇気を出して向き合ってみましょう。</p>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe; margin-top: 30px;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #1e40af; margin-top: 0;">📝 自分の悩みに向き合うステップ</p>
+                        
+                        <p style="font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: #1e3a8a;">1️⃣ 自分が今悩んでいることや過去に感じていたコンプレックスをとにかく書き出す</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">どんなに些細なことでもOKです。今の発信ジャンルに引っ張られすぎないように注意しましょう。ジャンル関係なく、とにかく思いつく限り書き出しましょう。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">どんなに些細な悩みやコンプレックスでも、「世界中であなたしか抱えていないもの」なんてものはありません。むしろ「これって私だけかも？」と思うような悩みのほうが需要があります。<br>SNS上であってもそれは同じなんですね。なので、</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; background-color: #fff; padding: 10px 10px 10px 30px; border-radius: 6px; list-style-type: '⭐ ';">
+                            <li>人になかなか言えない悩みやコンプレックス</li>
+                            <li>周りになかなか共感してもらえない悩みやコンプレックス</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; font-weight: bold; color: #0284c7;">→ これらを思いついたら積極的に記録しておきましょう！</p>
+                        
+                        <p style="font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">2️⃣ 悩みの解決方法を書く</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">自分が実際に試した解決方法を書いていきましょう。解決できていなくてもOKです。その場合は、</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; background-color: #fff; padding: 10px 10px 10px 30px; border-radius: 6px; list-style-type: '⭐ ';">
+                            <li>想定している解決策</li>
+                            <li>取組中の解決策</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; font-weight: bold; color: #0284c7;">→ を書いておきましょう。</p>
+
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 15px;">
+                            <p style="margin: 0; font-weight: bold; color: #92400e;">💡 ここで一度動画を止めて、中級宿題シートに1️⃣と2️⃣を記入しましょう。</p>
+                            <p style="font-size: 0.95rem; margin-top: 5px; margin-bottom: 10px; color: #b45309;">悩みも解決方法も、できるだけ具体的に記入するように意識してみてください。</p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; color: #b45309; font-weight: bold; list-style-type: '✅ ';">
+                                <li>なぜ不安なのか？</li>
+                                <li>なぜ不安を感じる状況になってしまったか？ など</li>
+                            </ul>
+                            <p style="font-size: 0.95rem; margin-top: 10px; margin-bottom: 0; color: #b45309;">具体的に考えるように意識してみましょう！<br>あなたが思う「悩み」「コンプレックス」も、人から感謝されるくらい素敵な部分です。だから、怖がらずに開示していきましょう。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　自分の物語を知る</h2>
+                    <p>物語というのは<strong>「挫折→努力→理想の未来」</strong>で表されるストーリーのことです。<br>今のInstagramには、山ほど情報発信者がいる中であなたが選ばれるためには、「理由」が必要です。その理由になり得るのが「物語」です。</p>
+                    <p>人は物語に惹かれます。「挫折→努力→理想の未来」の型のストーリーには人を熱狂させるパワーがあります。<br>キャラクターの物語を知るからこそ、人はそのキャラクターへ愛着が湧き、応援したくなり、ファンになりますよね。<br>それは舞台がアニメや映画に限った話ではなく、SNSアカウントでも同じことがいえます。</p>
+                    <p>つまり、物語があると以下が達成しやすくなります。</p>
+                    <ul style="font-weight: bold; font-size: 1.05rem;">
+                        <li>✅ あなたが作る商品をみんなが応援してくれたり</li>
+                        <li>✅ フォロワーがあなたの言う通りに行動してくれたり</li>
+                        <li>✅ たくさんの人から愛されたり</li>
+                    </ul>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe; margin-top: 30px;">
+                        <p style="font-weight: bold; font-size: 1.1rem; color: #1e40af; margin-top: 0;">📝 自分の物語を知るステップ</p>
+                        
+                        <p style="font-weight: bold; margin-top: 15px; margin-bottom: 10px; color: #1e3a8a;">1️⃣ 先ほど記入した悩みと解決方法を、「挫折→努力→理想の未来」に当てはめて物語化してみましょう</p>
+                        
+                        <div style="background-color: #fff; border: 1px solid #cbd5e1; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <p style="font-weight: bold; margin-top: 0; color: #475569; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px;">📖 例</p>
+                            <p style="font-weight: bold; font-size: 0.95rem; margin-top: 10px; margin-bottom: 5px;">【前提】</p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                                <li><strong>悩み</strong>：アラサーになっても彼女ができたことがない</li>
+                                <li><strong>解決方法</strong>：清潔感を手に入れて、マッチングアプリに登録し、徐々に女性に慣れていく</li>
+                            </ul>
+                            
+                            <p style="font-weight: bold; font-size: 0.95rem; margin-bottom: 5px;">【物語化】</p>
+                            <p style="font-size: 0.9rem; font-weight: bold; color: #3b82f6; margin-bottom: 5px;">📉 挫折</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 10px; padding-left: 20px;">
+                                <li>昔、好きな人に告白をしたら「肌がブツブツで気持ち悪い」とフラれた</li>
+                                <li>そこから女性と話すのが怖くなって、彼女ができないままアラサーになってしまった</li>
+                                <li>この年で彼女ができたことないのが恥ずかしくて周りにも相談できない</li>
+                            </ul>
+                            <p style="font-size: 0.9rem; font-weight: bold; color: #f59e0b; margin-bottom: 5px;">🏃‍♂️ 努力</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 10px; padding-left: 20px;">
+                                <li>コンプレックスの原因である肌を直すために、時間をかけていろんなスキンケアを続けていたら段々とよくなってきた</li>
+                                <li>勉強のため化粧品検定にも挑戦し、合格した</li>
+                            </ul>
+                            <p style="font-size: 0.9rem; font-weight: bold; color: #10b981; margin-bottom: 5px;">✨ 理想の未来</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; padding-left: 20px;">
+                                <li>肌がキレイになったことで自分に自信がついた</li>
+                                <li>初めてマッチングアプリで出会った女性とデートをした</li>
+                                <li>自分に自信がついたおかげか、スムーズに会話が弾み、次のデートの約束もできた</li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-weight: bold; margin-bottom: 10px; color: #1e3a8a;">2️⃣ 今のアカウントで発信できそうなものには印をつけておきましょう</p>
+                        
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 15px;">
+                            <p style="margin: 0; font-weight: bold; color: #92400e;">💡 ここで一度動画を止め、宿題に取り組んでみましょう。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　まとめ</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                        
+                        <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 0; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">個性の深掘り</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;">今の時代のInstagram運用は、個性で他のアカウントと差別化を図る必要があります。そのために、自分で気づいていない個性を深掘りしてみましょう。</p>
+                        </div>
+
+                        <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 0; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">自分の悩みやコンプレックスに向き合う</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 10px;">自分が悩んでいるということは人も悩んでいるということ！<br><strong>悩みやコンプレックスを開示するメリット</strong></p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px;">
+                                <li>共感を得られる</li>
+                                <li>具体的な解決策を提示できる</li>
+                                <li>応援シロを作れる</li>
+                            </ul>
+                        </div>
+
+                        <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: #1e3a8a; margin-top: 0; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">自分の物語を知る</h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 10px;">人はストーリー性のあるものに強く惹かれます。</p>
+                            <ul style="font-size: 0.95rem; margin-bottom: 10px; padding-left: 20px;">
+                                <li>たくさんの人から愛される</li>
+                                <li>フォロワーがあなたの言う通りに行動してくれる</li>
+                                <li>あなたが作る商品をみんなが応援してくれる</li>
+                            </ul>
+                            <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 0; color: #0284c7;">物語があると、これらが達成しやすくなります。</p>
+                        </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05　競合アカウントを洗い出す</h2>
+                    <p>まずは今発信しているジャンルの競合アカウントを10個洗い出す作業をしていきましょう。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">量をこなす理由</h3>
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;">⭐ 市場全体を理解できるから</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">アカウントを1つ2つ見ただけでは、どうしてもそのジャンルの全体像は把握できません。アカウントをたくさん調べることで、そのジャンルならではの特性や流行り、ニーズを掴めます。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;">⭐ ジャンルの隙間を見つけられるかもしれないから</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">大きなジャンルの中で、発信ジャンルはどんどん細分化していっています。競合アカウントをたくさん調べることで、細分化している小ジャンルの中にまだ発信者がいない「隙間」を見つけられるかもしれません。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;">⭐ 参考先が1つだけだと、丸パクリになってしまいがちだから</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">1つの競合アカウントしか見ていないと、どうしても「このアカウントを参考にしたんだな」と誰が見てもわかるくらい似てしまう場合があります。いろんなアカウントからいろんないい要素を抽出して、自分のアカウントに取り入れることを意識してみてください。</p>
+                        <p style="font-weight: bold; font-size: 0.95rem; color: #1e40af; text-align: center; margin-bottom: 0;">いい要素といい要素のハイブリッドなアカウントを目指していきましょう。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">競合アカウントの探し方</h3>
+                    <ul style="font-size: 0.95rem; line-height: 1.8; margin-bottom: 20px;">
+                        <li><strong>⭐ キーワードで検索する</strong>：検索バーからジャンルに関連するキーワードで検索して、アカウントを探していく方法です。大ジャンル名でも少ジャンル名でも探してみましょう。</li>
+                        <li><strong>⭐ 発見欄から探す</strong>：既にアカウントの運用を始めている場合は、発見欄に自分の発信ジャンルの投稿が並んでいるはずです。発見欄に載っている投稿は、最低限のクオリティが保証された投稿ということです。伸びている投稿から探す方が効率よくいいアカウントを探すことができます。発見欄から、思わず目が惹かれた投稿に飛んでみましょう。</li>
+                        <li><strong>⭐ インフルエンサーのフォロー欄から探す</strong>：インフルエンサーは同ジャンルのインフルエンサーをフォローしている確率が高いです。競合アカウントを1つ見つけたら、必ずフォロー欄も探してみましょう。</li>
+                        <li><strong>⭐ おすすめから探す</strong>：おすすめというのは「表示しているアカウントに似たアカウントをInstagramが教えてくれる機能」のことです。
+                            <ul style="margin-top: 5px; margin-bottom: 5px;">
+                                <li>競合アカウントのプロフィールに飛ぶ</li>
+                                <li>メッセージボタンの横のボタンをタップ</li>
+                                <li>調べたアカウントと似たアカウントをInstagramがおすすめする</li>
+                            </ul>
+                            同ジャンルかつInstagram上で人気のあるアカウントが簡単に見つかります。
+                        </li>
+                        <li><strong>⭐ キュレーションアカウントから探す</strong>：キュレーションアカウントとは、いろんなインスタグラマーの投稿を、許可を取って転載(リポスト)しているアカウントのことです。そのキュレーションアカウントの投稿から「この投稿好き、参考になる！」と思うものを探してみましょう。</li>
+                    </ul>
+
+                    <p>もし「競合アカウントがいない…」という場合は、以下の3つの原因が考えられます。</p>
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 10px;"><strong>✅ リサーチ不足</strong>：単純にリサーチが足りない場合もあります。先ほどお伝えした方法で根気よく探してみましょう。</li>
+                            <li style="margin-bottom: 10px;"><strong>✅ リサーチ範囲が狭すぎる</strong>：探す範囲を特化させすぎているというパターンです。リサーチ範囲を狭め過ぎず、どんどんジャンルの輪を広げていくイメージで探してみましょう。</li>
+                            <li><strong>✅ 需要がない</strong>：上記の方法でも競合アカウントがまったく見つからない場合、そのジャンルは需要のない可能性が高いです。そういったジャンルで発信してしまっている方は、初級編のアカウント設計編からやり直すことをオススメします。</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 20px;">
+                        <p style="margin: 0; font-weight: bold; color: #92400e;">💡 ここで動画を止めて宿題シートを開きましょう。</p>
+                        <p style="font-size: 0.95rem; margin-top: 10px; margin-bottom: 5px;">競合アカウント10個を探して、以下の内容を記入しましょう。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; padding-left: 20px;">
+                            <li>アカウントURL</li>
+                            <li>アカウントの名前</li>
+                            <li>フォロワー数</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">競合アカウントは<strong>フォロワー1万人以上のアカウントを中心に</strong>ピックアップします。初級編の宿題でベンチマークとしたアカウントと被っても大丈夫です。</p>
+                        
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 200px; background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #fcd34d;">
+                                <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px; font-size: 0.9rem;">フォロワー1万人以上のアカウントが10個ない場合は、</p>
+                                <ul style="font-size: 0.85rem; margin-bottom: 0; padding-left: 20px;">
+                                    <li>ジャンルの範囲を広げてみる</li>
+                                    <li>フォロワー5000人以上かつ今もアクティブなアカウントも探してみる</li>
+                                </ul>
+                                <p style="font-size: 0.85rem; margin-top: 5px; margin-bottom: 0;">などの方法でリサーチしてみましょう。</p>
+                            </div>
+                            <div style="flex: 1; min-width: 200px; background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #fcd34d;">
+                                <p style="font-weight: bold; margin-top: 0; margin-bottom: 5px; font-size: 0.9rem;">逆にフォロワーの多いアカウントがありすぎる場合は、</p>
+                                <ul style="font-size: 0.85rem; margin-bottom: 0; padding-left: 20px;">
+                                    <li>ジャンルの範囲を狭めてみる</li>
+                                    <li>アカウント開設から半年以内のアカウントのみに絞ってみる</li>
+                                </ul>
+                                <p style="font-size: 0.85rem; margin-top: 5px; margin-bottom: 0;">などの方法でリサーチしてみましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06　競合アカウントを分析する</h2>
+                    <p>次にピックアップした競合アカウントを分析していきます。プロフィールや投稿を見ながら考えてみましょう。</p>
+                    
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">分析するポイント</h3>
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">1️⃣ どんな悩みを抱えている人に届けているのか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">そのアカウントのフォロワーの悩みを言語化していきます。フォロワーの悩みを理解し自分のアカウントにも取り入れることで、ターゲットに寄り添ったアカウントを作れます。<br>
+                        特に見るべき場所が<strong>投稿の「コメント欄」</strong>です。中でも特にいいね数の多いコメントが、より多くのユーザーが共感しているコメントになります。そして、「この悩みをアカウントのコンセプトや投稿に取り入れることでユーザーの共感が得られるものが作れるかも？」という仮説を立てることができます。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">2️⃣ どんな未来に連れていくのか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">そのアカウントをフォローすることによるベネフィットを考えていきます。このときに未来と手段を混在させて考えてしまわないように注意です。ベネフィットをしっかりと考えることで、このアカウントのフォロワーがどういった状態になりたいのかを理解できます。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">3️⃣ どんな解決策を提示するのか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">悩みの解決策＝発信内容です。ゴールが同じでも、辿る道が違う場合もあります。競合の手段を調査することで世の中に求められている解決策がわかります。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">4️⃣ マネタイズ方法は何か</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">今はアカウントを育てることに注力している方も多いかと思いますが、このタイミングでマネタイズも視野に入れていきましょう。競合アカウントができているマネタイズ方法はあなたもできる可能性が高いです。調べ方は、主にハイライトとプロフィールリンク先のサイトを見ていきます。そして自分のアカウントでも同じようなPRができそうだと仮説を立ててみましょう。マネタイズについては「マネタイズ編」でもしっかり解説していきます。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">5️⃣ どの投稿がきっかけでフォロワーが増えたのか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">今回行う競合分析の中で、一番大切な部分です。<br>
+                        フォロワーが少ないときに急に伸びた投稿が<strong>「本当に世の中に求められているもの」</strong>です。フォロワーがたくさんいるアカウントの投稿はある程度は絶対伸びるんですね。なので、「フォロワーが少ないときにバズった投稿」というのが本当に需要のある投稿です。それがわかると、どのキーワードに需要があるかなど、Instagram上で求められるものが理解できるようになってきます。</p>
+                        
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 10px;">
+                            <p style="font-weight: bold; margin-top: 0; font-size: 0.95rem; margin-bottom: 5px;">🔍 調べ方（過去の投稿を遡って）</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0;">
+                                <li>急に再生数が伸びている投稿</li>
+                                <li>急にいいね数やコメント数が多くなっている投稿</li>
+                            </ul>
+                            <p style="font-size: 0.9rem; margin-top: 5px; margin-bottom: 0;">これらを探してみましょう。</p>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 20px; border-radius: 8px; border: 1px solid #bfdbfe; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e3a8a;">ピックアップした10個アカウントを全てやるのではなく、まずはその中から</p>
+                        <ul style="margin-bottom: 10px; font-weight: bold; color: #0284c7;">
+                            <li>⭐ 自分の理想とするアカウント</li>
+                            <li>⭐ この人を超えたいと思うようなアカウント</li>
+                        </ul>
+                        <p style="margin-bottom: 0; font-weight: bold; color: #1e3a8a;">このようなアカウントを3つに絞って深く分析してみましょう。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07　別ジャンルのアカウントも分析する</h2>
+                    <p>自分の発信ジャンルでの競合分析ができたら、次は自分の発信ジャンル以外のアカウントも同じ流れで分析してみましょう。できれば、10個全て違うジャンルでピックアップできるとより良いです。</p>
+                    <p>同ジャンルでは誰もやっていないことでも、別ジャンルで伸びている要素を取り入れると、同ジャンルの競合と差別化を図りながら伸ばせます。別ジャンルの競合分析も積極的に行っていきましょう。</p>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 15px; margin-bottom: 20px;">
+                        <p style="margin: 0; font-weight: bold; color: #92400e;">💡 ここで一旦動画を止めて、宿題シートを開いてください。</p>
+                        <p style="font-size: 0.95rem; margin-top: 5px; margin-bottom: 0;">別ジャンルのアカウントを10個洗い出し、それぞれのアカウントを分析してみましょう。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">別ジャンルアカウントの探し方</h3>
+                    <ul style="font-size: 0.95rem; line-height: 1.8; list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 10px;"><strong>✅ キーワードで検索する</strong><br>まずは同期メンバーの発信ジャンルのキーワードで検索してみましょう！</li>
+                        <li style="margin-bottom: 10px;"><strong>✅ 発見欄やリール欄から探す</strong><br>別ジャンルの投稿も表示されることがあります。その場合、かなりバズっている投稿が表示されている可能性が高いです。</li>
+                        <li><strong>✅ 競合アカウントのフォロー欄から探す</strong><br>インフルエンサーは、別ジャンルの知り合いインフルエンサーもフォローしていることがよくあります。</li>
+                    </ul>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08　自分のアカウントに落とし込む</h2>
+                    <p>競合アカウントの分析結果を、どのように自分のアカウントに落とし込めそうか考えてみましょう。しかし、20アカウント分も分析をしていただきましたが、分析結果全てを自分のアカウントに落とし込む必要はありません。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 15px; margin-bottom: 15px;">
+                        <p style="font-weight: bold; font-size: 0.95rem; margin-top: 0; color: #334155;">「この人のバックボーンが自分と似ているから、こんなふうに過去を見せればいいんだな」</p>
+                        <p style="font-weight: bold; font-size: 0.95rem; margin-bottom: 0; color: #334155;">「意外な組み合わせで伸びてる！だったら自分も◯◯という要素と△△という要素を組み合わせてみるのはどうだろう？」</p>
+                    </div>
+                    
+                    <p>このように、自分に取り入れられそうな要素だけを抽出するイメージで考えてみましょう。</p>
+                    <p>そして考えるだけで終わるのではなく、<strong>「実際に投稿に落とし込む」</strong>ところまで行ってください。</p>
+                    <p>自分で仮説と検証を繰り返しながら試していくうちに、どんどん自分の血肉になっていきます。<br>果てしない道のりのように感じるかもしれませんが、今成功している人はみんなこの道を乗り越えてきています。時間がかかっても大丈夫なので、一つひとつ試していきましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09　発信ジャンルについて</h2>
+                    <p>コンセプトとプロフィールを見直す前に、今の発信ジャンルのまま続けていいのか一度考えてみましょう。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">1️⃣ 今のジャンルが好きか、情熱を持って続けられるか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">Instagramはすぐに結果が出るものではないので、長期で継続する必要があります。その上で、やはり好きなもの・興味のある話題でないと発信を続けるのが嫌になってしまいます。普段友達と何時間でも喋れるような内容を発信ジャンルにできるのがベストです。<br>
+                        自分の好きなことを楽しく話している感じで発信すると、その楽しさは見ている人にも伝わります。夢中に勝るものはありません。大好きなことだったらリサーチも苦じゃないし、それが仕事になれば幸せですよね。「仕事」として長く続けていくためにも、情熱を持てるジャンルで発信をする、もしくは情熱を持てるジャンルを掛け合わせましょう。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">2️⃣ 需要があるか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">競合アカウントを探しても探してもまったく見つからない場合は、需要のないジャンルである可能性があります。ただしジャンルの輪を広げることで競合アカウントが見つかる場合は、ちゃんと需要のあるジャンルなので安心してください。「競合がいすぎて自分がそこで戦えるイメージが湧かない…」という方もいるかもしれませんが、初心者さんほど競合がたくさんいるレッドオーシャンで戦うことをオススメします。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">3️⃣ 今の生活の延長線上にあるものか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">これから毎日発信と向き合っていくにあたり、日々の生活の延長線上にあるもののほうが発信が続けやすいです。日々の生活の延長線上にあるもののほうが、新しいネタもどんどん仕入れられますよね。Instagramを継続するには、「発信しやすいかどうか」も大事になってきます。</p>
+                    </div>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">もしジャンルを大きく変えたい場合</h3>
+                    <p>もしもジャンルをがらっと大きく変えたいと思った場合は、初級編のアカウント設計からやり直し、アカウントを再度立ち上げましょう。理由は以下の通りです。</p>
+                    
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 15px;">
+                        <ul style="margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 10px;"><strong>✅ フォロワーからの需要を見込めないから</strong></li>
+                            <li><strong>✅ Instagram側のアルゴリズムから既にジャンルを認知されている可能性が高いから</strong></li>
+                        </ul>
+                    </div>
+                    <p style="font-weight: bold; color: #b91c1c; text-align: center;">誰も求めていない投稿が伸びるはずはありません。</p>
+                    
+                    <p style="margin-top: 15px;">しかし、同じジャンルの発信の中で方向修正するだけなら、0から再設計する必要はありません。方向修正だけなら、中級編のこのアカウント設計見直し編をしっかりやるだけでOKです。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10　インサイト分析</h2>
+                    <p>まず最初に、インサイトで自分のどのような投稿が受けているのかを調べてみましょう。インサイトとはInstagramが公式に提供している分析ツールのことです。Instagramアプリから見ることができます。</p>
+                    <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                        <li>過去の投稿のリーチ数や保存数</li>
+                        <li>ストーリーズのリンクのタップ数</li>
+                        <li>フォロワー数の推移</li>
+                    </ul>
+                    <p>インサイトを見ることで反応がいい投稿とイマイチな投稿を数字で理解することができます。つまり自分に求められていること・需要・ニーズがわかります。<br>
+                    投稿数が30を超えたあたりからインサイトも少しずつ見る癖をつけていきましょう。</p>
+
+                    <h3 style="margin-top: 30px; color: #1e3a8a;">インサイト分析のやり方</h3>
+                    <div style="background-color: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                        <ol style="margin-bottom: 0; padding-left: 20px; font-weight: bold; color: #334155; line-height: 2;">
+                            <li>プロフィールの「プロフェッショナルダッシュボード」、もしくは右上のメニューから「インサイト」を選びます。</li>
+                            <li>その中から「あなたがシェアしたコンテンツ」を見ていきます。</li>
+                            <li>過去に投稿したコンテンツがずらっと並んでいます。</li>
+                            <li>見たい内容を選択しましょう。</li>
+                        </ol>
+                    </div>
+
+                    <p>今日はまず、リールの場合は「いいね！の数順」に、フィードの場合は「フォローの数順」に投稿を並べ替えてみましょう。</p>
+                    
+                    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                        <div style="flex: 1; background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="margin: 0; font-size: 0.95rem;"><strong>「いいね！」アクション</strong>を起こしているということは、その投稿に対してポジティブな反応をしてくれているということです。</p>
+                        </div>
+                        <div style="flex: 1; background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="margin: 0; font-size: 0.95rem;"><strong>フォロー</strong>してくれているということは、その投稿があなたのアカウントに本当に求められているものだということです。</p>
+                        </div>
+                    </div>
+
+                    <p>インサイトの数字を見ることで、あなたのアカウントに求められているコンテンツがどんなものなのかがわかります。</p>
+                    
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe; margin-bottom: 20px;">
+                        <p style="margin-top: 0; font-weight: bold; color: #1e3a8a;">順番に並べ替えたら、平均のいいね！数・フォロー数の3倍以上の投稿を分析していきます。上から5番目までの投稿でOKです。</p>
+                        <ul style="font-size: 0.9rem; margin-bottom: 0;">
+                            <li>いいね！数・フォロー数が平均の3倍以上の投稿が5投稿未満なら、その数だけ分析していきましょう</li>
+                            <li>いいね！数・フォロー数が平均の3倍以上の投稿がない場合は、このインサイト分析は飛ばしてOKです</li>
+                        </ul>
+                    </div>
+
+                    <p>特に反応がよかったものを分析することで、より需要のある方向へ微調整ができるからです。まだいいね！数やフォロー数が突出して伸びているものがない場合は、インサイトを見るよりも、他のアカウントの投稿と自分の投稿を比較して、違うと思ったところを改善していくことに注力しましょう。</p>
+
+                    <div style="background-color: #fffbeb; padding: 20px; border-radius: 8px; border: 1px solid #fde68a; margin-top: 30px;">
+                        <p style="margin-top: 0; font-weight: bold; color: #92400e; font-size: 1.1rem;">💡 宿題シートを開いて、以下の4つを各投稿ごとに記入していきましょう。</p>
+                        
+                        <div style="background-color: #fff; padding: 15px; border-radius: 6px; border: 1px dashed #fbbf24; margin-bottom: 20px;">
+                            <p style="margin-top: 0; font-weight: bold; font-size: 0.95rem; color: #b45309;">⚠️ 以下に当てはまる人は今は一旦飛ばしましょう。条件を満たしたときに埋めればOKです。</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; color: #b45309;">
+                                <li>投稿数が30未満の場合</li>
+                                <li>いいね！数・フォロー数が平均の3倍以上の投稿がない</li>
+                            </ul>
+                        </div>
+
+                        <p style="font-weight: bold; color: #b45309;">1️⃣ 投稿タイトル</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 0;">
+                            <li>✅ <strong>フィード投稿の場合</strong>：サムネイル</li>
+                            <li>✅ <strong>リール投稿の場合</strong>：導入の一言</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">こちらを記入しましょう。</p>
+
+                        <p style="font-weight: bold; color: #b45309;">2️⃣ 投稿URL</p>
+
+                        <p style="font-weight: bold; color: #b45309; margin-top: 15px;">3️⃣ その投稿のいいね！数もしくはフォロー数</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">以下の数字を記入しましょう。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                            <li>リールの場合はいいね数</li>
+                            <li>フィードの場合はフォロー数</li>
+                        </ul>
+
+                        <p style="font-weight: bold; color: #b45309;">4️⃣ いいね！数やフォロー数が他よりも伸びた理由</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px;">
+                            <li>導入のインパクトがあったのかな？</li>
+                            <li>悩みを開示したことで共感してくれた人が多かったのかな？</li>
+                            <li>努力している姿を見せたから、応援したいと思ってくれた人が多かったのかな？</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">などなど、思いつく限りの理由を考えてみましょう。</p>
+                    </div>
+
+                    <p style="margin-top: 15px; font-weight: bold; text-align: center;">記入し終えたら、これらの投稿の共通点を探してみましょう。その共通点があなたのアカウントに求められているコンテンツである可能性が高いです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e1; margin-top: 30px;">
+                        <h4 style="margin-top: 0; color: #1e3a8a; border-bottom: 2px solid #bfdbfe; padding-bottom: 5px;">📝 インサイト分析に関する補足</h4>
+                        <p style="font-weight: bold; margin-bottom: 15px;">目的に応じてチェックする指数を選びましょう。</p>
+                        
+                        <p style="font-weight: bold; color: #1e40af; margin-bottom: 5px;">✅ より多くの認知をとりたいなら</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">閲覧数順にソートし、閲覧数が大きい投稿の共通点を探して次の投稿に生かすべきです。</p>
+                        
+                        <p style="font-weight: bold; color: #1e40af; margin-bottom: 5px;">✅ 保存数が多かったら</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">「このアカウント役に立つ」という印象を与えるための投稿を作りたいときは、保存数の多い投稿の内容を次の投稿にも生かすべきですね。</p>
+                        
+                        <p style="font-weight: bold; color: #1e40af; margin-bottom: 5px;">✅ 同じ閲覧数でもフォロー数が全く違う投稿もあります</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px;">
+                            <li>その２つの投稿の違いは何か？</li>
+                            <li>何が「フォローしたい」と思わせた要因なのか？</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">このあたりを考えることで、フォロー率の高い投稿を作るためのヒントになります。</p>
+                        
+                        <p style="font-weight: bold; text-align: center; color: #0f172a; margin-bottom: 0;">インサイト分析で大切なのは全部の数字をなんとなく見ることではありません。<br>目的に合わせて見る数字を変えることで、インサイト分析はただの確認作業ではなく、次の投稿を伸ばすためのヒントになります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11　コンセプトの見直し</h2>
+                    <p>インサイトが分析できたら、次にコンセプトを見直していきましょう。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">1️⃣ 都合のいいコンセプトになっていないか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">自分の作ったコンセプトを大切にしたいがあまり、現実にはあまり存在しないターゲットを生み出してしまったり、現実的ではない未来をコンセプトにしてしまっていたりする場合があります。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px;">
+                            <li>ターゲットの置かれている状況</li>
+                            <li>悩み</li>
+                            <li>解決策</li>
+                            <li>理想の未来</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold;">これら全てが現実的かどうか、一度振り返ってみましょう。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">2️⃣ 自分の個性は活かせているか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">2日前の宿題で、自分の個性を再度見直していただきました。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px;">
+                            <li>人から「すごいね」「変わってるね」と言われれること</li>
+                            <li>周り5人のうち自分しか当てはまっていないもの</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">この個性がコンセプトに入っているか見直していきましょう。個性がコンセプトに入っていないと、あなたが発信する意味がありません。あなたらしいアカウントを作るためにも、一度振り返ってみましょう。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">3️⃣ 需要のあるネタで設計できているか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">先ほどインサイトを見て、いいね！数の多い投稿を洗い出しました。その投稿の中身と、コンセプトが見合っているか振り返りましょう。また、競合分析も昨日行いました。そちらの分析結果もコンセプトに落とし込めているか確認しましょう。</p>
+
+                        <p style="font-weight: bold; margin-top: 0; color: #1e40af; font-size: 1.1rem;">4️⃣ 未来と手段を混合していないか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">理想の未来をコンセプトに入れられているか、再度振り返ってみましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍12　プロフィールの見直し</h2>
+                    <p>コンセプトが定まったら、そのコンセプトをプロフィールに反映させていきます。プロフィールの見直しは定期的に行いましょう！しかし、短期間でコロコロ変えてしまうのはNGです。</p>
+
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <div style="flex: 1; background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <p style="margin: 0; font-weight: bold; color: #475569;">❓ どのプロフィールの反応がよくて</p>
+                        </div>
+                        <div style="flex: 1; background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <p style="margin: 0; font-weight: bold; color: #475569;">❓ どのプロフィールの反応が悪かったのか</p>
+                        </div>
+                    </div>
+                    
+                    <p>データが取りにくいからです。一度変えたら、<strong>最低1ヶ月は様子をみましょう。</strong></p>
+                    <p>定期的に見直す理由は、プロフィールが40点なのか80点なのかで、フォロワーの伸びるスピードが倍変わるからです。せっかく投稿のクオリティが上がってきても、プロフィールがいまいちだとフォロワー数に反映されません。興味を持ってプロフィールに飛んでくれた人を取りこぼさないよう、しっかり見直していきましょう。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 30px;">
+                        <h3 style="margin-top: 0; color: #1e40af; font-size: 1.2rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">1️⃣ 名前</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">基本的に、名前は一度決めたら変えないほうがいいです。以下のチェックポイントをクリアしていれば、変えなくてOK。</p>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 名前は読みやすく、覚えやすいか</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                            <li>小学生でも読めて覚えられる名前にしましょう</li>
+                            <li>ローマ字や漢字は避けるほうが◎</li>
+                        </ul>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 他のインフルエンサーと被っていないか</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                            <li>自分の名前で検索してみましょう</li>
+                        </ul>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 名前の横の「発信テーマ」で、どんなアカウントなのか一発でわかるか</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px;">
+                            <li>アカウントのコンセプトを、ぎゅっと短く凝縮させるイメージ</li>
+                            <li>「一目で見て理解できる」ことを意識していきましょう</li>
+                        </ul>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 発信テーマはキャッチーか</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px;">
+                            <li>リズムのいい言葉で構成されているかどうか、一度声に出して呼んでみましょう。</li>
+                        </ul>
+
+                        <h3 style="margin-top: 30px; color: #1e40af; font-size: 1.2rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">2️⃣ アイコン</h3>
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">意識するべきポイント</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; list-style-type: none; padding-left: 0;">
+                            <li>✅ 実写か、イラストか</li>
+                            <li>✅ どのような雰囲気か</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; color: #475569;">※こちらは<a href="design-guide.html" style="color: #3b82f6; text-decoration: underline;">デザイン編</a>で詳細を解説しています。未視聴の方は、デザイン編も合わせてぜひご覧ください。</p>
+
+                        <h3 style="margin-top: 30px; color: #1e40af; font-size: 1.2rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">3️⃣ プロフィール文章</h3>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 大人数に当てはまる言葉を使っていないか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">みんなが当てはまることには強い共感は生まれません。具体的だからこそ</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; list-style-type: none; padding-left: 0;">
+                            <li>⭐「私も同じ経験したことある！」という共感が生まれたり</li>
+                            <li>⭐「私もこうなりたい！」という憧れが生まれたり</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px;">そのため（具体的であるため）に意識することは</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 0;">
+                            <li><strong>⭐ ターゲットが共感できる一言を入れる</strong><br><span style="padding-left: 20px; color: #475569;">・ユーザーが「それめっちゃわかる！」と感じること</span></li>
+                            <li><strong>⭐ 自分の経験に基づいたベネフィットを入れる</strong></li>
+                            <li><strong>⭐ 数字などを使って制限をかける</strong></li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #0284c7;">→ より具体的になり、ターゲットに自分ごとだと思ってもらいやすい。</p>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 3秒でコンセプトを理解できるか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">基本的に、ユーザーがあなたのプロフィールを0から100までじっくり読むことはありません。そのためには、以下のことを意識してみましょう</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0;">
+                            <li>⭐ 1文をできるだけシンプルに</li>
+                            <li>⭐ 漢字とひらがなの割合は3:7くらいに</li>
+                            <li>⭐ 中学生でもわかる言葉のチョイス</li>
+                            <li>⭐ 修飾語は繰り返さない</li>
+                        </ul>
+
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">✅ 絵文字や特殊文字は世界観に合っているか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">アイコンも大切ですが、絵文字や特殊文字もプロフィールの世界観を統一するために大切です。ターゲットが普段から馴染みがあるような絵文字・特殊文字を使うようにしましょう。</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

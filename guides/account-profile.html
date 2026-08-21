@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界観・プロフィール設計 | Instagram Circle Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css?v=1787214249096">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev {
+            margin-right: auto;
+        }
+        .nav-next {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="../knowledge.html" class="back-link" style="margin-bottom: 0;">← ノウハウ一覧に戻る</a>
+                <a href="account-design.html" class="back-link">← アカウント設計の基礎に戻る</a>
+            </div>
+
+            <header class="article-header" style="margin-top: 20px;">
+                <h1>世界観・プロフィール設計</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09 世界観（デザイン）</h2>
+                    <p>アカウントのコンセプトが決まったら、それに合った「世界観」を考えていきます。世界観も、フォロワーが増えるか増えないかを決める重要な要素です。</p>
+
+                    <div class="highlight-box">
+                        <h3 style="margin-top: 0;">1. 世界観とは</h3>
+                        <p>世界観とは、あなたのアカウントの全体の雰囲気のことです。いいコンセプトでいい投稿をしていても、ユーザーが期待した雰囲気にそぐわない世界観で発信していると、なかなかフォローされません。サムネイルの雰囲気が変わるだけで、届く層が全く異なってきます。</p>
+                        <p>つまり、<strong>「コンセプトにあった雰囲気」で世界観を作ることが大切</strong>です。</p>
+
+                        <h3 style="margin-top: 30px;">2. 世界観の整え方</h3>
+                        <p>Instagramは視覚に訴えかけるSNSなので、世界観に統一感があることが重要です。見に来てくれる人も「なんとなくの感覚」で良い・悪いを判断します。</p>
+                        <p>「なんとなくいい」と思ってもらうには、アカウントに統一感を持たせて世界観を整える必要があります。統一感のあるアカウントとは、全てがトータルでコーディネートされている状態のことです。</p>
+                        <ul>
+                            <li>⭐️ アイコンの雰囲気</li>
+                            <li>⭐️ プロフィール文章の雰囲気</li>
+                            <li>⭐️ サムネイルのフォント</li>
+                            <li>⭐️ 写真の色味や雰囲気</li>
+                        </ul>
+                        <p>使用している文字や写真全てに、色味やフォントの雰囲気の一貫性をもたせることが大切です。「あなたのアカウントの雰囲気が好き」と思ってもらうためにも、コンセプトにあった世界観をしっかり整えていきましょう。</p>
+
+                        <h3 style="margin-top: 30px;">3. フォントの基本</h3>
+                        <p>フォントとは「文字の形」のことです。同じ文章でも、フォントが違うだけで印象が変わります。選び方を間違えると、伝えたい雰囲気がユーザーに伝わらない可能性があります。</p>
+                        
+                        <h4 style="margin-top: 20px;">フォントが与える印象</h4>
+                        <ul>
+                            <li><strong>【明朝体】</strong><br>読みやすく、新聞や小説など長い文章によく使われます。縦線が太い線の強弱があり、筆で書いたような「はね」「はらい」があります。優雅で高級感のある大人っぽい印象、女性らしい繊細な印象を与えます。</li>
+                            <li style="margin-top: 10px;"><strong>【ゴシック体】</strong><br>見出しなどの強調によく使われます。縦横の線の太さが統一され、情報がクリアです。太いマジックで書いたような見た目で、カジュアル・男性的な印象。ぱっと見やすく印象が伝わりやすいです。</li>
+                            <li style="margin-top: 10px;"><strong>【丸ゴシック体】</strong><br>ゴシック体の角を丸くしたもの。カジュアルさは残しつつ、優しく柔らかい印象を与えられます。</li>
+                            <li style="margin-top: 10px;"><strong>【ポップ体】</strong><br>丸みを帯びた字形で線は太め。楽しさや親しみやすさ、子供っぽさが伝わりやすいです。</li>
+                            <li style="margin-top: 10px;"><strong>【手書き風フォント】</strong><br>人の手で書いたような見た目。親しみやすさや温もりがあり、かわいらしくカジュアルな印象を与えます。</li>
+                        </ul>
+
+                        <div style="background-color: #f8fafc; padding: 15px; margin-top: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0; font-weight: bold;">⚠️ フォント選びの注意点</p>
+                            <p style="margin-bottom: 0;"><strong>変わったフォントは避けましょう。</strong>読みにくく、どんな印象を与えたいのかよくわからなくなるからです。差別化のためなら、変わったフォントよりサムネイルのキャッチコピーや投稿内容で勝負しましょう。</p>
+                        </div>
+
+                        <h3 style="margin-top: 30px;">4. 世界観の決め方</h3>
+                        <p>実際にどんな世界観を作るかは、<strong>ベンチマークアカウントの世界観</strong>を参考にします。</p>
+                        <p>ベンチマークアカウントは「届けたいターゲット層」が似ているため、そのターゲット層が好きな世界観で構成されている可能性が高いです。「ユーザーが期待した世界観」が感じられないと、狙ったターゲット層からなかなかフォローしてもらえません。</p>
+                        <ul>
+                            <li>⭐ あなたのコンセプトに合った雰囲気</li>
+                            <li>⭐ あなた自身が好きだと思える雰囲気</li>
+                            <li>⭐ あなたの届けたいターゲット層が好む雰囲気</li>
+                        </ul>
+
+                        <h4 style="margin-top: 20px;">フォントを決める（Likefontの活用）</h4>
+                        <p>ベンチマークがメインで使っているフォントがわからない場合は、『<a href="https://ja.likefont.com/" target="_blank" rel="noopener">Likefont</a>』という無料ツールを使えば、画像をアップロードするだけで調べられます。</p>
+                        <ol>
+                            <li>① 調べたいフォントのスクリーンショットを撮る（文字が重なっていないものがベスト）</li>
+                            <li>② スクリーンショットをLikefontにアップロードする</li>
+                            <li>③ 1文字がバラバラに認識された場合はドラッグ＆ドロップで1つにくっつける</li>
+                            <li>④ 下部の四角にその文字を打ち込み、「すぐに識別する」をクリック</li>
+                            <li>⑤ 検索結果から同じフォントを探す</li>
+                        </ol>
+                        <p style="font-size: 0.9em; color: #64748b;">※ Likefontからフォントをダウンロードする場合は、各フォントの規約（商用利用可かどうかなど）を必ず確認してください。</p>
+
+                        <h4 style="margin-top: 20px;">色を決める</h4>
+                        <p>アカウントのコンセプトに「色」が入っている場合は、その色があなたのコンセプトの重要な部分になります。ベンチマークがその色を使っていなくても、コンセプトの色をテーマカラーに選んで大丈夫です。</p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                            <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #3b82f6; border-radius: 0 4px 4px 0;">
+                                <p style="margin-top: 0; font-weight: bold;">注意点①：モノトーン以外の色は1色に絞る</p>
+                                <p style="margin-bottom: 0;">色のセンスに自信がない人は「メインカラー1色＋モノトーン」でまとめるのが無難です。</p>
+                            </div>
+                            <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #3b82f6; border-radius: 0 4px 4px 0;">
+                                <p style="margin-top: 0; font-weight: bold;">注意点②：原色は避ける</p>
+                                <p style="margin-bottom: 0;">原色は刺激的で目に優しくなくキツイ印象を与えます。少し白が混ざったくすんだ色を選ぶと優しい印象になります。</p>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 20px;">世界観は一度決めたら一生変えられない、ということはありません。運用を続けるとデザインセンスも磨かれ、「ブラッシュアップしたいな」と思うタイミングが出てきます。そのときに整えていきましょう。</p>
+                        <p>※ 画像作成には <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a> などの無料ツールを活用するのがオススメです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10 プロフィールの作り方</h2>
+                    <p>アカウントを見に来てくれたユーザーが思わずフォローしたくなるプロフィールの作り方をお伝えします。プロフィールは、お店でいうと「看板」のようなもの。アカウントのコンセプトを凝縮して掲げていきましょう。</p>
+
+                    <div class="highlight-box">
+                        <h3 style="margin-top: 0;">1. プロフィールが大事な理由</h3>
+                        <p>プロフィールの作り込みが大事な理由は、ユーザーがフォローするまでの流れを見ると理解できます。</p>
+                        
+                        <div style="background-color: #f8fafc; padding: 15px; margin-top: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0; font-weight: bold;">▼ ユーザーがフォローするまでの流れ</p>
+                            <ol style="margin-bottom: 0;">
+                                <li>発見欄や検索からあなたの投稿を見つける</li>
+                                <li>「この投稿いいな」と思い、他の投稿も気になってプロフィールに飛ぶ</li>
+                                <li>「この人いいな」「見逃したくないな」と思ったらフォローする</li>
+                            </ol>
+                        </div>
+                        <p style="margin-top: 15px;">プロフィールにユーザーが求めるものが書かれていなかったり、投稿内容と合っていなかったりすると「フォローしたい！」と思ってもらえません。どれだけいい投稿を作っても、プロフィールがよくないだけでフォロワーが増えないアカウントになってしまいます。</p>
+
+                        <h3 style="margin-top: 30px;">2. プロフィールの構成要素と作り方</h3>
+                        <p>プロフィールは、主に4つの要素で構成されています。</p>
+
+                        <h4 style="margin-top: 20px;">① アイコン</h4>
+                        <p>見る人が「親しみやすさ」と「人間味」を覚えるアイコンにしましょう。</p>
+                        <ul>
+                            <li><strong>実写の場合：</strong>高画質で明るく好印象を与えられ、かつコンセプトや世界観にあった写真を使いましょう。顔出しは必須ではなく、顔出しが直接伸びる・伸びないの原因になることはあまりありません。</li>
+                            <li style="margin-top: 10px;"><strong>イラストの場合：</strong>フリー素材ではなくオリジナルを使いましょう。フリー素材だと「人間味」が薄れたり安っぽく見えてしまいます。オリジナルのイラストはココナラなどで数千円から制作してもらえます。</li>
+                        </ul>
+                        <div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 15px; margin-top: 15px; border-radius: 0 4px 4px 0;">
+                            <p style="margin-top: 0; font-weight: bold;">❌ NGなアイコン</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>他人の写真を許可なく使うなど、肖像権を侵害しているもの</li>
+                                <li>他人の創作物を許可なく使うなど、著作権を侵害しているもの</li>
+                                <li>風景など、他の一般アカウントに埋もれやすいアイコン</li>
+                                <li>イラストが小さすぎるなど、何が描いてあるかわからないアイコン</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">② アカウントID（ユーザーネーム）</h4>
+                        <p>英数字と記号で設定するIDのことです。「名前＋発信ジャンル」で設定するのがオススメ。名前と発信ジャンルの間には「_」や「.」のような記号を入れて区切りましょう。</p>
+
+                        <h4 style="margin-top: 20px;">③ 名前</h4>
+                        <p>プロフィールの一番上に表示されます。「名前＋発信テーマ」で設定しましょう。</p>
+                        <ul>
+                            <li>⭐ <strong>名前：</strong>「検索しやすい×読みやすい×覚えやすい」名前にしましょう。<br>
+                            ※ 呼び方に迷ってしまうものや、どう読むのかわからない漢字や英語はやめておきましょう。</li>
+                            <li style="margin-top: 10px;">⭐ <strong>発信テーマ：</strong>ほとんどの発信者は名前の横に発信テーマを書いています。アカウントのコンセプトを一言にぎゅっと凝縮したものを入れましょう。</li>
+                        </ul>
+                        <p>※ 名前はひらがなやカタカナを中心に、2〜3文字程度が呼びやすくてオススメです。</p>
+
+                        <h4 style="margin-top: 20px;">④ プロフィール文章</h4>
+                        <p>プロフィール文章では「あなたをフォローするメリット」を伝えます。誰が読んでも理解できる、小学生でもわかる言葉で書きましょう。箇条書きと絵文字を使い、視覚的にもわかりやすくするのがポイントです。書くべき要素は以下の4つです。</p>
+                        <ol>
+                            <li><strong>誰向けの発信なのか？：</strong><br>
+                            「あなたに向けた発信ですよ！」と教えてあげましょう。</li>
+                            <li style="margin-top: 10px;"><strong>どんな未来に行けるのか？：</strong><br>
+                            「このアカウントを見たらどうなれるのか？」を明確にしましょう。</li>
+                            <li style="margin-top: 10px;"><strong>あなたの実績や発信の説得力：</strong><br>
+                            「なぜあなたがその発信をしているのか？」の説得力になる過去の経験や実績を書きます。</li>
+                            <li style="margin-top: 10px;"><strong>どんな発信をしているのか？（アクションを促す）：</strong><br>
+                            「こんな発信をしているので、フォロー・保存してね」と具体的な行動を促します。</li>
+                        </ol>
+                        <p style="margin-top: 15px;">以上を意識してプロフィールを作ると、ユーザーがフォローする価値を感じるプロフィール画面になります。</p>
+                    </div>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="account-concept.html" class="nav-prev">← 前へ：コンセプト設計</a>
+                    <a href="account-setup.html" class="nav-next">次へ：アカウント開設と初期設定 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

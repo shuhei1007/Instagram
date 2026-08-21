@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS横展開編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>SNS横展開編</span>
+            </div>
+            <h1>SNS横展開編</h1>
+            <p class="subtitle">1本の動画を他のSNSで活用し、広告収益とフォロワーを獲得する戦略</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <!-- ▍01 なぜ横展開する必要があるのか？ -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　なぜ横展開する必要があるのか？</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">ショート動画、1本作るのに思ったより時間がかかりますよね。<br>撮影・編集・テロップ入れ・音楽選び・キャプション作成…。人によっては1本の動画に3〜6時間以上かけているケースもあります。</p>
+                    
+                    <div style="background-color: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin-bottom: 25px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 0; color: #b91c1c;">そんな大変な思いで作った動画をInstagramだけに投稿して終わりにするなんて、もったいないと思いませんか？</p>
+                    </div>
+
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">だからこそ、<span style="font-weight: bold; color: #1d4ed8;">「複数SNSに横展開」</span>することがとても重要です。たった1本の動画から、以下の3つの成果を得られる可能性があります。</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 20px;">
+                        <!-- 成果1 -->
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 10px; display: flex; align-items: center;">
+                                <span style="background-color: #3b82f6; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.9rem;">1</span>
+                                広告収益が得られる可能性がある
+                            </h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 10px; color: #334155;">Instagramには広告収益の仕組みがありません。ですが、TikTok・YouTube Shorts・LINE VOOMでは、一定の条件をクリアすることで収益を得ることが可能です。</p>
+                            <div style="background-color: #fff; padding: 10px; border-radius: 6px; font-size: 0.9rem; color: #475569; border-left: 3px solid #cbd5e1;">
+                                <span style="font-weight: bold;">たとえば、</span><br>
+                                ・Instagramで100万回再生 → 収益なし<br>
+                                ・TikTokで32万回再生 → 2万円の収益発生<br>
+                                同じ動画でも「どこに投稿するか」で結果が変わります。
+                            </div>
+                        </div>
+
+                        <!-- 成果2 -->
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 10px; display: flex; align-items: center;">
+                                <span style="background-color: #3b82f6; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.9rem;">2</span>
+                                フォロワー数を獲得できる
+                            </h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #334155;">Instagramで伸びなかった動画が、TikTokでは何百万も再生されることも珍しくありません。アルゴリズムの“相性”によって結果が大きく変わります。つまり、チャンスを1つのSNSに絞らないことが重要です。</p>
+                        </div>
+
+                        <!-- 成果3 -->
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-size: 1.1rem; color: #0f172a; margin-top: 0; margin-bottom: 10px; display: flex; align-items: center;">
+                                <span style="background-color: #3b82f6; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.9rem;">3</span>
+                                案件単価を上げることができる
+                            </h3>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #334155;">企業は、単にフォロワー数だけでなく、複数SNSでの影響力を重視しています。各SNSのフォロワー数を合算して評価してもらうことで、報酬単価が1.5倍〜2倍になるケースも多いのです。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- ▍02 各SNSごとの特徴と収益化の方法 -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　各SNSごとの特徴と収益化の方法</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 25px;">ここでは、TikTok・YouTube Shorts・LINE VOOMのそれぞれの特徴と収益化方法を解説します。</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <!-- TikTok -->
+                        <div style="background-color: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                            <h3 style="font-size: 1.3rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="font-size: 1.5rem; margin-right: 8px;">🎵</span> TikTok
+                            </h3>
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px;">特徴</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 20px; padding-left: 20px; color: #475569;">
+                                <li>圧倒的な拡散力</li>
+                                <li>フォロワーが少なくても再生されやすい</li>
+                                <li>トレンド音源＆コメント数がカギ</li>
+                            </ul>
+                            
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px; border-top: 1px dashed #cbd5e1; padding-top: 15px;">収益化の条件（Creator Rewards）</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 15px; padding-left: 20px; color: #475569;">
+                                <li>フォロワー1万人以上</li>
+                                <li>過去30日間で10万回以上の再生</li>
+                                <li>1分以上の動画投稿</li>
+                            </ul>
+                            <div style="background-color: #f0fdf4; padding: 10px; border-radius: 6px; font-size: 0.9rem; color: #166534; font-weight: bold;">
+                                ✅ 有効視聴数と視聴時間によって収益が決まります。
+                            </div>
+                        </div>
+
+                        <!-- YouTube Shorts -->
+                        <div style="background-color: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                            <h3 style="font-size: 1.3rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="font-size: 1.5rem; margin-right: 8px;">▶️</span> YouTube Shorts
+                            </h3>
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px;">特徴</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 20px; padding-left: 20px; color: #475569;">
+                                <li>ストック型の「資産になるSNS」</li>
+                                <li>検索流入が期待できる</li>
+                                <li>エンタメジャンルが伸びやすい</li>
+                            </ul>
+                            
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px; border-top: 1px dashed #cbd5e1; padding-top: 15px;">収益化の条件</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 15px; padding-left: 20px; color: #475569;">
+                                <li>チャンネル登録者1,000人以上</li>
+                                <li>過去90日間でショート動画1,000万回再生</li>
+                            </ul>
+                            <div style="background-color: #f0fdf4; padding: 10px; border-radius: 6px; font-size: 0.9rem; color: #166534; font-weight: bold;">
+                                ✅ 視聴シェアモデルで収益を分配。
+                            </div>
+                        </div>
+
+                        <!-- LINE VOOM -->
+                        <div style="background-color: #fff; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                            <h3 style="font-size: 1.3rem; color: #0f172a; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center;">
+                                <span style="font-size: 1.5rem; margin-right: 8px;">💬</span> LINE VOOM
+                            </h3>
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px;">特徴</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 20px; padding-left: 20px; color: #475569;">
+                                <li>主婦層・地方ユーザーに強い</li>
+                                <li>個人ではなく“代理店経由のスカウト制”</li>
+                            </ul>
+                            
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px; border-top: 1px dashed #cbd5e1; padding-top: 15px;">収益化のポイント</p>
+                            <ul style="font-size: 0.9rem; margin-bottom: 15px; padding-left: 20px; color: #475569;">
+                                <li>スカウトされた代理店によって分配率が異なる</li>
+                                <li>「一次代理店かどうか」と「分配率」を必ず確認する</li>
+                            </ul>
+                            <div style="background-color: #fffbeb; padding: 10px; border-radius: 6px; font-size: 0.9rem; color: #92400e; font-weight: bold;">
+                                📝 分配率の基準は「クリエイター：代理店＝7:3」交渉によって改善することも可能です。
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- ▍03 具体的なショート動画の横展開方法 -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　具体的なショート動画の横展開方法</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 25px;">ここからは、マネタイズにつながる横展開の具体的な戦略を紹介します。</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <!-- ステップ1 -->
+                        <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border-left: 5px solid #3b82f6;">
+                            <h3 style="font-size: 1.2rem; color: #1e40af; margin-top: 0; margin-bottom: 15px;">ステップ①：TikTokとInstagramを伸ばす</h3>
+                            <p style="font-weight: bold; color: #334155; margin-bottom: 10px;">具体的なステップ</p>
+                            <ol style="font-size: 0.95rem; margin-bottom: 15px; padding-left: 25px; color: #475569;">
+                                <li>まずはTikTokに投稿して反応を見る</li>
+                                <li>その後、Instagramに微調整して投稿</li>
+                                <li>両方のSNSで同時に育成を行う</li>
+                            </ol>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">※インスタグラムを先にあげてもOK。TikTokの方が初動の反応がつかみやすいため、テスト的に先に使うのがオススメです。</p>
+                            <div style="background-color: #eff6ff; padding: 15px; border-radius: 6px; font-weight: bold; color: #1d4ed8; text-align: center;">
+                                ✅ フォロワー1万人＋30日で10万再生を達成し、1分以上の動画で収益化を狙う
+                            </div>
+                        </div>
+
+                        <!-- ステップ2 -->
+                        <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border-left: 5px solid #ef4444;">
+                            <h3 style="font-size: 1.2rem; color: #991b1b; margin-top: 0; margin-bottom: 15px;">ステップ②：コンテンツが溜まってからYouTubeへ横展開</h3>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #475569;">
+                                <li style="margin-bottom: 8px;">まずはTikTokとInstagramでコンテンツを蓄積</li>
+                                <li style="margin-bottom: 8px;">過去にバズった動画・トレンド系をYouTube Shortsで展開</li>
+                                <li>収益化条件の1,000万回再生を狙うにはまとめ投稿が効果的</li>
+                            </ul>
+                        </div>
+
+                        <!-- ステップ3 -->
+                        <div style="background-color: #f8fafc; padding: 25px; border-radius: 8px; border-left: 5px solid #10b981;">
+                            <h3 style="font-size: 1.2rem; color: #065f46; margin-top: 0; margin-bottom: 15px;">ステップ③：代理店と契約したらLINE VOOMへ横展開</h3>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #475569;">
+                                <li style="margin-bottom: 8px;">LINE VOOMは契約後に過去の動画を順次投稿</li>
+                                <li style="margin-bottom: 8px;">毎日投稿＋公式イベントやハッシュタグ企画に参加</li>
+                                <li>実績作り → スカウト → 契約 → 投稿という流れが基本</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

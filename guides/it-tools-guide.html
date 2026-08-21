@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便利ITツール編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>便利ITツール編</span>
+            </div>
+            <h1>便利ITツール編</h1>
+            <p class="subtitle">活動を効率化するための便利なITツールの使い方</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　Gyazoの使い方</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">まずはGyazoアプリをパソコンにインストールします。続けてGoogle Chromeの拡張機能もインストールしておきましょう。ログインしておくと、一度撮ったスクリーンショットがアカウントに保存されていきます。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">Gyazoでスクリーンショットを撮ると、スクリーンショットのリンクを発行できます。</p>
+                        <p style="font-size: 0.95rem; font-weight: bold; color: #1e40af; margin-bottom: 0;">共有したい相手にそのリンクを送るだけで、スクリーンショットを共有することができます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　Chatworkの使い方</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">まずはChatworkアプリをパソコンにインストールします。右上のアイコンから「プロフィール」をクリックすると、名前やID、アイコンを変更できます。Chatworkで誰かと連絡を取りたいときは、IDを相手に伝えるようにしましょう。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">メッセージの送信と編集</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">メッセージボックスにメッセージを入力し、<code style="background-color: #e2e8f0; padding: 2px 6px; border-radius: 4px;">Shift + Enter</code>で送信します。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 20px; color: #475569;">
+                            <li style="margin-bottom: 5px;">・メッセージボックス右上の「Enterで送信」にチェックを入れると、<code style="background-color: #e2e8f0; padding: 2px 6px; border-radius: 4px;">Enter</code>のみで送信ができます。</li>
+                            <li>・送信したメッセージの上にマウスを乗せると、メッセージを編集できます。</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">メッセージに対するアクション</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">また、メッセージの上にマウスを乗せることで、下記も可能です。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 20px; color: #0f172a; font-weight: bold;">
+                            <li style="margin-bottom: 5px;">✅ リアクションをつける</li>
+                            <li style="margin-bottom: 5px;">✅ メッセージを引用する</li>
+                            <li style="margin-bottom: 5px;">✅ ブックマークする</li>
+                            <li style="margin-bottom: 5px;">✅ タスクに保存する</li>
+                            <li>✅ メッセージリンクを発行する</li>
+                        </ul>
+
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #1e3a8a;"><code style="background-color: #dbeafe; padding: 2px 6px; border-radius: 4px;">[info]</code> や <code style="background-color: #dbeafe; padding: 2px 6px; border-radius: 4px;">[title]</code> などのタグを使うことで、メッセージを装飾できます。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　AirDropの使い方</h2>
+                    <div style="background-color: #f3f4f6; padding: 10px 15px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <span style="font-weight: bold; color: #4b5563;">対応：</span> <span style="font-weight: bold; color: #1e3a8a;">Mac × iPhone</span> でのみ使える機能です。
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">送りたい画像を選択しAirDropをすると、簡単にiPhoneからパソコンへ、パソコンからiPhoneへ画像を転送できます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　SendAnywhereの使い方</h2>
+                    <div style="background-color: #f3f4f6; padding: 10px 15px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <span style="font-weight: bold; color: #4b5563;">対応：</span> <span style="font-weight: bold; color: #1e3a8a;">Windows × iPhone</span> で使えるサイトです。
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">まず、パソコンで「SendAnywhere」のサイトを開き、iPhoneには「SendAnywhere」アプリをインストールします。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">【パソコンからスマホに画像を転送する方法】</h3>
+                        <ol style="font-size: 0.95rem; margin-bottom: 25px; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">送りたい画像を選択し、ドラッグ＆ドロップでSendAnywhere内に追加し送信します。</li>
+                            <li style="margin-bottom: 5px;">次にスマホのSendAnywhereアプリを開き、パソコンで表示された番号を入力します。</li>
+                            <li>そして受信をタップすると、画像が転送されています。</li>
+                        </ol>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">【スマホからパソコンに画像を転送する方法】</h3>
+                        <ol style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">SendAnywhereのアプリを開き、送りたい画像を選択し「送信」をタップします。</li>
+                            <li style="margin-bottom: 5px;">画面上に番号が表示されるので、パソコンのSendAnywhereの受信欄にその番号を入力します。</li>
+                            <li>Enterを押すとパソコンに画像が転送されます。</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05　ギガファイル便の使い方</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">自分以外の人とのファイルのやり取りに使えるサイトです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">ファイルの共有手順</h3>
+                        <ol style="font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">ギガファイル便のサイトにアクセスし、まずはダウンロード期限を選択します。</li>
+                            <li style="margin-bottom: 5px;">送りたい動画や画像を選択し、ギガファイル便にドロップします。</li>
+                            <li style="margin-bottom: 5px;">するとURLが発行されるので、ファイルを渡したい相手にURLを共有しましょう。</li>
+                            <li>URLにアクセスすると、ファイルがダウンロードできます。</li>
+                        </ol>
+
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 20px;">
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #b91c1c; font-weight: bold;">セキュリティ面から、必ずパスワードを設定しましょう。</p>
+                        </div>
+
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">💡 複数の画像や動画を共有したいときは？</p>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;">フォルダを作り、そのフォルダをzipファイルに圧縮した状態でギガファイル便にアップロードしましょう。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06　公式LINEとは</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">LINE上で友達追加してくれたユーザーに直接情報を届けることができるサービスです。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07　料金体系</h2>
+                    <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0; color: #334155;">
+                        <li style="margin-bottom: 10px;">📩 月200通まで無料で送れます。</li>
+                        <li>💴 月5,500円のライトプランにすると、月の送信可能メッセージが5,000通まで増えます。</li>
+                    </ul>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08　Lステップとは</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">公式LINEを強化するためのツールで、実はLINEとはまったく別の会社が運営しています。</p>
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">単体で使用することはできず、公式LINEを合わせて使う必要があります。</p>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px; color: #475569;">単純な通知だけが目的であれば、Lステップを導入する必要はありません。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09　公式LINEの使い方-前編-</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">公式LINEの使い方は、前編と後編に分けて解説していきます。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">前編では設定方法をメインに解説し、後編では超具体的な活用方法を解説します。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 公式LINEの開設方法</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">LINE公式アカウントの公式サイトにアクセスし、アカウントを作成します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">各項目を入力しながら進めるとアカウントが作成できます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ プロフィールの設定</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">プロフィールタブをクリックすると編集画面に移ります。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ あいさつメッセージの設定</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">友達追加をして初めて送られるメッセージのことです。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #b91c1c;">見ている人が多いのでとても大事なメッセージになります。必ず設定しましょう。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ リッチメニューの設定</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">LINEのトーク画面の下部にある画像メニューのことです。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">Canvaにテンプレートがたくさんあるのでぜひ活用してください。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 一斉配信の方法</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">「メッセージの作成」をクリックし、配信日時を先の日時に設定しておきます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">テキストボックスに文章を入力すると、右側にプレビューが表示されます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">下書き保存、テスト配信、配信予約ができます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ ステップ配信</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">ユーザーが友達を追加してから◯日後にメッセージを配信、その◯日後にまたメッセージを配信、のようなスケジュールを組める機能です。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 自動応答設定</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">ユーザーからのメッセージに対して、自動で返信をする機能です。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">一律応答とキーワード応答が選べます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 個別チャット</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">応答設定からオンにすることで個別でチャットをできるようになります。</p>
+                        <div style="background-color: #fef2f2; padding: 10px 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 10px;">
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #b91c1c; font-weight: bold;">注意点として、最初の一通目は相手から送ってもらわないと個別チャットが開始できないということです。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10　公式LINEの使い方-後編-</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">後編では、公式LINEの超具体的な活用方法を解説します。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">少し難しい話が出てくるかもしれませんが、その場合は「自分にもできそうだ」と思うところから始めてみてください。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 公式LINEの禁止事項</h3>
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 15px;">
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #b91c1c; font-weight: bold;">LINE上でアフィリエイトリンクを直接貼るのは禁止されています。</p>
+                        </div>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">LINEの友達ユーザーにアフィリエイトリンクを紹介したい場合は、アフィリエイトリンクを貼ったブログを案内したり、インスタに誘導するようにしましょう。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 公式LINEで文章作成する際の注意点</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">LINEのトーク画面を開いた際に、ユーザーから見えるのは文章の下のほうになります。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; font-weight: bold; color: #1e3a8a;">なので、リンクを貼る場合は文章の一番下に入れるのがおすすめです。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">そして、LINEの文章は大体15文字前後で折り返されます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">折り返しも意識しながら文章を作成すると、ユーザーにとって読みやすいLINEメッセージを作れます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ インスタアプリに飛ばす裏技</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">インスタアカウントのURLの最後に <code style="background-color: #e2e8f0; padding: 2px 6px; border-radius: 4px;">&amp;openExternalBrowser=1</code> をつけると、アプリを直接開くことができます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 個別チャットのテクニック</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">個別チャットを行う場合、最初の一通目は相手から送ってもらわないと個別チャットが開始できないという注意点がありました。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold;">そこで、リッチメニューからテキストアクションを設定し、キーワード応答させることで、相手からメッセージを送ってもらうことができます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⭐ 高度なテクニックの紹介</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">作成したプレゼントなどをPDFでダウンロードし、ブログにアップロードすることで、ブログでPDFを表示させることができます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">すると、PDFの中にアフィリエイトリンクを埋め込むことができるようになります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11　注意点</h2>
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; margin-bottom: 10px; color: #b91c1c; font-weight: bold;">インスタツールは必ず「Meta社公式API」を活用したツールを使用しましょう。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">公式APIを活用したツールであれば、使用してもアカウント凍結にはなりません。逆に「そのへんのよくわからないツール」を使ってしまうと、アカウントが凍結してしまう恐れがあるので、絶対に使わないようにしましょう。</p>
+                    </div>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; color: #1e40af; margin-top: 0; margin-bottom: 15px;">Meta社公式APIを活用した代表的なツール</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 0; color: #334155;">
+                            <li style="margin-bottom: 10px;"><span style="font-size: 1.1rem; vertical-align: middle;">🅰️</span> <strong>iステップ</strong> …月額¥22,000</li>
+                            <li style="margin-bottom: 10px;"><span style="font-size: 1.1rem; vertical-align: middle;">🅱️</span> <strong>エルグラム</strong> …無料（ただし2025年からは月額¥11,000）</li>
+                            <li><span style="font-size: 1.1rem; vertical-align: middle;">🆎</span> <strong>ManyChat</strong> …月額$15</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">今回はエルグラムとManyChatについて解説をしていきます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍12　エルグラムの設定方法</h2>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">① エルグラムアカウントの作成</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">エルグラム公式ホームページにアクセスし、画面に従ってアカウントを作成します。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">② Instagramの設定変更方法</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">右上のメニューをタップし、「メッセージとストーリーズへの返信」→「メッセージコントロール」→「メッセージへのアクセスを許可」をオンにします。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">そしてビジネスアカウントへ変更し、カテゴリを起業家に変更します。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">③ Facebookページの作成</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">Facebookの個人アカウントにログインし、「ページ」→「新しいページを作成」→必要項目を入力→Facebookページを作成、と順番に進めます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">④ FacebookページとInstagramの連携</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">Facebookの右上の自分のアイコンから、先ほど作成したFacebookページを選択します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">「設定とプライバシー」→「設定」→「リンク済みのアカウント」と順番にクリックします。ここから「アカウントをリンク」→「リンクする」と順番にクリックしていきます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">そしてInstagramアカウントにログインすれば、FacebookページとInstagramアカウントが連携されます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">⑤ エルグラムとInstagramの連携</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">エルグラムにログイン後、プランを選択し、画面に従いFacebookへログインします。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">その後画面に従い接続が完了すると、エルグラムとInstagramが連携されます。</p>
+
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">詳細はエルグラムの公式ページでも解説されています。</p>
+                            <a href="https://lgram.jp/manual/register/" target="_blank" style="font-size: 0.95rem; color: #3b82f6; text-decoration: underline;">＞＞ https://lgram.jp/manual/register/</a>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍13　エルグラムの使い方</h2>
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">設定確認用の別アカウントを必ず作っておきましょう。</p>
+                    </div>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">① 自動応答設定</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">新規作成をクリックし、トリガーを選択します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; color: #475569;">トリガーとは、相手が何のアクションをしたときに自動でメッセージが配信されるのかの反応条件のことです。</p>
+                        
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 20px;">
+                            <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px; color: #334155;">💡 設定例：「投稿・リールにコメントされたとき」</p>
+                            <ol style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px;">
+                                <li style="margin-bottom: 5px;">まずは対象の投稿を選びます。</li>
+                                <li style="margin-bottom: 5px;">「◯◯ってコメントしたら△△をプレゼント！」のような企画をやりたい際は、「設定したキーワードに反応」を選択しましょう。</li>
+                                <li>「反応時のアクション」に送りたいDMの文章を記入します。</li>
+                            </ol>
+                        </div>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">② テンプレート</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">自動応答メッセージでユーザーと往復のやり取りをしたい場合は、テンプレートを設定しておくと便利です。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0; font-weight: bold; color: #1e3a8a;">テンプレートはあとから配信するメッセージから先に作成すると効率よく設定できます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍14　Manychatの使い方</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">海外ツールなので、英語が苦手な方は翻訳機能をオンにした状態で使用するのがおすすめです。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">接続方法はエルグラムとまったく同じです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">Manychatは「オートメーション」というメニューから自動応答が設定できます。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">エルグラムと見た目は違いますが、設定方法はほぼ同じです。</p>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

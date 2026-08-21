@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEP8: 2投稿目に挑戦しよう（参考・タイトル・台本） | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev { margin-right: auto; }
+        .nav-next { margin-left: auto; }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>STEP8: 2投稿目に挑戦しよう（参考・タイトル・台本）</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回は振り返りを通して出てきた反省点を意識して、2投稿目を作成していきます。基本的には手順はすべて同じです。</p>
+
+                    <h4 style="margin-top: 20px;">リールを作る10STEP</h4>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <ul style="margin-bottom: 0;">
+                            <li>1️⃣ 参考にする投稿を決める</li>
+                            <li>2️⃣ 投稿のタイトルを決める</li>
+                            <li>3️⃣ 台本を作成する</li>
+                            <li>4️⃣ 台本どおりに撮影する</li>
+                            <li>5️⃣ 撮影した動画を編集アプリに入れる</li>
+                            <li>6️⃣ 音楽を差し込む</li>
+                            <li>7️⃣ 音楽に合わせて動画を編集する</li>
+                            <li>8️⃣ 動画に字幕を入れる</li>
+                            <li>9️⃣ 動画にアフレコを入れる</li>
+                            <li>🔟 フィルターをつけたりして見栄えを調整する</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: 15px;">今日は台本を完成させるところ（1️⃣〜3️⃣）まで進めていきます。</p>
+                    <p>慣れてくると、それぞれの手順が5分の1くらいの時間でこなせるようになってくるので、まずはこの手順で作成することに慣れていきましょう。</p>
+                    <p>ここから3日間は、より効率的に、かつ質の良いリール投稿を作成していく方法をお伝えしていきます。では早速始めていきましょう！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 1️⃣ 参考にする投稿を決める</h2>
+                    <p>まずは1投稿目と同様に、参考にする投稿を決めていきます。しかし何度もお伝えしているように、伸びている投稿のパクリにならないように注意です。</p>
+                    <p>ここで「パクる」と「参考にする」の違いを簡単に復習していきます。</p>
+                    
+                    <ul>
+                        <li>・<strong>パクる</strong>…自分がどうであれ世の中の人がパクっているんじゃない？と感じる</li>
+                        <li>・<strong>参考にする</strong>…自分が作成する投稿のメッセージ性・タイトルに、良い要素を組み込む</li>
+                    </ul>
+
+                    <p>「雰囲気」が近すぎていたり、文章が完全に一緒だと「パクっている」になります。後ろ指を刺されないように注意しましょう！</p>
+                    
+                    <h4 style="margin-top: 20px;">なぜ参考にするのか</h4>
+                    <p>さて、この「参考投稿探し」は、伸びる投稿を作るために「ニーズ」を分析していく部分になります。なので、自分のアカウントのニーズを理解していないうちは、省略せずに実施していただきたいです。</p>
+                    <p>ただ慣れてくると、フォロワーさんが何を求めているのか、どんなキーワードを入れたら伸びるのかがわかってきます。そうしたら、参考にする投稿から作成するのではなく、完全オリジナルでも良い投稿が作成できるようになります。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">⚠️ 慣れたと勘違いすると…</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>🌀 パクリすぎてしまってトラブルになったり</li>
+                            <li>🌀 ニーズをつかめなくて伸びなかったり</li>
+                        </ul>
+                        <p style="margin-top: 10px; margin-bottom: 0;">してしまうので、約50投稿ほど作成するまでは書き出していくことがおすすめです。</p>
+                    </div>
+
+                    <p style="margin-top: 20px;">では、「参考にする投稿」を一つ宿題シートに記入していきましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 2️⃣ タイトルを決める</h2>
+                    <p>前回お話しした重要ポイントは「メッセージ性」と「具体性」です。</p>
+
+                    <h4 style="margin-top: 20px;">① メッセージ性</h4>
+                    <p>この投稿を見た人が、投稿を見た後にどう感じている状態になって欲しいのか。→ しっかり見ている人に「何を得てもらうのか」「どんな価値を伝えたいのか」を明確にしましょう。</p>
+
+                    <h4 style="margin-top: 20px;">② 具体性</h4>
+                    <p>数字や場面を限定するなどで「制限」すること。さらに一歩進んだタイトルのコツとしては、メッセージ性が伝わったら見ている人がどうなるのか、を意識します。</p>
+                    <ul>
+                        <li>・理想の未来</li>
+                        <li>・最悪な未来の回避</li>
+                    </ul>
+                    <p>これらをタイトルに直接記入できると良いです！</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0;"><strong>【メッセージ性】</strong><br>時間の使い方を工夫して、お金がもっと貯まるようになって欲しい</p>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #94a3b8; border-radius: 0 4px 4px 0;">
+                            <p style="margin-top: 0; font-weight: bold;">【NG例】</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>・タイトル：お金が貯まる時間の使い方</li>
+                                <li>・理由：時間の使い方を知った先の未来が想像できない</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0;">
+                            <p style="margin-top: 0; font-weight: bold;">【OK例】</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>・タイトル：日本人上位5％ 富裕層に共通する時間の使い方</li>
+                                <li>・理由：投稿を見た後に、自分が富裕層に近づける気がする</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 20px;">見ている人が「理想の未来に近づける！」「最悪な未来を回避できる！」と感じるような、そんなタイトルを意識しましょう。</p>
+                    <p>表面的なメリットの一歩先「それをやったらどんな未来になるか」。これをコントロールできるようになると、何をやっても数字の結果を出すことができるようになります！</p>
+                    <p>数字を入れよう！などの細かいテクニックもありますが、極論、すべてこの「未来」をイメージさせるためのものです。</p>
+
+                    <div style="font-size: 1.1rem; font-weight: bold; text-align: center; margin: 20px 0; padding: 15px; background-color: #fef3c7; border-radius: 4px;">
+                        💡 発信活動は、文章で相手に未来をイメージさせる仕事
+                    </div>
+
+                    <p>と言っても良いくらいでしょう。それほど「未来」を想像させることは重要なので、意識していきましょう。ここで一回動画を止めて、宿題シートに2投稿目のタイトルを記入しましょう！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 3️⃣ 台本を作成する</h2>
+                    <p>今回は台本を、構成から撮影イメージまで一気に作成していきます。</p>
+                    <ul>
+                        <li>・手順①：全体の構成を考える</li>
+                        <li>・手順②：詳細の文章を作成</li>
+                        <li>・手順③：撮影イメージを作成</li>
+                    </ul>
+
+                    <p style="margin-top: 20px;">台本を考えずに、頭のイメージでいきなり撮影に入る人もいますが、これはかなり慣れてきてからにしましょう。頭の中では完璧に良い！と感じていても、「全体構成」を見ることで、いろいろな改善点が見つかってきます。</p>
+                    <p>面倒に思えるかもしれませんが非常に重要なので、200投稿ほどするまでは台本作成はやるのがおすすめです！</p>
+
+                    <h4 style="margin-top: 20px;">台本作成のツール</h4>
+                    <p>台本も最初はスプレッドシートを使っていますが、他のメモアプリで作成しても問題ありません。自分にあったものを使いましょう。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【おすすめメモアプリ】</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>・MindMeister（マインドマイスター）</li>
+                            <li>・iPhone純正メモ</li>
+                            <li>・Googleドキュメント</li>
+                            <li>・Notion（ノーション）</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: 15px;">もし「どれを使ったら良いかわからない…」という方は、PC作業ならスプレッドシート、iPhone作業なら純正メモがおすすめです。</p>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="reels-step7.html" class="nav-prev">← 前へ：STEP7 振り返り</a>
+                    <a href="reels-step9.html" class="nav-next">次へ：STEP9 撮影・編集の効率化 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva完全解説 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .qa-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .qa-q {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        .qa-a {
+            margin-bottom: 0;
+            color: #334155;
+        }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="feed-guide.html" class="back-link">← フィード投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>特別編：Canva完全解説</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 登録方法</h2>
+                    <p>以下のアカウントがあれば、Canvaに登録可能です。</p>
+                    <ul>
+                        <li>・グーグル</li>
+                        <li>・フェイスブック</li>
+                        <li>・Apple</li>
+                        <li>・メールアドレス</li>
+                    </ul>
+                    <p>入力が完了するとCanvaのホーム画面になります。</p>
+
+                    <h3 style="margin-top: 30px;">❓ よくある質問</h3>
+                    <div class="qa-box">
+                        <p class="qa-q">Q：Canvaは無料のままでも大丈夫ですか？</p>
+                        <p class="qa-a">A：ひとまず無料のままでOKです！ただし無料版は使える素材や機能が制限されるため、1〜2ヶ月使ってみて使いにくさを感じたり、「Instagramを本格的にやっていきたい！」となれば有料にしちゃいましょう。<br>
+                        Canva Pro（有料）の料金は変わることがあるため、最新は公式の料金ページをご確認ください。講座予約ページにも最新情報を共有しています。<br>
+                        なお、有料版も30日間は無料でお試しできます。</p>
+                    </div>
+                    <div class="qa-box">
+                        <p class="qa-q">Q：Canvaはスマホでもできますか？</p>
+                        <p class="qa-a">A：スマホでも利用できます！ただし実際に作業するだけになると、パソコンの方が使いやすいのでオススメです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 作りたいものを選ぶ</h2>
+                    <p>Canvaにログインし、ホーム画面から作りたいものを選びましょう。作るデザインを選ぶ方法は2つあります。</p>
+
+                    <h3 style="margin-top: 30px;">① サイズを指定して白紙から作る</h3>
+                    <p>ホーム画面の中央付近に「空のデザインテンプレート」があります。Instagramに関する投稿デザインテンプレートがあるので、作りたいサイズを選んでいきましょう。</p>
+                    
+                    <h4 style="margin-top: 15px;">フィード投稿</h4>
+                    <ul>
+                        <li>・Instagramの投稿（正方形）1080px × 1080px</li>
+                        <li>・Instagramの投稿（縦長）1080px × 1350px</li>
+                    </ul>
+                    <p>縦長のサイズが画面領域も大きく、見てもらいやすいです。</p>
+
+                    <h4 style="margin-top: 15px;">リール投稿</h4>
+                    <ul>
+                        <li>・Instagramリール動画 1080px × 1920px</li>
+                    </ul>
+                    <p>リール投稿は編集アプリVLLOを使うのがオススメですが、Canvaでも作成できます。</p>
+
+                    <h4 style="margin-top: 15px;">ストーリーズ</h4>
+                    <ul>
+                        <li>・Instagramストーリー 1080px × 1920px</li>
+                    </ul>
+                    <p>ストーリーズはスマホでサクッと作成できる良さがありますが、凝ったデザインを作りたい場合はCanvaを使うと作りやすいです。</p>
+
+                    <h3 style="margin-top: 30px;">② すでにデザインされたテンプレートから作る</h3>
+                    <p>Canvaにはテンプレート機能があります。ホーム画面上部の検索バーに、作りたいデザインのキーワードを入力しましょう。</p>
+
+                    <ul style="margin-top: 15px;">
+                        <li><strong>「Instagram投稿」（フィード投稿）</strong><br>
+                        ・Instagramの投稿（正方形）1080px × 1080px<br>
+                        ・Instagramの投稿（縦長）1080px × 1350px</li>
+                        <li style="margin-top: 10px;"><strong>「インスタグラムリール動画」</strong><br>
+                        ・インスタグラムリール 1080px × 1920px<br>
+                        ・動画ショート</li>
+                        <li style="margin-top: 10px;"><strong>「ストーリーズ」</strong><br>
+                        ・Instagramストーリー 1080px × 1920px<br>
+                        ・静止画</li>
+                    </ul>
+                    <p>テンプレートの数は多いので、左のフィルターでスタイルテーマや色ごとに探せます。「これで行く！」というものを見つけたらクリックしましょう。</p>
+
+                    <h3 style="margin-top: 30px;">▼ Canvaデザインテンプレート（フィード投稿用）</h3>
+                    <p>今回はiサークル初級編でお配りしたデザインテンプレートを活用して、フィード投稿を作ってみましょう。</p>
+                    <ul>
+                        <li>・<a href="https://www.canva.com/design/DAF4O7d2tHA/fCUmPaUwiHfKVM-Sutvn2A/view?utm_content=DAF4O7d2tHA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">① シャープなデザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyQ1QzqQg/lmRTPOq7-Bz8vR__dIC9mQ/view?utm_content=DAFyQ1QzqQg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">② ほっこり系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyUR92KAg/111O9CHQEpbMG7lDJcQydQ/view?utm_content=DAFyUR92KAg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">③ シンプルなデザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyVsnOEs4/No6Egqu4RsLtVoyDZjiIcQ/view?utm_content=DAFyVsnOEs4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">④ レシピ系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyfr3uHic/ki_4UrnHnmp9vlt3i8Q7Lg/view?utm_content=DAFyfr3uHic&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑤ 美容系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyfzZQ5cA/kfWNzQagkxwzP6lntdk47w/view?utm_content=DAFyfzZQ5cA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑥ ミニマルデザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyyNYqqSs/KYUEFweb_NQxosDRb3xI5Q/view?utm_content=DAFyyNYqqSs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑦ 家系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFyyj868as/kBO09lBt-AAcCI7vgMZayg/view?utm_content=DAFyyj868as&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑧ ノウハウ系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFy0BkBV3M/k5hQi8lW2HMPKa_in3n0IA/view?utm_content=DAFy0BkBV3M&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑨ 文字投稿系デザイン</a></li>
+                        <li>・<a href="https://www.canva.com/design/DAFy4bdYej8/65W3cyVf0by9Uoy6Z315eA/view?utm_content=DAFy4bdYej8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer">⑩ 旅系デザイン</a></li>
+                    </ul>
+                    <p>投稿の型が決まったら、これを保存して今後の投稿作りの準備をしていきましょう。型を決めれば同じような作業をせずに済むので時短につながり、作業がラクになります。</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin: 0; font-weight: bold;">💡 元に戻すショートカット</p>
+                        <p style="margin: 0;">操作を間違えても左上の「元に戻す」で修正できます。「Windows：ctrl+z」「Mac：command+Z」で戻せるので覚えておくと便利です。雲マークがチェックされていれば保存済みの証です。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 文字を入れる</h2>
+                    <p>文字を入れる際に覚えておいてほしい5つのポイントを解説します。</p>
+
+                    <h3 style="margin-top: 20px;">文字入れ</h3>
+                    <p>文字を入れる場合は左の「テキスト」を使います。「見出しを追加」「小さい見出しを追加」「本文を追加」とあるので、「見出しを追加」を押してみましょう。枠を触っていない状態でキーボードの「T」を押すと一瞬で文字入れができます。</p>
+                    <ul>
+                        <li>・文字をクリックすると選択した状態になる</li>
+                        <li>・ドラッグ＆ドロップすると文字を移動できる</li>
+                        <li>・文字をダブルクリックすると文字の変更ができる</li>
+                    </ul>
+
+                    <h3 style="margin-top: 20px;">文字サイズの変更</h3>
+                    <ul>
+                        <li>① 数字で入力：上のフォントサイズにて「＋」「−」で変更するか、数字を直接入力して変更できます。</li>
+                        <li>② 手動で動かす：文字の隅を引っ張ることで、直感的にサイズを決められます。</li>
+                    </ul>
+
+                    <h3 style="margin-top: 20px;">フォントの変更</h3>
+                    <p>文字をクリックすると、左上の「フォント」が一覧で見られます。Instagramのアカウント設計で決めたフォントがあれば、それを選択しましょう。お悩みの方は『明朝体』『ゴシック体』がオススメです。</p>
+                    
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                        <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0; font-weight: bold;">明朝体の特徴</p>
+                            <ul style="margin-bottom: 10px;">
+                                <li>・線に強弱がある</li>
+                                <li>・文字の形が分かりやすい</li>
+                                <li>・文章として読みやすい</li>
+                            </ul>
+                            <p style="margin-bottom: 0; font-size: 0.9rem;">文章で書くときにオススメのフォントです。</p>
+                        </div>
+                        <div style="flex: 1; min-width: 250px; background-color: #f8fafc; padding: 15px; border-radius: 4px;">
+                            <p style="margin-top: 0; font-weight: bold;">ゴシック体の特徴</p>
+                            <ul style="margin-bottom: 10px;">
+                                <li>・線の太さが均一</li>
+                                <li>・力強さがあり、目に入りやすい</li>
+                                <li>・視認性が高い</li>
+                            </ul>
+                            <p style="margin-bottom: 0; font-size: 0.9rem;">目立ちやすいので、キャッチコピーや要点で使うのがオススメです。</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 15px;">フォントの太さによっても印象は変わります。<br>
+                    太い：男性的、インパクト的、古典的<br>
+                    繊細：女性的、上品、繊細<br>
+                    発信し続けるジャンルと見てくれるユーザーさんに合わせて、自分のアカウントの「これだ！」というものを見つけていきましょう。</p>
+
+                    <h3 style="margin-top: 20px;">テキストの色変更</h3>
+                    <p>文字をクリックして、左上の「テキストの色」で色が変更されます。</p>
+                    <ul>
+                        <li>① カラーを選んで変更する：単色を選んだり、よく使う色も候補に出てくるので、使いたい色があれば選択しましょう。</li>
+                        <li>② 新しいカラーを追加から選ぶ：ドラッグして色を選べます。細かく色を設定したいときに活用しましょう。</li>
+                    </ul>
+                    <p>また、「この画像の色を使いたい！」となったときは、スポイトマークの「デザインからカラーを選択」を選んで、パソコン上から色を持ってくることもできます。</p>
+
+                    <h3 style="margin-top: 20px;">テキストのコピー・調整</h3>
+                    <p><strong>テキストのコピー方法</strong></p>
+                    <ol>
+                        <li>テキストを選択する</li>
+                        <li>「Ctrl＋C」または「command＋C」を押してコピー</li>
+                        <li>「Ctrl＋V」または「command＋V」を押してペースト</li>
+                        <li>「Alt」または「Option」を押しながらコピーしても可能</li>
+                    </ol>
+                    <p>変更したい文字をダブルクリックして文字を入力し、キリの良いところで「Enter」を押すことで変更できます。<br>
+                    文字の長さを調整：文字をクリックして左右のどちらかを引っ張ることで、入力した文字の横幅を伸ばすこともできます。</p>
+
+                    <div style="background-color: #f0f9ff; padding: 15px; border-left: 4px solid #0ea5e9; border-radius: 0 4px 4px 0; margin-top: 20px;">
+                        <p style="margin-top: 0; font-weight: bold;">✅ よく使う機能4選</p>
+                        <ul style="margin-bottom: 15px;">
+                            <li>① 太字：文字を太くできます。強調したいときによく使います。</li>
+                            <li>② 配置：テキストを左揃え・中央揃え・右揃えにできます。文字を揃えたいときに。</li>
+                            <li>③ 縦書き：文字を縦書きで表現できます。横文字と差別化したいときに。</li>
+                            <li>④ エフェクト：影付き、浮き出し、中抜き、袋文字、エコー、背景、湾曲など。</li>
+                        </ul>
+                        
+                        <p style="margin-top: 0; font-weight: bold;">✅ 時々使う機能5選</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>① 箇条書き：要点を箇条書きで表現したいときに。</li>
+                            <li>② 取り消し線：内容が違うことを伝えたいときに。</li>
+                            <li>③ 斜体：文字を斜めにし強調したいときに。</li>
+                            <li>④ 下線：文字に下線を引く（素材の下線の方が使いやすいことが多いです）。</li>
+                            <li>⑤ スペース：文字間隔と行間を調整できます。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 素材を入れる</h2>
+                    <p>素材・図形入れについて解説していきます。左の項目の「素材」をクリックしてみましょう。</p>
+
+                    <h3 style="margin-top: 20px;">① 線と図形</h3>
+                    <p><strong>変更可能な箇所</strong></p>
+                    <ul>
+                        <li>・線：色、太さ、種類</li>
+                        <li>・図形：全体的なサイズ変更、縦横サイズの変更、図形内への文字入れ</li>
+                    </ul>
+                    <p><strong>ショートカットキー</strong></p>
+                    <p>線：「L」 ／ 図形：「R」で呼び出せます</p>
+
+                    <h3 style="margin-top: 20px;">② 素材を入れる</h3>
+                    <p>検索バーで素材が見つかります。使いたい素材があればクリックすると、その素材が出てきます。</p>
+                    
+                    <p><strong>写真のフレーム機能</strong></p>
+                    <ol>
+                        <li>素材の検索バーをクリック</li>
+                        <li>下の方の「フレーム」をクリック</li>
+                        <li>好きなフレームを選ぶ</li>
+                        <li>任意の位置に配置</li>
+                        <li>切り取りたい写真をフレームの上にドラッグ＆ドロップ</li>
+                    </ol>
+
+                    <p><strong>素材構成の変更方法</strong></p>
+                    <ol>
+                        <li>配置を変更したい文字や素材を右クリック</li>
+                        <li>レイヤーの「前面」「背面」をクリック</li>
+                        <li>それぞれの配置関係を修正</li>
+                    </ol>
+                    <p>（ショートカット：前面「Ctrl＋]」、背面「Ctrl＋[」）</p>
+
+                    <h3 style="margin-top: 30px;">❓ よくある質問</h3>
+                    <div class="qa-box">
+                        <p class="qa-q">Q：色の変更ができない素材があります</p>
+                        <p class="qa-a">A：素材をクリックして上の項目に表示されているものが編集できる内容です。この中に色選択がない素材は、色の変更ができません。</p>
+                    </div>
+                    <div class="qa-box">
+                        <p class="qa-q">Q：次の画像作成にも同じ素材を使いたい</p>
+                        <p class="qa-a">A：次回も使いたい素材があった場合、お気に入り登録ができます。素材横の「…」をクリック → 「スターを付ける」をクリック。呼び出すときは「プロジェクト」→「スター付き」から見つけられます。</p>
+                    </div>
+                    <div class="qa-box">
+                        <p class="qa-q">Q：Canvaのフリー素材を使っても大丈夫ですか？</p>
+                        <p class="qa-a">A：Canvaのフリー素材はいくらでも使ってOKです。ただしInstagramでは独自性を出して「この人にしか発信していない」というアカウントを作ることが伸びるポイントなので、オリジナルなイラストや写真を使う方がオススメです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 画像・動画をアップロードする</h2>
+                    <p>撮った画像や動画をCanvaにアップロードしてみましょう。</p>
+                    
+                    <h3 style="margin-top: 20px;">アップロード方法</h3>
+                    <ul>
+                        <li>・パソコンのデータをCanvaにドラッグ＆ドロップ</li>
+                        <li>・「アップロード」をクリックしてファイルをアップロード</li>
+                    </ul>
+
+                    <h3 style="margin-top: 20px;">写真の加工方法</h3>
+                    <p>アップした写真は、サイズ変更や写真編集ができます。</p>
+                    
+                    <div style="background-color: #f0f9ff; padding: 15px; border-left: 4px solid #0ea5e9; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">✅ よく使う機能8選</p>
+                        <ul style="margin-bottom: 15px;">
+                            <li>① 背景除去：物や人物を残して背景を一括で削除</li>
+                            <li>② マジック拡張：写真素材を決めたサイズに拡張</li>
+                            <li>③ マジック切り抜き：写真の背景と対象物を切り取れる</li>
+                            <li>④ フィルター：写真にフィルターをかけられる</li>
+                            <li>⑤ 切り抜き：写真素材の一部だけ切り抜きたいときに</li>
+                            <li>⑥ ぼかし：個人情報や人の顔にモザイクをかける場合に</li>
+                            <li>⑦ 高画質化：画質が粗い写真をAIが補正（応急処置的）</li>
+                            <li>⑧ フェイスレタッチ：顔の肌や表情を自然に補正</li>
+                        </ul>
+                        
+                        <p style="margin-top: 0; font-weight: bold;">✅ 時々使う機能8選</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>① マジック消しゴム：なぞった箇所を写真から取り除く</li>
+                            <li>② マジック加工：写真素材の一部をまるごと変更</li>
+                            <li>③ テキスト切り抜き：写真からテキストを抽出</li>
+                            <li>④ 調整：写真の色味や明るさを手動で調整</li>
+                            <li>⑤ シャドウ：写真素材にエフェクトを付ける</li>
+                            <li>⑥ オートフォーカス：被写体に焦点を当てる</li>
+                            <li>⑦ ダブルトーン：写真の色味を正反対の色に変化させる</li>
+                            <li>⑧ 背景生成：被写体は残し、背景だけをAIに作り直してもらう</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 15px;"><strong>反転</strong>：写真を上下左右に反転させることができます。今まで入れてきた画像や動画はアップロードに履歴が残っています。</p>
+                    <p><strong>容量</strong>：無料の場合は5GB、有料の場合は1TBまで保存可能です。</p>
+
+                    <div class="qa-box">
+                        <p class="qa-q">Q：ページを追加したい</p>
+                        <p class="qa-a">A：方法は2つあります。「ページを追加」で白紙のページが追加され、「ページを複製」で作成したページが複製されます。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06 ダウンロードする</h2>
+                    <p>作った画像や動画をダウンロードしてみます。</p>
+                    <ol>
+                        <li>右上の「共有」ボタンをクリック</li>
+                        <li>「ダウンロード」をクリック</li>
+                        <li>ファイルの種類を選択
+                            <ul>
+                                <li>・画像なら：PNG または JPEG（MacでPCから投稿する場合はJPEG推奨）</li>
+                                <li>・動画なら：MP4形式の動画</li>
+                            </ul>
+                        </li>
+                        <li>ページを選択（画像と動画が混ざる投稿の場合は分けてダウンロード）</li>
+                        <li>ダウンロード</li>
+                    </ol>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+                <div class="page-navigation">
+                    <a href="feed-guide.html" class="nav-prev">← 前へ：フィード投稿の基本に戻る</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

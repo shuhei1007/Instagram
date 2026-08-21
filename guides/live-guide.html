@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インスタライブ編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>インスタライブ編</span>
+            </div>
+            <h1>インスタライブ完全攻略（準備編・企画編・実践編）</h1>
+            <p class="subtitle">トラブルを防ぐ準備から、収益化につなげる企画、そしてファンを増やす実践的なコミュニケーション術まで</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　なぜ今、インスタライブが必要なのか？</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">インスタライブが重要な理由は、ビジネス面でもファン化の面でも、非常に強い効果があるからです。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">ライブ配信の役割は、大きく2つあります。</p>
+
+                    <ul style="font-size: 1.05rem; margin-bottom: 20px; list-style-type: none; padding-left: 0; font-weight: bold; color: #1e40af;">
+                        <li style="margin-bottom: 10px;">🤝 圧倒的な信頼構築</li>
+                        <li>🔥 熱量や想いの伝達</li>
+                    </ul>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px;">
+                            <h3 style="font-size: 1rem; color: #334155; margin-top: 0; margin-bottom: 10px; text-align: center;">リール・フィード投稿</h3>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; padding-left: 20px; color: #475569;">
+                                <li style="margin-bottom: 5px;">認知を広げるのが得意</li>
+                                <li>情報は伝わるが、人柄までは伝わりにくい</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                            <h3 style="font-size: 1rem; color: #1d4ed8; margin-top: 0; margin-bottom: 10px; text-align: center;">インスタライブ</h3>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; padding-left: 20px; color: #1e3a8a;">
+                                <li style="margin-bottom: 5px;">信頼を深めるのが得意</li>
+                                <li>人柄や雰囲気、熱量がダイレクトに伝わる</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold;">投稿は「広く浅く」、ライブは「狭く深く」。この役割を理解しているかどうかが、とても重要です。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-top: 0; margin-bottom: 15px; color: #0f172a;">ライブを見ることで、フォロワーさんの中では次の変化が起こります。</p>
+                        <div style="text-align: center; color: #334155; font-size: 0.95rem;">
+                            <p style="margin: 5px 0;">「なんとなくフォローしている」</p>
+                            <p style="margin: 5px 0; color: #94a3b8;">↓</p>
+                            <p style="margin: 5px 0; font-weight: bold;">ライブを見る</p>
+                            <p style="margin: 5px 0; color: #94a3b8;">↓</p>
+                            <p style="margin: 5px 0;">「安心する」「こんな雰囲気なんだ」</p>
+                            <p style="margin: 5px 0; color: #94a3b8;">↓</p>
+                            <p style="margin: 5px 0; font-weight: bold; color: #1d4ed8;">「この人の言うことなら信頼できる」</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">だからこそ、投稿を何本も頑張るより、ライブ1回の方が関係性が深まることもあります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　放送事故を防ぐ！必須の環境設定チェック</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブ配信の不安の多くは、事前準備で防げます。ここでは、最低限チェックしておきたいポイントを整理します。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 20px;">
+                                <span style="font-weight: bold; font-size: 1.1rem; color: #1e40af;">📷 カメラ位置</span>
+                                <ul style="padding-left: 30px; margin-top: 5px; color: #475569;">
+                                    <li>下から煽らない</li>
+                                    <li>目線と同じ高さに設置</li>
+                                    <li>顔出ししない場合も画角を確認</li>
+                                </ul>
+                            </li>
+                            <li style="margin-bottom: 20px;">
+                                <span style="font-weight: bold; font-size: 1.1rem; color: #1e40af;">🖼️ 背景</span>
+                                <ul style="padding-left: 30px; margin-top: 5px; color: #475569;">
+                                    <li>洗濯物や個人情報が映らない</li>
+                                    <li>白い壁やカーテンが安心</li>
+                                </ul>
+                            </li>
+                            <li style="margin-bottom: 20px;">
+                                <span style="font-weight: bold; font-size: 1.1rem; color: #1e40af;">💡 明るさ</span>
+                                <ul style="padding-left: 30px; margin-top: 5px; color: #475569;">
+                                    <li>暗さはNG</li>
+                                    <li>窓際やリングライトを活用</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span style="font-weight: bold; font-size: 1.1rem; color: #1e40af;">🔔 通知・インカメ・通信・充電</span>
+                                <ul style="padding-left: 30px; margin-top: 5px; color: #475569;">
+                                    <li>おやすみモード必須</li>
+                                    <li>カメラの向きを確認（使用しないカメラにマスキングテープ）</li>
+                                    <li>Wi-Fi環境が整っている場所で配信</li>
+                                    <li>充電は満タンか接続したまま</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-top: 15px; font-weight: bold; color: #1e3a8a; text-align: center;">これだけでも、トラブルはほぼ防げます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　顔出しなしでも大丈夫！「顔出しなし」配信のコツ</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">顔出ししていなくても、インスタライブは問題なくできます。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">方法①：顔が映らない画角で配信</h3>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">手元だけ</li>
+                            <li style="margin-bottom: 5px;">首から下だけ</li>
+                            <li>作業や実演中心</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">方法②：お面・被り物</h3>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">定番のお面</li>
+                            <li>マスクで部分的に隠す</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">方法③：エフェクト</h3>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 5px;">顔が隠れるエフェクト</li>
+                            <li><span style="font-weight: bold; color: #b91c1c;">事前テストは必須</span></li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #1e3a8a;">顔が見えなくても、声や話し方から伝わるものは十分あります。大切なのは、顔よりも中身です。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　5分でマスター！実際のアプリ操作手順</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">操作はとてもシンプルです。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 2px solid #3b82f6; padding-bottom: 10px; display: inline-block;">配信開始</h3>
+                            <ol style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #334155;">
+                                <li style="margin-bottom: 5px;">「＋」をタップ、または画面を右にスワイプ</li>
+                                <li style="margin-bottom: 5px;">「ライブ」を選択</li>
+                                <li style="margin-bottom: 5px;">タイトル入力</li>
+                                <li style="margin-bottom: 5px;">公開範囲を設定</li>
+                                <li>真ん中のボタンで開始</li>
+                            </ol>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #cbd5e1;">
+                            <h3 style="font-size: 1.1rem; color: #b91c1c; margin-top: 0; border-bottom: 2px solid #ef4444; padding-bottom: 10px; display: inline-block;">配信終了</h3>
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; color: #334155;">
+                                <li style="margin-bottom: 5px;">右上の「×」をタップ</li>
+                                <li>「動画を終了する」を選択</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-top: 15px; font-weight: bold; color: #1e3a8a; text-align: center;">「開始」と「終了」が分かれば、操作で迷うことはありません。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05　初心者が抱える3つの誤解（マインドブロック）</h2>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #475569; margin-top: 0; margin-bottom: 5px;">誤解①：うまく喋れないといけない</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #1e40af;"><span style="color: #3b82f6;">→</span> 噛んでもOK。人間味が伝わります。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #475569; margin-top: 0; margin-bottom: 5px;">誤解②：人が集まらないと意味がない</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #1e40af;"><span style="color: #3b82f6;">→</span> 少ない方が練習できます。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #475569; margin-top: 0; margin-bottom: 5px;">誤解③：準備が大変そう</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 0; font-weight: bold; color: #1e40af;"><span style="color: #3b82f6;">→</span> スマホ1台で十分です。</p>
+                    </div>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">失敗しても大丈夫。0人ならアーカイブを残さなければいいだけです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06　インスタライブ完全攻略（企画編）</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">今回の企画編では、そこから一歩進んで目的を持ってファン化・収益化につなげるライブを設計していきます。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">この講座で目指すのは、次の2つです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; font-weight: bold; color: #1e3a8a;">
+                            <li style="margin-bottom: 10px;">✅ 定期配信で、濃いファンを育てられるようになる</li>
+                            <li>✅ アフィリエイトや自社商品を、狙って案内できるようになる</li>
+                        </ul>
+                    </div>
+
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブは「なんとなく」では成果につながりません。ですが、正しい流れと型を知れば、再現性のある武器になります。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">ここからは、実際の運用をイメージしながら進めていきましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07　人が集まる！告知から事後までの「黄金フロー」</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">インスタライブは、「配信している時間」だけが勝負ではありません。</p>
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">実は、告知から事後対応までを含めた流れで、成果の8割が決まります。</p>
+                    </div>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">多くの人がやってしまいがちな失敗は、「思い立ったときに、いきなりライブを始めること」です。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">ここでは、人を集めて、ライブ後もファンとして関係が続くための正しいフローを解説します。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">Step1：事前告知（集客の命）</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">どれだけ良い内容でも、知られていなければ存在しないのと同じです。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">以下のタイミングで、しつこいくらい告知を行いましょう。</p>
+                        
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                            <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                                <li style="margin-bottom: 10px;">
+                                    <span style="font-weight: bold; color: #334155;">3日前（フィード・ストーリーズ）</span><br>
+                                    <span style="color: #475569;">「◯月◯日21時から◯◯について話します！質問も募集中」</span>
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <span style="font-weight: bold; color: #334155;">前日（フィード・ストーリーズ）</span><br>
+                                    <span style="color: #475569;">「明日21時から◯◯について話します！」</span>
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <span style="font-weight: bold; color: #334155;">当日朝（ストーリーズ）</span><br>
+                                    <span style="color: #475569;">「今日の夜です！リマインダー設定してね」</span>
+                                </li>
+                                <li>
+                                    <span style="font-weight: bold; color: #334155;">1時間前（ストーリーズ）</span><br>
+                                    <span style="color: #475569;">「もうすぐ始まります！」</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">Step2：ライブ実施（本番）</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">本番で意識するのは、「最初の5分」と「終わりの挨拶」です。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0; color: #334155;">
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">開始5分</span><br>
+                                挨拶と軽い雑談で、場の空気を温めます。この時間は、視聴者と自分、両方の緊張を解くための時間です。
+                            </li>
+                            <li>
+                                <span style="font-weight: bold;">終了時</span><br>
+                                感謝と次回予告を忘れずに行いましょう。コメントをくれた方の名前を呼ぶだけでも、満足度は大きく上がります。
+                            </li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">Step3：事後対応（ファン化の仕上げ）</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブが終わってからが、実はファン化の本番です。</p>
+                        <ol style="font-size: 0.95rem; margin-bottom: 20px; padding-left: 20px; color: #334155;">
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">アーカイブを残す</span><br>
+                                リアルタイムで見られなかった人のために残します。表紙にタイトルを入れると、再生されやすくなります。
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">お礼のストーリーズ</span><br>
+                                「見てくれてありがとう」と一言添えるだけで、次回の参加率が変わります。
+                            </li>
+                            <li>
+                                <span style="font-weight: bold;">DM返信</span><br>
+                                感想や質問への丁寧な返信は、最強の信頼構築です。
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-top: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">最後に、一番大切なポイントです。</p>
+                        <p style="font-size: 1.05rem; font-weight: bold; margin-bottom: 5px; color: #1d4ed8;">人が集まるライブの正体は、定期開催です。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">「毎週◯曜日の◯時から」と決めることで、ライブが視聴者の生活の一部になります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08　基本の「3つの型」を使いこなす</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">3つの基本型に沿って進めるだけで、ライブは一気に安定します。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">型①：解説型ライブ（初心者おすすめ）</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">テーマを決めて、ノウハウや手順を教えるライブです。</p>
+                        <p style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #475569;">【進行ステップ】</p>
+                        <div style="background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 0.9rem; font-weight: bold; color: #334155; margin-bottom: 20px;">
+                            宣言（タイトル回収）<span style="color: #94a3b8; margin: 0 5px;">→</span>共感<span style="color: #94a3b8; margin: 0 5px;">→</span>本題（3つのポイント解説）<span style="color: #94a3b8; margin: 0 5px;">→</span>まとめとアクション
+                        </div>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">型②：Q&A型ライブ</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">事前に質問を集め、それに答えていくスタイルです。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; padding-left: 20px; color: #334155;">
+                            <li>視聴者の悩みを直接解決できる</li>
+                            <li>信頼度が一気に高まる</li>
+                        </ul>
+                        <p style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #475569;">【進行ステップ】</p>
+                        <div style="background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 0.9rem; font-weight: bold; color: #334155; margin-bottom: 20px;">
+                            質問読み上げ<span style="color: #94a3b8; margin: 0 5px;">→</span>全肯定・共感<span style="color: #94a3b8; margin: 0 5px;">→</span>回答（自分の経験）<span style="color: #94a3b8; margin: 0 5px;">→</span>視聴者へのパス
+                        </div>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">型③：雑談型ライブ</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">日常や裏話を共有するスタイルです。完全なノープランは避け、「ゆるいテーマ」を1〜3個決めておくのがポイントです。</p>
+                        <p style="font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #475569;">【進行ステップ】</p>
+                        <div style="background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 0.9rem; font-weight: bold; color: #334155;">
+                            トークテーマ提示<span style="color: #94a3b8; margin: 0 5px;">→</span>エピソードトーク<span style="color: #94a3b8; margin: 0 5px;">→</span>逆質問<span style="color: #94a3b8; margin: 0 5px;">→</span>コメント拾い・広げ
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09　【応用編】ファン化しながら売る「商品紹介」の組み合わせ術</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">基本の3つの型に商品紹介を組み合わせることで、売り込み感を出さずに収益化ができます。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">パターンA：解説型 × 商品紹介</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">ノウハウの流れの中で、「便利ツール」として商品を紹介します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #b91c1c;">→ 教えてもらっているうちに、自然と欲しくなります。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">パターンB：Q&A型 × 商品紹介(お悩み解決)</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">質問への回答として商品を提案します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #b91c1c;">→ 信頼している人の解決策なので、購入率が高くなります。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">パターンC：雑談型 × 商品紹介(口コミ共有)</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 5px;">友達に「これ良かったよ」と話す感覚で紹介します。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px; font-weight: bold; color: #b91c1c;">→ リアルな愛用品として伝わります。</p>
+
+                        <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">普段はファン化、売りたいときはしっかり紹介。</p>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;">このメリハリが、長く続くアカウントを作ります。</p>
+                        </div>
+                    </div>
+
+                    <h3 style="font-size: 1.2rem; color: #0f172a; margin-top: 30px; margin-bottom: 15px;">✅ 購入率を最大化する「導線設計」と「クロージング」</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブ中に「欲しい！」と思っても、買い方が分かりにくいと離脱されます。迷わせない購入導線を用意しましょう。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px;">
+                            <h4 style="font-size: 1rem; color: #334155; margin-top: 0; margin-bottom: 10px;">購入導線の基本</h4>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; padding-left: 20px; color: #475569;">
+                                <li style="margin-bottom: 5px;">固定コメントで「詳細はプロフのリンクから」と案内</li>
+                                <li style="margin-bottom: 5px;">ハイライトを使い、タップ先を視覚的に見せる</li>
+                                <li>「欲しい」とコメントした人にDMでリンクを送る<br><span style="font-weight: bold; color: #b91c1c; font-size: 0.85rem;">※ DM送付が最も成約率が高い方法です</span></li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #f1f5f9; padding: 15px; border-radius: 8px;">
+                            <h4 style="font-size: 1rem; color: #334155; margin-top: 0; margin-bottom: 10px;">ライブ後のクロージング</h4>
+                            <ul style="font-size: 0.9rem; margin-bottom: 0; padding-left: 20px; color: #475569;">
+                                <li style="margin-bottom: 5px;">お礼ストーリーズでリンクを再案内</li>
+                                <li>質問してくれた人にはDMで個別フォロー</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.95rem; font-weight: bold; color: #1d4ed8; text-align: center;">この一連の流れだけで、ライブ後の成約率は大きく変わります。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10　まとめ</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">今回は企画編として、インスタライブを売上につなげるための全体設計をお伝えしました。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; font-weight: bold; color: #334155;">
+                            <li style="margin-bottom: 10px;">✅ ライブは告知から始まっている</li>
+                            <li style="margin-bottom: 10px;">✅ 定期開催が、最大の集客装置になる</li>
+                            <li style="margin-bottom: 10px;">✅ 基本は3つの型からでOK</li>
+                            <li>✅ ファン化と販売を使い分ける</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">ここまで学んだみなさんは、もう十分に準備が整っています。</p>
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 0; color: #1e3a8a;">あとは、これを「習慣」にしていくだけです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11　インスタライブ完全攻略（実践編）</h2>
+                    <h3 style="font-size: 1.3rem; color: #1e40af; margin-top: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 10px;">▍12　開始5分が勝負！離脱を防ぐ「オープニング」の作法</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブ配信で最も緊張するのは、始まってすぐの数分間。そして、視聴者が最も離脱しやすいのもこのタイミングです。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">この“勝負の5分”でやるべきことは、以下の3つ。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">① 挨拶とウェルカム感</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">視聴者が入ってきた瞬間に反応！「〇〇さん、来てくれてありがとうございます！」と名前を呼びましょう。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">インスタライブの「ウェーブ機能」を使って、手を振るアクションもおすすめ。</p>
+
+                        <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">② テーマの固定コメント（ピン留め）</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">「今、何の話？」とならないよう、冒頭でテーマをコメントし、それをピン留め。</p>
+                        <div style="background-color: #fff; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 0.95rem; font-weight: bold; color: #334155; margin-bottom: 20px;">
+                            📌「今日のテーマ：〇〇について」
+                        </div>
+
+                        <h4 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">③ アイドリングトークで場を温める</h4>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">本題に入る前に、雑談を数分。「音声大丈夫ですか？」「そちらの天気は？」など、YES/NOで答えられる質問が◎</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">Good &amp; Newのように、最近の出来事をシェアするのも効果的です。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍13　コメントが増える「双方向コミュニケーション」の極意</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">インスタライブ最大の魅力は“対話”です。ただ話すだけなら、リール動画で十分。ライブでは<span style="font-weight: bold; color: #1d4ed8;">「視聴者を主役にする」</span>意識が大切です。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">ここでは、コメントを促進し、ファン化を後押しするテクニックを4つ紹介します。</p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <h4 style="font-size: 1rem; color: #1e3a8a; margin-top: 0; margin-bottom: 10px;">✅ テクニック①：名前呼びの魔力</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 10px; color: #334155;">コメントを読むときは必ず「〇〇さん」と名前を添える</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; font-weight: bold; color: #b91c1c;">名前を呼ばれると、脳内でドーパミンが出て好感度アップ！</p>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <h4 style="font-size: 1rem; color: #1e3a8a; margin-top: 0; margin-bottom: 10px;">✅ テクニック②：肯定ファースト</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: #334155;">「それいいですね！」「分かります〜！」など、まず肯定から入るのが基本</p>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <h4 style="font-size: 1rem; color: #1e3a8a; margin-top: 0; margin-bottom: 10px;">✅ テクニック③：主語を「あなた」に変える</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px; color: #475569;">「私はこう思う」ではなく</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px; font-weight: bold; color: #334155;">→「〇〇さんならどうしますか？」</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; font-weight: bold; color: #334155;">→「みなさんはどっち派ですか？」</p>
+                        </div>
+                        <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <h4 style="font-size: 1rem; color: #1e3a8a; margin-top: 0; margin-bottom: 10px;">✅ テクニック④：少人数の時こそ“個別質問”</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 10px; color: #334155;">参加者が1人でも大丈夫！むしろチャンス。</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; font-weight: bold; color: #334155;">「〇〇さん、今日は何してたんですか？」と会話を広げていきましょう</p>
+                        </div>
+                    </div>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin-bottom: 5px; color: #1e3a8a;">💡 コメントが来ないときの対処法</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">焦らず、企画編で作った構成メモに沿って話しましょう。合間に「ここまで大丈夫ですか？」と優しく問いかけるだけでOKです。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍14　トラブルこそチャンス！「人間味」でファンを作る</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">ライブ中に…</p>
+                    <ul style="font-size: 0.95rem; margin-bottom: 15px; padding-left: 20px; color: #334155;">
+                        <li>子供が乱入</li>
+                        <li>宅急便が到着</li>
+                        <li>言葉を噛んでしまった</li>
+                        <li>機材トラブル</li>
+                    </ul>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">そんな時、どうしていますか？実は、これらの“プチトラブル”はファン化の大チャンスなんです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">📌 対処法は「実況スタイル」</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">「あ、ごめんなさい！子供が来ちゃいました〜」</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">「ちょっと噛みました（笑）」など、実況するだけでOK</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 10px;">🤝 弱みを見せると「共感」が生まれる</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">完璧より「人間らしさ」</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 0; font-weight: bold; color: #b91c1c;">失敗やハプニングこそが“親近感”を生むカギになります</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍15　ライブは終わってからが本番！「アーカイブ」と「DM」戦略</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">ライブの本当の成果は、「終了ボタンを押した後」に出ます。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 15px;">📺 アーカイブの工夫ポイント</h3>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0; color: #334155;">
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">カバー画像：</span> Canvaで文字を入れて見栄えをアップ
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">タイトル：</span> 日時を明記すると次回の集客にも◎
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <span style="font-weight: bold;">小見出し：</span> 「10:00〜ここ絶対見て！」など注目ポイントを記載
+                            </li>
+                            <li>
+                                <span style="font-weight: bold;">キャプション：</span> 見どころ時間を書いて再生率アップを狙いましょう
+                            </li>
+                        </ul>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; margin-bottom: 15px;">💌 お礼DMで信頼を深める</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">コメントしてくれた方や視聴してくれた方に「来てくれてありがとうございます！」と個別メッセージを送ると強烈な印象に！</p>
+                        <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">この“1対1”の交流が、深く濃いファンを生むきっかけになります。</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

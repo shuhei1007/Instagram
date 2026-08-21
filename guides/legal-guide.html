@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法務編 | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../knowledge.html">ノウハウ一覧</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <span>法務編</span>
+            </div>
+            <h1>法務編</h1>
+            <p class="subtitle">著作権の「本質」を理解し、SNS発信のリスクをコントロールする</p>
+        </div>
+
+        <div class="content-section">
+            <div class="guide-content">
+                
+                <section>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">著作権に関して</p>
+                    <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 0; color: #475569;">
+                        <li>「これって大丈夫？違法じゃないかな？」</li>
+                        <li>「結局何が正解かわからない」</li>
+                    </ul>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">このような声をたくさん聞きます。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">そんな悩みに対する回答は「『正解』はない」です。法律に関する多くの悩みは、違法とも適法とも言えない曖昧なケースが多いからです。</p>
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 30px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #1e3a8a;">そのためこの講座では、「違法か適法か」ではなく、著作権の「本質」を理解することを目標に解説していきます。一緒に学んでいきましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01　著作権の基礎知識</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">著作権とは、著作物が生まれた瞬間に創作した人（＝著作者）が自動的に手に入れる権利のことです。その著作物について、以下のような権利を著作権と言います。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; color: #0f172a; font-weight: bold;">
+                            <li style="margin-bottom: 10px;">・自分で使い方を自由に決められる</li>
+                            <li style="margin-bottom: 10px;">・勝手に使うなと言える（差止め）</li>
+                            <li>・お金を払えと言える（損害賠償）</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02　著作権が「よくわからない」理由</h2>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">1️⃣ 法律自体が曖昧＋著作権法特有の難しさ</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px;">法律とは、◯と✕ではっきり分かれたものというイメージを持たれがちですが、実際はもっと曖昧なもので、◯と✕の間の△のもののほうが多いです。</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 20px;">また、著作権は利用され放題だとクリエイターのやる気がなくなってしまい、強すぎると新しい作品を作りにくくなるという側面があるため、バランスを取る必要があります。</p>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">2️⃣ 判断のポイント（分かれ目）が多すぎ</h3>
+                        
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">① 「著作物」にあたるか</p>
+                        <div style="background-color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 15px; margin-left: 20px;">
+                            <ul style="font-size: 0.95rem; margin-bottom: 10px; list-style-type: none; padding-left: 0; color: #475569;">
+                                <li>・思想または感情を</li>
+                                <li>・創作的に</li>
+                                <li>・表現し</li>
+                                <li>・文学、学術、美術、音楽の範囲に属する</li>
+                            </ul>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; font-weight: bold;">ものが著作物とされます。</p>
+                        </div>
+
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">② 著作物の「利用」にあたるか</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; color: #475569; padding-left: 20px;">創作性のある部分が共通している場合「利用」にあたる可能性があります。</p>
+
+                        <p style="font-weight: bold; color: #0f172a; margin-bottom: 5px;">③ 例外的に許される場合か　例）引用</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px; color: #475569; padding-left: 20px;">以下の5つが判断のポイントになります。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 15px; list-style-type: none; padding-left: 20px;">
+                            <li style="margin-bottom: 5px;">✅ 引用の必要性（必然性）がある</li>
+                            <li style="margin-bottom: 5px;">✅ 主従関係がある（自分の著作物が主）</li>
+                            <li style="margin-bottom: 5px;">✅ 引用部分が明確に区別できる</li>
+                            <li style="margin-bottom: 5px;">✅ 出典を明示</li>
+                            <li>✅ 改変しない</li>
+                        </ul>
+                        <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 20px; margin-left: 20px;">
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: #b91c1c; font-weight: bold;">引用には「絶対に大丈夫」という基準はないことを覚えておいてください。</p>
+                        </div>
+
+                        <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">3️⃣ 法律≠実際の世の中</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">世の中には違法だけど容認されているもの、適法だけど炎上したものもあります。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03　著作物との付き合い方</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">著作権は「権利」のため、その権利を行使するかは著作権者次第となります。なので、著作者の気持ちになって考えることが一番大切です。</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">仮に著作権侵害をしてしまったとしても、いきなり賠償や刑事処分になる可能性は低いです。実際に警告が来たら丁寧に対応しましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04　特定商取引法について</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">消費者トラブルが起こりやすい特定の取引類型を規制している法律です。中でもインスタ運用をする上で関係する可能性が高いのが「通信販売」となります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; color: #1e40af; margin-top: 0; margin-bottom: 10px;">広告の表示義務（一部）</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; color: #475569;">
+                            <li style="margin-bottom: 5px;">・販売価格</li>
+                            <li style="margin-bottom: 5px;">・対価の支払時期、方法</li>
+                            <li style="margin-bottom: 5px;">・事業者の氏名、住所、電話番号</li>
+                            <li style="margin-bottom: 5px;">・商品の引き渡し、サービス提供の時期</li>
+                            <li>・キャンセル、返品の条件</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05　景品表示法について</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">不当な広告の表示や過大な景品の提供を禁止し、消費者が自主的かつ合理的に選択できるようにするのがこの法律の目的です。</p>
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">インスタで行うアフィリエイトやPR投稿だけでなく、ライブ配信で商品を口頭で宣伝する場合も「広告」にあたります。</p>
+                    </div>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="font-weight: bold; color: #1e40af; margin-top: 0; margin-bottom: 10px;">不当な表示とされるもの（3種類）</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 5px;">✅ 優良誤認表示</li>
+                            <li style="margin-bottom: 5px;">✅ 有利誤認表示</li>
+                            <li>✅ 内閣総理大臣による指定告示 <span style="color: #ef4444; font-weight: bold;">←「ステマ規制法」</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06　ステマ規制法について</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">広告でない客観的な感想だと誤解すると、批判的な目を持たずに信頼してしまうおそれがあるため、規制するのが法律の趣旨になります。</p>
+                    
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px; color: #1e3a8a;">ステマの定義</p>
+                        <p style="font-size: 0.95rem; margin-bottom: 10px;">一般消費者が</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 10px; list-style-type: none; padding-left: 20px; font-weight: bold; color: #0f172a;">
+                            <li>① 事業者の表示であることを</li>
+                            <li>② 判別することが困難な表示</li>
+                        </ul>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">とされています。</p>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">① 事業者の表示</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px; color: #475569;">事業主が表示内容の決定に関与したと認められるもの＝第三者（インフルエンサー）の自主的な意思による表示と認められないもの</p>
+
+                    <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">② 判別することが困難な表示</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px; color: #475569;">一般消費者が基準となります。</p>
+                    <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 20px; color: #475569;">
+                        <li style="margin-bottom: 5px;">・認識しにくい文言、場所、大きさ、長さ、色 <span style="font-weight: bold; color: #b91c1c;">※「ad」は非推奨</span></li>
+                        <li>・大量の＃の中に「ＰＲ」を紛れ込ませる</li>
+                    </ul>
+
+                    <div style="background-color: #fef2f2; padding: 20px; border-radius: 8px; border: 1px solid #fca5a5; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; margin-bottom: 15px; font-weight: bold; color: #0f172a;">景品表示法の規制対象者はあくまで事業者（＝広告主）であり、インフルエンサーは対象外です。ただし、守らなかった場合、以下のリスクがあります。</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; color: #b91c1c; font-weight: bold;">
+                            <li style="margin-bottom: 5px;">❌ 事業主やＡＳＰとの契約違反になる可能性<br><span style="padding-left: 20px; font-weight: normal; color: #475569;">⇒ 契約解除、売上金没収、損害賠償</span></li>
+                            <li>❌ 垢ＢＡＮ、炎上、信用低下</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">ステマ規制法を守るためにチェックしたいポイント</h3>
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 15px;">
+                        <ol style="font-size: 0.95rem; margin-bottom: 0; padding-left: 20px; font-weight: bold; color: #334155;">
+                            <li style="margin-bottom: 5px;">ステマ規制法</li>
+                            <li style="margin-bottom: 5px;">プラットフォームのポリシー（Instagramブランドコンテンツポリシー）</li>
+                            <li style="margin-bottom: 5px;">① ＡＳＰの規約・広告主からの指示</li>
+                            <li>② 楽天アフィリエイト利用規約</li>
+                        </ol>
+                    </div>
+                    <p style="font-size: 1rem; font-weight: bold; color: #b91c1c; text-align: center;">⇒ これらを全部守る必要があります。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07　薬機法について</h2>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">医薬品・医薬部外品・化粧品・医療機器・再生医療等製品の品質、有効性、安全性の確保を目的とした法律です。</p>
+
+                    <div style="background-color: #eff6ff; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px; color: #1e3a8a;">薬機法上の「広告」となる3つの条件</p>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0; font-weight: bold; color: #0f172a;">
+                            <li style="margin-bottom: 5px;">① 商品を買ってもらう意図がある</li>
+                            <li style="margin-bottom: 5px;">② 商品名が明らかになっている</li>
+                            <li>③ 一般人が見ることができる</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                        <p style="font-size: 0.95rem; font-weight: bold; margin: 0; color: #92400e;">つまり、化粧品などのPRを行う際は必ず薬機法に気をつけなければいけないということになります。薬機法の対象者は、広告主だけでなくインフルエンサーも対象です。</p>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; color: #1e40af; margin-top: 30px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">化粧品をPRする際に守るべきルール</h3>
+                    <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0; font-weight: bold; color: #334155;">
+                        <li style="margin-bottom: 5px;">1️⃣ 医薬品等適正広告基準の解説及び留意事項等</li>
+                        <li>2️⃣ 化粧品等の適正広告ガイドライン</li>
+                    </ul>
+
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <h4 style="font-size: 1.05rem; color: #b91c1c; margin-top: 0; margin-bottom: 15px;">▼ 違反パターン① 認められた効果効能の範囲を逸脱する表現</h4>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 5px;"><span style="color: #ef4444; font-weight: bold;">❌</span>「シワが少なく／薄くなってきた」 <br><span style="color: #22c55e; font-weight: bold; padding-left: 20px;">⭕</span>「乾燥による小ジワを目立たなくする」</li>
+                            <li><span style="color: #ef4444; font-weight: bold;">❌</span>「髪のダメージを修復／回復」 <br><span style="color: #22c55e; font-weight: bold; padding-left: 20px;">⭕</span>「髪のダメージを補修」</li>
+                        </ul>
+
+                        <h4 style="font-size: 1.05rem; color: #b91c1c; margin-top: 20px; margin-bottom: 15px;">▼ 違反パターン② 効果効能や安全性の保証・最大級表現</h4>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 5px;"><span style="color: #ef4444; font-weight: bold;">❌</span>「これさえあれば」「赤ちゃんにも安心」</li>
+                            <li><span style="color: #ef4444; font-weight: bold;">❌</span>「自分史上一番の効き目」</li>
+                        </ul>
+
+                        <h4 style="font-size: 1.05rem; color: #b91c1c; margin-top: 20px; margin-bottom: 15px;">▼ 違反パターン③ 効果効能の速効性・持続性・発現時間の保証的表現</h4>
+                        <ul style="font-size: 0.95rem; margin-bottom: 20px; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 5px;"><span style="color: #ef4444; font-weight: bold;">❌</span>「●時間経っても落ちてない」</li>
+                            <li><span style="color: #ef4444; font-weight: bold;">❌</span> ビフォーアフターで「●週間後」と記載</li>
+                        </ul>
+
+                        <h4 style="font-size: 1.05rem; color: #b91c1c; margin-top: 20px; margin-bottom: 15px;">▼ 違反パターン④ 医薬関係者、美容師等による推せん</h4>
+                        <ul style="font-size: 0.95rem; margin-bottom: 0; list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 5px;"><span style="color: #ef4444; font-weight: bold;">❌</span>「薬剤師の友達もおすすめ」</li>
+                            <li><span style="color: #ef4444; font-weight: bold;">❌</span>「美容師の私も愛用しています」</li>
+                        </ul>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

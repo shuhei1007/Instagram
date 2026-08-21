@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEP9: 2投稿目に挑戦しよう（撮影・編集の効率化） | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .page-navigation a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .page-navigation a:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .nav-prev { margin-right: auto; }
+        .nav-next { margin-left: auto; }
+    </style>
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="reels-guide.html" class="back-link">← リール投稿の基本に戻る</a>
+
+            <header class="article-header">
+                <h1>STEP9: 2投稿目に挑戦しよう（撮影・編集の効率化）</h1>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 はじめに</h2>
+                    <p>今回は撮影から編集まで完了させることを目標に進めていきます！</p>
+                    <p>撮影のやり方や重要ポイント、編集の方法などは前回お話ししてきましたが、今回はその<strong>効率化</strong>についてお話ししていきます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 4️⃣ 撮影する</h2>
+                    <p>まずは撮影の重要ポイントの簡単なおさらいです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【撮影の重要ポイント】</p>
+                        <ul>
+                            <li><strong>① 自然光で撮影する</strong><br>
+                            太陽の光が当たっている明るい場所で撮影するのが理想です。どうしても難しい場合は、ライトなどを活用して可能な限り明るくして撮影しましょう！</li>
+                            <li style="margin-top: 10px;"><strong>② 複数の画角から撮影する</strong><br>
+                            1つの同じ視点だけだと「メリハリのないつまらない動画」になりやすいです。1つのものを撮影する場合でも2個以上の異なる画角で撮影できると一気に迫力が出るので意識しましょう。</li>
+                            <li style="margin-top: 10px;"><strong>③ 動きをつける</strong><br>
+                            動画を撮影しながら左右にゆっくり動かしたり、前後にゆっくりズームで動かすなど、動きをつけるだけでリッチで迫力のある動画に仕上がります！</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 15px;">まずはこの3点だけで十分なので、今回も意識して撮影を行いましょう。他の重要ポイントはインスタグラム講座の中級編などでより詳しく説明していくので、楽しみにしていてください！</p>
+
+                    <h3 style="margin-top: 30px;">撮影を効率的に行うポイント</h3>
+                    <p>撮影を効率的に行うポイントは3点あります。</p>
+                    
+                    <h4 style="margin-top: 15px;">① 三脚を活用する</h4>
+                    <p>三脚があると、いろんな視点から簡単に撮影することができます。最近だとiPhoneのMagSafeを活用して、マグネットで簡単に取り外しできる三脚もあるので、ぜひ活用しましょう！</p>
+
+                    <h4 style="margin-top: 15px;">② 常に撮影できる環境づくりをする</h4>
+                    <p>「撮影しよう！」と思ったけど、部屋が散らかっていてできない…。そんな状況になると、まずは片付けて、そこから撮影…とすごく大変です。</p>
+                    <p>部屋全体を片付けようとせずに、撮影する部屋の一部だけを掃除するなど、完璧を目指さずに撮影しましょう。</p>
+
+                    <h4 style="margin-top: 15px;">③ 余分な動画もとりあえず大量に撮る</h4>
+                    <p>たくさん撮影しておくことで、撮影なしで過去の動画のみを編集してリールが完成してしまうこともよくあります。なのでたくさん撮影する！と同時に、きちんとフォルダなどで管理することも効率化にはおすすめです。</p>
+
+                    <p style="margin-top: 20px;">撮影の効率化に関しては、道具に頼ったり、愚直に「撮影環境づくり」を徹底していくしかないです。</p>
+                    <ul>
+                        <li>・家事代行を依頼して、常に部屋をきれいに保つ</li>
+                        <li>・ベランダで料理できるセットを自作で作る</li>
+                    </ul>
+                    <p>自分がストレスなく続けられるように、上手く道具やサービスを活用したり、無理なく継続していくために自分のライフスタイルに合った工夫をしていきましょう！</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 20px;">
+                        <p style="margin: 0; font-weight: bold;">✋ ここで一旦ストップ</p>
+                        <p style="margin-bottom: 0;">ここで一旦講義動画を止めて、台本通りに撮影を行いましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 5️⃣ 撮影した動画を編集アプリに取り込む</h2>
+                    <p>動画を編集アプリに取り込む際、撮影イメージの台本がきちんとできていれば非常に楽です。台本通りに、何も考えずに編集アプリに取り込んでいけるからです！</p>
+                    <p>新しく撮影した動画だけでなく、過去に撮影した動画もきちんとフォルダ分けしておくと、編集アプリに取り込む際に非常に見つけやすいです。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 4px; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">【おすすめのフォルダ分け】</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>・〜部屋</li>
+                            <li>・PCデスク</li>
+                            <li>・外　など</li>
+                        </ul>
+                        <p style="margin-top: 10px; margin-bottom: 0;">自分にとってしっくりくるフォルダ分けを試していきましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 6️⃣ 音楽を入れる</h2>
+                    <p>前回と同じ手順で、Instagramで音楽を画面録画し、編集アプリに音源・BGMとして取り込んでいきます。</p>
+                    
+                    <p>Instagramには音源の保存機能があるので、日々見ていて「これ良いかも！」という音楽があれば音源ページで保存してためておくと、いちいちどの音楽を使うのか探す手間が省けます！何度も聴いていて流行っていると感じたり、良いと感じた音源は随時保存していきましょう。</p>
+
+                    <div style="background-color: #fef2f2; padding: 15px; border-left: 4px solid #ef4444; border-radius: 0 4px 4px 0; margin-top: 20px;">
+                        <p style="margin: 0; font-weight: bold;">✋ ここで一旦ストップ</p>
+                        <p style="margin-bottom: 0;">講義動画を止めて「撮影した動画を編集アプリに取り込む」ことと「音源を取り込む」ことをやってみましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 7️⃣ 音楽に合わせて動画を編集する</h2>
+                    <p>音楽が強くなる「拍」のタイミングを目安に、動画が切り替わる編集をしていきましょう！あくまで目安なので、実際は途中に動画の切り替わりが来ても良いです。このように音楽の「拍」を意識して編集することで、テンポの良い動画になります。</p>
+
+                    <h4 style="margin-top: 20px;">【動画編集時の注意ポイント】</h4>
+                    <ul>
+                        <li><strong>① 前半3秒にこだわること</strong><br>
+                        リールを見ている人は、前半3秒で続きを見るか判断しています。前半3秒間に1秒の動画を3カット入れるなど、情報量を増やしテンポ良く動画を見せることで、動画の中身や後半まで見てもらえる確率が上がります。</li>
+                        <li style="margin-top: 10px;"><strong>② 1カットは3秒以内が目安</strong><br>
+                        ダラダラしていて「つまらない動画」と感じられないように、1カット3秒以内を目安に動画を編集しましょう。</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">ざっくり編集のすすめ</h3>
+                    <p>これを抑えた上で、効率的に編集するにはVLLOの機能にどんどん慣れていくことが重要です。そして、最初から完璧な編集ではなく、<strong>ざっくり大雑把に編集してから細かく編集する</strong>のがおすすめです！</p>
+
+                    <div style="background-color: #f0fdf4; padding: 15px; border-left: 4px solid #22c55e; border-radius: 0 4px 4px 0; margin-top: 15px;">
+                        <p style="margin-top: 0; font-weight: bold;">▼ 効率化の例</p>
+                        <ol style="margin-bottom: 0;">
+                            <li>全ての動画を2倍速にしてから編集を始める</li>
+                            <li>編集後に1.3倍速に戻す</li>
+                        </ol>
+                        <p style="margin-top: 10px; margin-bottom: 0;">こうすることにより、初心者が陥りがちなダラダラとした動画展開を改善することができます！</p>
+                    </div>
+
+                    <p style="margin-top: 20px;">また他にも、細かい部分は後から調整する前提で、ざっくりカットして40〜50秒程度の動画にしてしまうのもおすすめです。最初から完璧に編集しようとすると、後から台本を入れた際にまた修正する手間が発生してしまいます。</p>
+                    <p>台本を入れる時に編集するのであれば、このフェーズでは100点は目指さず、60点くらいの出来栄えのざっくりした編集にとどめておきましょう。</p>
+                </section>
+
+                <!-- 前後ナビゲーション -->
+                <div class="page-navigation">
+                    <a href="reels-step8.html" class="nav-prev">← 前へ：STEP8 2投稿目（台本まで）</a>
+                    <a href="reels-step10.html" class="nav-next">次へ：STEP10 字幕・アフレコ・完成 →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>

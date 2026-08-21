@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマホ撮影の基本とテクニック | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo">InstaCircle</a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="../knowledge.html" class="back-link">← ノウハウ一覧に戻る</a>
+
+            <header class="article-header">
+                <span class="category badge-info" style="background:#f3f4f6; color:#4b5563; padding: 4px 8px; border-radius:4px; font-size:0.8rem; font-weight:bold; margin-bottom: 10px; display: inline-block;">撮影・機材</span>
+                <h1>スマホ撮影の基本とテクニック</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 撮影で一番大事なポイント</h2>
+                    <p>人は見慣れていない位置からの写真を「美しい」と感じます。一方で、人間の目線の高さから撮った写真は、いつも見ている景色と同じ場面が切り取られるだけです。なので感動は生まれません。</p>
+                    <p>つまり、人は無意識のうちに「見慣れているか否か」を「美しいかそうでないか」を判断する基準にしているんです！</p>
+                    <p>「見慣れた景色」とは違う場面を切り取ることで、美しく、印象深い写真が撮れるようになります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                        <p style="margin: 0; font-weight: bold;">✅ 人を感動させるには、「見慣れていない場面を切り取ること」</p>
+                    </div>
+                    <p style="margin-bottom: 0;">このポイントをまず覚えておきましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 撮影に必要なもの</h2>
+                    <p>Instagram用の写真や動画の撮影に必要なものは次の通りです。</p>
+                    <ul>
+                        <li>カメラ</li>
+                        <li>三脚</li>
+                        <li>ライト</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">📱 カメラ</h4>
+                        <p>スマホでOKです。スマホでも、少し工夫するだけでいい写真やいい動画は撮れるようになります。</p>
+                        <p style="font-weight: bold; margin-bottom: 5px;">機種を選ぶ際の数値の指標</p>
+                        <ul style="margin-top: 0;">
+                            <li>✅ カメラの画素数：1200万画素以上</li>
+                            <li>✅ F値：2.0以下</li>
+                            <li>✅ レンズの種類や数：広角・望遠レンズの2つを搭載</li>
+                        </ul>
+                        <p style="margin-bottom: 0;">以上の機能を持ったスマホがオススメです。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">📹 三脚</h4>
+                        <p>自分の姿を第三者目線で撮るために必要です。自分の姿はできるだけ出しながらInstagramを運用していくことをオススメしています。なぜなら「アカウント主の姿を写す」というのも「バズ」に必要な要素の1つになるんですね。</p>
+                        <p>自分の姿を出すことで属人感が生まれ、あなただけの唯一無二のコンテンツを作ることができます。また、人感があるアカウントのほうが、親しみやすさや憧れが生まれます。どんな人が発信しているのかわからないアカウントよりも、画面の奥の人をイメージできるほうが、親しみを持ちやすいですよね。</p>
+                        <p>自分の姿を出すだけで差別化の要因の1つになり、「この人が勧める商品だったら買ってみようかな」と思ってもらえる確率が上がり、マネタイズにも繋げやすくなります。</p>
+                        <p style="margin-bottom: 0;">三脚はAmazonや楽天で3000〜4000円ほどで買えるもので十分です。Bluetoothリモコンがついているものだと、スマホから離れたところからでもシャッターが切れるので便利です。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">💡 ライト</h4>
+                        <p>自然光の明るい部屋で撮れる場合は必要ありません。ただし、部屋に光が入りにくかったり、暗い時間帯にしか撮影できない場合はあったほうがいいです。</p>
+                        <p>一般的な照明だけだと、</p>
+                        <ul>
+                            <li>🌀 自分の影が映り込んでしまったり</li>
+                            <li>🌀 位置取りが大変だったり</li>
+                        </ul>
+                        <p>撮影が難しくなるからですね。さらに、より明るく写すことで被写体をキレイに見せることができます。</p>
+                    </div>
+                    
+                    <p style="margin-top: 20px;">▼ 他のオススメ機材もリストにまとめています！<br>
+                    <a href="https://docs.google.com/spreadsheets/d/199j6X_g26WKnjWerE6WysoqpSFKim4hsUhlpDjWoHCM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: bold;">＞＞ インフルエンサー愛用機材リスト</a></p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 ベストな撮影環境</h2>
+                    <h3 style="margin-top: 20px; color: #b45309; font-size: 1.4rem;">自然光が正義！</h3>
+                    <p>写真も動画も、できるだけ自然光で撮影を行いましょう。特に晴れの日の午前中の自然光を使うと、被写体を一番キレイに写すことができます。</p>
+                    
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ 左側の自然光で撮った写真は、明るく爽やかな印象</li>
+                        <li>✅ 右側の自然光なしで撮った写真は、どんよりとして暗い印象</li>
+                    </ul>
+                    
+                    <p>被写体が動かせるものの場合は、窓際まで移動させて、レースカーテンを締めた状態で撮影しましょう。それくらいの労力をかけるほど、自然光で撮った写真とそうでない写真では、投稿のリーチ数に差が出るんですね。</p>
+                    <p>ただ、どうしても部屋に光が入らない人や、暗い時間帯にしか撮影できない人もいると思います。そういう人は、先ほど紹介したリングライトなどを使って、できるだけ明るい状況で撮影を行いましょう。</p>
+                    <p>また、夜景や星空などの夜の撮影をしたい場合は、スマホのカメラ性能だと綺麗に撮影することは正直難しいです。そのため、一眼レフカメラやミラーレスカメラなどの本格的な機材が必要になります。ただ、最初からあまりにも高額なものを買うと、使いこなせない可能性もあるので、夜景や星空の撮影にこだわりがなければ、スマホカメラで十分です。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 カメラの設定</h2>
+                    <p>冒頭でもお話しましたが、iPhone14Proを使用して解説していきます。使用機種が違う場合も、同じような機能がついている場合が多いので設定方法を探してみてください。</p>
+                    
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">▼ カメラの設定</p>
+                        <ol style="margin-bottom: 0;">
+                            <li>① グリッドを出す</li>
+                            <li>② フレームの外側の表示をオフ</li>
+                            <li>③ ビデオ撮影を1080p HD/60fpsに設定</li>
+                            <li>④ フォーマットを高効率に</li>
+                            <li>⑤ Instagram側の設定</li>
+                        </ol>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">① グリッドを出す</h4>
+                        <p>グリッドとは、写真をよりバランスよく撮影するための補助線のことです。写真の構図を決める際の大事な指標になるので、必ず出しておきましょう。グリッドを出さないと、写真の基本である水平垂直を取れなかったり、構図のバランスが取れなかったりしてしまいます。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>「設定」から「カメラ」を開いて「グリッド」をオン</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">② フレームの外側の表示をオフ</h4>
+                        <p>フレームの外側とは、カメラを起動した際の画像のエリア外のことです。フレームの外側の表示をオンすると、写真にならない部分も目に入ってしまいます。そうすると写真の画角や構図を正しく判断しにくくなるため、オフにしておきましょう。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>「設定」から「カメラ」を開いて「フレームの外側を表示」をオフ</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">③ ビデオ撮影を1080p HD/60fpsに設定</h4>
+                        <p>1080p HDとは、一般的に「フルハイビジョン」と呼ばれているものです。Instagramはフルハイビジョンまで対応し、それ以上の画質でアップロードしても、フルハイビジョンまで画質が落ちてしまいます。</p>
+                        <p>fpsとは、「フレームレート」のことで、1秒間の動画が何枚の画像で構成されているかを示す単位です。60fpsに設定しておくと、動画をスローモーションにしたときでもなめらかに再生ができます。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>「設定」から「カメラ」を開いて「ビデオ撮影」の中から「1080p HD/60fps」を選択</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">④ フォーマットを高効率に</h4>
+                        <p>フォーマットを高効率に設定すると、写真の容量が自動的に抑えられるのでiPhoneのデータ容量を節約することができます。ただし、互換性がなくなるのでPCでの編集作業には向きません。もし、撮影した写真をPCで編集したい場合は「互換性優先」を選んでおきましょう。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>「設定」から「カメラ」を開いて「フォーマット」から選択</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">⑤ Instagram側の設定</h4>
+                        <p>こちらはスマホカメラではなく、Instagramアプリで高画質な動画をアップロードするための設定です。せっかく作ったリール動画をできるだけ「いい状態」でInstagramにアップするために、必ずこちらは設定しておきましょう！</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>プロフィール右上のメニューから「メディアの画質」「最高画質でアップロード」をオン</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 カメラの機能を使いこなそう</h2>
+                    <p>iPhoneのカメラには、様々な機能が備わっています。それらの機能を使いこなすことで、ワンランク上の写真や動画を撮れるようになります。</p>
+
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">▼ カメラの基本機能（iPhone14 Pro）</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>明るさ調整</li>
+                            <li>ピント調整</li>
+                            <li>AE/AFロック</li>
+                            <li>Live Photos</li>
+                            <li>ポートレートモード</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">明るさ調整</h4>
+                        <p>写真や動画が明るすぎると、被写体が白飛びしてしまい、逆に暗すぎると、どんよりとした印象を与えてしまいます。適正な明るさで撮影ができるよう、調整のやり方を覚えておきましょう。</p>
+                        <p style="margin-bottom: 5px; font-weight: bold;">▼ 調整方法</p>
+                        <ol style="margin-top: 0; margin-bottom: 0;">
+                            <li>被写体をタップする</li>
+                            <li>黄色い四角い枠が表示される</li>
+                            <li>その枠に指を当てながら上下に動かす</li>
+                        </ol>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">ピント調整</h4>
+                        <p>被写体にピントが合っていない写真や動画は、視聴者が集中できなくなってしまいます。見せたいものにきちんとピントが合うよう、調整方法を覚えておきましょう。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 手動でピントを合わせる方法</strong><br>ピントを合わせたい箇所をタップ</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">AE/AFロック</h4>
+                        <p>「AE/AFロック」は長押しした箇所で明るさとピントを固定する機能です。ピントを合わせようとしてスマホ画面の被写体をタップしても、すぐに別の場所にフォーカスされてしまい勝手に画面が暗くなったり、シャッターを切る頃にはピントが思ったところに合ってなかったり、その自動調節が邪魔になってしまう場合に使います。</p>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ やりかた</strong><br>ピントや明るさを固定したい箇所を長押し</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">Live Photos</h4>
+                        <p>Live Photosとは、撮影した写真とそれを撮影したときの小さな動画を保存できるiPhoneカメラ特有の機能です。子どもやペット、乗り物などの動きのある被写体を撮影する際に活用できます。また、撮影したタイミングのうちの、最も良い瞬間を選び出してベストショットとして保管が可能です。ただし、Live Photosは小さな動画として保存されるので、普通の写真よりも容量が大きいことに注意しましょう。</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li>✅ <strong>動く被写体の場合</strong>はLive Photosを使う</li>
+                            <li>✅ <strong>動かない被写体の場合</strong>はLive Photosを使わない</li>
+                        </ul>
+                        <p style="margin-bottom: 0; background: #e2e8f0; padding: 8px; border-radius: 4px;"><strong>▼ 設定方法</strong><br>カメラを起動した状態で、右上のマークからオンとオフを選択</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">ポートレートモード</h4>
+                        <p>ポートレートモードとは、背景のボケの度合いを調節できたり、ライティング効果を選択できたりする機能のことです。背景をボカすことで、見せたい被写体をより強調することができます。F値の調整はカメラの起動をしながらでも、写真を撮った後でも可能です。</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍06 撮影時のポイント</h2>
+                    <p>魅力的な写真を撮るために、撮影時に抑えておきたいポイントは以下の4つです。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 写真の主役を決めておく</li>
+                            <li>② 行動範囲を広める</li>
+                            <li>③ 脇を締めて両手でスマホを持って撮る</li>
+                            <li>④ 水平垂直を意識する</li>
+                        </ul>
+                    </div>
+                    <p>以上のちょっとした工夫をするだけで、あなたの写真は一気に「プロっぽく」なります！</p>
+
+                    <h3 style="margin-top: 30px;">① 写真の主役を決めておく</h3>
+                    <p>まず構図を考える前に、あなたがその写真で伝えたいこと、すなわち「主役」を考えておきましょう。写真の主役とは、「写真を見た人の視線を注目させるポイント」のことです。</p>
+                    <p>「イマイチいい写真が撮れない…」と悩んでいる人の写真を見ると、「写真の主役」がないことがよくあります。</p>
+                    <p style="font-weight: bold; color: #b91c1c;">写真を撮る際は、必ず「この写真の主役は何か」を頭の中で決めてから撮影をするようにしましょう。</p>
+
+                    <h3 style="margin-top: 30px;">② 行動範囲を広める</h3>
+                    <p>普段見慣れている景色を写真で切り取るだけではそこから感動は生まれません。写真の初心者さんほど、その場から動かずにシャッターを切ってしまいがちです。</p>
+                    <p>しかし、いい写真を撮るためには、被写体をいろんな角度から見ていいアングルを探す必要があります。</p>
+                    <p>写真撮影の際は、その場でシャッターを切るのではなくできるだけ体を動かして、見慣れた景色とは違う「感動のアングル」を見つけるようにしましょう！</p>
+
+                    <h3 style="margin-top: 30px;">③ 脇を締めて両手でスマホを持って撮る</h3>
+                    <p>最近のスマホカメラは手ブレ補正が有能ですが、それでも完璧に手ブレを排除することはできません。撮影した写真を無駄にしないよう、手ブレをできるだけ抑えられる方法で撮影を行いましょう。</p>
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">▼ 手ブレをおさえる方法</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li>① 脇をしっかりと締める</li>
+                            <li>② 両手でスマホを持つ</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">④ 水平垂直を意識する</h3>
+                    <p>写真が歪んでしまっていると、その写真を見たときに、先に「歪み」を認識してしまい、被写体の認識が素直にできなくなってしまいます。なので、写真撮影の際はできるだけ対象物が水平垂直に写るように意識をしましょう。</p>
+                    <p>被写体に対してスマホの面を垂直に向けることで、水平垂直のキレイな写真が撮りやすくなります。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍07 構図のパターン8選</h2>
+                    <p>人が「美しい」と感じる構図には正解があります。この講座では基本的な8つを紹介していきます。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <li>① 二分割構図</li>
+                            <li>② 三分割構図</li>
+                            <li>③ 日の丸構図</li>
+                            <li>④ 左右対称構図</li>
+                            <li>⑤ 額縁構図</li>
+                            <li>⑥ S字構図</li>
+                            <li>⑦ 対角線構図</li>
+                            <li>⑧ 放射構図</li>
+                        </ul>
+                    </div>
+                    <p>「この構図好きかも」「これなら撮りやすそう！」と思う構図から撮影にチャレンジしてみてください！</p>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">① 二分割構図</h4>
+                        <p style="margin-bottom: 0;">写真を半分に分けるようなシンプルな構図です。シンメトリーな風景を撮るときにオススメです。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">② 三分割構図</h4>
+                        <p style="margin-bottom: 0;">カメラのグリッドの交わるところに見せたいものを持ってくる構図です。物を撮るときも人を撮る時も、この構図を用いるだけで、バランスのいい写真が撮れるようになります。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">③ 日の丸構図</h4>
+                        <p style="margin-bottom: 0;">日の丸国旗のように画像の中央に被写体を持ってくる構図です。キレイな風景の前に立つ人や物を撮りたいときなどにオススメです。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">④ 左右対称構図</h4>
+                        <p style="margin-bottom: 0;">左右対称に被写体を持ってくる構図です。撮りたい物が2つあるときや人物を2人撮るときに、バランスが取りやすいです。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">⑤ 額縁構図</h4>
+                        <p style="margin-bottom: 0;">ドアや門、窓などで被写体を囲む構図です。囲むことで、普通に撮影するよりも被写体を強調することができます。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">⑥ S字構図</h4>
+                        <p style="margin-bottom: 0;">視線誘導の効果がある構図です。物をS字に並べて撮るだけで、バランスのいい写真を撮ることができ、手前のものから奥のものにかけて視線を誘導する効果があります。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">⑦ 対角線構図</h4>
+                        <p style="margin-bottom: 0;">あえて対角線状に被写体をぶった斬った構図です。海や大地など、横に大きく広がるものを撮るときにオススメです。</p>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; font-size: 1.3rem; color: #1e3a8a;">⑧ 放射構図</h4>
+                        <p style="margin-bottom: 0;">一点に向かって放射状に集まっている構図です。奥行き感を出すことができるので、長い1本道や廊下などを撮るのにオススメです。</p>
+                    </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍08 物の撮り方</h2>
+                    <p>商品紹介、レシピ、グルメなどのジャンルで、物をキレイに撮り、被写体をより魅力的に見せることができます。魅力的な写真を撮影できるように、以下の3つのポイントを意識しましょう。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 光の向きを考える</li>
+                            <li>② ポートレートモードで撮る</li>
+                            <li>③ 望遠レンズで撮る</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① 光の向きを考える</h3>
+                    <p>被写体に当たる光の向きによって、写真の印象は大きく変わります。物を撮るときは、被写体の横から光が当たっているサイド光で撮るのがオススメです。</p>
+                    <p>サイド光で撮った写真は、被写体に影ができて、立体感とメリハリのある写真に仕上がり、強い印象を与えます。</p>
+
+                    <h3 style="margin-top: 30px;">② ポートレートモードで撮る</h3>
+                    <p>ポートレートモードで撮影し、背景をぼかすことで、Instagram上に何千万とある写真と差別化を図ることができます。</p>
+                    <p>ベストなF値は写真によって異なりますが、2.0〜4.5あたりに絞ると、背景がキレイにボケてくれることが多いです。</p>
+
+                    <h3 style="margin-top: 30px;">③ 望遠レンズで撮る</h3>
+                    <p>実は標準のレンズで撮ると、被写体に歪みが生じやすくなってしまいます。しかし、少し引いたところから望遠レンズで撮影をすると、標準レンズで撮影するよりも被写体が歪みにくくなります。</p>
+                    <p>とても細かいポイントですが、こういった小さな気遣いの積み重ねが、バズる投稿とそうでない投稿を分ける要因となります。</p>
+                    <p style="font-weight: bold; color: #b91c1c;">物を撮影する際は望遠レンズで撮影したほうが、より対象物をキレイな形で表現できるので、望遠レンズのついたスマホをお持ちの方は積極的に使ってみてください。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍09 人の撮り方</h2>
+                    <p>美容、ファッション、ダイエット、暮らしなどのジャンルで使えます。魅力的な写真を撮影できるように、以下の3つのポイントを意識しましょう。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① レンズの仕組みを理解する</li>
+                            <li>② ポージングを意識する</li>
+                            <li>③ 背景も人物撮影の一部</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① レンズの仕組みを理解する</h3>
+                    <p>基本的にカメラのレンズには次の性質があります。</p>
+                    <ul>
+                        <li>レンズに近いものを大きく写す</li>
+                        <li>レンズから遠いものを小さく写す</li>
+                    </ul>
+                    <p>つまり、顔がカメラのレンズに近いほど顔が大きく、足が短く写ってしまいます。そのためには、<strong>腰の高さあたりでスマホを上下逆さまに構えるのがオススメ</strong>です。</p>
+                    <p>すると、顔が小さく足が長く見えます。</p>
+
+                    <h3 style="margin-top: 30px;">② ポージングを意識する</h3>
+                    <p>ちょっとしたことを意識するだけで、写真写りが格段によくなります！以下の3つのポイントを抑えておきましょう！</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ <strong>姿勢に注意する</strong><br>肩を落として、鎖骨を突き上げ、顎を引く</li>
+                        <li style="margin-top: 10px;">✅ <strong>左右非対称にポーズを撮る</strong><br>手足は常に左右反対側を動かす</li>
+                        <li style="margin-top: 10px;">✅ <strong>カメラと反対側で動作をする</strong><br>手で物を持つときや足を前に出すときは、カメラから遠いほうの手足を動かすようにする</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">③ 背景も人物撮影の一部</h3>
+                    <p>特にファッションを見せたいときは、背景の色にも注意をしましょう。服の色と背景の色が被ってしまうと、せっかくのコーディネートが背景に同化してしまい、目立たなくなってしまいます。</p>
+                    <p>ファッションインフルエンサーの中には、背景の壁を変えただけで、一気に投稿のリーチが伸び出した、という人もいるくらいです。</p>
+                    <p style="font-weight: bold; color: #b91c1c;">背景の色味や質感にこだわったり、加工でキレイにしたり、背景も写真を構成する要素の一つであることを意識しましょう！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍10 空間の撮り方</h2>
+                    <p>家、ホテル紹介、レストラン紹介などのジャンルで使えます。「行ってみたい」「住んでみたい」という憧れを抱かせる撮影のコツは、以下の3つです。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 柱や天井に沿って撮る</li>
+                            <li>② 広角で撮影する</li>
+                            <li>③ 周りの物の配置にも注意する</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① 柱や天井に沿って撮る</h3>
+                    <p>空間が歪んでいると、見る人に不安定な印象を与えてしまって、「キレイな写真」という印象が薄れてしまいます。</p>
+                    <p>写真を撮る際は、柱や天井、床などにまっすぐグリッド線を合わせて、水平垂直に撮ることを意識しましょう。</p>
+
+                    <h3 style="margin-top: 30px;">② 広角で撮影する</h3>
+                    <p>空間を広く見せたい場合は広角レンズを使って撮影しましょう。ただし、広角レンズの場合は、画面の端が伸びて映ってしまいます。</p>
+                    <p>画面の端に物や人が映ってしまうと、不格好な写真になってしまうので、画角を決める際は気をつけましょう。</p>
+
+                    <h3 style="margin-top: 30px;">③ 周りの物の配置にも注意する</h3>
+                    <p>空間にある家具や小物も、その空間を構成する大事な要素です。</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ 椅子が歪んでいたら直す</li>
+                        <li>✅ シーツにシワがあったら伸ばす</li>
+                        <li>✅ 小物の位置のバランスを整える</li>
+                    </ul>
+                    <p>など、細かいところにも気を使うことでより洗練された写真を撮ることができます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍11 風景の撮り方</h2>
+                    <p>旅行、スポット紹介などのジャンルで使えます。「行ってみたい」「この景色をみたい」という憧れを抱かせる撮影のコツは、以下の4つです。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 被写体を決める</li>
+                            <li>② 広角で撮る</li>
+                            <li>③ 人の映り込みに注意する</li>
+                            <li>④ F値を大きめに</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① 被写体を決める</h3>
+                    <p>魅力的な写真を撮るためには、写真の主役を決めることが大切です。</p>
+                    <ul>
+                        <li>✅ 美しい紅葉を見せたい写真なのか？</li>
+                        <li>✅ 川辺で戯れる鳥を見せたい写真なのか？</li>
+                        <li>✅ 高くそびえるビル群を見せたい写真なのか？</li>
+                    </ul>
+                    <p style="font-weight: bold;">きちんと「何を伝えたいのか」を頭の中で決めた上でシャッターを切ることを意識しましょう。</p>
+
+                    <h3 style="margin-top: 30px;">② 広角で撮る</h3>
+                    <p>広角レンズで撮影することで、風景を広い画角で写真に収めることができます。景色の広大さを伝えたいときには、広角レンズで撮影するのがオススメです。</p>
+
+                    <h3 style="margin-top: 30px;">③ 人の映り込みに注意する</h3>
+                    <p>人が映り込んでしまうと、ごちゃついた印象を与えるのであまりキレイな写真とはいえません。できるだけ人のいないタイミングを狙って撮影するようにしましょう。</p>
+
+                    <h3 style="margin-top: 30px;">④ F値を大きめに</h3>
+                    <p>F値は大きいほど隅々までくっきり写すことができ、風景の美しさをより伝えることができます。</p>
+                    <p>風景の場合は画面全体を壮大な絵画のように映したいので、F値は8〜11くらいの大きめに設定しましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍12 加工(レタッチ)のやり方</h2>
+                    <p>写真は、撮りっぱなしでSNSにアップロードせずに、必ず色味や明るさを調整しましょう。切り取った場面をもっと魅力的に仕上げるためにレタッチ（写真の加工）を行います。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0;">
+                        <h3 style="margin-top: 0; font-size: 1.4rem; color: #0f172a;">📱 レタッチおすすめアプリ：Adobe Lightroom</h3>
+                        <p style="margin-bottom: 10px;"><a href="https://apps.apple.com/jp/app/lightroom-%E5%86%99%E7%9C%9F-%E5%8B%95%E7%94%BB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%83%BC-%E5%86%99%E7%9C%9F%E6%98%A0%E5%83%8F%E7%B7%A8%E9%9B%86/id878783582" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: bold;">＞＞ App Storeからインストール</a></p>
+                        <p><a href="https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=ja&gl=US" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: bold;">＞＞ Google Play Storeからインストール</a></p>
+                        
+                        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                        <h4 style="margin-top: 0; font-size: 1.2rem; color: #0f172a;">▼ Adobe Lightroomの使用方法</h4>
+                        <ol style="margin-top: 0; margin-bottom: 0; line-height: 1.8;">
+                            <li>① アカウントを作成する</li>
+                            <li>② 編集したい写真を取り込む</li>
+                            <li>③ 編集する（フィルター ・切り抜き ・編集：自動・ライト・カラー・ぼかし）</li>
+                            <li>④ 保存</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍13 撮影時の注意点</h2>
+                    <p>動画撮影の注意点は「<strong>意図しないブレを避けること</strong>」です。</p>
+                    <p>ブレを避けるためのポイントは、以下の3点です。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① スマホをゆっくり動かす</li>
+                            <li>② 体ごと動かす</li>
+                            <li>③ すり足で歩く</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① スマホをゆっくり動かす</h3>
+                    <p>動画を撮る際は、「ゆっくりすぎるかな？」と思うくらいの動きで大丈夫です。なぜなら、速く動かすほどブレた動画になりがちだからです。</p>
+                    <p>速度は編集の際に速くすることができますが、速い動画をスローモーションにしてもブレが消えるわけではありません。スピードをイメージに合わせるよりも、ゆっくり動かしてブレない動画を撮ることを優先しましょう。</p>
+
+                    <h3 style="margin-top: 30px;">② 体ごと動かす</h3>
+                    <p>体の中心に構えたまま体ごとスマホを動かすと、安定した動画を撮影することができます。一方、スマホを持った手だけを動かしてしまうと、揺れの激しい動画になってしまう可能性があります。</p>
+                    <p>少しの違いですが、こういった細かいところで視聴者は「続けて見るか」「次の投稿にいくか」を無意識に判断しています。視聴者がより見やすい動画を作るために、安定した動画を撮影するよう心がけましょう！</p>
+
+                    <h3 style="margin-top: 30px;">③ すり足で歩く</h3>
+                    <p>移動しながら動画を撮る際は、画面の上下の揺れをできるだけ抑えるために、すり足で歩くのがオススメです。</p>
+                    <p>揺れの激しい動画は視聴者が画面酔いを起こしてしまう可能性があり、見る人のことを第一に考えた動画とは言えません。歩き方を少し意識するだけで、上下の揺れを抑えることができます。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍14 バズる動画を作るコツ</h2>
+                    <p>動画をバズらせるためには、「見やすくて退屈に感じない動画」を作ることが大前提です。一瞬でも、</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>🌀 見にくい</li>
+                        <li>🌀 つまらない</li>
+                    </ul>
+                    <p>と感じさせてはダメなんです。</p>
+                    <p>「動画を最後まで見てもらう」ために、抑えたいポイントは以下の5つになります。</p>
+
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 目的を持って撮影する</li>
+                            <li>② 被りに注意</li>
+                            <li>③ 情報を限定する</li>
+                            <li>④ 色んな画角で撮る</li>
+                            <li>⑤ 動きをつける</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① 目的を持って撮影する</h3>
+                    <ul>
+                        <li>✅ 何を撮りたいのか・何を伝えたいのか</li>
+                        <li>✅ 動画を見た人にどのような感情を抱いてほしいのか</li>
+                    </ul>
+                    <p>目的を持って撮影することが大切です。</p>
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">例</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li>・商品が届いたときのワクワク感を感じてもらうために、ダンボールを開封するシーンを撮る</li>
+                            <li>・上機嫌な気持ちを感じてもらうために、スキップをするシーンを撮る</li>
+                            <li>・嫌なことがあったときのガッカリ感を感じてもらうために、頭を抱えて倒れ込むシーンを撮る</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">② 被りに注意</h3>
+                    <p>Instagramのリール動画は、一部文字と被ってしまい見にくくなる部分があります。なので、この部分に被写体を写すことはできるだけ避けましょう。注目してほしいものはできるだけ中央に配置すると見やすい動画になります。</p>
+                    <p>ｉサークルの限定特典に、リールの文字位置のチェックテンプレートをご用意しているので、ぜひ活用してみてください。</p>
+                    <p><a href="https://www.canva.com/design/DAFy-xgTr2A/uztmR1MifQAWEaQItiIBqw/view?utm_content=DAFy-xgTr2A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: bold;">＞＞ リール文字入れ禁止位置テンプレート</a></p>
+
+                    <h3 style="margin-top: 30px;">③ 情報を限定する</h3>
+                    <p>撮りたい被写体を決めたら、その被写体が「主役」であることがわかる動画を撮る必要があります。なぜなら、視聴者の注意が散漫になるからです。</p>
+                    <p>動画内で伝えたい情報は限定することを意識しましょう。そのためには、撮影場所を整理整頓しておくことも大切です。</p>
+
+                    <h3 style="margin-top: 30px;">④ 色んな画角で撮る</h3>
+                    <p>視聴者を退屈に感じさせないためには、常に「一定ではない」動画を作る必要があります。定点観測のような動画を見るだけでは、どうしてもつまらなく感じてしまいますよね。1つのシーンを色んな画角から撮ることで、退屈しないリール動画を作りやすくなります。</p>
+                    <div style="background-color: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="font-weight: bold; margin-top: 0; margin-bottom: 10px;">例（「パソコンに向かう自分」を撮るとき）</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                            <li>・後ろ姿を撮る</li>
+                            <li>・手元をアップで撮る</li>
+                            <li>・デスク横の観葉植物越しに撮る</li>
+                        </ul>
+                    </div>
+                    <p>このときも、写真撮影の際のポイントと同じで、「普段見慣れていない場面」を動画にできると、より飽きられにくい動画を作ることができます。</p>
+
+                    <h3 style="margin-top: 30px;">⑤ 動きをつける</h3>
+                    <p>人は、本能的に動いている物に目が奪われる生き物です。つまり、動画を撮影する際も様々な動きをつけることで、視聴者の興味を惹くリール動画を作ることができます。</p>
+                    
+                    <div class="highlight-box">
+                        <p style="font-weight: bold; color: #1e3a8a; margin-top: 0;">自分が被写体を撮るとき</p>
+                        <ul style="margin-bottom: 15px;">
+                            <li>カメラを左右に動かす</li>
+                            <li>カメラを上下に動かす</li>
+                            <li>被写体に近づく</li>
+                            <li>被写体から遠ざかる</li>
+                            <li>カメラを回す</li>
+                            <li>ピントの移動</li>
+                        </ul>
+                        <p style="font-weight: bold; color: #1e3a8a; margin-top: 0;">自分が被写体のとき</p>
+                        <ul style="margin-bottom: 0;">
+                            <li>画面に変化をもたらす</li>
+                            <li>カメラの前で「演技」をする</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background-color: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                        <p style="margin: 0; font-weight: bold; color: #b91c1c;">※ 動きをつける際の注意点</p>
+                        <p style="margin: 5px 0 0 0;">視聴者が見ていて不快感を感じるようなブレは避けましょう！不快感を感じた瞬間にそのリールは飛ばされて二度と見られることはありません。動きをつける際も、スマホをゆっくり動かしたり、画面の揺れを最小限に抑えることを意識して撮影に臨みましょう！</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍15 撮影の上達方法</h2>
+                    <p>実践あるのみ！写真・動画の撮影が上達するポイントは以下の3つです。</p>
+                    
+                    <div style="background-color: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin-bottom: 0; font-weight: bold; color: #1e3a8a; list-style-type: none; padding-left: 0;">
+                            <li>① 数をこなす</li>
+                            <li>② 人の作品と見比べる</li>
+                            <li>③ 羞恥心を捨てる</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">① 数をこなす</h3>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>✅ <strong>数をこなすことで成長する</strong><br>理論だけ頭に入れたとしても、最初からその通りに実践できるとは限りません。カメラの扱いや構図の選定にも慣れ、魅力的な写真・動画が撮れるようになっていきます。</li>
+                        <li style="margin-top: 15px;">✅ <strong>数を打てば当たる確率も高くなる</strong><br>いろんな画角やいろんなシーンをとにかくたくさん撮ることで、いい写真・動画が撮れる確率が高くなります。</li>
+                        <li style="margin-top: 15px;">✅ <strong>後々の素材として活かせる</strong><br>「上達方法」とは少し話がずれるのですが、数をこなすことで後々の素材として活かせる素材が手に入ります。さまざまなアングルで複数ずつ撮っておきましょう。</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">② 人の作品と見比べる</h3>
+                    <p>必ず伸びている投稿の写真や動画と、自分の撮影した作品を見比べてください。</p>
+                    <ul>
+                        <li>✅ 光の当たり方</li>
+                        <li>✅ 構図・画角</li>
+                        <li>✅ 物の配置</li>
+                        <li>✅ カメラの動かし方</li>
+                        <li>✅ 写るときの姿勢や動き</li>
+                    </ul>
+                    <p>違うところを見つけたら、必ずどこかにメモを取っておきましょう。</p>
+
+                    <h3 style="margin-top: 30px;">③ 羞恥心を捨てる</h3>
+                    <p>コソコソと遠慮をしながら撮影しても、イマイチな構図しか撮れない可能性が高いです。</p>
+                    <p style="font-weight: bold; color: #b91c1c;">みなさんは既にインスタグラマーです！堂々と撮影に専念しましょう！</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍16 まとめ</h2>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #e2e8f0;">
+                        <h3 style="margin-top: 0; font-size: 1.4rem; color: #0f172a;">📝 撮影時の注意点</h3>
+                        <p>動画撮影の注意点は「意図しないブレを避けること」です。ブレを避けるためのポイント</p>
+                        <ul style="margin-top: 0;">
+                            <li>① スマホをゆっくり動かす</li>
+                            <li>② 体ごと動かす</li>
+                            <li>③ すり足で歩く</li>
+                        </ul>
+
+                        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                        <h3 style="margin-top: 0; font-size: 1.4rem; color: #0f172a;">🔥 バズる動画を作るコツ</h3>
+                        <p>「動画を最後まで見てもらう」ために、抑えたいポイントは以下の5つです。</p>
+                        <ul style="margin-top: 0;">
+                            <li>① 目的を持って撮影する</li>
+                            <li>② 被りに注意</li>
+                            <li>③ 情報を限定する</li>
+                            <li>④ 色んな画角で撮る</li>
+                            <li>⑤ 動きをつける</li>
+                        </ul>
+
+                        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+                        <h3 style="margin-top: 0; font-size: 1.4rem; color: #0f172a;">📈 撮影の上達方法</h3>
+                        <p>実践あるのみ！写真・動画の撮影が上達するポイント</p>
+                        <ul style="margin-top: 0; margin-bottom: 0;">
+                            <li>① 数をこなす</li>
+                            <li>② 人の作品と見比べる</li>
+                            <li>③ 羞恥心を捨てる</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+</html>
