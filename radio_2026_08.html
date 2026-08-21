@@ -2,11 +2,11 @@
 <html lang="ja">
 
 <head>
-    <!-- cSpell:ignore InstaCircle PDCA NISA -->
+    <!-- cSpell:ignore InstaCircle -->
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/images/強化チームロゴ.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Circle Dashboard</title>
+    <title>2026年8月のラジオ | Instagram Circle Dashboard</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +29,7 @@
                 <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
         </button>
-        <a href="index.html" class="logo">
-            <img src="assets/images/強化チームロゴ.png" alt="強化チームロゴ" width="120" height="80">
-        </a>
+        <a href="index.html" class="logo"><img src="assets/images/強化チームロゴ.png" alt="強化チームロゴ" width="120" height="80"></a>
     </header>
 
     <!-- サイドバーオーバーレイ -->
@@ -52,7 +50,7 @@
                 <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
                 <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
                 <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
-                <a href="radio.html" class="menu-item" data-page="radio">ラジオ集</a>
+                <a href="radio.html" class="menu-item active" data-page="radio">ラジオ集</a>
                 <a href="live.html" class="menu-item" data-page="live">ライブ集</a>
             </div>
 
@@ -73,49 +71,42 @@
 
     <!-- メインコンテンツ -->
     <main class="main-content" id="app">
-        <div class="page-container gs-reveal">
-            <h1>お知らせ</h1>
+        <div class="article-container gs-reveal">
+            <a href="radio.html" class="back-link">← ラジオ集に戻る</a>
 
-            <ul class="news-list">
-                <li class="news-item gs-item">
-                    <a href="#">
-                        <div class="news-meta">
-                            <time datetime="2026-08-20">2026.08.21</time>
-                            <span class="badge badge-update">UPDATE</span>
-                        </div>
-                        <h2 class="news-title">ノウハウ一覧を更新しました</h2>
-                    </a>
-                </li>
-                <li class="news-item gs-item">
-                    <a href="#">
-                        <div class="news-meta">
-                            <time datetime="2026-08-20">2026.08.20</time>
-                            <span class="badge badge-update">UPDATE</span>
-                        </div>
-                        <h2 class="news-title">お知らせを更新しました</h2>
-                    </a>
-                </li>
-                <li class="news-item gs-item">
-                    <a href="#">
-                        <div class="news-meta">
-                            <time datetime="2026-08-15">2026.09.12</time>
-                            <span class="badge badge-event">EVENT</span>
-                        </div>
-                        <h2 class="news-title">名古屋オフ会</h2>
-                    </a>
-                </li>
-                <li class="news-item gs-item">
-                    <a href="#">
-                        <div class="news-meta">
-                            <time datetime="2026-08-01">2026.08.20</time>
-                            <span class="badge badge-info">INFO</span>
-                        </div>
-                        <h2 class="news-title">サークルメンバー専用のポータルサイトを開設しました！</h2>
-                    </a>
-                </li>
-            </ul>
+            <header class="article-header">
+                <h1>2026年8月のラジオまとめ</h1>
+                <div class="article-meta">更新日: 2026年8月21日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                <p>2026年8月に配信されたラジオの内容まとめです。</p>
+
+                <h2>2026/8/21</h2>
+
+                <div class="highlight-box">
+                    <h3>一番伝えたいこと</h3>
+                    <p>何か問題にぶつかった時、「AかBのどっちかしか選べない」と自分で勝手に思い込んで選択肢を狭めないでほしい、ということです。</p>
+                </div>
+
+                <h3>わかりやすいポイント解説</h3>
+
+                <div class="highlight-box">
+                    <h3>「どちらか一方」を諦めない</h3>
+                    <p>たとえば「動画の再生数を伸ばすか」「フォロワーを増やすか」で悩んだ時、「再生数を取るならフォロワーは諦める」と考える必要はありません。</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>いいとこ取り（C案）をつくる</h3>
+                    <p>「冒頭は再生数が伸びる工夫をして、後半はフォロワーが増える工夫をする」というように、AとBの良かったところを組み合わせて両方を狙う（第3の選択肢を作る）ことが大切です。</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>一人で悩まず周りに相談する</h3>
+                    <p>自分一人で考えると「これしかない」と思い込みがちです。紙に書き出してみたり、他人に相談したりして、自分では気づけなかった新しいアイデア（可能性）を見つけましょう。</p>
+                </div>
+            </div>
         </div>
-
     </main>
 
     <!-- Animation & ScrollTrigger Libraries -->
@@ -125,8 +116,6 @@
     <!-- Custom JS -->
     <script defer src="js/theme.js"></script>
     <script defer src="js/main.js"></script>
-
-
 
 </body>
 

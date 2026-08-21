@@ -184,7 +184,7 @@ ul {
 }
 
 .accordion-content.open {
-  max-height: 300px;
+  max-height: 600px;
 }
 
 .menu-item {
