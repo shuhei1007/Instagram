@@ -4,13 +4,14 @@
 <head>
     <!-- cspell:ignore Insta InstaCircle GSAP -->
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/強化チームロゴ.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9期生強化チームポータルサイト</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=1787214249096">
@@ -18,53 +19,7 @@
 
 <body>
 
-    <!-- トップバー -->
-    <header class="topbar">
-        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
-            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
-        <a href="index.html" class="logo">InstaCircle</a>
-    </header>
 
-    <!-- サイドバーオーバーレイ -->
-    <div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-    <!-- サイドバー -->
-    <aside class="sidebar" id="sidebar">
-        <nav class="menu">
-            <button class="accordion-btn">
-                <span>メインメニュー</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </button>
-            <div class="accordion-content">
-                <a href="news.html" class="menu-item" data-page="news">お知らせ</a>
-                <a href="knowledge.html" class="menu-item" data-page="knowledge">ノウハウ一覧</a>
-                <a href="members.html" class="menu-item" data-page="members">メンバー一覧</a>
-                <a href="prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
-            </div>
-
-            <button class="accordion-btn">
-                <span>その他</span>
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </button>
-            <div class="accordion-content">
-                <a href="resources.html" class="menu-item" data-page="resources">リソース</a>
-                <a href="schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
-                <a href="links.html" class="menu-item" data-page="links">関連リンク</a>
-            </div>
-        </nav>
-    </aside>
 
     <!-- メインコンテンツ -->
     <main class="main-content splash-main" id="app">
