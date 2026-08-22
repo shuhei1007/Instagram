@@ -1322,6 +1322,93 @@ ul {
   color: #9a5b0a;
 }
 
+/* --------------------
+   ラジオ：日別アコーディオン
+-------------------- */
+.radio-day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.radio-day {
+  background: #fff;
+  border: 1px solid #d1e5db;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.radio-day[open] {
+  border-color: #a8c4b4;
+  box-shadow: 0 2px 10px rgba(54, 86, 74, 0.08);
+}
+
+.radio-day summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  background: #f4f9f7;
+  user-select: none;
+}
+
+.radio-day-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #36564a;
+  line-height: 1.4;
+}
+
+.radio-day summary::-webkit-details-marker {
+  display: none;
+}
+
+.radio-day summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #36564a;
+  border-bottom: 2px solid #36564a;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-top: -4px;
+}
+
+.radio-day[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.radio-day summary:hover {
+  background: #edf3ef;
+}
+
+.radio-day-body {
+  padding: 8px 20px 24px;
+  border-top: 1px solid #d1e5db;
+}
+
+.radio-day-body > :first-child {
+  margin-top: 16px;
+}
+
+.radio-day-meta {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5b7a6c;
+  background: #edf3ef;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
 @media (max-width: 768px) {
   .article-container {
     padding: 24px;
