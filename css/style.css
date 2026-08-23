@@ -1323,13 +1323,14 @@ ul {
 }
 
 /* --------------------
-   ラジオ：日別アコーディオン
+   ラジオ：日別アコーディオン（横並び）
 -------------------- */
 .radio-day-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
   margin-top: 24px;
+  align-items: start;
 }
 
 .radio-day {
@@ -1337,6 +1338,7 @@ ul {
   border: 1px solid #d1e5db;
   border-radius: 12px;
   overflow: hidden;
+  min-width: 0;
 }
 
 .radio-day[open] {
@@ -1390,12 +1392,17 @@ ul {
 }
 
 .radio-day-body {
-  padding: 8px 20px 24px;
+  padding: 8px 16px 20px;
   border-top: 1px solid #d1e5db;
 }
 
 .radio-day-body > :first-child {
-  margin-top: 16px;
+  margin-top: 12px;
+}
+
+.radio-day-body .highlight-box {
+  margin: 14px 0;
+  padding: 14px 16px;
 }
 
 .radio-day-meta {
@@ -1469,7 +1476,38 @@ ul {
 .radio-day--rose .radio-day-meta { background: #c0392b; color: #fff; }
 .radio-day--rose .radio-day-body { border-top-color: #f5c2c2; }
 
+.radio-day--purple {
+  border-color: #d4c4f0;
+  border-left: 5px solid #7c3aed;
+}
+.radio-day--purple[open] { border-color: #b794e8; box-shadow: 0 2px 10px rgba(124, 58, 237, 0.12); }
+.radio-day--purple summary { background: #f5f0ff; }
+.radio-day--purple summary:hover { background: #ebe0ff; }
+.radio-day--purple .radio-day-title { color: #5b21b6; }
+.radio-day--purple summary::after { border-color: #7c3aed; }
+.radio-day--purple .radio-day-meta { background: #7c3aed; color: #fff; }
+.radio-day--purple .radio-day-body { border-top-color: #d4c4f0; }
+
+.highlight-box--tip {
+  background: #f3eefc;
+  border-color: #c9b3ef;
+  border-left: 4px solid #7c3aed;
+}
+
+.highlight-box--tip h3,
+.highlight-box--tip h4 {
+  color: #5b21b6;
+}
+
+.callout-label--tip {
+  background: #ebe0ff;
+  color: #5b21b6;
+}
+
 @media (max-width: 768px) {
+  .radio-day-list {
+    grid-template-columns: 1fr;
+  }
   .article-container {
     padding: 24px;
   }
