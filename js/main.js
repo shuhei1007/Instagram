@@ -202,6 +202,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Info pages opened from ノウハウ一覧: back link goes to knowledge.html
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('from') === 'knowledge') {
+        const backLink = document.querySelector('.back-link');
+        if (backLink) {
+            backLink.href = 'knowledge.html';
+            backLink.textContent = '← ノウハウ一覧に戻る';
+        }
+        menuItems.forEach((item) => {
+            const href = item.getAttribute('href');
+            item.classList.toggle('active', href === 'knowledge.html');
+        });
+    }
+
     // Radio day cards: keep open while reading (body clicks must not toggle)
     document.querySelectorAll('.radio-day').forEach((day) => {
         const body = day.querySelector('.radio-day-body');
