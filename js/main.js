@@ -201,6 +201,18 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.remove('active');
         }
     });
+
+    // Radio day cards: keep open while reading (body clicks must not toggle)
+    document.querySelectorAll('.radio-day').forEach((day) => {
+        const body = day.querySelector('.radio-day-body');
+        if (!body) return;
+        body.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        body.addEventListener('mousedown', (e) => {
+            e.stopPropagation();
+        });
+    });
 });
 
 // Prompt Copy Logic
