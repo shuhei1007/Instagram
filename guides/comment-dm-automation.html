@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- cSpell:ignore InstaCircle ManyChat Dropbox -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/images/強化チームロゴ.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コメント→DM自動化（コメントオートメーション） | Instagram Circle Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css?v=1787305000011">
+</head>
+
+<body>
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo"><img src="../assets/images/強化チームロゴ.png" alt="強化チームロゴ" width="120" height="80"></a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+                <a href="../radio.html" class="menu-item" data-page="radio">ラジオ集</a>
+                <a href="../live.html" class="menu-item" data-page="live">ライブ集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="../knowledge.html" class="back-link">← ノウハウ一覧に戻る</a>
+
+            <header class="article-header">
+                <span class="category badge-custom badge-indigo" style="margin-bottom: 10px; display: inline-block;">ツール・自動化</span>
+                <h1>コメント→DM自動化（コメントオートメーション）</h1>
+                <div class="article-meta">更新日: 2026年9月4日</div>
+            </header>
+
+            <div class="article-content gs-item">
+                
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍01 コメントオートメーションとは？</h2>
+                    <p>Instagramのフィード投稿やリールで、<strong>「『プレゼント』とコメントしてね！DMで今すぐお送りします」</strong>という案内を見かけたことはありませんか？</p>
+                    <p>これは、投稿についた特定のキーワードコメントを検知して、<strong>ユーザーへ自動でダイレクトメッセージ（DM）を即時送信する仕組み</strong>で、一般に<strong>「コメントオートメーション（コメント→DM自動化）」</strong>と呼ばれています。</p>
+                    
+                    <div class="highlight-box highlight-box--key">
+                        <h3>💡 なぜ多くの発信者が使っているのか？</h3>
+                        <p>① ユーザーがコメントすることで投稿のエンゲージメントが跳ね上がり、<strong>リールや投稿がバズりやすくなる</strong><br>
+                        ② DM内で親密なコミュニケーションや特典配布・リンク誘導を<strong>完全自動・取りこぼしゼロ</strong>で行える</p>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍02 自動化のシンプルな4ステップ</h2>
+                    <p>仕組みは非常にシンプルで、以下の4つの流れで自動完結します。</p>
+
+                    <div style="display: grid; gap: 16px; margin: 20px 0;">
+                        <div style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 16px 20px; border-radius: 6px;">
+                            <strong style="color: #1e40af; font-size: 1.05rem;">① 投稿に指定ワードをコメント</strong>
+                            <p style="margin: 6px 0 0; font-size: 0.95rem;">ユーザーがリールやフィードのコメント欄に「プレゼント」「レシピ」「詳細」などの指定キーワードを書き込みます。</p>
+                        </div>
+                        <div style="background: #f8fafc; border-left: 4px solid #0284c7; padding: 16px 20px; border-radius: 6px;">
+                            <strong style="color: #0369a1; font-size: 1.05rem;">② 外部ツールがコメントを検知</strong>
+                            <p style="margin: 6px 0 0; font-size: 0.95rem;">連携している外部自動化ツールが、対象投稿についた指定ワードをリアルタイムで検知します。</p>
+                        </div>
+                        <div style="background: #f8fafc; border-left: 4px solid #10b981; padding: 16px 20px; border-radius: 6px;">
+                            <strong style="color: #047857; font-size: 1.05rem;">③ InstagramのDMを自動送信</strong>
+                            <p style="margin: 6px 0 0; font-size: 0.95rem;">ツール経由で、コメントしてくれたユーザーのDMへ事前に設定したメッセージを即座に自動送信します。</p>
+                        </div>
+                        <div style="background: #f8fafc; border-left: 4px solid #8b5cf6; padding: 16px 20px; border-radius: 6px;">
+                            <strong style="color: #6d28d9; font-size: 1.05rem;">④ DMからPDFや特典を受け取る</strong>
+                            <p style="margin: 6px 0 0; font-size: 0.95rem;">ユーザーは届いたDMのメッセージやリンクから、PDF資料・限定動画・購入ページなどをスムーズに受け取ります。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍03 代表的なツール「ManyChat（メニーチャット）」</h2>
+                    <p>コメントオートメーションを実装する際の代表的ツールとして世界中で広く使われているのが<strong>「ManyChat」</strong>です。</p>
+
+                    <div class="highlight-box highlight-box--ok">
+                        <h3>ManyChatの特徴と安心ポイント</h3>
+                        <ul>
+                            <li><strong>Meta公式API連携</strong>：Meta（Instagram/Facebook）の公式なInstagram連携を利用しているため、アカウント停止（BAN）のリスクを避け安全に運用できます。</li>
+                            <li><strong>ノーコードで直感設定</strong>：プログラミングの知識がなくても、視覚的なフローチャートで自動応答やメッセージ分岐を簡単に作成できます。</li>
+                            <li><strong>手動作業の完全自動化</strong>：24時間365日、コメントがついた瞬間に自動で返信・DM送信が完了します。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍04 PDF・特典プレゼントの正しい配布方法</h2>
+                    <p>無料特典としてPDFファイルを配布する場合、<strong>「PDFファイルそのものをInstagramのDMに直接送信する」のは一般的ではありません。</strong></p>
+
+                    <div class="highlight-box highlight-box--tip">
+                        <h3>おすすめの配布手順</h3>
+                        <ol>
+                            <li>PDFファイルを <strong>Google Drive</strong> や <strong>Dropbox</strong>、または<strong>自社サイト</strong>へアップロードする。</li>
+                            <li>そのファイルの<strong>共有URL（リンク）</strong>を取得する。</li>
+                            <li>取得したURLを<strong>DMの自動送信メッセージ内に記載して送信</strong>する。</li>
+                        </ol>
+                    </div>
+
+                    <p style="font-size: 0.95rem; color: #475569; margin-top: 15px;">
+                        ※URLリンクで配布することで、スマートフォンのブラウザですぐに開けるだけでなく、後からPDFの内容を修正・更新した場合でも同じURLのまま最新版を届けられるメリットがあります。
+                    </p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍05 ツールで設定できる便利な応用機能</h2>
+                    <p>ManyChatなどのツールでは、単なる一括送信にとどまらず、以下のような細かな条件設定が可能です。</p>
+
+                    <div class="highlight-box highlight-box--homework">
+                        <h3>よく使われる設定オプション</h3>
+                        <ul>
+                            <li><strong>指定キーワードのみに反応</strong>：「プレゼント」など設定した特定の言葉が含まれるコメントだけに反応させる。</li>
+                            <li><strong>特定の投稿・リールのみを対象にする</strong>：キャンペーン用の投稿だけを対象にし、他の日常投稿のコメント欄には反応させない。</li>
+                            <li><strong>ボタンタップ後のシナリオ分岐</strong>：DMを送った後、「受け取る」「詳細を見る」などのボタンを押したユーザーにだけ次のメッセージやURLを送る。</li>
+                            <li><strong>フォロー促進の仕組み</strong>：「アカウントをフォローしてから特典を受け取ってね」と案内し、フォロー転換率を高める。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0;">▍まとめ</h2>
+                    <div class="highlight-box highlight-box--key">
+                        <h3>運用のポイント</h3>
+                        <p style="margin-bottom: 0;">「コメント→DM自動化」を取り入れることで、<strong>投稿のコメント数を劇的に伸ばして発見タブやリールでおすすめ表示されやすくしつつ、DMでの深い信頼関係構築・マネタイズへの誘導を自動化</strong>できます。プレゼント企画や商品案内を行う際は、ぜひ活用を検討してみましょう。</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+
+</html>
