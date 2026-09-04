@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- cSpell:ignore InstaCircle Canva VLLO UD角ゴ -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assets/images/強化チームロゴ.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界観の構築と運用 | Instagram Circle Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css?v=1787305000011">
+    <link rel="stylesheet" href="../css/knowledge-cards.css">
+</head>
+
+<body>
+
+    <!-- トップバー -->
+    <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <a href="../index.html" class="logo"><img src="../assets/images/強化チームロゴ.png" alt="強化チームロゴ" width="120" height="80"></a>
+    </header>
+
+    <!-- サイドバーオーバーレイ -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- サイドバー -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="menu">
+            <button class="accordion-btn">
+                <span>メインメニュー</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../news.html" class="menu-item" data-page="news">お知らせ</a>
+                <a href="../knowledge.html" class="menu-item active" data-page="knowledge">ノウハウ一覧</a>
+                <a href="../members.html" class="menu-item" data-page="members">メンバー一覧</a>
+                <a href="../prompts.html" class="menu-item" data-page="prompts">プロンプト集</a>
+                <a href="../radio.html" class="menu-item" data-page="radio">ラジオ集</a>
+                <a href="../live.html" class="menu-item" data-page="live">ライブ集</a>
+            </div>
+
+            <button class="accordion-btn">
+                <span>その他</span>
+                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="accordion-content">
+                <a href="../resources.html" class="menu-item" data-page="resources">リソース</a>
+                <a href="../schedule.html" class="menu-item" data-page="schedule">スケジュール</a>
+                <a href="../links.html" class="menu-item" data-page="links">関連リンク</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content" id="app">
+        <div class="article-container gs-reveal">
+            <a href="../knowledge.html" class="back-link">← ノウハウ一覧に戻る</a>
+
+            <header class="article-header">
+                <span class="category badge-custom badge-purple" style="margin-bottom: 10px; display: inline-block;">世界観・ブランディング</span>
+                <h1>世界観の構築と運用</h1>
+                <div class="article-meta">更新日: 2026年9月4日</div>
+            </header>
+
+            <div class="article-content gs-item">
+
+                <!-- イントロダクション -->
+                <section>
+                    <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #334155; font-weight: 500;">
+                        「世界観」とは単なるおしゃれな雰囲気やデザインのことではありません。<br>
+                        情報が溢れる現代において、<strong>「なぜあなたのアカウントが選ばれ、フォローされ続けるのか」</strong>を決定づける最も重要なコアです。
+                    </p>
+                    <p>ここでは、世界観を構築・運用するための本質的な考え方から、実践的な設計手法、細部のノイズ排除、ツールの活用法までを詳しく解説します。</p>
+
+                    <div class="highlight-box highlight-box--key" style="margin: 25px 0;">
+                        <h3>✨ 世界観構築の全体像</h3>
+                        <ul style="margin-bottom: 0; padding-left: 20px;">
+                            <li><strong>本質</strong>：情報（ノウハウ）ではなく「理念・思い」に人が集まる</li>
+                            <li><strong>構造</strong>：「入り口（現状の悩み）」から「出口（理想の未来）」への導線定義</li>
+                            <li><strong>細部</strong>：ディズニーランドのように日常のノイズを徹底排除する</li>
+                            <li><strong>統一</strong>：3大タッチポイントと4つの王道イメージで一貫性を持たせる</li>
+                            <li><strong>実践</strong>：配色・フォント・配置のルール化とツール（Canva・VLLO）による型化</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- 01 世界観の本質と構造 -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e293b;">▍01 「世界観」の本質と構造：なぜ情報だけでは勝てないのか</h2>
+
+                    <h3 style="margin-top: 25px; color: #3b82f6;">① 情報ではなく「理念・思い」に人は集まる</h3>
+                    <p>現代は検索や生成AIの普及により、ノウハウや情報そのものは誰でも簡単に手に入る時代になりました。<br>
+                    そのため、単に「役に立つ情報」を発信するだけでは差別化できず、継続的な支持やファン化にはつながりません。</p>
+                    <p>人が集まり、熱狂的なファンになる決定的な要因は、発信者が持つ<strong>「どんな理想の世界を作りたいか」「どんな価値観を大切にしているか」</strong>という<strong>理念や思い</strong>です。</p>
+
+                    <div style="background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 18px 22px; border-radius: 6px; margin: 20px 0;">
+                        <p style="margin: 0; font-weight: bold; color: #1e3a8a;">💡 比較：情報発信 vs 世界観発信</p>
+                        <ul style="margin: 10px 0 0 0; padding-left: 20px; color: #334155;">
+                            <li><strong>情報だけのアカウント</strong>：「この投稿は役に立った（保存して終わり、次は見ない）」</li>
+                            <li><strong>世界観のあるアカウント</strong>：「この人の考え方や美意識が好き！ずっとこの世界に浸っていたい（フォロー＆継続閲覧）」</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">② 「入り口」と「出口」の導線設計</h3>
+                    <p>世界観とは、決してフワフワとした抽象的な雰囲気ではありません。<br>
+                    本質は、<strong>「誰を（入り口）、どこへ連れていくか（出口）」</strong>というフォロワーのビフォーアフターを明確に定義することです。</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0;">
+                        <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 20px;">
+                            <h4 style="color: #be123c; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                                <span style="background: #be123c; color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px;">入り口</span>
+                                現在の状態（悩み・課題）
+                            </h4>
+                            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">受け手が今抱えている不満、悩み、コンプレックス</p>
+                            <hr style="margin: 12px 0; border: none; border-top: 1px dashed #fecdd3;">
+                            <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #334155;">
+                                <li>部屋が散らかり、衝動買いでお金も心も余裕がない</li>
+                                <li>ファッションやメイクが全く分からない</li>
+                                <li>副業したいが何から始めればいいか迷子</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 20px;">
+                            <h4 style="color: #047857; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                                <span style="background: #047857; color: #fff; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px;">出口</span>
+                                理想の未来（目指す世界）
+                            </h4>
+                            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 0;">あなたのアカウントを見続けた先にある理想の姿</p>
+                            <hr style="margin: 12px 0; border: none; border-top: 1px dashed #a7f3d0;">
+                            <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem; color: #334155;">
+                                <li>年100万円貯金できて日常の小さな幸せに気づける</li>
+                                <li>ハイブランドの良さまで理解し自分に自信が持てる</li>
+                                <li>月5万円の副収入を得て心にゆとりが生まれる</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">③ 「保存されるアカウント」を目指す真心</h3>
+                    <p>「これだけ食べれば痩せる」「おすすめ便利グッズ○選」といった単発の課題解決やバズ狙い（ブツ切りの情報提供）は、その場限りで消費されて人が離れてしまいます。</p>
+                    <p>アカウントの「フォロー」とは、<strong>「この場所を見逃したくない」とアカウント丸ごと保存する行為</strong>です。<br>
+                    読者を自分の世界に招き入れ、出口まで責任を持って連れていくという真心を持ち、<strong>「何を伝えるか」以上に「どんな切り口・言葉・ストーリーで伝えるか」</strong>を重視しましょう。</p>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- 02 ディズニーランドに学ぶ細部の徹底 -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e293b;">▍02 ディズニーランドに学ぶ「細部の徹底（ノイズ排除）」</h2>
+                    <p>伸びているアカウントは、どの投稿を切り取っても「誰のものか」が一目で伝わり、<strong>「ここに来れば期待通りの世界に浸れる」</strong>という安心感を与えます。<br>
+                    これを実現するために不可欠なのが、ディズニーランドのような<strong>細部への徹底的なこだわり</strong>です。</p>
+
+                    <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1px solid #bfdbfe; border-radius: 8px; padding: 22px; margin: 20px 0;">
+                        <h3 style="color: #1e40af; margin-top: 0;">🏰 ディズニーランドの空間演出に学ぶ2大原則</h3>
+                        
+                        <div style="margin-top: 15px;">
+                            <h4 style="color: #0f172a; margin-bottom: 6px;">① 現実（ノイズ）の排除</h4>
+                            <p style="margin-top: 0; color: #334155;">ディズニーランドが外の一般ビルや高速道路をパーク内から絶対に見せないように、SNS発信においても<strong>世界観とズレる日常の違和感（ノイズ）</strong>を徹底的に消す必要があります。</p>
+                        </div>
+
+                        <div style="margin-top: 15px;">
+                            <h4 style="color: #0f172a; margin-bottom: 6px;">② 無意識の認識と「端っこ」の作り込み</h4>
+                            <p style="margin-top: 0; color: #334155;">アトラクションの片隅にある小さな小道具にまでバックストーリーが存在するように、<strong>「ユーザーが無意識に感じ取る緻密さ」</strong>があって初めて世界観が完成します。</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box highlight-box--tip">
+                        <h3>🔍 具体例：「透明感・清潔感」をテーマにする場合</h3>
+                        <ul>
+                            <li><strong>メインの被写体だけ揃えても不十分</strong>：紹介するスキンケア商品がおしゃれでも、背景の生活感や散らかりが映り込んでいると一気に世界観が崩れる。</li>
+                            <li><strong>端っこまで揃え切る</strong>：背景のインテリア、光の当たり方、映り込む手元・爪のケア、着ている服の質感・色味に至るまで統一し切ることで、プロフィールのフォロワー転換率が劇的に上がります。</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- 03 3大タッチポイントと4つの王道イメージ -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e293b;">▍03 世界観を統一する3大タッチポイントと4つの王道イメージ</h2>
+                    <p>ユーザーの目に触れるすべての接点で、<strong>テーマカラー・フォント・写真のトーン</strong>を一貫させます。</p>
+
+                    <h3 style="margin-top: 25px; color: #3b82f6;">① 3大タッチポイントの設計</h3>
+
+                    <div style="display: grid; gap: 16px; margin: 20px 0;">
+                        <!-- アイコン -->
+                        <div style="background: #f8fafc; border-left: 4px solid #8b5cf6; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #5b21b6; font-size: 1.05rem;">1. アイコン（アカウントの顔）</strong>
+                            <p style="margin: 8px 0 0 0; color: #334155;">ユーザーが最初に認識するシンボル。ターゲット層が好感を持つスタイルを選びます。</p>
+                            <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 0.95rem; color: #475569;">
+                                <li><strong>実写</strong>：清潔感、上品、かっこいい印象向き（正面だけでなく、斜めアングル、作業風景、手元の切り取りも有効）。</li>
+                                <li><strong>イラスト</strong>：親しみやすさ、ポップ、かわいい印象向き。</li>
+                            </ul>
+                        </div>
+
+                        <!-- ハイライト -->
+                        <div style="background: #f8fafc; border-left: 4px solid #8b5cf6; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #5b21b6; font-size: 1.05rem;">2. ハイライト（プロフィールの第一印象）</strong>
+                            <p style="margin: 8px 0 0 0; color: #334155;">プロフィール訪問者が最初に目にする並び。カバー画像にテーマカラー、統一されたフォント、統一トーンのアイコン・イラストを適用します。</p>
+                        </div>
+
+                        <!-- 投稿 -->
+                        <div style="background: #f8fafc; border-left: 4px solid #8b5cf6; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #5b21b6; font-size: 1.05rem;">3. 投稿（リール・フィード・ストーリーズ）</strong>
+                            <p style="margin: 8px 0 0 0; color: #334155;">表紙テンプレートを作成・固定化し、毎回同じ配置・カラー・フォント・余白感で制作します。</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">② ターゲットに合わせる4つの王道イメージ</h3>
+                    <p>自分の好みで選ぶのではなく、<strong>「届けたいターゲット層が好む世界」に合わせて1つの軸に固定</strong>します。</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 20px 0;">
+                        <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #ec4899; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <h4 style="color: #be185d; margin-top: 0; font-size: 1.1rem;">🌸 きれい・上品</h4>
+                            <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #334155; line-height: 1.6;">
+                                <li>落ち着いたトーンの実写写真</li>
+                                <li>余白を広めに取った洗練レイアウト</li>
+                                <li>細めの上品な明朝体・ゴシック体</li>
+                                <li>ターゲット：美意識の高い女性、大人の暮らし層</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #f59e0b; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <h4 style="color: #b45309; margin-top: 0; font-size: 1.1rem;">🌻 ポップ・かわいい</h4>
+                            <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #334155; line-height: 1.6;">
+                                <li>暖色系や明るく楽しげな配色</li>
+                                <li>手描き風イラストやあしらい</li>
+                                <li>丸みのある丸ゴシック・手書きフォント</li>
+                                <li>ターゲット：子育て世代、学生、カジュアル層</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #10b981; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <h4 style="color: #047857; margin-top: 0; font-size: 1.1rem;">🌿 シンプル・ミニマル</h4>
+                            <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #334155; line-height: 1.6;">
+                                <li>色数を絞った配色・淡色系（くすみカラー）</li>
+                                <li>無駄な装飾を削ぎ落としたすっきりした画面</li>
+                                <li>ニュートラルで読みやすい標準ゴシック</li>
+                                <li>ターゲット：ミニマリスト、整理整頓・暮らし系</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1e293b; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <h4 style="color: #0f172a; margin-top: 0; font-size: 1.1rem;">⚡ かっこいい・力強い</h4>
+                            <ul style="margin: 0; padding-left: 18px; font-size: 0.9rem; color: #334155; line-height: 1.6;">
+                                <li>黒・ダークグレーがベースの配色</li>
+                                <li>太めの角ゴシックで力強いメッセージ</li>
+                                <li>コントラスト強めでシャープな写真・映像</li>
+                                <li>ターゲット：ビジネスマン、ガジェット・筋トレ層</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- 04 デザイン原則の実践ルール -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e293b;">▍04 デザイン原則の実践ルール（カラー・フォント・配置）</h2>
+                    <p>デザインは生まれつきのセンスではなく、<strong>確立されたルールを守る</strong>ことで誰でも美しく伝わる画面を作ることができます。</p>
+
+                    <h3 style="margin-top: 25px; color: #3b82f6;">① テーマカラーの比率と心理効果</h3>
+
+                    <div class="highlight-box highlight-box--key">
+                        <h4>🎨 配色の黄金比率（70 : 25 : 5）</h4>
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>ベースカラー（70%）</strong>：背景など画面の大部分を占める色（白、淡いグレー、淡色など）。</li>
+                            <li><strong>メインカラー（25%）</strong>：アカウントの印象を決定づける主色（テーマカラー）。</li>
+                            <li><strong>アクセントカラー（5%）</strong>：最も目立たせたいCTAや重要キーワードに使う強調色。</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8fafc; padding: 16px 20px; border-radius: 8px; margin: 18px 0;">
+                        <h4 style="color: #1e293b; margin-top: 0;">⚠️ 視覚ストレスの回避</h4>
+                        <ul>
+                            <li><strong>ストループ効果を避ける</strong>：文字の意味と色がズレる違和感（例：「青」という文字を赤で書くなど）をなくす。</li>
+                            <li><strong>ハレーションの防止</strong>：彩度の高い色同士（赤×緑など）を直接重ねると目がチカチカするため、間に白や黒の境界線を挟む。</li>
+                            <li><strong>トーン（明度・彩度）の統一</strong>：写真の上に文字を載せる場合は、背景画像の明るさを落としたり彩度を下げてコントラストをしっかり確保する。</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">② フォントの使い分けと可読性</h3>
+                    <p>デザインにおいて<strong>「可読性（読みやすさ）」は最優先事項</strong>です。装飾フォントを本文に使うことは避け、シンプルで視認性の高い書体を選びます。</p>
+
+                    <div style="overflow-x: auto; margin: 20px 0;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff;">
+                            <thead>
+                                <tr style="background: #f1f5f9; text-align: left;">
+                                    <th style="padding: 12px; border: 1px solid #cbd5e1;">目指す印象</th>
+                                    <th style="padding: 12px; border: 1px solid #cbd5e1;">おすすめフォント例</th>
+                                    <th style="padding: 12px; border: 1px solid #cbd5e1;">特徴・使い分け</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #be185d;">上品・繊細</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">筑紫オールド明朝、テロップ明朝</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">高級感、落ち着き、洗練された大人の雰囲気</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #047857;">シンプル・ミニマル</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">筑紫A丸ゴシック、ヒラギノ角ゴ</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">癖がなく清潔感がある、抜群の可読性</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #b45309;">ポップ・親しみ</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">コーポレート・ロゴ丸、ジャンボ丸</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">柔らかさ、可愛らしさ、親近感の演出</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #1e3a8a;">力強い・クール</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">UD角ゴ ラージ、Noto Sans JP（Bold）</td>
+                                    <td style="padding: 12px; border: 1px solid #cbd5e1;">説得力、インパクト、お得感・即効性の訴求</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #64748b;">※太字（Bold）は「力強さ・親しみ・お得感」、細字（Light）は「洗練・高級感」の訴求に適しています。</p>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">③ 配置（レイアウト）の4大原則</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px;">
+                            <strong style="color: #0284c7; font-size: 1.05rem;">1. 近接（Proximity）</strong>
+                            <p style="margin: 6px 0 0 0; font-size: 0.9rem; color: #334155;">関連する要素（写真・タイトル・説明文）を近づけ、別のブロックとの間にはしっかり余白を空ける。</p>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px;">
+                            <strong style="color: #0284c7; font-size: 1.05rem;">2. 整列（Alignment）</strong>
+                            <p style="margin: 6px 0 0 0; font-size: 0.9rem; color: #334155;">左揃えや中央揃えの基準線をピシッと揃え、目線の動きをスムーズにする。ガタつきを徹底排除。</p>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px;">
+                            <strong style="color: #0284c7; font-size: 1.05rem;">3. 反復（Repetition）</strong>
+                            <p style="margin: 6px 0 0 0; font-size: 0.9rem; color: #334155;">見出しのデザイン、吹き出しの形、アイコンのスタイルを一貫して繰り返すことで統一感を生む。</p>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px;">
+                            <strong style="color: #0284c7; font-size: 1.05rem;">4. 対比（Contrast）</strong>
+                            <p style="margin: 6px 0 0 0; font-size: 0.9rem; color: #334155;">見出しと本文、数字と単位など、強調したい主役と補足の強弱（サイズ・太さ・色）に大きな差をつける。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr style="margin: 40px 0; border: none; border-top: 2px solid #e2e8f0;">
+
+                <!-- 05 実践・運用のステップとツールの活用 -->
+                <section>
+                    <h2 style="font-size: 1.6rem; border-bottom: none; padding-bottom: 0; color: #1e293b;">▍05 実践・運用のステップとツールの活用</h2>
+
+                    <h3 style="margin-top: 25px; color: #3b82f6;">① 競合調査と分析</h3>
+                    <p>ベンチマークとする同ジャンル・他ジャンルの伸びているアカウントを調査し、以下の要素を書き出します。</p>
+                    <ul>
+                        <li>ターゲット層（年代・性別・悩み）</li>
+                        <li>配色比率（ベース・メイン・アクセントの色味）</li>
+                        <li>使用フォントと装飾の傾向</li>
+                        <li>写真や動画の明るさ・空気感</li>
+                    </ul>
+                    <p><em>※1つのアカウントを丸パクリするのではなく、複数の優れたアカウントからエッセンスを抽出し、自分独自の組み合わせを作り上げます。</em></p>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">② デザインの型化とツール活用</h3>
+
+                    <div style="display: grid; gap: 16px; margin: 20px 0;">
+                        <div style="background: #fdf4ff; border-left: 4px solid #c026d3; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #86198f; font-size: 1.05rem;">🎨 Canvaの活用法</strong>
+                            <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 0.95rem; color: #475569;">
+                                <li><strong>ブランドキット登録</strong>：アカウントのロゴ、カラーコード（HEX）、指定フォントを登録し、迷わず同じデザインを適用できるようにする。</li>
+                                <li><strong>表紙ガイドライン</strong>：プロフィールグリッド（1:1正方形）、リールタブ（9:16縦長）、フィード（4:5）の各画面で文字や重要要素が見切れないようガイド枠を設定し、テンプレート化して量産する。</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #14532d; font-size: 1.05rem;">🎬 VLLOの活用法</strong>
+                            <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 0.95rem; color: #475569;">
+                                <li>動画編集時に、あらかじめ作成したカラーパレット画像を読み込む。</li>
+                                <li><strong>スポイトツール</strong>を使って指定テーマカラーのHEXコードを抽出し、テロップや図形に毎回正確に反映する。</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #eff6ff; border-left: 4px solid #2563eb; padding: 18px 20px; border-radius: 6px;">
+                            <strong style="color: #1e3a8a; font-size: 1.05rem;">📷 写真フィルターの固定化</strong>
+                            <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 0.95rem; color: #475569;">
+                                <li>写真加工アプリやカメラのフィルターは<strong>1〜2種類に絞ってお気に入り保存</strong>する。</li>
+                                <li>毎回同じトーン・露光量・彩度バランスで現像し、投稿一覧で並んだ時の統一感を保つ。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 35px; color: #3b82f6;">③ 第三者チェックによるブラッシュアップ</h3>
+                    <p>完成したアイコン、ハイライトカバー、投稿表紙テンプレートを、<strong>ターゲットに近い属性の友人やコミュニティメンバー</strong>に見てもらいましょう。</p>
+                    <ul>
+                        <li>「どんな人が発信しているように見えるか？」</li>
+                        <li>「文字はパッと見で読みやすいか？」</li>
+                        <li>「世界観に違和感（ノイズ）はないか？」</li>
+                    </ul>
+                    <p>客観的な意見をもとに微調整を重ねることで、独りよがりではない、ターゲットに刺さる強固な世界観が完成します。</p>
+
+                    <div class="highlight-box highlight-box--homework" style="margin-top: 30px;">
+                        <h3>📝 今日からできる世界観構築アクション</h3>
+                        <ol style="margin-bottom: 0; padding-left: 20px;">
+                            <li>自アカウントの<strong>「入り口（現在の悩み）」と「出口（理想の未来）」</strong>を言語化する</li>
+                            <li>4つの王道イメージから<strong>ターゲットに合った1つの軸</strong>を決める</li>
+                            <li><strong>3色のテーマカラー（70:25:5）と指定フォント</strong>を決定し、Canva/VLLOに登録する</li>
+                            <li>日常の生活感やズレた色味などの<strong>ノイズを徹底排除した表紙テンプレート</strong>を作成する</li>
+                        </ol>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Animation & ScrollTrigger Libraries -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script defer src="../js/theme.js"></script>
+    <script defer src="../js/main.js"></script>
+
+</body>
+
+</html>
